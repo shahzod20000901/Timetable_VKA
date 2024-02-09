@@ -87,12 +87,12 @@ namespace Timetable_VKA.DATA_SECTION
             
 
 
-            command.Parameters.Add("@log", MySqlDbType.VarChar).Value = listView1.Items[0].ToString();
-            command.Parameters.Add("@log1", MySqlDbType.VarChar).Value = listView1.Items[1].ToString();
-            command.Parameters.Add("@log2", MySqlDbType.VarChar).Value = listView1.Items[2].ToString();
-            command.Parameters.Add("@log3", MySqlDbType.VarChar).Value = listView1.Items[3].ToString();
-            command.Parameters.Add("@log4", MySqlDbType.VarChar).Value = listView1.Items[4].ToString();
-            command.Parameters.Add("@log5", MySqlDbType.VarChar).Value = listView1.Items[5].ToString();
+            command.Parameters.Add("@log", MySqlDbType.VarChar).Value = listView1.Items[0].Text.ToString();
+            command.Parameters.Add("@log1", MySqlDbType.VarChar).Value = listView1.Items[1].Text.ToString();
+            command.Parameters.Add("@log2", MySqlDbType.VarChar).Value = listView1.Items[2].Text.ToString();
+            command.Parameters.Add("@log3", MySqlDbType.VarChar).Value = listView1.Items[3].Text.ToString();
+            command.Parameters.Add("@log4", MySqlDbType.VarChar).Value = listView1.Items[4].Text.ToString();
+            command.Parameters.Add("@log5", MySqlDbType.VarChar).Value = listView1.Items[5].Text.ToString();
 
 
 

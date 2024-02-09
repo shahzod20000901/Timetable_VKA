@@ -12,5 +12,7 @@ namespace Timetable_VKA
         public static int check;
         public static string subject_name;
         public static string edit_subject_name="";
+        public static string subject_reduction = "";
+        
     }
 }
