@@ -38,14 +38,18 @@ namespace Timetable_VKA.DATA_SECTION
 
         ListViewItem listViewItem; 
         
-        private void Update_btn_Click(object sender, EventArgs e)
+        public int i = 0;
+        public void Update_btn_Click(object sender, EventArgs e)
         {
             listViewItem = new ListViewItem(new string[] { DataBank.subject_name, DataBank.subject_reduction });
 
             listView1.Items.Add(listViewItem);
             
+            DataBank.all_subjects[i] = DataBank.subject_name;
+            ++i;
 
             this.Refresh();
+            
         }
 
         private void Delete_btn_Click(object sender, EventArgs e)

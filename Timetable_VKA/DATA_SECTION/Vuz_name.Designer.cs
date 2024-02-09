@@ -73,6 +73,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Vuz_name";
             this.Text = "Название учебного заведения";
+            this.Load += new System.EventHandler(this.Vuz_name_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

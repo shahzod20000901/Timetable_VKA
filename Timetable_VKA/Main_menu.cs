@@ -93,5 +93,11 @@ namespace Timetable_VKA
             Subjects_form form =new Subjects_form();
             form.Show();
         }
+
+        private void ПреподователиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            add_teachers_form form=new add_teachers_form();
+            form.Show();
+        }
     }
 }

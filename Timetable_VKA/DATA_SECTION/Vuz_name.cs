@@ -41,5 +41,10 @@ namespace Timetable_VKA.DATA_SECTION
         {
             this.Close();
         }
+
+        private void Vuz_name_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

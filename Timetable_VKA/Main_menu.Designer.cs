@@ -593,6 +593,7 @@
             this.преподователиToolStripMenuItem.Name = "преподователиToolStripMenuItem";
             this.преподователиToolStripMenuItem.Size = new System.Drawing.Size(276, 22);
             this.преподователиToolStripMenuItem.Text = "Преподователи";
+            this.преподователиToolStripMenuItem.Click += new System.EventHandler(this.ПреподователиToolStripMenuItem_Click);
             // 
             // военнослужащиеToolStripMenuItem
             // 

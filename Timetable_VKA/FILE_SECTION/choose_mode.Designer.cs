@@ -141,6 +141,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "choose_mode";
             this.Text = "Пожалуйста, выберите режим для нового файла";
+            this.Load += new System.EventHandler(this.Choose_mode_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

@@ -32,5 +32,10 @@ namespace Timetable_VKA
         {
             this.Close();
         }
+
+        private void Choose_mode_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
