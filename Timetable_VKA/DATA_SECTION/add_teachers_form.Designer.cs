@@ -65,9 +65,10 @@
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(3, 3);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(463, 368);
+            this.listView1.Size = new System.Drawing.Size(460, 365);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.ListView1_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -115,6 +116,7 @@
             this.ok_btn.TabIndex = 4;
             this.ok_btn.Text = "OK";
             this.ok_btn.UseVisualStyleBackColor = true;
+            this.ok_btn.Click += new System.EventHandler(this.Ok_btn_Click);
             // 
             // cancel_btn
             // 

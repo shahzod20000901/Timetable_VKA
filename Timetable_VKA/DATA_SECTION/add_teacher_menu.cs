@@ -28,12 +28,15 @@ namespace Timetable_VKA.DATA_SECTION
         private void Cancel_btn_Click(object sender, EventArgs e)
         {
             this.Close();
+            DataBank.defined_subject = label2.Text;
         }
 
         private void Ok_btn_Click(object sender, EventArgs e)
         {
             DataBank.defined_teacher=textBox1.Text;
             DataBank.defined_subject = label2.Text;
+            
+            
             this.Close();
         }
     }

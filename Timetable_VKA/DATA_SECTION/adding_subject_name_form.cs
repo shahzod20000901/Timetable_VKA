@@ -25,8 +25,12 @@ namespace Timetable_VKA.DATA_SECTION
 
         private void Ok_btn_Click(object sender, EventArgs e)
         {
+            
             DataBank.subject_name=textBox1.Text;
             DataBank.subject_reduction=textBox2.Text;
+            DataBank.all_subjects[DataBank.i]=textBox1.Text;
+            DataBank.all_subjects_reduction[DataBank.i]=textBox2.Text;
+            ++DataBank.i;
             this.Close();
         }
 

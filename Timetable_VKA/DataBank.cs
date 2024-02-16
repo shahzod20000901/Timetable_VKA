@@ -16,12 +16,15 @@ namespace Timetable_VKA
         public static string subject_reduction = "";
         public static string teachers = "";
         public static int summ_of_subjects = 100;
-        public static string[] all_subjects=new string[summ_of_subjects];
+        public static string[] all_subjects = {"","","","","","","","","","","","","","","",""};
+        public static string[] all_subjects_reduction= { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
+
+
         public static int i = 0;
         public static int selected_subject_index=0;
 
-        public static string defined_teacher = "ффффффффффффф";
-        public static string defined_subject = "ыыыыыыыыыыыыы";
+        public static string defined_teacher = "";
+        public static string defined_subject = "";
         
     }
 }

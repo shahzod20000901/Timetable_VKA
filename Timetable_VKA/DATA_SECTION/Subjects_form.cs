@@ -47,7 +47,29 @@ namespace Timetable_VKA.DATA_SECTION
             
             DataBank.all_subjects[i] = DataBank.subject_name;
             ++i;
+            /*
+            DB db = new DB();
 
+            MySqlCommand command;
+
+            command = new MySqlCommand("TRUNCATE TABLE `subjects_table`", db.getConnection());
+            
+            db.openConnection();
+
+            
+            if (command.ExecuteNonQuery() == 1)
+                MessageBox.Show("Список дисциплин не обновлено!");
+            else
+                
+                MessageBox.Show("Список дисциплин обновлено!");
+                
+                
+
+
+
+            db.closeConnection();
+            
+            */
             this.Refresh();
             
         }
@@ -68,11 +90,27 @@ namespace Timetable_VKA.DATA_SECTION
 
             DB db = new DB();
 
-                MySqlCommand command;
-           
-                    command = new MySqlCommand("INSERT INTO `subjects_table` (`Subjects`, `Subjects_reduction`) VALUES(@log, @log1)", db.getConnection());
-                    command.Parameters.Add("@log", MySqlDbType.VarChar).Value = listViewItem.SubItems[0].Text.ToString();
-                    command.Parameters.Add("@log1", MySqlDbType.VarChar).Value = listViewItem.SubItems[1].Text.ToString();
+            MySqlCommand command1;
+            command1 = new MySqlCommand("TRUNCATE TABLE `subjects_table`", db.getConnection());
+            db.openConnection();
+            if (command1.ExecuteNonQuery() == 1)
+                MessageBox.Show("Список дисциплин не обновлено!");
+            else
+
+                MessageBox.Show("Список дисциплин обновлено!");
+            db.closeConnection();
+
+            MySqlCommand command;
+            int j;
+
+
+            for (int i=0; i< listView1.Items.Count;i++)
+            {
+
+            
+                    command = new MySqlCommand("INSERT INTO `subjects_table` (`Subjects`, `Subjects_reduction`) VALUES(@log"+i+", @log1"+i+")", db.getConnection());
+                    command.Parameters.Add("@log"+i+"", MySqlDbType.VarChar).Value = DataBank.all_subjects[i];
+                    command.Parameters.Add("@log1"+i+"", MySqlDbType.VarChar).Value = DataBank.all_subjects_reduction[i];
             
 
 
@@ -80,13 +118,15 @@ namespace Timetable_VKA.DATA_SECTION
 
             db.openConnection();
 
+
+                if (command.ExecuteNonQuery() == 1)
+                    j = 0;
+               
+                else
+                    j = 1;
             
-            if (command.ExecuteNonQuery() == 1)
-                MessageBox.Show("Сохранено в базу данных!");
-            else
-                MessageBox.Show("Не сохранено в базу данных!");
             db.closeConnection();
-            
+            }
             this.Close();
 
 

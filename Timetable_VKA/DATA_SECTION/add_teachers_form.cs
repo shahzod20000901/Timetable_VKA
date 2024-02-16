@@ -31,12 +31,16 @@ namespace Timetable_VKA.DATA_SECTION
             {
                 listView1.Items.Add(DataBank.all_subjects[i]);
             }
-            listViewItem = new ListViewItem(new string[] { DataBank.defined_subject, DataBank.defined_teacher });
+            //listViewItem = new ListViewItem(new string[] { DataBank.defined_subject, DataBank.defined_teacher });
 
-            listView1.Items.Add(listViewItem);
+           
+            
         }
         public void Update_btn_Click(object sender, EventArgs e)
         {
+            listViewItem = new ListViewItem(new string[] { DataBank.defined_subject, DataBank.defined_teacher });
+
+            listView1.Items.Add(listViewItem);
             
             this.Refresh();
 
@@ -46,7 +50,18 @@ namespace Timetable_VKA.DATA_SECTION
         {
             DataBank.selected_subject_index = listView1.FocusedItem.Index;
             add_teacher_menu form=new add_teacher_menu();
+            listView1.FocusedItem.Remove();
             form.Show();
+        }
+
+        private void Ok_btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ListView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
