@@ -25,6 +25,13 @@ namespace Timetable_VKA
 
         public static string defined_teacher = "";
         public static string defined_subject = "";
+
+
+        public static string edit_teacher = "";
+        public static string edit_defined_subject = "";
+
+
+        
         
     }
 }

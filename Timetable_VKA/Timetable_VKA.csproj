@@ -69,6 +69,12 @@
     <Compile Include="DATA_SECTION\add_teacher_menu.Designer.cs">
       <DependentUpon>add_teacher_menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="DATA_SECTION\edit_teacher_menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DATA_SECTION\edit_teacher_menu.Designer.cs">
+      <DependentUpon>edit_teacher_menu.cs</DependentUpon>
+    </Compile>
     <Compile Include="DATA_SECTION\Subjects_form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DATA_SECTION\add_teacher_menu.resx">
       <DependentUpon>add_teacher_menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DATA_SECTION\edit_teacher_menu.resx">
+      <DependentUpon>edit_teacher_menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DATA_SECTION\Subjects_form.resx">
       <DependentUpon>Subjects_form.cs</DependentUpon>

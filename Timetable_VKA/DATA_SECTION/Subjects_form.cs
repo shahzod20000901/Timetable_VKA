@@ -77,6 +77,7 @@ namespace Timetable_VKA.DATA_SECTION
         private void Delete_btn_Click(object sender, EventArgs e)
         {
             listView1.FocusedItem.Remove();
+            //DataBank.all_subjects[listView1.FocusedItem.Index]="";
         }
 
         private void Button1_Click(object sender, EventArgs e)

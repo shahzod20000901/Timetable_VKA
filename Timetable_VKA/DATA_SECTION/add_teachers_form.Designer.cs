@@ -39,6 +39,7 @@
             this.ok_btn = new System.Windows.Forms.Button();
             this.cancel_btn = new System.Windows.Forms.Button();
             this.update_btn = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,7 +53,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(466, 371);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(443, 371);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // listView1
@@ -65,7 +66,7 @@
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(3, 3);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(460, 365);
+            this.listView1.Size = new System.Drawing.Size(436, 365);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.SelectedIndexChanged += new System.EventHandler(this.ListView1_SelectedIndexChanged);
@@ -98,6 +99,7 @@
             this.delete_btn.TabIndex = 2;
             this.delete_btn.Text = "Удалить";
             this.delete_btn.UseVisualStyleBackColor = true;
+            this.delete_btn.Click += new System.EventHandler(this.Delete_btn_Click);
             // 
             // edit_btn
             // 
@@ -107,10 +109,11 @@
             this.edit_btn.TabIndex = 3;
             this.edit_btn.Text = "Переименовать";
             this.edit_btn.UseVisualStyleBackColor = true;
+            this.edit_btn.Click += new System.EventHandler(this.Edit_btn_Click);
             // 
             // ok_btn
             // 
-            this.ok_btn.Location = new System.Drawing.Point(297, 412);
+            this.ok_btn.Location = new System.Drawing.Point(271, 419);
             this.ok_btn.Name = "ok_btn";
             this.ok_btn.Size = new System.Drawing.Size(75, 23);
             this.ok_btn.TabIndex = 4;
@@ -120,7 +123,7 @@
             // 
             // cancel_btn
             // 
-            this.cancel_btn.Location = new System.Drawing.Point(379, 412);
+            this.cancel_btn.Location = new System.Drawing.Point(356, 419);
             this.cancel_btn.Name = "cancel_btn";
             this.cancel_btn.Size = new System.Drawing.Size(75, 23);
             this.cancel_btn.TabIndex = 5;
@@ -129,7 +132,7 @@
             // 
             // update_btn
             // 
-            this.update_btn.Location = new System.Drawing.Point(12, 412);
+            this.update_btn.Location = new System.Drawing.Point(12, 406);
             this.update_btn.Name = "update_btn";
             this.update_btn.Size = new System.Drawing.Size(75, 23);
             this.update_btn.TabIndex = 6;
@@ -137,11 +140,23 @@
             this.update_btn.UseVisualStyleBackColor = true;
             this.update_btn.Click += new System.EventHandler(this.Update_btn_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label1.Location = new System.Drawing.Point(12, 432);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(218, 15);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Обновите форму после изменение данных";
+            // 
             // add_teachers_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(466, 447);
+            this.ClientSize = new System.Drawing.Size(443, 454);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.update_btn);
             this.Controls.Add(this.cancel_btn);
             this.Controls.Add(this.ok_btn);
@@ -156,6 +171,7 @@
             this.Load += new System.EventHandler(this.Add_teachers_form_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -171,5 +187,6 @@
         private System.Windows.Forms.Button ok_btn;
         private System.Windows.Forms.Button cancel_btn;
         private System.Windows.Forms.Button update_btn;
+        private System.Windows.Forms.Label label1;
     }
 }
