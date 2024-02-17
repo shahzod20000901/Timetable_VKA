@@ -574,6 +574,7 @@
             this.расписаниеЗвонковToolStripMenuItem.Name = "расписаниеЗвонковToolStripMenuItem";
             this.расписаниеЗвонковToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
             this.расписаниеЗвонковToolStripMenuItem.Text = "Расписание звонков";
+            this.расписаниеЗвонковToolStripMenuItem.Click += new System.EventHandler(this.РасписаниеЗвонковToolStripMenuItem_Click);
             // 
             // дисциплиныToolStripMenuItem
             // 

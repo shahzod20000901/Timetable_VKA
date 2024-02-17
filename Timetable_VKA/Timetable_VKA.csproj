@@ -87,6 +87,12 @@
     <Compile Include="DATA_SECTION\Vuz_name.Designer.cs">
       <DependentUpon>Vuz_name.cs</DependentUpon>
     </Compile>
+    <Compile Include="DATA_SECTION\working_hours_per_day.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DATA_SECTION\working_hours_per_day.Designer.cs">
+      <DependentUpon>working_hours_per_day.cs</DependentUpon>
+    </Compile>
     <Compile Include="DATA_SECTION\Work_day_of_week.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +137,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DATA_SECTION\Vuz_name.resx">
       <DependentUpon>Vuz_name.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DATA_SECTION\working_hours_per_day.resx">
+      <DependentUpon>working_hours_per_day.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DATA_SECTION\Work_day_of_week.resx">
       <DependentUpon>Work_day_of_week.cs</DependentUpon>

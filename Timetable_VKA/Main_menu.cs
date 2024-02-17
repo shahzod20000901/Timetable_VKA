@@ -104,5 +104,11 @@ namespace Timetable_VKA
         {
 
         }
+
+        private void РасписаниеЗвонковToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            working_hours_per_day form=new working_hours_per_day();
+            form.Show();
+        }
     }
 }
