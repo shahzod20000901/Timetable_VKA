@@ -38,8 +38,6 @@
             this.edit_btn = new System.Windows.Forms.Button();
             this.ok_btn = new System.Windows.Forms.Button();
             this.cancel_btn = new System.Windows.Forms.Button();
-            this.update_btn = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -130,34 +128,11 @@
             this.cancel_btn.Text = "Отменить";
             this.cancel_btn.UseVisualStyleBackColor = true;
             // 
-            // update_btn
-            // 
-            this.update_btn.Location = new System.Drawing.Point(12, 406);
-            this.update_btn.Name = "update_btn";
-            this.update_btn.Size = new System.Drawing.Size(75, 23);
-            this.update_btn.TabIndex = 6;
-            this.update_btn.Text = "Обновить";
-            this.update_btn.UseVisualStyleBackColor = true;
-            this.update_btn.Click += new System.EventHandler(this.Update_btn_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label1.Location = new System.Drawing.Point(12, 432);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(218, 15);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Обновите форму после изменение данных";
-            // 
             // add_teachers_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(443, 454);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.update_btn);
             this.Controls.Add(this.cancel_btn);
             this.Controls.Add(this.ok_btn);
             this.Controls.Add(this.edit_btn);
@@ -171,7 +146,6 @@
             this.Load += new System.EventHandler(this.Add_teachers_form_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -184,8 +158,6 @@
         private System.Windows.Forms.Button delete_btn;
         private System.Windows.Forms.Button ok_btn;
         private System.Windows.Forms.Button cancel_btn;
-        private System.Windows.Forms.Button update_btn;
-        private System.Windows.Forms.Label label1;
         public System.Windows.Forms.Button edit_btn;
         public System.Windows.Forms.ListView listView1;
     }
