@@ -79,33 +79,43 @@ namespace Timetable_VKA.DATA_SECTION
 
         private void OK_btn_Click(object sender, EventArgs e)
         {
-           
-            
+
+
             DB db = new DB();
-            MySqlCommand command = new MySqlCommand("INSERT INTO `work_days` (`1`, `2`, `3`, `4`, `5`, `6`) VALUES (@log, @log1, @log2, @log3, @log4, @log5)", db.getConnection());
-             
-            
 
-
-            command.Parameters.Add("@log", MySqlDbType.VarChar).Value = listView1.Items[0].Text.ToString();
-            command.Parameters.Add("@log1", MySqlDbType.VarChar).Value = listView1.Items[1].Text.ToString();
-            command.Parameters.Add("@log2", MySqlDbType.VarChar).Value = listView1.Items[2].Text.ToString();
-            command.Parameters.Add("@log3", MySqlDbType.VarChar).Value = listView1.Items[3].Text.ToString();
-            command.Parameters.Add("@log4", MySqlDbType.VarChar).Value = listView1.Items[4].Text.ToString();
-            command.Parameters.Add("@log5", MySqlDbType.VarChar).Value = listView1.Items[5].Text.ToString();
-
-
-
-
-
-
+            MySqlCommand command1;
+            command1 = new MySqlCommand("TRUNCATE TABLE `work_days`", db.getConnection());
             db.openConnection();
-
-            if (command.ExecuteNonQuery() == 1)
-                MessageBox.Show("Сохранено в базу данных!");
+            if (command1.ExecuteNonQuery() == 1)
+                MessageBox.Show("Список рабочие дни не обновлено!");
             else
-                MessageBox.Show("Не сохранено в базу данных!");
+
+                MessageBox.Show("Список рабочие дни обновлено!");
             db.closeConnection();
+
+            MySqlCommand command;
+            int j;
+
+
+            for (int i = 0; i < listView1.Items.Count; i++)
+            {
+
+
+                command = new MySqlCommand("INSERT INTO `work_days` (`work_days_name`) VALUES(@log" + i + ")", db.getConnection());
+                command.Parameters.Add("@log" + i + "", MySqlDbType.VarChar).Value = listView1.Items[i].SubItems[0].Text;
+                
+
+                db.openConnection();
+
+
+                if (command.ExecuteNonQuery() == 1)
+                    j = 0;
+
+                else
+                    j = 1;
+
+                db.closeConnection();
+            }
             this.Close();
         }
 
