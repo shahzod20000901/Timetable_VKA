@@ -32,44 +32,19 @@ namespace Timetable_VKA.DATA_SECTION
 
         private void Add_btn_Click(object sender, EventArgs e)
         {
-            adding_subject_name_form form =new adding_subject_name_form();
-            form.Show();
+            new adding_subject_name_form(this).Show();
+            
         }
 
         ListViewItem listViewItem; 
         
-        public int i = 0;
+        
         public void Update_btn_Click(object sender, EventArgs e)
         {
-            listViewItem = new ListViewItem(new string[] { DataBank.subject_name, DataBank.subject_reduction });
-
-            listView1.Items.Add(listViewItem);
             
-            DataBank.all_subjects[i] = DataBank.subject_name;
-            ++i;
-            /*
-            DB db = new DB();
-
-            MySqlCommand command;
-
-            command = new MySqlCommand("TRUNCATE TABLE `subjects_table`", db.getConnection());
             
-            db.openConnection();
-
-            
-            if (command.ExecuteNonQuery() == 1)
-                MessageBox.Show("Список дисциплин не обновлено!");
-            else
-                
-                MessageBox.Show("Список дисциплин обновлено!");
-                
-                
-
-
-
-            db.closeConnection();
-            
-            */
+           
+           
             this.Refresh();
             
         }
@@ -77,7 +52,7 @@ namespace Timetable_VKA.DATA_SECTION
         private void Delete_btn_Click(object sender, EventArgs e)
         {
             listView1.FocusedItem.Remove();
-            //DataBank.all_subjects[listView1.FocusedItem.Index]="";
+           
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -110,14 +85,14 @@ namespace Timetable_VKA.DATA_SECTION
 
             
                     command = new MySqlCommand("INSERT INTO `subjects_table` (`Subjects`, `Subjects_reduction`) VALUES(@log"+i+", @log1"+i+")", db.getConnection());
-                    command.Parameters.Add("@log"+i+"", MySqlDbType.VarChar).Value = DataBank.all_subjects[i];
-                    command.Parameters.Add("@log1"+i+"", MySqlDbType.VarChar).Value = DataBank.all_subjects_reduction[i];
-            
+                command.Parameters.Add("@log" + i + "", MySqlDbType.VarChar).Value = listView1.Items[i].SubItems[0].Text;
+                    command.Parameters.Add("@log1"+i+"", MySqlDbType.VarChar).Value = listView1.Items[i].SubItems[1].Text;
 
 
-            
 
-            db.openConnection();
+
+
+                db.openConnection();
 
 
                 if (command.ExecuteNonQuery() == 1)

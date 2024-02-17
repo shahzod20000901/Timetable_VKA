@@ -99,5 +99,10 @@ namespace Timetable_VKA
             add_teachers_form form=new add_teachers_form();
             form.Show();
         }
+
+        private void MenuStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }

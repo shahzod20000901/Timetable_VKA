@@ -12,9 +12,11 @@ namespace Timetable_VKA.DATA_SECTION
 {
     public partial class adding_subject_name_form : Form
     {
-        public adding_subject_name_form()
+        Subjects_form form1;
+        public adding_subject_name_form(Subjects_form owner)
         {
             InitializeComponent();
+            form1 = owner;
         }
 
         private void Adding_subject_name_form_Load(object sender, EventArgs e)
@@ -22,16 +24,22 @@ namespace Timetable_VKA.DATA_SECTION
             this.MinimizeBox= false;
             this.MaximizeBox= false;
         }
-
+        public int i = 0;
         private void Ok_btn_Click(object sender, EventArgs e)
         {
             
-            DataBank.subject_name=textBox1.Text;
-            DataBank.subject_reduction=textBox2.Text;
+            
             DataBank.all_subjects[DataBank.i]=textBox1.Text;
             DataBank.all_subjects_reduction[DataBank.i]=textBox2.Text;
             ++DataBank.i;
-            this.Close();
+            
+            string[] sub_red = {textBox1.Text,textBox2.Text};
+            ListViewItem listViewItem = new ListViewItem ( sub_red );
+            form1.listView1.Items.Add(listViewItem);
+
+            DataBank.all_subjects[i] = textBox1.Text;
+            ++i;
+            //this.Close();
         }
 
         private void Cancel_btn_Click(object sender, EventArgs e)

@@ -7,13 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Timetable_VKA.DATA_SECTION
 {
     public partial class edit_teacher_menu : Form
     {
-        public edit_teacher_menu()
+
+        readonly add_teachers_form form1;
+        public edit_teacher_menu(add_teachers_form owner)
         {
+            form1=owner;
             InitializeComponent();
         }
 
@@ -28,12 +32,17 @@ namespace Timetable_VKA.DATA_SECTION
             this.Close();
         }
 
-        private void Ok_btn_Click(object sender, EventArgs e)
+        void Ok_btn_Click(object sender, EventArgs e)
         {
             DataBank.edit_defined_subject= label2.Text;
             DataBank.edit_teacher= textBox1.Text;
-            add_teachers_form form= new add_teachers_form();
-            form.edit(textBox1.Text);
+
+
+
+            form1.listView1.SelectedItems[0].SubItems[1].Text=textBox1.Text;
+            
+
+           
             this.Close();
         }
     }

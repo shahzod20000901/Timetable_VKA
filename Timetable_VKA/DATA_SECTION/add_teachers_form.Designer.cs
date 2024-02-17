@@ -178,15 +178,15 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.Button add_btn;
         private System.Windows.Forms.Button delete_btn;
-        private System.Windows.Forms.Button edit_btn;
         private System.Windows.Forms.Button ok_btn;
         private System.Windows.Forms.Button cancel_btn;
         private System.Windows.Forms.Button update_btn;
         private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Button edit_btn;
+        public System.Windows.Forms.ListView listView1;
     }
 }

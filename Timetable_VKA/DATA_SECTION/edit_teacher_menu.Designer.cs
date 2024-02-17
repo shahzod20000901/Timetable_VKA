@@ -102,11 +102,10 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button ok_btn;
         private System.Windows.Forms.Button cancel_btn;
+        public System.Windows.Forms.Button ok_btn;
+        public System.Windows.Forms.TextBox textBox1;
     }
 }

@@ -2057,6 +2057,7 @@
             this.menuStrip2.Size = new System.Drawing.Size(800, 450);
             this.menuStrip2.TabIndex = 1;
             this.menuStrip2.Text = "menuStrip2";
+            this.menuStrip2.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.MenuStrip2_ItemClicked);
             // 
             // tabControl1
             // 
