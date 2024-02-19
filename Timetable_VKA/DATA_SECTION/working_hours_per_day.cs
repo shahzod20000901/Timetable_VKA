@@ -16,14 +16,15 @@ namespace Timetable_VKA.DATA_SECTION
         {
             InitializeComponent();
         }
+        
 
         private void Working_hours_per_day_Load(object sender, EventArgs e)
         {
             this.MinimizeBox= false;
             this.MaximizeBox= false;
-            listView1.Scrollable = true;
-            listView1.View = View.Details;
             
+            
+            dataGridView1.SelectionMode= DataGridViewSelectionMode.RowHeaderSelect;
            
 
         }
@@ -31,20 +32,47 @@ namespace Timetable_VKA.DATA_SECTION
             string[] pairs = { "Первая пара", "Вторая пара", "Третья пара", "Четвертая пара" };
         private void Add_btn_Click(object sender, EventArgs e)
         {
-            ListViewItem listViewItem;
-            listViewItem = new ListViewItem(new string[] { pairs[i], pairs[i], pairs[i], pairs[i], pairs[i], pairs[i] });
+            if (i <= 3)
+            {
+                DataGridViewRow row0 = new DataGridViewRow();
+
+                DataGridViewCell monday_ = new DataGridViewTextBoxCell();
+                DataGridViewCell tuesday_ = new DataGridViewTextBoxCell();
+                DataGridViewCell wednesday_ = new DataGridViewTextBoxCell();
+                DataGridViewCell thursday_ = new DataGridViewTextBoxCell();
+                DataGridViewCell friday_ = new DataGridViewTextBoxCell();
+                DataGridViewCell saturday_ = new DataGridViewTextBoxCell();
+
+
+
+
+                monday_.Value = pairs[i];
+                tuesday_.Value = pairs[i];
+                wednesday_.Value = pairs[i];
+                thursday_.Value = pairs[i];
+                friday_.Value = pairs[i];
+                saturday_.Value = pairs[i];
+                row0.Cells.AddRange(monday_, tuesday_, wednesday_, thursday_, friday_, saturday_);
+                dataGridView1.Rows.AddRange(row0);
+            }
+            else
+            {
+                MessageBox.Show("Больше пар добавить невозможно!");
+            }
+
+
+
             ++i;
-            listView1.Items.Add(listViewItem);
         }
 
         private void Delete_btn_Click(object sender, EventArgs e)
         {
-            //listView1.FocusedItem.SubItems[listView1.FocusedItem.Index].Text = "";
+            
         }
 
         private void Working_hours_per_day_Enter(object sender, EventArgs e)
         {
-            listView1.FocusedItem.Selected = true;
+           
         }
     }
 }
