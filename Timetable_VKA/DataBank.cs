@@ -32,7 +32,9 @@ namespace Timetable_VKA
 
         public static string selected_subject = "";
 
-        
-        
+
+        public static string edit_group = "";
+        public static string edit_department = "";
+        public static string edit_faculty = "";
     }
 }

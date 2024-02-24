@@ -110,5 +110,10 @@ namespace Timetable_VKA
             working_hours_per_day form=new working_hours_per_day();
             form.Show();
         }
+
+        private void группыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Groups().Show();
+        }
     }
 }

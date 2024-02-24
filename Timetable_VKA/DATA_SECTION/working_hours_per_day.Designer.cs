@@ -48,6 +48,7 @@
             this.thursday = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.friday = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.saturday = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,9 +59,9 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Location = new System.Drawing.Point(12, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(245, 15);
+            this.label1.Size = new System.Drawing.Size(229, 15);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Количество академических часов в неделю";
+            this.label1.Text = "Количество академических часов в день";
             // 
             // add_btn
             // 
@@ -80,6 +81,7 @@
             this.ok_btn.TabIndex = 5;
             this.ok_btn.Text = "ОК";
             this.ok_btn.UseVisualStyleBackColor = true;
+            this.ok_btn.Click += new System.EventHandler(this.Ok_btn_Click);
             // 
             // cancel_btn
             // 
@@ -179,6 +181,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(823, 162);
             this.dataGridView1.TabIndex = 15;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // monday
             // 
@@ -216,11 +219,22 @@
             this.saturday.Name = "saturday";
             this.saturday.Width = 130;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label6.Location = new System.Drawing.Point(249, 224);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(368, 15);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Ячейки не должны оставаться пустыми. Если пары нет то введите:  \" - \"";
+            // 
             // working_hours_per_day
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(851, 386);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
@@ -262,12 +276,13 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn monday;
         private System.Windows.Forms.DataGridViewTextBoxColumn tuesday;
         private System.Windows.Forms.DataGridViewTextBoxColumn wednesday;
         private System.Windows.Forms.DataGridViewTextBoxColumn thursday;
         private System.Windows.Forms.DataGridViewTextBoxColumn friday;
         private System.Windows.Forms.DataGridViewTextBoxColumn saturday;
+        public System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label6;
     }
 }

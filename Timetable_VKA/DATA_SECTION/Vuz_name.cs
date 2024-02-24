@@ -18,15 +18,27 @@ namespace Timetable_VKA.DATA_SECTION
         {
             InitializeComponent();
         }
-
+        int i = 1;
+        int g;
         private void Ok_btn_Click(object sender, EventArgs e)
         {
-            
             DB db = new DB();
-            MySqlCommand command = new MySqlCommand("INSERT INTO `vuzname` (`id`, `vuzName`) VALUES (NULL, @log);", db.getConnection());
+
+            MySqlCommand command1;
+            command1 = new MySqlCommand("TRUNCATE TABLE `vuzname`", db.getConnection());
+            db.openConnection();
+            if (command1.ExecuteNonQuery() == 1)
+                g = 0;
+            else
+                g = 1;
+            db.closeConnection();
+
+
+            
+            MySqlCommand command = new MySqlCommand("INSERT INTO `vuzname` (`id`, `vuzName`) VALUES ("+i+", @log);", db.getConnection());
 
             command.Parameters.Add("@log", MySqlDbType.VarChar).Value = textBox1.Text;
-            
+            ++i;
 
             db.openConnection();
 
@@ -35,6 +47,7 @@ namespace Timetable_VKA.DATA_SECTION
             else
                 MessageBox.Show("Военный ВУЗ не был создан");
             db.closeConnection();
+            this.Close();
         }
 
         private void Cancel_btn_Click(object sender, EventArgs e)

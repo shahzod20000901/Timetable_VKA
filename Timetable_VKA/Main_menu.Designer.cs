@@ -609,19 +609,20 @@
             // потокиToolStripMenuItem
             // 
             this.потокиToolStripMenuItem.Name = "потокиToolStripMenuItem";
-            this.потокиToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.потокиToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.потокиToolStripMenuItem.Text = "Потоки";
             // 
             // группыToolStripMenuItem
             // 
             this.группыToolStripMenuItem.Name = "группыToolStripMenuItem";
-            this.группыToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.группыToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.группыToolStripMenuItem.Text = "Группы";
+            this.группыToolStripMenuItem.Click += new System.EventHandler(this.группыToolStripMenuItem_Click);
             // 
             // подгруппыToolStripMenuItem
             // 
             this.подгруппыToolStripMenuItem.Name = "подгруппыToolStripMenuItem";
-            this.подгруппыToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.подгруппыToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.подгруппыToolStripMenuItem.Text = "Подгруппы";
             // 
             // занятияToolStripMenuItem

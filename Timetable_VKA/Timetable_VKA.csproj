@@ -57,6 +57,12 @@
     <Compile Include="DATA_SECTION\adding_subject_name_form.Designer.cs">
       <DependentUpon>adding_subject_name_form.cs</DependentUpon>
     </Compile>
+    <Compile Include="DATA_SECTION\add_group_menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DATA_SECTION\add_group_menu.Designer.cs">
+      <DependentUpon>add_group_menu.cs</DependentUpon>
+    </Compile>
     <Compile Include="DATA_SECTION\add_teachers_form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,11 +75,23 @@
     <Compile Include="DATA_SECTION\add_teacher_menu.Designer.cs">
       <DependentUpon>add_teacher_menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="DATA_SECTION\edit_group_menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DATA_SECTION\edit_group_menu.Designer.cs">
+      <DependentUpon>edit_group_menu.cs</DependentUpon>
+    </Compile>
     <Compile Include="DATA_SECTION\edit_teacher_menu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DATA_SECTION\edit_teacher_menu.Designer.cs">
       <DependentUpon>edit_teacher_menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DATA_SECTION\Groups.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DATA_SECTION\Groups.Designer.cs">
+      <DependentUpon>Groups.cs</DependentUpon>
     </Compile>
     <Compile Include="DATA_SECTION\Subjects_form.cs">
       <SubType>Form</SubType>
@@ -123,14 +141,23 @@
     <EmbeddedResource Include="DATA_SECTION\adding_subject_name_form.resx">
       <DependentUpon>adding_subject_name_form.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DATA_SECTION\add_group_menu.resx">
+      <DependentUpon>add_group_menu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DATA_SECTION\add_teachers_form.resx">
       <DependentUpon>add_teachers_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DATA_SECTION\add_teacher_menu.resx">
       <DependentUpon>add_teacher_menu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DATA_SECTION\edit_group_menu.resx">
+      <DependentUpon>edit_group_menu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DATA_SECTION\edit_teacher_menu.resx">
       <DependentUpon>edit_teacher_menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DATA_SECTION\Groups.resx">
+      <DependentUpon>Groups.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DATA_SECTION\Subjects_form.resx">
       <DependentUpon>Subjects_form.cs</DependentUpon>
