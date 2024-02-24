@@ -115,5 +115,10 @@ namespace Timetable_VKA
         {
             new Groups().Show();
         }
+
+        private void аудиторииToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Classrooms().Show();
+        }
     }
 }
