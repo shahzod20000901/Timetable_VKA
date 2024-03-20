@@ -1,5 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -32,49 +33,104 @@ namespace Timetable_VKA.DATA_SECTION
         DataTable dtt;
         MySqlDataAdapter daa;
         DataSet dss;
+
+
+        MySqlCommand command_reduc, command_classroms, command_lesson_sum;
+        DataTable dt_reduc, dt_classroms, dt_lesson_sum;
+        MySqlDataAdapter da_reduc, da_classroms, da_lesson_sum;
+        DataSet ds_reduc, ds_classroms, ds_lesson_sum;
+
         private void All_timetable_Load(object sender, EventArgs e)
         {
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             dataGridView1.AutoSizeRowsMode=DataGridViewAutoSizeRowsMode.AllCells;
             dataGridView1.Columns[2].DefaultCellStyle.Font = new Font("Times New Roman", 6);
-
-            
-
-            
-
             label3.Text = "Сформировано: 12.08.2023";
 
+            //////////////////////////////////////////////////////////////////////////////////////////////////
+            /*                       Получение данных из базы данных                      */
 
-            ////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-            /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-            command1 = new MySqlCommand("SELECT `Subjects_reduction` FROM `subjects_table`", db.getConnection());
+            List<string> all_subjects = new List<string> { "", "", "", "", "", "", "", "","","","","","","","","","" };
+            /*-------------------------------------------------------------------------------------------------------*/
+            command_reduc = new MySqlCommand("SELECT `Subjects_reduction` FROM `subjects_table`", db.getConnection());
             db.openConnection();
-            da = new MySqlDataAdapter(command1);
-            ds = new DataSet();
-            da.Fill(ds, "testTable");
-
+            da_reduc = new MySqlDataAdapter(command_reduc);
+            ds_reduc = new DataSet();
+            da_reduc.Fill(ds_reduc, "testTable");
             db.closeConnection();
-            dt = ds.Tables["testTable"];
-            //dataGridView2.DataSource = dt;
-            for (int i = 0; i < dt.Columns.Count-1; i++)
+            dt_reduc = ds_reduc.Tables["testTable"];
+
+            for(int i=0; i<dt_reduc.Rows.Count; i++)
             {
-                //dataGridView2[0, i].Value = dt.Columns[0].Rows[i].ToString();
+                all_subjects[i] = dt_reduc.Rows[i].ItemArray[0].ToString();
+                
+                
             }
 
-            /*-------------------------------------------------------------------------------*/
-            string[] pairs_ = { "first_pair", "second_pair", "third_pair", "fourth_pair" };
-            string[] lesson_time = { "", "", "", "" };
+            for(int i=0; i<all_subjects.Count; i++)
+            {
+                if (all_subjects[i] =="")all_subjects.RemoveAt(i);
+            }
+            /*--------------------------------------------------------------------------------------------------------*/
+            command_classroms = new MySqlCommand("SELECT `classroom_number` FROM `classroms`", db.getConnection());
+            db.openConnection();
+            da_classroms = new MySqlDataAdapter(command_classroms);
+            ds_classroms = new DataSet();
+            da_classroms.Fill(ds_classroms, "testTable");
+            db.closeConnection();
+            dt_classroms = ds_classroms.Tables["testTable"];
+
+            for (int i = 0; i < dt_classroms.Rows.Count; i++)
+            {
+                all_subjects[i] += dt_classroms.Rows[i].ItemArray[0].ToString();
+
+            }
+
+            ///////////////////////////////////////////////////////////////////////////////////////////////////
+            /*                                распределение расписаний                                     */
+
+            command_lesson_sum = new MySqlCommand("SELECT `lecture` FROM `lessons_sum`", db.getConnection());
+            db.openConnection();
+            da_lesson_sum = new MySqlDataAdapter(command_lesson_sum);
+            ds_lesson_sum = new DataSet();
+            da_lesson_sum.Fill(ds_lesson_sum, "testTable");
+            db.closeConnection();
+            dt_lesson_sum = ds_lesson_sum.Tables["testTable"];
+
+            List<string> subjects_lecture = new List<string> { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
+
+            for (int i = 0; i < dt_reduc.Rows.Count; i++)
+            {
+                subjects_lecture[i] = dt_lesson_sum.Rows[i].ItemArray[0].ToString();
+
+
+            }
+
+            for (int i = 0; i < subjects_lecture.Count; i++)
+            {
+                if (subjects_lecture[i] == "") subjects_lecture.RemoveAt(i);
+            }
+
+            List<int> subjetc_lecture_int = new List<int>(subjects_lecture.Count);
+
+
+            for (var i = 0; i < subjects_lecture.Count; i++)
+            {
+                subjetc_lecture_int.Add(int.Parse(subjects_lecture[i]));
+            }
+            /*-------------------------------------------------------------------------------------------*/
+
 
 
 
             //////////////////////////////////////////////////////////////////////////////////////////
-            
+
             /*                 Вставка рабочего времени                 */
-            
+
+            string[] pairs_ = { "first_pair", "second_pair", "third_pair", "fourth_pair" };
+            string[] lesson_time = { "", "", "", "" };
+
             for (int i=0; i<4; i++)
             {
                 command2 = new MySqlCommand("SELECT `"+pairs_[i]+"` FROM `working_hours_in_pairs`", db.getConnection());
