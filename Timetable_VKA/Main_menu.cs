@@ -120,5 +120,15 @@ namespace Timetable_VKA
         {
             new Classrooms().Show();
         }
+
+        private void занятияToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Lessons_menu().Show();
+        }
+
+        private void generate_timetable_btn_Click(object sender, EventArgs e)
+        {
+            new All_timetable().Show();
+        }
     }
 }

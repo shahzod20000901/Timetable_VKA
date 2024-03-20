@@ -69,7 +69,6 @@
             this.подгруппыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.занятияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.измененияПодзанятияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.зданияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.аудиторииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.всеОграниченияПоВремениToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ограниченияПоВремениToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -310,6 +309,7 @@
             this.timetable_students_btn = new System.Windows.Forms.Button();
             this.timetable_teachers_btn = new System.Windows.Forms.Button();
             this.timetable_create_btn = new System.Windows.Forms.Button();
+            this.generate_timetable_btn = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.main_file.SuspendLayout();
@@ -515,7 +515,6 @@
             this.военнослужащиеToolStripMenuItem,
             this.занятияToolStripMenuItem,
             this.измененияПодзанятияToolStripMenuItem,
-            this.зданияToolStripMenuItem,
             this.аудиторииToolStripMenuItem,
             this.всеОграниченияПоВремениToolStripMenuItem,
             this.ограниченияПоВремениToolStripMenuItem});
@@ -630,18 +629,13 @@
             this.занятияToolStripMenuItem.Name = "занятияToolStripMenuItem";
             this.занятияToolStripMenuItem.Size = new System.Drawing.Size(276, 22);
             this.занятияToolStripMenuItem.Text = "Занятия";
+            this.занятияToolStripMenuItem.Click += new System.EventHandler(this.занятияToolStripMenuItem_Click);
             // 
             // измененияПодзанятияToolStripMenuItem
             // 
             this.измененияПодзанятияToolStripMenuItem.Name = "измененияПодзанятияToolStripMenuItem";
             this.измененияПодзанятияToolStripMenuItem.Size = new System.Drawing.Size(276, 22);
             this.измененияПодзанятияToolStripMenuItem.Text = "Изменения подзанятии";
-            // 
-            // зданияToolStripMenuItem
-            // 
-            this.зданияToolStripMenuItem.Name = "зданияToolStripMenuItem";
-            this.зданияToolStripMenuItem.Size = new System.Drawing.Size(276, 22);
-            this.зданияToolStripMenuItem.Text = "Здания";
             // 
             // аудиторииToolStripMenuItem
             // 
@@ -2578,11 +2572,22 @@
             this.timetable_create_btn.Text = "Составить";
             this.timetable_create_btn.UseVisualStyleBackColor = true;
             // 
+            // generate_timetable_btn
+            // 
+            this.generate_timetable_btn.Location = new System.Drawing.Point(525, 384);
+            this.generate_timetable_btn.Name = "generate_timetable_btn";
+            this.generate_timetable_btn.Size = new System.Drawing.Size(236, 30);
+            this.generate_timetable_btn.TabIndex = 3;
+            this.generate_timetable_btn.Text = "Сгенерировать расписание";
+            this.generate_timetable_btn.UseVisualStyleBackColor = true;
+            this.generate_timetable_btn.Click += new System.EventHandler(this.generate_timetable_btn_Click);
+            // 
             // main_menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.generate_timetable_btn);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.menuStrip2);
@@ -2653,7 +2658,6 @@
         private System.Windows.Forms.ToolStripMenuItem подгруппыToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem занятияToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem измененияПодзанятияToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem зданияToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem аудиторииToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem всеОграниченияПоВремениToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ограниченияПоВремениToolStripMenuItem;
@@ -2894,6 +2898,7 @@
         private System.Windows.Forms.Button timetable_students_btn;
         private System.Windows.Forms.Button timetable_teachers_btn;
         private System.Windows.Forms.Button timetable_create_btn;
+        private System.Windows.Forms.Button generate_timetable_btn;
     }
 }
 

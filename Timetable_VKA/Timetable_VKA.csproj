@@ -75,6 +75,12 @@
     <Compile Include="DATA_SECTION\add_teacher_menu.Designer.cs">
       <DependentUpon>add_teacher_menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="DATA_SECTION\All_timetable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DATA_SECTION\All_timetable.Designer.cs">
+      <DependentUpon>All_timetable.cs</DependentUpon>
+    </Compile>
     <Compile Include="DATA_SECTION\Classrooms.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +104,12 @@
     </Compile>
     <Compile Include="DATA_SECTION\Groups.Designer.cs">
       <DependentUpon>Groups.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DATA_SECTION\Lessons_menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DATA_SECTION\Lessons_menu.Designer.cs">
+      <DependentUpon>Lessons_menu.cs</DependentUpon>
     </Compile>
     <Compile Include="DATA_SECTION\Subjects_form.cs">
       <SubType>Form</SubType>
@@ -156,6 +168,9 @@
     <EmbeddedResource Include="DATA_SECTION\add_teacher_menu.resx">
       <DependentUpon>add_teacher_menu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DATA_SECTION\All_timetable.resx">
+      <DependentUpon>All_timetable.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DATA_SECTION\Classrooms.resx">
       <DependentUpon>Classrooms.cs</DependentUpon>
     </EmbeddedResource>
@@ -167,6 +182,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DATA_SECTION\Groups.resx">
       <DependentUpon>Groups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DATA_SECTION\Lessons_menu.resx">
+      <DependentUpon>Lessons_menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DATA_SECTION\Subjects_form.resx">
       <DependentUpon>Subjects_form.cs</DependentUpon>
