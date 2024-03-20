@@ -35,17 +35,24 @@ namespace Timetable_VKA.DATA_SECTION
         DataSet dss;
 
 
-        MySqlCommand command_reduc, command_classroms, command_lesson_sum;
-        DataTable dt_reduc, dt_classroms, dt_lesson_sum;
-        MySqlDataAdapter da_reduc, da_classroms, da_lesson_sum;
-        DataSet ds_reduc, ds_classroms, ds_lesson_sum;
+        MySqlCommand command_reduc, command_classroms, command_lesson_sum, command_practic, command_con_work;
+        DataTable dt_reduc, dt_classroms, dt_lesson_sum, dt_practic, dt_con_work;
+        MySqlDataAdapter da_reduc, da_classroms, da_lesson_sum, da_practic, da_con_work;
+        DataSet ds_reduc, ds_classroms, ds_lesson_sum, ds_practic, ds_con_work;
 
         private void All_timetable_Load(object sender, EventArgs e)
         {
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             dataGridView1.AutoSizeRowsMode=DataGridViewAutoSizeRowsMode.AllCells;
+
+            for(int i=0; i<dataGridView1.Columns.Count; i++)
+            {
+                dataGridView1.Columns[i].DefaultCellStyle.Font = new Font("Times New Roman", 7);
+
+            }
             dataGridView1.Columns[2].DefaultCellStyle.Font = new Font("Times New Roman", 6);
+
             label3.Text = "Сформировано: 12.08.2023";
 
             //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -64,7 +71,7 @@ namespace Timetable_VKA.DATA_SECTION
             for(int i=0; i<dt_reduc.Rows.Count; i++)
             {
                 all_subjects[i] = dt_reduc.Rows[i].ItemArray[0].ToString();
-                
+                all_subjects[i] += "\t";
                 
             }
 
@@ -72,6 +79,8 @@ namespace Timetable_VKA.DATA_SECTION
             {
                 if (all_subjects[i] =="")all_subjects.RemoveAt(i);
             }
+
+            
             /*--------------------------------------------------------------------------------------------------------*/
             command_classroms = new MySqlCommand("SELECT `classroom_number` FROM `classroms`", db.getConnection());
             db.openConnection();
@@ -84,13 +93,18 @@ namespace Timetable_VKA.DATA_SECTION
             for (int i = 0; i < dt_classroms.Rows.Count; i++)
             {
                 all_subjects[i] += dt_classroms.Rows[i].ItemArray[0].ToString();
+                all_subjects[i] += "\tлек";
 
             }
 
-            ///////////////////////////////////////////////////////////////////////////////////////////////////
-            /*                                распределение расписаний                                     */
+            /*--------------------------------------------------------------------------------------------------------*/
+            /*                         получение кол. лекции практики и контрольных работ */
 
-            command_lesson_sum = new MySqlCommand("SELECT `lecture` FROM `lessons_sum`", db.getConnection());
+            List<int> subjects_lecture = new List<int> { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+            List<int> subjects_practic = new List<int> { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+            List<int> subjects_con_work = new List<int> { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+
+            command_lesson_sum = new MySqlCommand("SELECT `lectures` FROM `lessons_summary`", db.getConnection());
             db.openConnection();
             da_lesson_sum = new MySqlDataAdapter(command_lesson_sum);
             ds_lesson_sum = new DataSet();
@@ -98,28 +112,65 @@ namespace Timetable_VKA.DATA_SECTION
             db.closeConnection();
             dt_lesson_sum = ds_lesson_sum.Tables["testTable"];
 
-            List<string> subjects_lecture = new List<string> { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
 
             for (int i = 0; i < dt_reduc.Rows.Count; i++)
             {
-                subjects_lecture[i] = dt_lesson_sum.Rows[i].ItemArray[0].ToString();
+                subjects_lecture[i] = int.Parse(dt_lesson_sum.Rows[i].ItemArray[0].ToString());
 
 
             }
 
             for (int i = 0; i < subjects_lecture.Count; i++)
             {
-                if (subjects_lecture[i] == "") subjects_lecture.RemoveAt(i);
+                if (subjects_lecture[i] == 0) subjects_lecture.RemoveAt(i);
             }
 
-            List<int> subjetc_lecture_int = new List<int>(subjects_lecture.Count);
 
-
-            for (var i = 0; i < subjects_lecture.Count; i++)
-            {
-                subjetc_lecture_int.Add(int.Parse(subjects_lecture[i]));
-            }
             /*-------------------------------------------------------------------------------------------*/
+            command_practic = new MySqlCommand("SELECT `practic` FROM `lessons_summary`", db.getConnection());
+            db.openConnection();
+            da_practic = new MySqlDataAdapter(command_practic);
+            ds_practic = new DataSet();
+            da_practic.Fill(ds_practic, "testTable");
+            db.closeConnection();
+            dt_practic = ds_practic.Tables["testTable"];
+
+            
+            for (int i = 0; i < dt_practic.Rows.Count; i++)
+            {
+                subjects_practic[i] = int.Parse(dt_practic.Rows[i].ItemArray[0].ToString());
+
+
+            }
+
+            for (int i = 0; i < subjects_practic.Count; i++)
+            {
+                if (subjects_practic[i] == 0) subjects_practic.RemoveAt(i);
+            }
+
+            /*-------------------------------------------------------------------------------------------*/
+            command_con_work = new MySqlCommand("SELECT `control work` FROM `lessons_summary`", db.getConnection());
+            db.openConnection();
+            da_con_work = new MySqlDataAdapter(command_con_work);
+            ds_con_work = new DataSet();
+            da_con_work.Fill(ds_con_work, "testTable");
+            db.closeConnection();
+            dt_con_work = ds_con_work.Tables["testTable"];
+
+
+            for (int i = 0; i < dt_con_work.Rows.Count; i++)
+            {
+                subjects_con_work[i] = int.Parse(dt_con_work.Rows[i].ItemArray[0].ToString());
+
+
+            }
+
+            for (int i = 0; i < subjects_con_work.Count; i++)
+            {
+                if (subjects_con_work[i] == 0) subjects_con_work.RemoveAt(i);
+            }
+            ///////////////////////////////////////////////////////////////////////////////////////////////////////
+           
 
 
 
@@ -169,7 +220,7 @@ namespace Timetable_VKA.DATA_SECTION
                 DataGridViewRow row = new DataGridViewRow();
 
 
-                row.Height = 30;
+                row.Height = 45;
 
                 if (i==0 || i==1 || i==2 || i == 3 || i == 8 || i == 13 || i == 18 || i == 23 || i == 28 || i == 32)
                 {
@@ -254,9 +305,9 @@ namespace Timetable_VKA.DATA_SECTION
                     if (g == 4) g = 0;
                 }
 
-
+                
                 dataGridView1.Rows.Add(row);
-
+                
 
             }
 
@@ -289,7 +340,7 @@ namespace Timetable_VKA.DATA_SECTION
                         }
                         cell.Value = d.ToString();
 
-                        //row_date.Cells.AddRange(cell);
+                       
                         dataGridView1[i, m] = cell;
                         m = m + 4;
                         ++d;
@@ -300,64 +351,9 @@ namespace Timetable_VKA.DATA_SECTION
                 
 
             }
-
-            ///////////////////////////////////////////////////////////////////////////////////////////////////
-            
-            /*                           Вставка названия месяца               */
-
-            for (int i=4; i<dataGridView1.Columns.Count;i++)
-            {
-                
-                if(i>=4 && i<8)
-                {
-                    dataGridView1[i, 2].Style.BackColor = Color.Tan;
-                    dataGridView1[i, 2].Value = "Сентябрь";
-
-                }
-                if(i>=8 && i<12)
-                {
-                    dataGridView1[i, 2].Style.BackColor = Color.Aquamarine;
-                    dataGridView1[i, 2].Value = "Октябрь";
-
-                }
-                if (i>=12 && i < 16)
-                {
-                    dataGridView1[i, 2].Style.BackColor = Color.Blue;
-                    dataGridView1[i, 2].Value = "Ноябрь";
-
-                }
-
-                if (i>=16 && i < 21)
-                {
-                    dataGridView1[i, 2].Style.BackColor = Color.Brown;
-                    dataGridView1[i, 2].Value = "Декабрь";
-
-                }
-
-                if (i>=21 && i <26)
-                {
-                    dataGridView1[i, 2].Style.BackColor = Color.Azure;
-                    dataGridView1[i, 2].Value = "Январь";
-
-                }
-
-                if (i>=26 && i < 30)
-                {
-                    dataGridView1[i, 2].Style.BackColor = Color.Chocolate;
-                    dataGridView1[i, 2].Value = "Февраль";
-
-                }
-
-                
-
-            }
-
-
-            ///////////////////////////////////////////////////////////////////////////////////////////////////////
-            
             /*                            Закрашивание ячецки                   */
 
-            for(int i=0; i<dataGridView1.Columns.Count; i++)
+            for (int i = 0; i < dataGridView1.Columns.Count; i++)
             {
                 dataGridView1[i, 3].Style.BackColor = Color.Red;
                 dataGridView1[i, 8].Style.BackColor = Color.Red;
@@ -370,9 +366,109 @@ namespace Timetable_VKA.DATA_SECTION
 
             ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
+            dataGridView1.Rows.RemoveAt(32);
+            ////////////////////////////////////////////////////////////////////////////////////////////////////////
+            /*                                      распределение расписаний                             */
 
 
 
+
+            int subject = 0;
+                int summa = 0;
+            for(int r=0; r<all_subjects.Count; r++)
+            {
+                int column = 3;
+                int row__ = 24;
+                Random random = new Random();
+
+                
+                    for (int i = 0; i < subjects_lecture[summa] + subjects_practic[summa] + subjects_con_work[summa]; i++)
+                    {
+                    
+
+
+                        if (!(column>dataGridView1.Columns.Count))
+                        {
+
+                            if (dataGridView1[column, row__].Value==null)
+                            {
+                                 dataGridView1[column, row__].Value = all_subjects[subject].ToString();
+                     
+                            }
+                            else
+                            {
+                                 --i;
+                            }
+                        }
+
+                        ++column;
+                        row__ = random.Next(4, dataGridView1.Rows.Count);
+                    }
+                        ++summa;
+                        ++subject;
+            }
+            
+
+            ///////////////////////////////////////////////////////////////////////////////////////////////////
+
+            /*                           Вставка названия месяца               */
+
+            for (int i=4; i<dataGridView1.Columns.Count;i++)
+            {
+                
+                if(i>=4 && i<8)
+                {
+                    dataGridView1[i, 2].Style.BackColor = Color.Tan;
+                    dataGridView1[i, 2].Value = "Сен";
+
+                }
+                if(i>=8 && i<12)
+                {
+                    dataGridView1[i, 2].Style.BackColor = Color.Aquamarine;
+                    dataGridView1[i, 2].Value = "Октяб";
+
+                }
+                if (i>=12 && i < 16)
+                {
+                    dataGridView1[i, 2].Style.BackColor = Color.Blue;
+                    dataGridView1[i, 2].Value = "Нояб";
+
+                }
+
+                if (i>=16 && i < 21)
+                {
+                    dataGridView1[i, 2].Style.BackColor = Color.Brown;
+                    dataGridView1[i, 2].Value = "Декаб";
+
+                }
+
+                if (i>=21 && i <26)
+                {
+                    dataGridView1[i, 2].Style.BackColor = Color.Azure;
+                    dataGridView1[i, 2].Value = "Янв";
+
+                }
+
+                if (i>=26 && i < 30)
+                {
+                    dataGridView1[i, 2].Style.BackColor = Color.Chocolate;
+                    dataGridView1[i, 2].Value = "Февр";
+
+                }
+
+                
+
+            }
+
+
+            ///////////////////////////////////////////////////////////////////////////////////////////////////////
+            
+           
+
+
+           
+
+            
         }
        
         private void tabPage1_Click(object sender, EventArgs e)
@@ -382,7 +478,7 @@ namespace Timetable_VKA.DATA_SECTION
  
 
         }
-
+        
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             
