@@ -72,10 +72,13 @@ namespace Timetable_VKA.DATA_SECTION
         {
             this.Close();
         }
-        string[] Subjects = { "", "", "", "" };
-        int[] lecture = { 0,0,0,0 };
-        int[] seminar = { 0, 0, 0, 0 };
-        int[] control_work = { 0, 0, 0, 0 };
+        List<string> Subjects =new List<string>() { "", "", "", "","","","","","","","","","","","","","","","" };
+        
+        List<int> lecture =new List<int>() { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
+        List<int> seminar = new List<int>() { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+        List<int> control_work = new List<int>() { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+
+       
 
         private void ok_btn_Click(object sender, EventArgs e)
         {
@@ -92,7 +95,7 @@ namespace Timetable_VKA.DATA_SECTION
                 g = 1;
             db.closeConnection();
 
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < dataGridView1.Rows.Count-1; i++)
             {
 
                 Subjects[i] = dataGridView1.Rows[i].Cells[0].Value.ToString();
@@ -105,13 +108,33 @@ namespace Timetable_VKA.DATA_SECTION
 
                 control_work[i] = int.Parse(dataGridView1.Rows[i].Cells[3].Value.ToString());
 
-
-                
+                            
 
 
             }
 
-            for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
+            
+
+            for(int i=0; i<Subjects.LongCount(); i++)
+            {
+                if (Subjects[i]=="")Subjects.RemoveAt(i);
+            }
+
+            for (int i = 0; i < lecture.LongCount(); i++)
+            {
+                if (lecture[i] == 0) lecture.RemoveAt(i) ;
+            }
+            for (int i = 0; i < seminar.LongCount(); i++)
+            {
+                if (seminar[i] == 0) seminar.RemoveAt(i);
+            }
+            for (int i = 0; i < control_work.LongCount(); i++)
+            {
+                if (control_work[i] == 0) control_work.RemoveAt(i);
+            }
+
+
+            for (int i = 0; i < dataGridView1.Rows.Count-1; i++)
             {
 
 
@@ -146,7 +169,7 @@ namespace Timetable_VKA.DATA_SECTION
             }
 
 
-            MessageBox.Show("Данные загружены! ");
+            MessageBox.Show("Данные загружены! "+" Subjects="+Subjects.Count+" Lectures= "+lecture.Count+" seminar="+seminar.Count);
 
 
 

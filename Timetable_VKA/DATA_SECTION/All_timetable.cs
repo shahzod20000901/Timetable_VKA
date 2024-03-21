@@ -29,10 +29,10 @@ namespace Timetable_VKA.DATA_SECTION
         DataSet ds;
 
 
-        MySqlCommand command2;
-        DataTable dtt;
-        MySqlDataAdapter daa;
-        DataSet dss;
+        MySqlCommand command2, command_vuz_name;
+        DataTable dtt, dt_vuz_name;
+        MySqlDataAdapter daa, da_vuz_name;
+        DataSet dss, ds_vuz_name;
 
 
         MySqlCommand command_reduc, command_classroms, command_lesson_sum, command_practic, command_con_work;
@@ -46,14 +46,40 @@ namespace Timetable_VKA.DATA_SECTION
             this.MinimizeBox = false;
             dataGridView1.AutoSizeRowsMode=DataGridViewAutoSizeRowsMode.AllCells;
 
-            for(int i=0; i<dataGridView1.Columns.Count; i++)
+            /////////////////////////////////////////////////////////////////////////////////////////////
+            /*                         Получение название ВУЗа                                */
+
+            command_vuz_name = new MySqlCommand("SELECT `vuzName` FROM `vuzname`", db.getConnection());
+            db.openConnection();
+            da_vuz_name = new MySqlDataAdapter(command_vuz_name);
+            ds_vuz_name = new DataSet();
+            da_vuz_name.Fill(ds_vuz_name, "testTable");
+            db.closeConnection();
+            dt_vuz_name = ds_vuz_name.Tables["testTable"];
+            /*
+            string[] vuzname = { "", "" };
+
+            for (int i = 0; i < dt_vuz_name.Rows.Count; i++)
+            {
+                vuzname[i] = dt_vuz_name.Rows[i].ItemArray[0].ToString();
+                
+
+            }*/
+
+            label3.Text= dt_vuz_name.Rows[0].ItemArray[0].ToString();
+
+
+            ///////////////////////////////////////////////////////////////////////////////////////////
+
+
+            for (int i=0; i<dataGridView1.Columns.Count; i++)
             {
                 dataGridView1.Columns[i].DefaultCellStyle.Font = new Font("Times New Roman", 7);
 
             }
             dataGridView1.Columns[2].DefaultCellStyle.Font = new Font("Times New Roman", 6);
 
-            label3.Text = "Сформировано: 12.08.2023";
+           
 
             //////////////////////////////////////////////////////////////////////////////////////////////////
             /*                       Получение данных из базы данных                      */
@@ -113,7 +139,7 @@ namespace Timetable_VKA.DATA_SECTION
             dt_lesson_sum = ds_lesson_sum.Tables["testTable"];
 
 
-            for (int i = 0; i < dt_reduc.Rows.Count; i++)
+            for (int i = 0; i < dt_lesson_sum.Rows.Count; i++)
             {
                 subjects_lecture[i] = int.Parse(dt_lesson_sum.Rows[i].ItemArray[0].ToString());
 
