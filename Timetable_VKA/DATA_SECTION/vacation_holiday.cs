@@ -22,7 +22,7 @@ namespace Timetable_VKA.DATA_SECTION
             this.Close();
         }
 
-        private void vacation_holiday_Load(object sender, EventArgs e)
+        public void vacation_holiday_Load(object sender, EventArgs e)
         {
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -35,7 +35,7 @@ namespace Timetable_VKA.DATA_SECTION
 
            
 
-            for(int i=0; i<12;i++)
+            for(int i=0; i<7;i++)
             {
                 DataGridViewRow row = new DataGridViewRow();
                 dataGridView1.Rows.Add(row);
@@ -50,7 +50,7 @@ namespace Timetable_VKA.DATA_SECTION
 
         }
 
-        private void ok_btn_Click(object sender, EventArgs e)
+        public void ok_btn_Click(object sender, EventArgs e)
         {
             
 
@@ -61,34 +61,54 @@ namespace Timetable_VKA.DATA_SECTION
             DataBank.vac_mounth[1] = textBox4.Text.Substring(0, textBox4.Text.Length - 3);
 
 
-
-            for (int i = 0; i < dataGridView1.Columns.Count; i++)
+            for (int j = 0; j < dataGridView1.Rows.Count; j++)
             {
-                for (int j = 0; j < dataGridView1.Rows.Count; j++)
+                if (dataGridView1[0, j].Value == null)
                 {
-                    if (dataGridView1[i, j].Value == null) dataGridView1.Rows.RemoveAt(i);
+                    dataGridView1.Rows.RemoveAt(j);
 
                 }
-
             }
-            /*
-            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            MessageBox.Show(dataGridView1.Rows.Count.ToString());
+
+                int flag = 0;
+                for(int j=0; j<dataGridView1.Rows.Count; j++)
+                {
+                    if (dataGridView1[0, j].Value!=null)
+                    {
+                        DataBank.hol_day[flag] = dataGridView1[0, j].Value.ToString();
+                        DataBank.hol_mounth[flag] = dataGridView1[1, j].Value.ToString();
+                    flag++;
+
+                    }
+                }
+
+           
+
+            for (int j = 0; j < DataBank.hol_day.Count; j++)
             {
-               
-                dataGridView1[1, i].Value = dataGridView1[1, i].Value.ToString().Substring(0, dataGridView1[1, i].Value.ToString().Length - 3);
-
-
+                if (DataBank.hol_day[j]=="")DataBank.hol_day.RemoveAt(j);
             }
+
+
+           
+           
+
             
-            for (int i = 0; i < dataGridView1.Columns.Count; i++)
+            
+            for (int j = 0; j < 2; j++)
             {
-                for (int j = 0; j < dataGridView1.Rows.Count; j++)
-                {
-                    DataBank.dataGridView[i, j].Value = dataGridView1[i,j].ToString();
-                }
-
+                DataBank.hol_mounth[j] = DataBank.hol_mounth[j].Substring(0, DataBank.hol_mounth[j].Length - 3);
             }
-*/
+
+            MessageBox.Show(DataBank.hol_mounth[0]);
+            DataBank.hol_mounth[0] = "Нояб";
+            
+           
+
+
+           
+
             this.Close();
 
         }

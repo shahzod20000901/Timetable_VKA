@@ -178,11 +178,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn date;
         private System.Windows.Forms.DataGridViewTextBoxColumn mounth;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button ok_btn;
         private System.Windows.Forms.Button cancel_btn;
+        public System.Windows.Forms.DataGridView dataGridView1;
     }
 }

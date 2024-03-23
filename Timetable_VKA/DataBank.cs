@@ -39,6 +39,10 @@ namespace Timetable_VKA
 
         public static string[] vac_dates = { "", "" };
         public static string[] vac_mounth = { "", "" };
-        public static DataGridView dataGridView=new DataGridView();
+        
+        public static List<string> hol_day=new List<string>{"","","","","","","","","" };
+        public static List<string> hol_mounth=new List<string> {"","","","","","","","","" };
+        
+
     }
 }
