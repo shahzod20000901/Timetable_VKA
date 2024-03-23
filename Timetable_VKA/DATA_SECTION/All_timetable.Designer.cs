@@ -35,12 +35,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(All_timetable));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.group_name = new System.Windows.Forms.Label();
-            this.vuz_name = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.week = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,9 +66,14 @@
             this.Column27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.group_name = new System.Windows.Forms.Label();
+            this.faculty_name = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.vuz_name = new System.Windows.Forms.Label();
+            this.the_end_of_column = new System.Windows.Forms.Label();
+            this.the_end_of_row = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,11 +93,12 @@
             // tabPage1
             // 
             this.tabPage1.AutoScroll = true;
-            this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Controls.Add(this.dataGridView2);
+            this.tabPage1.Controls.Add(this.the_end_of_row);
+            this.tabPage1.Controls.Add(this.the_end_of_column);
+            this.tabPage1.Controls.Add(this.vuz_name);
             this.tabPage1.Controls.Add(this.dataGridView1);
             this.tabPage1.Controls.Add(this.group_name);
-            this.tabPage1.Controls.Add(this.vuz_name);
+            this.tabPage1.Controls.Add(this.faculty_name);
             this.tabPage1.Location = new System.Drawing.Point(4, 21);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
@@ -107,23 +108,6 @@
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(102, 15);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(29, 12);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "label3";
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(67, 568);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(744, 230);
-            this.dataGridView2.TabIndex = 4;
             // 
             // dataGridView1
             // 
@@ -171,7 +155,7 @@
             this.Column29});
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Times New Roman", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Times New Roman", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -183,39 +167,8 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 30;
             this.dataGridView1.RowTemplate.Height = 32;
-            this.dataGridView1.Size = new System.Drawing.Size(917, 534);
+            this.dataGridView1.Size = new System.Drawing.Size(917, 771);
             this.dataGridView1.TabIndex = 3;
-            // 
-            // group_name
-            // 
-            this.group_name.AutoSize = true;
-            this.group_name.Location = new System.Drawing.Point(415, 15);
-            this.group_name.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.group_name.Name = "group_name";
-            this.group_name.Size = new System.Drawing.Size(29, 12);
-            this.group_name.TabIndex = 2;
-            this.group_name.Text = "label2";
-            // 
-            // vuz_name
-            // 
-            this.vuz_name.AutoSize = true;
-            this.vuz_name.Location = new System.Drawing.Point(415, 0);
-            this.vuz_name.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.vuz_name.Name = "vuz_name";
-            this.vuz_name.Size = new System.Drawing.Size(29, 12);
-            this.vuz_name.TabIndex = 1;
-            this.vuz_name.Text = "label1";
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 21);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage2.Size = new System.Drawing.Size(926, 807);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // week
             // 
@@ -432,6 +385,64 @@
             this.Column29.Name = "Column29";
             this.Column29.Width = 30;
             // 
+            // group_name
+            // 
+            this.group_name.AutoSize = true;
+            this.group_name.Location = new System.Drawing.Point(660, 14);
+            this.group_name.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.group_name.Name = "group_name";
+            this.group_name.Size = new System.Drawing.Size(52, 12);
+            this.group_name.TabIndex = 2;
+            this.group_name.Text = "group_name";
+            // 
+            // faculty_name
+            // 
+            this.faculty_name.AutoSize = true;
+            this.faculty_name.Location = new System.Drawing.Point(660, 2);
+            this.faculty_name.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.faculty_name.Name = "faculty_name";
+            this.faculty_name.Size = new System.Drawing.Size(55, 12);
+            this.faculty_name.TabIndex = 1;
+            this.faculty_name.Text = "faculty_name";
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 21);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage2.Size = new System.Drawing.Size(926, 807);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // vuz_name
+            // 
+            this.vuz_name.AutoSize = true;
+            this.vuz_name.Location = new System.Drawing.Point(102, 15);
+            this.vuz_name.Name = "vuz_name";
+            this.vuz_name.Size = new System.Drawing.Size(43, 12);
+            this.vuz_name.TabIndex = 5;
+            this.vuz_name.Text = "vuz_name";
+            // 
+            // the_end_of_column
+            // 
+            this.the_end_of_column.AutoSize = true;
+            this.the_end_of_column.Location = new System.Drawing.Point(510, 2);
+            this.the_end_of_column.Name = "the_end_of_column";
+            this.the_end_of_column.Size = new System.Drawing.Size(52, 12);
+            this.the_end_of_column.TabIndex = 6;
+            this.the_end_of_column.Text = "end_column";
+            // 
+            // the_end_of_row
+            // 
+            this.the_end_of_row.AutoSize = true;
+            this.the_end_of_row.Location = new System.Drawing.Point(512, 15);
+            this.the_end_of_row.Name = "the_end_of_row";
+            this.the_end_of_row.Size = new System.Drawing.Size(39, 12);
+            this.the_end_of_row.TabIndex = 7;
+            this.the_end_of_row.Text = "end_row";
+            // 
             // All_timetable
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -447,7 +458,6 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -459,10 +469,8 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label group_name;
-        private System.Windows.Forms.Label vuz_name;
+        private System.Windows.Forms.Label faculty_name;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridViewTextBoxColumn week;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -493,5 +501,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column27;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column28;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column29;
+        private System.Windows.Forms.Label vuz_name;
+        private System.Windows.Forms.Label the_end_of_column;
+        private System.Windows.Forms.Label the_end_of_row;
     }
 }

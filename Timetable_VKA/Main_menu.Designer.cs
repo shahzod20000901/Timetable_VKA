@@ -68,7 +68,7 @@
             this.группыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.подгруппыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.занятияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.измененияПодзанятияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.vacation_holiday = new System.Windows.Forms.ToolStripMenuItem();
             this.аудиторииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.всеОграниченияПоВремениToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ограниченияПоВремениToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -514,7 +514,7 @@
             this.преподователиToolStripMenuItem,
             this.военнослужащиеToolStripMenuItem,
             this.занятияToolStripMenuItem,
-            this.измененияПодзанятияToolStripMenuItem,
+            this.vacation_holiday,
             this.аудиторииToolStripMenuItem,
             this.всеОграниченияПоВремениToolStripMenuItem,
             this.ограниченияПоВремениToolStripMenuItem});
@@ -631,11 +631,12 @@
             this.занятияToolStripMenuItem.Text = "Занятия";
             this.занятияToolStripMenuItem.Click += new System.EventHandler(this.занятияToolStripMenuItem_Click);
             // 
-            // измененияПодзанятияToolStripMenuItem
+            // vacation_holiday
             // 
-            this.измененияПодзанятияToolStripMenuItem.Name = "измененияПодзанятияToolStripMenuItem";
-            this.измененияПодзанятияToolStripMenuItem.Size = new System.Drawing.Size(276, 22);
-            this.измененияПодзанятияToolStripMenuItem.Text = "Изменения подзанятии";
+            this.vacation_holiday.Name = "vacation_holiday";
+            this.vacation_holiday.Size = new System.Drawing.Size(276, 22);
+            this.vacation_holiday.Text = "Другие мероприятия";
+            this.vacation_holiday.Click += new System.EventHandler(this.vacation_holiday_Click);
             // 
             // аудиторииToolStripMenuItem
             // 
@@ -2657,7 +2658,7 @@
         private System.Windows.Forms.ToolStripMenuItem группыToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem подгруппыToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem занятияToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem измененияПодзанятияToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem vacation_holiday;
         private System.Windows.Forms.ToolStripMenuItem аудиторииToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem всеОграниченияПоВремениToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ограниченияПоВремениToolStripMenuItem;

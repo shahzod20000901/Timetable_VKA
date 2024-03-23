@@ -56,17 +56,9 @@ namespace Timetable_VKA.DATA_SECTION
             da_vuz_name.Fill(ds_vuz_name, "testTable");
             db.closeConnection();
             dt_vuz_name = ds_vuz_name.Tables["testTable"];
-            /*
-            string[] vuzname = { "", "" };
+            
 
-            for (int i = 0; i < dt_vuz_name.Rows.Count; i++)
-            {
-                vuzname[i] = dt_vuz_name.Rows[i].ItemArray[0].ToString();
-                
-
-            }*/
-
-            label3.Text= dt_vuz_name.Rows[0].ItemArray[0].ToString();
+            vuz_name.Text= dt_vuz_name.Rows[0].ItemArray[0].ToString();
 
 
             ///////////////////////////////////////////////////////////////////////////////////////////
@@ -392,49 +384,7 @@ namespace Timetable_VKA.DATA_SECTION
 
             ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
-            dataGridView1.Rows.RemoveAt(32);
-            ////////////////////////////////////////////////////////////////////////////////////////////////////////
-            /*                                      распределение расписаний                             */
-
-
-
-
-            int subject = 0;
-                int summa = 0;
-            for(int r=0; r<all_subjects.Count; r++)
-            {
-                int column = 3;
-                int row__ = 24;
-                Random random = new Random();
-
-                
-                    for (int i = 0; i < subjects_lecture[summa] + subjects_practic[summa] + subjects_con_work[summa]; i++)
-                    {
-                    
-
-
-                        if (!(column>dataGridView1.Columns.Count))
-                        {
-
-                            if (dataGridView1[column, row__].Value==null)
-                            {
-                                 dataGridView1[column, row__].Value = all_subjects[subject].ToString();
-                     
-                            }
-                            else
-                            {
-                                 --i;
-                            }
-                        }
-
-                        ++column;
-                        row__ = random.Next(4, dataGridView1.Rows.Count);
-                    }
-                        ++summa;
-                        ++subject;
-            }
             
-
             ///////////////////////////////////////////////////////////////////////////////////////////////////
 
             /*                           Вставка названия месяца               */
@@ -445,13 +395,13 @@ namespace Timetable_VKA.DATA_SECTION
                 if(i>=4 && i<8)
                 {
                     dataGridView1[i, 2].Style.BackColor = Color.Tan;
-                    dataGridView1[i, 2].Value = "Сен";
+                    dataGridView1[i, 2].Value = "Сент";
 
                 }
                 if(i>=8 && i<12)
                 {
                     dataGridView1[i, 2].Style.BackColor = Color.Aquamarine;
-                    dataGridView1[i, 2].Value = "Октяб";
+                    dataGridView1[i, 2].Value = "Октя";
 
                 }
                 if (i>=12 && i < 16)
@@ -464,14 +414,14 @@ namespace Timetable_VKA.DATA_SECTION
                 if (i>=16 && i < 21)
                 {
                     dataGridView1[i, 2].Style.BackColor = Color.Brown;
-                    dataGridView1[i, 2].Value = "Декаб";
+                    dataGridView1[i, 2].Value = "Дека";
 
                 }
 
                 if (i>=21 && i <26)
                 {
                     dataGridView1[i, 2].Style.BackColor = Color.Azure;
-                    dataGridView1[i, 2].Value = "Янв";
+                    dataGridView1[i, 2].Value = "Янва";
 
                 }
 
@@ -488,15 +438,178 @@ namespace Timetable_VKA.DATA_SECTION
 
 
             ///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+            ////////////////////////////////////////////////////////////////////////////////////////////////////////
+            /*                                            Вставка отпуска и праздников                                   */
+            int vac_start_column = 0;
+            int vac_start_row = 0;
+
+            int vac_end_column = 0;
+            int vac_end_row = 0;
+
+            /*----------------------------------- Определение началы даты  ------------------------------------------------------------*/
+            for (int i = 4; i < dataGridView1.Columns.Count; i++)
+            {
+                int loc = 2;
+
+                if (dataGridView1[i, loc].Value != null)
+                {
+                    if (dataGridView1[i, loc].Value.ToString().ToLower() == DataBank.vac_mounth[0].ToLower())
+                    {
+                        ++loc;
+
+
+                        for (; loc < dataGridView1.Rows.Count; loc++)
+                        {
+                            if (dataGridView1[i, loc].Value != null)
+                            {
+                                if (dataGridView1[i, loc].Value.ToString().ToLower() == DataBank.vac_dates[0].ToLower())
+                                {
+                                    vac_start_column = i;
+                                    vac_start_row = loc;
+
+
+                                }
+                            }
+
+
+                        }
+
+                    }
+                }
+
+
+            }
+            faculty_name.Text = vac_start_column.ToString();
+            group_name.Text = vac_start_row.ToString();
+
+            /*----------------------------------- Определение конец даты  ------------------------------------------------------------*/
+
+            for (int i = 4; i < dataGridView1.Columns.Count; i++)
+            {
+                int loc = 2;
+
+                if (dataGridView1[i, loc].Value != null)
+                {
+                    if (dataGridView1[i, loc].Value.ToString().ToLower() == DataBank.vac_mounth[1].ToLower())
+                    {
+                        ++loc;
+
+
+                        for (; loc < dataGridView1.Rows.Count; loc++)
+                        {
+                            if (dataGridView1[i, loc].Value != null)
+                            {
+                                if (dataGridView1[i, loc].Value.ToString().ToLower() == DataBank.vac_dates[1].ToLower())
+                                {
+                                    vac_end_column = i;
+                                    vac_end_row = loc;
+
+
+                                }
+                            }
+
+
+                        }
+
+                    }
+                }
+
+
+            }
+            the_end_of_column.Text = vac_end_column.ToString();
+            the_end_of_row.Text = vac_end_row.ToString();   
+
+            /* --------------------------------- Вставка выходных ------------------------------------------------- */
+            for (; vac_start_column <= vac_end_column; vac_start_column++)
+            {
+                if (vac_start_column < vac_end_column)
+                {
+                    for (; vac_start_row <= dataGridView1.Rows.Count-1; vac_start_row++)
+                    {
+                        if (dataGridView1[vac_start_column, vac_start_row].Value == null)
+                        {
+                            dataGridView1[vac_start_column, vac_start_row].Value = "Вых";
+                            dataGridView1[vac_start_column, vac_start_row].Style.BackColor =Color.DarkGray;
+                            
+                        }
+                    }
+                    vac_start_row = 4;
+                }
+                
+                 if (vac_start_column == vac_end_column)
+                {
+                    for (; vac_start_row <= vac_end_row+4; vac_start_row++)
+                    {
+                        if (dataGridView1[vac_start_column, vac_start_row].Value == null)
+                        {
+                            dataGridView1[vac_start_column, vac_start_row].Value = "Вых";
+                            dataGridView1[vac_start_column, vac_start_row].Style.BackColor = Color.DarkGray;
+                        }
+                    }
+                }
+                
+            }
+
             
-           
 
 
-           
+            ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            ///
+            dataGridView1.Rows.RemoveAt(32);
 
-            
+            ////////////////////////////////////////////////////////////////////////////////////////////////////////
+            /*                                      распределение расписаний                             */
+
+
+
+
+            int subject = 0;
+            int summa = 0;
+            for (int r = 0; r < all_subjects.Count; r++)
+            {
+                int column = 3;
+                int row__ = 24;
+                Random random = new Random();
+
+
+                for (int i = 0; i < subjects_lecture[summa] + subjects_practic[summa] + subjects_con_work[summa]; i++)
+                {
+
+
+
+                    if (!(column > dataGridView1.Columns.Count))
+                    {
+
+                        if (dataGridView1[column, row__].Value == null)
+                        {
+                            dataGridView1[column, row__].Value = all_subjects[subject].ToString();
+
+                        }
+                        else
+                        {
+                            --i;
+                        }
+                    }
+
+                    ++column;
+                    row__ = random.Next(4, dataGridView1.Rows.Count);
+                }
+                ++summa;
+                ++subject;
+            }
+
+
+
+
+
+
+
+
+
         }
-       
+
         private void tabPage1_Click(object sender, EventArgs e)
         {
            

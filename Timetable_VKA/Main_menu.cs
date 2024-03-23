@@ -130,5 +130,10 @@ namespace Timetable_VKA
         {
             new All_timetable().Show();
         }
+
+        private void vacation_holiday_Click(object sender, EventArgs e)
+        {
+            new vacation_holiday().Show();
+        }
     }
 }

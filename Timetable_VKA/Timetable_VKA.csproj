@@ -117,6 +117,12 @@
     <Compile Include="DATA_SECTION\Subjects_form.Designer.cs">
       <DependentUpon>Subjects_form.cs</DependentUpon>
     </Compile>
+    <Compile Include="DATA_SECTION\vacation_holiday.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DATA_SECTION\vacation_holiday.Designer.cs">
+      <DependentUpon>vacation_holiday.cs</DependentUpon>
+    </Compile>
     <Compile Include="DATA_SECTION\Vuz_name.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,6 +194,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DATA_SECTION\Subjects_form.resx">
       <DependentUpon>Subjects_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DATA_SECTION\vacation_holiday.resx">
+      <DependentUpon>vacation_holiday.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DATA_SECTION\Vuz_name.resx">
       <DependentUpon>Vuz_name.cs</DependentUpon>

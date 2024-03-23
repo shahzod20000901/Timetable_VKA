@@ -36,5 +36,9 @@ namespace Timetable_VKA
         public static string edit_group = "";
         public static string edit_department = "";
         public static string edit_faculty = "";
+
+        public static string[] vac_dates = { "", "" };
+        public static string[] vac_mounth = { "", "" };
+        public static DataGridView dataGridView=new DataGridView();
     }
 }
