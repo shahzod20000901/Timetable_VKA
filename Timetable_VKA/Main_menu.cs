@@ -133,7 +133,7 @@ namespace Timetable_VKA
 
         private void vacation_holiday_Click(object sender, EventArgs e)
         {
-            new vacation_holiday().Show();
+            new vacation_holiday_pratice().Show();
         }
     }
 }

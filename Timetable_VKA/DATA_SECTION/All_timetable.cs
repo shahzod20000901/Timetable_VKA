@@ -439,7 +439,114 @@ namespace Timetable_VKA.DATA_SECTION
 
             ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
+            /*                                      Вставка стажировки                                         */
+            int vac_start_column_p = 0;
+            int vac_start_row_p = 0;
 
+            int vac_end_column_p = 0;
+            int vac_end_row_p = 0;
+
+            /*----------------------------------- Определение началы даты стажировки ------------------------------------------------------------*/
+            for (int i = 4; i < dataGridView1.Columns.Count; i++)
+            {
+                int loc = 2;
+
+                if (dataGridView1[i, loc].Value != null)
+                {
+                    if (dataGridView1[i, loc].Value.ToString().ToLower() == DataBank.practic_mounth[0].ToLower())
+                    {
+                        ++loc;
+
+
+                        for (; loc < dataGridView1.Rows.Count; loc++)
+                        {
+                            if (dataGridView1[i, loc].Value != null)
+                            {
+                                if (dataGridView1[i, loc].Value.ToString().ToLower() == DataBank.practic_dates[0].ToLower())
+                                {
+                                    vac_start_column_p = i;
+                                    vac_start_row_p = loc;
+
+
+                                }
+                            }
+
+
+                        }
+
+                    }
+                }
+
+
+            }
+
+            /*----------------------------------- Определение конец даты стажировки ------------------------------------------------------------*/
+
+            for (int i = 4; i < dataGridView1.Columns.Count; i++)
+            {
+                int loc = 2;
+
+                if (dataGridView1[i, loc].Value != null)
+                {
+                    if (dataGridView1[i, loc].Value.ToString().ToLower() == DataBank.practic_mounth[1].ToLower())
+                    {
+                        ++loc;
+
+
+                        for (; loc < dataGridView1.Rows.Count; loc++)
+                        {
+                            if (dataGridView1[i, loc].Value != null)
+                            {
+                                if (dataGridView1[i, loc].Value.ToString().ToLower() == DataBank.practic_dates[1].ToLower())
+                                {
+                                    vac_end_column_p = i;
+                                    vac_end_row_p = loc;
+
+
+                                }
+                            }
+
+
+                        }
+
+                    }
+                }
+
+
+            }
+
+            /* --------------------------------- Вставка стажировки ------------------------------------------------- */
+            for (; vac_start_column_p <= vac_end_column_p; vac_start_column_p++)
+            {
+                if (vac_start_column_p < vac_end_column_p)
+                {
+                    for (; vac_start_row_p <= dataGridView1.Rows.Count - 1; vac_start_row_p++)
+                    {
+                        if (dataGridView1[vac_start_column_p, vac_start_row_p].Value == null)
+                        {
+                            dataGridView1[vac_start_column_p, vac_start_row_p].Value = "Стаж";
+                            dataGridView1[vac_start_column_p, vac_start_row_p].Style.BackColor = Color.DarkOrange;
+
+                        }
+                    }
+                    vac_start_row_p = 4;
+                }
+
+                if (vac_start_column_p == vac_end_column_p)
+                {
+                    for (; vac_start_row_p <= vac_end_row_p + 4; vac_start_row_p++)
+                    {
+                        if (dataGridView1[vac_start_column_p, vac_start_row_p].Value == null)
+                        {
+                            dataGridView1[vac_start_column_p, vac_start_row_p].Value = "Стаж";
+                            dataGridView1[vac_start_column_p, vac_start_row_p].Style.BackColor = Color.DarkOrange;
+                        }
+                    }
+                }
+
+            }
+
+            ////////////////////////////////////////////////////////////////////////////////////////////////////////
             ////////////////////////////////////////////////////////////////////////////////////////////////////////
             /*                                            Вставка отпуска                                  */
             int vac_start_column = 0;
@@ -481,8 +588,7 @@ namespace Timetable_VKA.DATA_SECTION
 
 
             }
-            faculty_name.Text = vac_start_column.ToString();
-            group_name.Text = vac_start_row.ToString();
+           
 
             /*----------------------------------- Определение конец даты  ------------------------------------------------------------*/
 
@@ -518,8 +624,7 @@ namespace Timetable_VKA.DATA_SECTION
 
 
             }
-            the_end_of_column.Text = vac_end_column.ToString();
-            the_end_of_row.Text = vac_end_row.ToString();   
+            
 
             /* --------------------------------- Вставка отпусков ------------------------------------------------- */
             for (; vac_start_column <= vac_end_column; vac_start_column++)

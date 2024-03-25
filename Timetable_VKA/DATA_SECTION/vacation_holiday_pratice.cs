@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Timetable_VKA.DATA_SECTION
 {
-    public partial class vacation_holiday : Form
+    public partial class vacation_holiday_pratice : Form
     {
-        public vacation_holiday()
+        public vacation_holiday_pratice()
         {
             InitializeComponent();
         }
@@ -26,15 +26,20 @@ namespace Timetable_VKA.DATA_SECTION
         {
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-
+            ///////////////////////////////////////////////// вставка значения отпуска //////////////////////////////////
             textBox1.Text = "27";
             textBox2.Text = "декабря";
             textBox3.Text = "10";
             textBox4.Text = "январья";
 
+            //////////////////////////////////////////////////   вставка значения стажировки ////////////////////////////////
 
+            textBox5.Text = "11";
+            textBox6.Text = "декабря";
+            textBox7.Text = "15";
+            textBox8.Text = "декабря";
            
-
+            //////////////////////////////////////////////////  вставка значения праздников //////////////////////////////////
             for(int i=0; i<10;i++)
             {
                 DataGridViewRow row = new DataGridViewRow();
@@ -61,6 +66,14 @@ namespace Timetable_VKA.DATA_SECTION
             DataBank.vac_mounth[1] = textBox4.Text.Substring(0, textBox4.Text.Length - 3);
 
 
+            DataBank.practic_dates[0] = textBox5.Text;
+            DataBank.practic_dates[1]=textBox7.Text;
+
+            DataBank.practic_mounth[0]=textBox6.Text.Substring(0, textBox6.Text.Length - 3);
+            DataBank.practic_mounth[1]=textBox8.Text.Substring(0, textBox8.Text.Length - 3);
+
+
+
             for(int i=0; i<dataGridView1.Columns.Count; i++)
             {
                 for(int j=0; j<dataGridView1.Rows.Count; j++)
@@ -85,12 +98,7 @@ namespace Timetable_VKA.DATA_SECTION
                 }
             }
             
-            /*
-            for(int i=0; i<dataGridView1.Rows.Count;i++)
-            {
-                if (dataGridView1[0,i].Value==null)dataGridView1.Rows.RemoveAt(i);
-            }
-            */
+            
             for (int i = 0; i < dataGridView1.Rows.Count; i++)
             {
                 if (dataGridView1[0, i].Value != null)
@@ -101,12 +109,7 @@ namespace Timetable_VKA.DATA_SECTION
                 
             }
 
-            /*
-            DataBank.hol_day[0] = "4";
-            DataBank.hol_day[1] = "23";
-            DataBank.hol_mounth[0] = "Нояб";
-            DataBank.hol_mounth[1] = "Февр";
-           */
+           
 
             this.Close();
 

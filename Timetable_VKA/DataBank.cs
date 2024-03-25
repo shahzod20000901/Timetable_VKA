@@ -39,6 +39,11 @@ namespace Timetable_VKA
 
         public static string[] vac_dates = { "", "" };
         public static string[] vac_mounth = { "", "" };
+
+        public static string[] practic_dates = { "", "" };
+        public static string[] practic_mounth = { "", "" };
+
+
         
         public static List<string> hol_day=new List<string>{"","","","","","","","","" };
         public static List<string> hol_mounth=new List<string> {"","","","","","","","","" };
