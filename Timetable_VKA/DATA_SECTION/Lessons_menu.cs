@@ -66,6 +66,14 @@ namespace Timetable_VKA.DATA_SECTION
             dataGridView1.Columns.Add(control_cln);
 
             dataGridView1.Columns[0].Width = 200;
+            Random random = new Random();
+            for(int m=1; m<dataGridView1.Columns.Count; m++)
+            {
+                for(int n=0; n<dataGridView1.Rows.Count-1; n++)
+                {
+                    dataGridView1[m, n].Value = random.Next(3, 10);
+                }
+            }
         }
 
         private void cancel_btn_Click(object sender, EventArgs e)
@@ -145,47 +153,59 @@ namespace Timetable_VKA.DATA_SECTION
                 if (id[i] == 0) id.RemoveAt(i);
             }
 
-            for (int i = 0; i < dataGridView1.Rows.Count-1; i++)
+            int summa = 0;
+            for(int i=0; i<lecture.LongCount(); i++)
             {
-
-
-
-                command1 = new MySqlCommand("INSERT INTO `lessons_summary` (`id`, `Subjects`, `lectures`,`practic`,`control work`) VALUES(@log, @log" + i +", @log" + i + 1+", @log" + i + 2 + ", @log" + i + 3 + ")", db.getConnection());
-
-                command1.Parameters.Add("@log", MySqlDbType.VarChar).Value = id[i];
-                command1.Parameters.Add("@log" + i + "", MySqlDbType.VarChar).Value = Subjects[i];
-
-                command1.Parameters.Add("@log" + i + 1+"", MySqlDbType.Int32).Value = lecture[i];
-
-                command1.Parameters.Add("@log" + i + 2 + "", MySqlDbType.Int32).Value = seminar[i];
-                command1.Parameters.Add("@log" + i + 3 + "", MySqlDbType.Int32).Value = control_work[i];
-                
-
-
-
-
-
-
-
-                db.openConnection();
-
-
-                if (command1.ExecuteNonQuery() == 1)
-                    d = 1;
-
-                else
-                    d = 0;
-
-                db.closeConnection();
-
+                summa+= lecture[i];
+                summa+= seminar[i];
+                summa+= control_work[i];
             }
 
+            if(summa>300)
+            {
+                MessageBox.Show("Сумма всех занятий не должен превышать выше 400 пар");
+            }
+            else
+            {
+                for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
+                {
 
-            MessageBox.Show("Данные загружены! "+" Subjects="+Subjects.Count+" Lectures= "+lecture.Count+" seminar="+seminar.Count);
+
+
+                    command1 = new MySqlCommand("INSERT INTO `lessons_summary` (`id`, `Subjects`, `lectures`,`practic`,`control work`) VALUES(@log, @log" + i + ", @log" + i + 1 + ", @log" + i + 2 + ", @log" + i + 3 + ")", db.getConnection());
+
+                    command1.Parameters.Add("@log", MySqlDbType.VarChar).Value = id[i];
+                    command1.Parameters.Add("@log" + i + "", MySqlDbType.VarChar).Value = Subjects[i];
+
+                    command1.Parameters.Add("@log" + i + 1 + "", MySqlDbType.Int32).Value = lecture[i];
+
+                    command1.Parameters.Add("@log" + i + 2 + "", MySqlDbType.Int32).Value = seminar[i];
+                    command1.Parameters.Add("@log" + i + 3 + "", MySqlDbType.Int32).Value = control_work[i];
 
 
 
-            this.Close();
+
+
+
+
+
+                    db.openConnection();
+
+
+                    if (command1.ExecuteNonQuery() == 1)
+                        d = 1;
+
+                    else
+                        d = 0;
+
+                    db.closeConnection();
+
+                }
+
+                this.Close();
+            }
+
+           
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -128,10 +128,83 @@ namespace Timetable_VKA
 
         private void generate_timetable_btn_Click(object sender, EventArgs e)
         {
-            new All_timetable().Show();
+            new All_timetable();
+            MessageBox.Show("Генерация выполнено!!!");
+
         }
 
         private void vacation_holiday_Click(object sender, EventArgs e)
+        {
+            new vacation_holiday_pratice().Show();
+        }
+
+        private void data_subject_btn_Click(object sender, EventArgs e)
+        {
+            Subjects_form form = new Subjects_form();
+            form.Show();
+        }
+
+        private void data_students_btn_Click(object sender, EventArgs e)
+        {
+            new Groups().Show();
+        }
+
+        private void data_teachers_btn_Click(object sender, EventArgs e)
+        {
+            add_teachers_form form = new add_teachers_form();
+            form.Show();
+        }
+
+        private void data_class_btn_Click(object sender, EventArgs e)
+        {
+            new Classrooms().Show();
+        }
+
+        private void data_lessons_btn_Click(object sender, EventArgs e)
+        {
+            new Lessons_menu().Show();
+        }
+
+        private void ogr_timeout_btn_Click(object sender, EventArgs e)
+        {
+            working_hours_per_day form = new working_hours_per_day();
+            form.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Work_day_of_week form = new Work_day_of_week();
+            form.Show();
+        }
+
+        private void информацияОбУчебномЗаведенииToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Vuz_name newForm = new Vuz_name();
+            newForm.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            working_hours_per_day form = new working_hours_per_day();
+            form.Show();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            new Groups().Show();
+        }
+
+        private void просмотрпоГруппамToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new All_timetable().Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
         {
             new vacation_holiday_pratice().Show();
         }

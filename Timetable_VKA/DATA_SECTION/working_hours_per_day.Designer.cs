@@ -48,7 +48,6 @@
             this.thursday = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.friday = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.saturday = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -219,22 +218,11 @@
             this.saturday.Name = "saturday";
             this.saturday.Width = 130;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label6.Location = new System.Drawing.Point(249, 224);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(368, 15);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "Ячейки не должны оставаться пустыми. Если пары нет то введите:  \" - \"";
-            // 
             // working_hours_per_day
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(851, 386);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
@@ -283,6 +271,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn friday;
         private System.Windows.Forms.DataGridViewTextBoxColumn saturday;
         public System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label6;
     }
 }

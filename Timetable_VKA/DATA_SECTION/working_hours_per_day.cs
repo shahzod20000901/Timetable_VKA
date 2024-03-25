@@ -110,7 +110,13 @@ namespace Timetable_VKA.DATA_SECTION
 
             int g;
 
-
+            for(int i=0; i<dataGridView1.Columns.Count; i++)
+            {
+                for(int r=0; r<dataGridView1.Rows.Count; r++)
+                {
+                    if (dataGridView1[i, r].Value == null) dataGridView1[i,r].Value = "-";
+                }
+            }
 
             DB db = new DB();
 
@@ -221,7 +227,7 @@ namespace Timetable_VKA.DATA_SECTION
             }
 
 
-            MessageBox.Show("Данные загружены! ");
+           
 
 
 

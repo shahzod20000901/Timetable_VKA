@@ -56,141 +56,23 @@
             this.информацияОбУчебномЗаведенииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.названиеУчебногоЗаведенияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.коментарииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.периодыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.дниНеделиИРасписаниеЗвонковToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.дниНеделиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.расписаниеЗвонковToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.дисциплиныToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.видыЗанятийToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.преподователиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.военнослужащиеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.потокиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.группыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.подгруппыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.занятияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vacation_holiday = new System.Windows.Forms.ToolStripMenuItem();
             this.аудиторииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.всеОграниченияПоВремениToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ограниченияПоВремениToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.прочиеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.основноеОбязательноеОграниченияПоВремениToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.перерывToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.преподователиToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.преподователь1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.доступностьПреподователейToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.максимумДнейВНеделюДляПреподователяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.максимумУтреннихСменВНеделюДляПреподователяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.максимумВечернихСменВНеделюДляПреподователяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.преподовательРаботаетМаксимумТриДняПодрядToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.преподовательРаботаетМаксимумДваУтраПодрядToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.преподовательРаботаетМаксимумДваВечераПодрядToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.минимумДнейДляПреподователяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.минимумРеальныхДнейВНеделюДляПреподователяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.минимумУтреннихСменВНеделюДляПреподователяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.минимумВечернихСменВНеделюДляПреподователяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.максимумОконВДеньДляПреподователяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.максимумОконУтромвечеромДляПреподователяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.максимумОконВНеделюДляПреподователяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.максимумОконВНеделюДляРеальныхДнейДляПреподователяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.максимумНулевыхПерерывовВВечеромДляПреподователяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.преподователь2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.максимумПарВДеньДляПреподователяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.максиумПарВРеальныйДеньДляПреподователяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.максимумПромежутокВДеньДляПреподователяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.максимумПромежутковВРеальныйДеньДляПреподователяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.максимумПарОпределённогоВидаВРеальныйДеньДляПреподователяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.максимумДваВидаЗанятийИз123ВДеньДляПреподователяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.максимумДваВидаЗанятийИз123ВРеальныйДеньДляПреподователяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.минимумПарВДеньДляПреподователяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.минимумПарВРеальныйДеньДляПреподователяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.минимумПарУтромДляПреподователяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.минимумПарВечеромДляПреподователяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.минимумПарОпределенногоВидаПодрядДляПреподователяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.минимумПереходовМеждуЗанятиямиОдногоТипаДляПреподователяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.минимумОконМеждуУпорядоченнымиЗанятиямиОпределённогоВидаДляПреподователяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.работаПреподователяВЗаданномВременномИнтервалеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.всеПреподователи1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.времяДоступностиВсехПреподователейToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.максимумДнейВНеделюДляВсехПреподователейToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.максимумРеальныхДнейВНеделюДляВсехПреподователейToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.максимумУтреннихСменВНеделюДляВсехПреподователейToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.максимумВечернихСменВНеделюДляВсехПреподователейToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.всеПреподователиРаботаютМаксимумТриДняПодрядToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.всеПреподователиРаботаютМаксимумДваУтраПодрядToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.всеПреподователиРаботаютМаксимумДваВечераПодрядToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.минимумДнейВНеделюДляВсехПреподователейToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.минимумРеальныхДнейВНеделюДляВсехПреподователейToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.минимумУтреннихСменВНеделюДляВсехПреподователейToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.минимумВечернихСменВНеделюДляВсехПреподователейToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.максимумОконВДеньДляВсехПреподователейToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.максимумОконУтромвечеромДляВсехПреподователейToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.максимумОконВНеделюДляВсехПреподователейToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.максимумОконВРеальныйДеньДляВсехПреподователейToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.максимумОконВНеделюДляРеальныхДнейДляВсехПреподователейToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.максимумНулевыхПерерывовВечеромДляВсехПреподователейToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.всеПреподователи2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.максимумПарВДеньДляВсехПреподователейToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.максимумПарВРеальныйДеньДляВсехПреподователейToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.максимумПромежутковВДеньДляВсехПреподователейToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.максимумПромежутковВРеальныйДеньДляВсехПреподователейToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.максимумПарОпределенногоВидаВРеальныйДеньДляВсехПреподователейToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.максимумДваВидаЗанятийИз123ВДеньДляВсехПреподователейToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.максимумДваВидаЗанятийИз123ВРеальныйДеньДляВсехПреподователейToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.минимумПарВДеньДляВсехПреподователейToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.минимумПарВРеальныйДеньДляВсехПреподователейToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.минимумПарСУтраДляВсехПреподователейToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.минимумПарВечеромДляВсехПреподователейToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.максимумПарОпределенногоВидаВДеньДляВсехПреподователейToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.максимумПарПодрядДляВсехПреподователейToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.максимумЗанятийОпределённогоВидаПодрядДляВсехПреподователейToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.минимумПереходовМеждуЗанятиямиОдногоТипаДляВсехПреподователейToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.минимумОконМеждуУпорядоченнымиЗанятиямиОпределённогоВидаДляВсехПреподователейToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.работаВсехПреподователейВЗаданномВременномИнтервалеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.военнослужащиеToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.занятияToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.историяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.восстановитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.настройкаToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.статистикаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.статистикаПоПреподователямToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.статистикаПоДисциплинамToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.статистикаПоВоеннослужащимToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.статистикаПоАудиториямToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.статистикаПреподователейПоДисциплинамToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.печататьРасширеннуюСтатистикуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.сохранитьРасширеннуюСтатистикуНаДискеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.спракаПоСтатистикеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.дополнительноToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.планированиеЗанятийToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.распределитьЗанятиеРавномерноВТеченииНеделиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.удалитьИзбыточноеОграничениеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.занятияГруппВПорядкеГенерацииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.расписаниеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.состоваитьНовоеCTRLGToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.просмотрпоПреподователямToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.дниГоризонтальноToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.времяГоризонтальноToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.просмотрпоГруппамToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.дниГоризонтальноToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.времяГоризонтальноToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.просмотрпоАудиториямToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.дниГоризонтальноToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.времяГоризонтальноToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.показатьмягкиеКонфликтыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.печатьCTRLPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.блокировкаразблокировкаЗанятийToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.заблокироватьВсеЗанятияТекущегоРасписанияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.разблокироватьВсеЗанятияТекущегоРасписанияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.заблокироватьВсеЗанятияВОпределенныйДеньToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.разблокироватьВсеЗанятияВОпределенныйДеньToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.заблокироватьВсеЗанятияЗавершающиеУчебныйДеньToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.разблокироватьВсеЗанятияЗавершающиеУчебныйДеньToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.заблокироватьВсеЗанятияОпределенногоВидаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.разблокироватьВсеЗанятияОпределенногоВидаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.блокироватьВсеЗанятияВыбранныеСПомощьюРасширенногоФильтраToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.разблокироватьВсеЗанятияВыбранныеСПомощьюРасширенногоФильтраToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.сохToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.составитьНесколькоToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.настройкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.проверятьНаличиеОбновленийПриЗапускеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.языкLanguageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -271,21 +153,15 @@
             this.create = new System.Windows.Forms.Button();
             this.main_data = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.data_additinal_btn = new System.Windows.Forms.Button();
-            this.data_podzanya_btn = new System.Windows.Forms.Button();
             this.data_lessons_btn = new System.Windows.Forms.Button();
-            this.data_vid_z_btn = new System.Windows.Forms.Button();
             this.data_subject_btn = new System.Windows.Forms.Button();
             this.data_class_btn = new System.Windows.Forms.Button();
             this.data_students_btn = new System.Windows.Forms.Button();
             this.data_teachers_btn = new System.Windows.Forms.Button();
-            this.data_info_btn = new System.Windows.Forms.Button();
             this.main_time = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.ogr_additinal_btn = new System.Windows.Forms.Button();
             this.ogr_lessons_btn = new System.Windows.Forms.Button();
             this.ogr_timeout_btn = new System.Windows.Forms.Button();
-            this.ogr_students_btn = new System.Windows.Forms.Button();
             this.ogr_teachers_btn = new System.Windows.Forms.Button();
             this.ogr_all_btn = new System.Windows.Forms.Button();
             this.main_razme = new System.Windows.Forms.TabPage();
@@ -310,6 +186,11 @@
             this.timetable_teachers_btn = new System.Windows.Forms.Button();
             this.timetable_create_btn = new System.Windows.Forms.Button();
             this.generate_timetable_btn = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.main_file.SuspendLayout();
@@ -329,15 +210,12 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.файлToolStripMenuItem,
             this.данныеToolStripMenuItem,
-            this.историяToolStripMenuItem,
-            this.статистикаToolStripMenuItem,
-            this.дополнительноToolStripMenuItem,
             this.расписаниеToolStripMenuItem,
             this.настройкаToolStripMenuItem,
             this.справкаToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(525, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -507,17 +385,13 @@
             // 
             this.данныеToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.информацияОбУчебномЗаведенииToolStripMenuItem,
-            this.периодыToolStripMenuItem,
             this.дниНеделиИРасписаниеЗвонковToolStripMenuItem,
             this.дисциплиныToolStripMenuItem,
-            this.видыЗанятийToolStripMenuItem,
             this.преподователиToolStripMenuItem,
             this.военнослужащиеToolStripMenuItem,
             this.занятияToolStripMenuItem,
             this.vacation_holiday,
-            this.аудиторииToolStripMenuItem,
-            this.всеОграниченияПоВремениToolStripMenuItem,
-            this.ограниченияПоВремениToolStripMenuItem});
+            this.аудиторииToolStripMenuItem});
             this.данныеToolStripMenuItem.Name = "данныеToolStripMenuItem";
             this.данныеToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.данныеToolStripMenuItem.Text = "Данные";
@@ -528,8 +402,9 @@
             this.названиеУчебногоЗаведенияToolStripMenuItem,
             this.коментарииToolStripMenuItem});
             this.информацияОбУчебномЗаведенииToolStripMenuItem.Name = "информацияОбУчебномЗаведенииToolStripMenuItem";
-            this.информацияОбУчебномЗаведенииToolStripMenuItem.Size = new System.Drawing.Size(276, 22);
-            this.информацияОбУчебномЗаведенииToolStripMenuItem.Text = "Информация об учебном заведении";
+            this.информацияОбУчебномЗаведенииToolStripMenuItem.Size = new System.Drawing.Size(263, 22);
+            this.информацияОбУчебномЗаведенииToolStripMenuItem.Text = "Название ВУЗа";
+            this.информацияОбУчебномЗаведенииToolStripMenuItem.Click += new System.EventHandler(this.информацияОбУчебномЗаведенииToolStripMenuItem_Click);
             // 
             // названиеУчебногоЗаведенияToolStripMenuItem
             // 
@@ -544,21 +419,13 @@
             this.коментарииToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
             this.коментарииToolStripMenuItem.Text = "Коментарии";
             // 
-            // периодыToolStripMenuItem
-            // 
-            this.периодыToolStripMenuItem.Enabled = false;
-            this.периодыToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.периодыToolStripMenuItem.Name = "периодыToolStripMenuItem";
-            this.периодыToolStripMenuItem.Size = new System.Drawing.Size(276, 22);
-            this.периодыToolStripMenuItem.Text = "Периоды";
-            // 
             // дниНеделиИРасписаниеЗвонковToolStripMenuItem
             // 
             this.дниНеделиИРасписаниеЗвонковToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.дниНеделиToolStripMenuItem,
             this.расписаниеЗвонковToolStripMenuItem});
             this.дниНеделиИРасписаниеЗвонковToolStripMenuItem.Name = "дниНеделиИРасписаниеЗвонковToolStripMenuItem";
-            this.дниНеделиИРасписаниеЗвонковToolStripMenuItem.Size = new System.Drawing.Size(276, 22);
+            this.дниНеделиИРасписаниеЗвонковToolStripMenuItem.Size = new System.Drawing.Size(263, 22);
             this.дниНеделиИРасписаниеЗвонковToolStripMenuItem.Text = "Дни недели и расписание звонков";
             // 
             // дниНеделиToolStripMenuItem
@@ -578,835 +445,84 @@
             // дисциплиныToolStripMenuItem
             // 
             this.дисциплиныToolStripMenuItem.Name = "дисциплиныToolStripMenuItem";
-            this.дисциплиныToolStripMenuItem.Size = new System.Drawing.Size(276, 22);
+            this.дисциплиныToolStripMenuItem.Size = new System.Drawing.Size(263, 22);
             this.дисциплиныToolStripMenuItem.Text = "Дисциплины";
             this.дисциплиныToolStripMenuItem.Click += new System.EventHandler(this.ДисциплиныToolStripMenuItem_Click);
-            // 
-            // видыЗанятийToolStripMenuItem
-            // 
-            this.видыЗанятийToolStripMenuItem.Name = "видыЗанятийToolStripMenuItem";
-            this.видыЗанятийToolStripMenuItem.Size = new System.Drawing.Size(276, 22);
-            this.видыЗанятийToolStripMenuItem.Text = "Виды занятий";
             // 
             // преподователиToolStripMenuItem
             // 
             this.преподователиToolStripMenuItem.Name = "преподователиToolStripMenuItem";
-            this.преподователиToolStripMenuItem.Size = new System.Drawing.Size(276, 22);
+            this.преподователиToolStripMenuItem.Size = new System.Drawing.Size(263, 22);
             this.преподователиToolStripMenuItem.Text = "Преподователи";
             this.преподователиToolStripMenuItem.Click += new System.EventHandler(this.ПреподователиToolStripMenuItem_Click);
             // 
             // военнослужащиеToolStripMenuItem
             // 
             this.военнослужащиеToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.потокиToolStripMenuItem,
-            this.группыToolStripMenuItem,
-            this.подгруппыToolStripMenuItem});
+            this.группыToolStripMenuItem});
             this.военнослужащиеToolStripMenuItem.Name = "военнослужащиеToolStripMenuItem";
-            this.военнослужащиеToolStripMenuItem.Size = new System.Drawing.Size(276, 22);
+            this.военнослужащиеToolStripMenuItem.Size = new System.Drawing.Size(263, 22);
             this.военнослужащиеToolStripMenuItem.Text = "Военнослужащие";
-            // 
-            // потокиToolStripMenuItem
-            // 
-            this.потокиToolStripMenuItem.Name = "потокиToolStripMenuItem";
-            this.потокиToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
-            this.потокиToolStripMenuItem.Text = "Потоки";
             // 
             // группыToolStripMenuItem
             // 
             this.группыToolStripMenuItem.Name = "группыToolStripMenuItem";
-            this.группыToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.группыToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.группыToolStripMenuItem.Text = "Группы";
             this.группыToolStripMenuItem.Click += new System.EventHandler(this.группыToolStripMenuItem_Click);
-            // 
-            // подгруппыToolStripMenuItem
-            // 
-            this.подгруппыToolStripMenuItem.Name = "подгруппыToolStripMenuItem";
-            this.подгруппыToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
-            this.подгруппыToolStripMenuItem.Text = "Подгруппы";
             // 
             // занятияToolStripMenuItem
             // 
             this.занятияToolStripMenuItem.Name = "занятияToolStripMenuItem";
-            this.занятияToolStripMenuItem.Size = new System.Drawing.Size(276, 22);
+            this.занятияToolStripMenuItem.Size = new System.Drawing.Size(263, 22);
             this.занятияToolStripMenuItem.Text = "Занятия";
             this.занятияToolStripMenuItem.Click += new System.EventHandler(this.занятияToolStripMenuItem_Click);
             // 
             // vacation_holiday
             // 
             this.vacation_holiday.Name = "vacation_holiday";
-            this.vacation_holiday.Size = new System.Drawing.Size(276, 22);
+            this.vacation_holiday.Size = new System.Drawing.Size(263, 22);
             this.vacation_holiday.Text = "Другие мероприятия";
             this.vacation_holiday.Click += new System.EventHandler(this.vacation_holiday_Click);
             // 
             // аудиторииToolStripMenuItem
             // 
             this.аудиторииToolStripMenuItem.Name = "аудиторииToolStripMenuItem";
-            this.аудиторииToolStripMenuItem.Size = new System.Drawing.Size(276, 22);
+            this.аудиторииToolStripMenuItem.Size = new System.Drawing.Size(263, 22);
             this.аудиторииToolStripMenuItem.Text = "Аудитории";
             this.аудиторииToolStripMenuItem.Click += new System.EventHandler(this.аудиторииToolStripMenuItem_Click);
-            // 
-            // всеОграниченияПоВремениToolStripMenuItem
-            // 
-            this.всеОграниченияПоВремениToolStripMenuItem.Name = "всеОграниченияПоВремениToolStripMenuItem";
-            this.всеОграниченияПоВремениToolStripMenuItem.Size = new System.Drawing.Size(276, 22);
-            this.всеОграниченияПоВремениToolStripMenuItem.Text = "Все ограничения по времени";
-            // 
-            // ограниченияПоВремениToolStripMenuItem
-            // 
-            this.ограниченияПоВремениToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.прочиеToolStripMenuItem,
-            this.преподователиToolStripMenuItem1,
-            this.военнослужащиеToolStripMenuItem1,
-            this.занятияToolStripMenuItem1});
-            this.ограниченияПоВремениToolStripMenuItem.Name = "ограниченияПоВремениToolStripMenuItem";
-            this.ограниченияПоВремениToolStripMenuItem.Size = new System.Drawing.Size(276, 22);
-            this.ограниченияПоВремениToolStripMenuItem.Text = "Ограничения по времени";
-            // 
-            // прочиеToolStripMenuItem
-            // 
-            this.прочиеToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.основноеОбязательноеОграниченияПоВремениToolStripMenuItem,
-            this.перерывToolStripMenuItem});
-            this.прочиеToolStripMenuItem.Name = "прочиеToolStripMenuItem";
-            this.прочиеToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
-            this.прочиеToolStripMenuItem.Text = "Прочие";
-            // 
-            // основноеОбязательноеОграниченияПоВремениToolStripMenuItem
-            // 
-            this.основноеОбязательноеОграниченияПоВремениToolStripMenuItem.Name = "основноеОбязательноеОграниченияПоВремениToolStripMenuItem";
-            this.основноеОбязательноеОграниченияПоВремениToolStripMenuItem.Size = new System.Drawing.Size(350, 22);
-            this.основноеОбязательноеОграниченияПоВремениToolStripMenuItem.Text = "Основное обязательное ограничения по времени";
-            // 
-            // перерывToolStripMenuItem
-            // 
-            this.перерывToolStripMenuItem.Name = "перерывToolStripMenuItem";
-            this.перерывToolStripMenuItem.Size = new System.Drawing.Size(350, 22);
-            this.перерывToolStripMenuItem.Text = "Перерыв";
-            // 
-            // преподователиToolStripMenuItem1
-            // 
-            this.преподователиToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.преподователь1ToolStripMenuItem,
-            this.преподователь2ToolStripMenuItem,
-            this.всеПреподователи1ToolStripMenuItem,
-            this.всеПреподователи2ToolStripMenuItem});
-            this.преподователиToolStripMenuItem1.Name = "преподователиToolStripMenuItem1";
-            this.преподователиToolStripMenuItem1.Size = new System.Drawing.Size(173, 22);
-            this.преподователиToolStripMenuItem1.Text = "Преподователи";
-            // 
-            // преподователь1ToolStripMenuItem
-            // 
-            this.преподователь1ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.доступностьПреподователейToolStripMenuItem,
-            this.максимумДнейВНеделюДляПреподователяToolStripMenuItem,
-            this.максимумУтреннихСменВНеделюДляПреподователяToolStripMenuItem,
-            this.максимумВечернихСменВНеделюДляПреподователяToolStripMenuItem,
-            this.преподовательРаботаетМаксимумТриДняПодрядToolStripMenuItem,
-            this.преподовательРаботаетМаксимумДваУтраПодрядToolStripMenuItem,
-            this.преподовательРаботаетМаксимумДваВечераПодрядToolStripMenuItem,
-            this.минимумДнейДляПреподователяToolStripMenuItem,
-            this.минимумРеальныхДнейВНеделюДляПреподователяToolStripMenuItem,
-            this.минимумУтреннихСменВНеделюДляПреподователяToolStripMenuItem,
-            this.минимумВечернихСменВНеделюДляПреподователяToolStripMenuItem,
-            this.максимумОконВДеньДляПреподователяToolStripMenuItem,
-            this.максимумОконУтромвечеромДляПреподователяToolStripMenuItem,
-            this.максимумОконВНеделюДляПреподователяToolStripMenuItem,
-            this.максимумОконВНеделюДляРеальныхДнейДляПреподователяToolStripMenuItem,
-            this.максимумНулевыхПерерывовВВечеромДляПреподователяToolStripMenuItem});
-            this.преподователь1ToolStripMenuItem.Name = "преподователь1ToolStripMenuItem";
-            this.преподователь1ToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-            this.преподователь1ToolStripMenuItem.Text = "Преподователь (1)";
-            // 
-            // доступностьПреподователейToolStripMenuItem
-            // 
-            this.доступностьПреподователейToolStripMenuItem.Name = "доступностьПреподователейToolStripMenuItem";
-            this.доступностьПреподователейToolStripMenuItem.Size = new System.Drawing.Size(434, 22);
-            this.доступностьПреподователейToolStripMenuItem.Text = "Доступность преподователей";
-            // 
-            // максимумДнейВНеделюДляПреподователяToolStripMenuItem
-            // 
-            this.максимумДнейВНеделюДляПреподователяToolStripMenuItem.Name = "максимумДнейВНеделюДляПреподователяToolStripMenuItem";
-            this.максимумДнейВНеделюДляПреподователяToolStripMenuItem.Size = new System.Drawing.Size(434, 22);
-            this.максимумДнейВНеделюДляПреподователяToolStripMenuItem.Text = "Максимум дней в неделю для преподователя";
-            // 
-            // максимумУтреннихСменВНеделюДляПреподователяToolStripMenuItem
-            // 
-            this.максимумУтреннихСменВНеделюДляПреподователяToolStripMenuItem.Name = "максимумУтреннихСменВНеделюДляПреподователяToolStripMenuItem";
-            this.максимумУтреннихСменВНеделюДляПреподователяToolStripMenuItem.Size = new System.Drawing.Size(434, 22);
-            this.максимумУтреннихСменВНеделюДляПреподователяToolStripMenuItem.Text = "Максимум утренних смен в неделю для преподователя";
-            // 
-            // максимумВечернихСменВНеделюДляПреподователяToolStripMenuItem
-            // 
-            this.максимумВечернихСменВНеделюДляПреподователяToolStripMenuItem.Name = "максимумВечернихСменВНеделюДляПреподователяToolStripMenuItem";
-            this.максимумВечернихСменВНеделюДляПреподователяToolStripMenuItem.Size = new System.Drawing.Size(434, 22);
-            this.максимумВечернихСменВНеделюДляПреподователяToolStripMenuItem.Text = "Максимум вечерних смен в неделю для преподователя";
-            // 
-            // преподовательРаботаетМаксимумТриДняПодрядToolStripMenuItem
-            // 
-            this.преподовательРаботаетМаксимумТриДняПодрядToolStripMenuItem.Name = "преподовательРаботаетМаксимумТриДняПодрядToolStripMenuItem";
-            this.преподовательРаботаетМаксимумТриДняПодрядToolStripMenuItem.Size = new System.Drawing.Size(434, 22);
-            this.преподовательРаботаетМаксимумТриДняПодрядToolStripMenuItem.Text = "Преподователь работает максимум три дня подряд";
-            // 
-            // преподовательРаботаетМаксимумДваУтраПодрядToolStripMenuItem
-            // 
-            this.преподовательРаботаетМаксимумДваУтраПодрядToolStripMenuItem.Name = "преподовательРаботаетМаксимумДваУтраПодрядToolStripMenuItem";
-            this.преподовательРаботаетМаксимумДваУтраПодрядToolStripMenuItem.Size = new System.Drawing.Size(434, 22);
-            this.преподовательРаботаетМаксимумДваУтраПодрядToolStripMenuItem.Text = "Преподователь работает максимум два утра подряд";
-            // 
-            // преподовательРаботаетМаксимумДваВечераПодрядToolStripMenuItem
-            // 
-            this.преподовательРаботаетМаксимумДваВечераПодрядToolStripMenuItem.Name = "преподовательРаботаетМаксимумДваВечераПодрядToolStripMenuItem";
-            this.преподовательРаботаетМаксимумДваВечераПодрядToolStripMenuItem.Size = new System.Drawing.Size(434, 22);
-            this.преподовательРаботаетМаксимумДваВечераПодрядToolStripMenuItem.Text = "Преподователь работает максимум два вечера подряд";
-            // 
-            // минимумДнейДляПреподователяToolStripMenuItem
-            // 
-            this.минимумДнейДляПреподователяToolStripMenuItem.Name = "минимумДнейДляПреподователяToolStripMenuItem";
-            this.минимумДнейДляПреподователяToolStripMenuItem.Size = new System.Drawing.Size(434, 22);
-            this.минимумДнейДляПреподователяToolStripMenuItem.Text = "Минимум дней в неделю для преподователя";
-            // 
-            // минимумРеальныхДнейВНеделюДляПреподователяToolStripMenuItem
-            // 
-            this.минимумРеальныхДнейВНеделюДляПреподователяToolStripMenuItem.Name = "минимумРеальныхДнейВНеделюДляПреподователяToolStripMenuItem";
-            this.минимумРеальныхДнейВНеделюДляПреподователяToolStripMenuItem.Size = new System.Drawing.Size(434, 22);
-            this.минимумРеальныхДнейВНеделюДляПреподователяToolStripMenuItem.Text = "Минимум реальных дней в неделю для преподователя";
-            // 
-            // минимумУтреннихСменВНеделюДляПреподователяToolStripMenuItem
-            // 
-            this.минимумУтреннихСменВНеделюДляПреподователяToolStripMenuItem.Name = "минимумУтреннихСменВНеделюДляПреподователяToolStripMenuItem";
-            this.минимумУтреннихСменВНеделюДляПреподователяToolStripMenuItem.Size = new System.Drawing.Size(434, 22);
-            this.минимумУтреннихСменВНеделюДляПреподователяToolStripMenuItem.Text = "Минимум утренних смен в неделю для преподователя";
-            // 
-            // минимумВечернихСменВНеделюДляПреподователяToolStripMenuItem
-            // 
-            this.минимумВечернихСменВНеделюДляПреподователяToolStripMenuItem.Name = "минимумВечернихСменВНеделюДляПреподователяToolStripMenuItem";
-            this.минимумВечернихСменВНеделюДляПреподователяToolStripMenuItem.Size = new System.Drawing.Size(434, 22);
-            this.минимумВечернихСменВНеделюДляПреподователяToolStripMenuItem.Text = "Минимум вечерних смен в неделю для преподователя";
-            // 
-            // максимумОконВДеньДляПреподователяToolStripMenuItem
-            // 
-            this.максимумОконВДеньДляПреподователяToolStripMenuItem.Name = "максимумОконВДеньДляПреподователяToolStripMenuItem";
-            this.максимумОконВДеньДляПреподователяToolStripMenuItem.Size = new System.Drawing.Size(434, 22);
-            this.максимумОконВДеньДляПреподователяToolStripMenuItem.Text = "Максимум окон в день для преподователя";
-            // 
-            // максимумОконУтромвечеромДляПреподователяToolStripMenuItem
-            // 
-            this.максимумОконУтромвечеромДляПреподователяToolStripMenuItem.Name = "максимумОконУтромвечеромДляПреподователяToolStripMenuItem";
-            this.максимумОконУтромвечеромДляПреподователяToolStripMenuItem.Size = new System.Drawing.Size(434, 22);
-            this.максимумОконУтромвечеромДляПреподователяToolStripMenuItem.Text = "Максимум окон утром+вечером для преподователя";
-            // 
-            // максимумОконВНеделюДляПреподователяToolStripMenuItem
-            // 
-            this.максимумОконВНеделюДляПреподователяToolStripMenuItem.Name = "максимумОконВНеделюДляПреподователяToolStripMenuItem";
-            this.максимумОконВНеделюДляПреподователяToolStripMenuItem.Size = new System.Drawing.Size(434, 22);
-            this.максимумОконВНеделюДляПреподователяToolStripMenuItem.Text = "Максимум окон в неделю для преподователя";
-            // 
-            // максимумОконВНеделюДляРеальныхДнейДляПреподователяToolStripMenuItem
-            // 
-            this.максимумОконВНеделюДляРеальныхДнейДляПреподователяToolStripMenuItem.Name = "максимумОконВНеделюДляРеальныхДнейДляПреподователяToolStripMenuItem";
-            this.максимумОконВНеделюДляРеальныхДнейДляПреподователяToolStripMenuItem.Size = new System.Drawing.Size(434, 22);
-            this.максимумОконВНеделюДляРеальныхДнейДляПреподователяToolStripMenuItem.Text = "Максимум окон в неделю для реальных дней для преподователя";
-            // 
-            // максимумНулевыхПерерывовВВечеромДляПреподователяToolStripMenuItem
-            // 
-            this.максимумНулевыхПерерывовВВечеромДляПреподователяToolStripMenuItem.Name = "максимумНулевыхПерерывовВВечеромДляПреподователяToolStripMenuItem";
-            this.максимумНулевыхПерерывовВВечеромДляПреподователяToolStripMenuItem.Size = new System.Drawing.Size(434, 22);
-            this.максимумНулевыхПерерывовВВечеромДляПреподователяToolStripMenuItem.Text = "Максимум нулевых перерывов в вечером для преподователя";
-            // 
-            // преподователь2ToolStripMenuItem
-            // 
-            this.преподователь2ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.максимумПарВДеньДляПреподователяToolStripMenuItem,
-            this.максиумПарВРеальныйДеньДляПреподователяToolStripMenuItem,
-            this.максимумПромежутокВДеньДляПреподователяToolStripMenuItem,
-            this.максимумПромежутковВРеальныйДеньДляПреподователяToolStripMenuItem,
-            this.максимумПарОпределённогоВидаВРеальныйДеньДляПреподователяToolStripMenuItem,
-            this.максимумДваВидаЗанятийИз123ВДеньДляПреподователяToolStripMenuItem,
-            this.максимумДваВидаЗанятийИз123ВРеальныйДеньДляПреподователяToolStripMenuItem,
-            this.минимумПарВДеньДляПреподователяToolStripMenuItem,
-            this.минимумПарВРеальныйДеньДляПреподователяToolStripMenuItem,
-            this.минимумПарУтромДляПреподователяToolStripMenuItem,
-            this.минимумПарВечеромДляПреподователяToolStripMenuItem,
-            this.минимумПарОпределенногоВидаПодрядДляПреподователяToolStripMenuItem,
-            this.минимумПереходовМеждуЗанятиямиОдногоТипаДляПреподователяToolStripMenuItem,
-            this.минимумОконМеждуУпорядоченнымиЗанятиямиОпределённогоВидаДляПреподователяToolStripMenuItem,
-            this.работаПреподователяВЗаданномВременномИнтервалеToolStripMenuItem});
-            this.преподователь2ToolStripMenuItem.Name = "преподователь2ToolStripMenuItem";
-            this.преподователь2ToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-            this.преподователь2ToolStripMenuItem.Text = "Преподователь (2)";
-            // 
-            // максимумПарВДеньДляПреподователяToolStripMenuItem
-            // 
-            this.максимумПарВДеньДляПреподователяToolStripMenuItem.Name = "максимумПарВДеньДляПреподователяToolStripMenuItem";
-            this.максимумПарВДеньДляПреподователяToolStripMenuItem.Size = new System.Drawing.Size(588, 22);
-            this.максимумПарВДеньДляПреподователяToolStripMenuItem.Text = "Максимум пар в день для преподователя";
-            // 
-            // максиумПарВРеальныйДеньДляПреподователяToolStripMenuItem
-            // 
-            this.максиумПарВРеальныйДеньДляПреподователяToolStripMenuItem.Name = "максиумПарВРеальныйДеньДляПреподователяToolStripMenuItem";
-            this.максиумПарВРеальныйДеньДляПреподователяToolStripMenuItem.Size = new System.Drawing.Size(588, 22);
-            this.максиумПарВРеальныйДеньДляПреподователяToolStripMenuItem.Text = "Максиум пар в реальный день для преподователя";
-            // 
-            // максимумПромежутокВДеньДляПреподователяToolStripMenuItem
-            // 
-            this.максимумПромежутокВДеньДляПреподователяToolStripMenuItem.Name = "максимумПромежутокВДеньДляПреподователяToolStripMenuItem";
-            this.максимумПромежутокВДеньДляПреподователяToolStripMenuItem.Size = new System.Drawing.Size(588, 22);
-            this.максимумПромежутокВДеньДляПреподователяToolStripMenuItem.Text = "Максимум промежуток в день для преподователя";
-            // 
-            // максимумПромежутковВРеальныйДеньДляПреподователяToolStripMenuItem
-            // 
-            this.максимумПромежутковВРеальныйДеньДляПреподователяToolStripMenuItem.Name = "максимумПромежутковВРеальныйДеньДляПреподователяToolStripMenuItem";
-            this.максимумПромежутковВРеальныйДеньДляПреподователяToolStripMenuItem.Size = new System.Drawing.Size(588, 22);
-            this.максимумПромежутковВРеальныйДеньДляПреподователяToolStripMenuItem.Text = "Максимум промежутков в реальный день для преподователя";
-            // 
-            // максимумПарОпределённогоВидаВРеальныйДеньДляПреподователяToolStripMenuItem
-            // 
-            this.максимумПарОпределённогоВидаВРеальныйДеньДляПреподователяToolStripMenuItem.Name = "максимумПарОпределённогоВидаВРеальныйДеньДляПреподователяToolStripMenuItem";
-            this.максимумПарОпределённогоВидаВРеальныйДеньДляПреподователяToolStripMenuItem.Size = new System.Drawing.Size(588, 22);
-            this.максимумПарОпределённогоВидаВРеальныйДеньДляПреподователяToolStripMenuItem.Text = "Максимум пар определённого вида в реальный день для преподователя";
-            // 
-            // максимумДваВидаЗанятийИз123ВДеньДляПреподователяToolStripMenuItem
-            // 
-            this.максимумДваВидаЗанятийИз123ВДеньДляПреподователяToolStripMenuItem.Name = "максимумДваВидаЗанятийИз123ВДеньДляПреподователяToolStripMenuItem";
-            this.максимумДваВидаЗанятийИз123ВДеньДляПреподователяToolStripMenuItem.Size = new System.Drawing.Size(588, 22);
-            this.максимумДваВидаЗанятийИз123ВДеньДляПреподователяToolStripMenuItem.Text = "Максимум два вида занятий из №1, №2, №3 в день для преподователя";
-            // 
-            // максимумДваВидаЗанятийИз123ВРеальныйДеньДляПреподователяToolStripMenuItem
-            // 
-            this.максимумДваВидаЗанятийИз123ВРеальныйДеньДляПреподователяToolStripMenuItem.Name = "максимумДваВидаЗанятийИз123ВРеальныйДеньДляПреподователяToolStripMenuItem";
-            this.максимумДваВидаЗанятийИз123ВРеальныйДеньДляПреподователяToolStripMenuItem.Size = new System.Drawing.Size(588, 22);
-            this.максимумДваВидаЗанятийИз123ВРеальныйДеньДляПреподователяToolStripMenuItem.Text = "Максимум два вида занятий из №1, №2, №3 в реальный день для преподователя";
-            // 
-            // минимумПарВДеньДляПреподователяToolStripMenuItem
-            // 
-            this.минимумПарВДеньДляПреподователяToolStripMenuItem.Name = "минимумПарВДеньДляПреподователяToolStripMenuItem";
-            this.минимумПарВДеньДляПреподователяToolStripMenuItem.Size = new System.Drawing.Size(588, 22);
-            this.минимумПарВДеньДляПреподователяToolStripMenuItem.Text = "Минимум пар в день для преподователя";
-            // 
-            // минимумПарВРеальныйДеньДляПреподователяToolStripMenuItem
-            // 
-            this.минимумПарВРеальныйДеньДляПреподователяToolStripMenuItem.Name = "минимумПарВРеальныйДеньДляПреподователяToolStripMenuItem";
-            this.минимумПарВРеальныйДеньДляПреподователяToolStripMenuItem.Size = new System.Drawing.Size(588, 22);
-            this.минимумПарВРеальныйДеньДляПреподователяToolStripMenuItem.Text = "Минимум пар в реальный день для преподователя";
-            // 
-            // минимумПарУтромДляПреподователяToolStripMenuItem
-            // 
-            this.минимумПарУтромДляПреподователяToolStripMenuItem.Name = "минимумПарУтромДляПреподователяToolStripMenuItem";
-            this.минимумПарУтромДляПреподователяToolStripMenuItem.Size = new System.Drawing.Size(588, 22);
-            this.минимумПарУтромДляПреподователяToolStripMenuItem.Text = "Минимум пар утром для преподователя";
-            // 
-            // минимумПарВечеромДляПреподователяToolStripMenuItem
-            // 
-            this.минимумПарВечеромДляПреподователяToolStripMenuItem.Name = "минимумПарВечеромДляПреподователяToolStripMenuItem";
-            this.минимумПарВечеромДляПреподователяToolStripMenuItem.Size = new System.Drawing.Size(588, 22);
-            this.минимумПарВечеромДляПреподователяToolStripMenuItem.Text = "Минимум пар вечером для преподователя";
-            // 
-            // минимумПарОпределенногоВидаПодрядДляПреподователяToolStripMenuItem
-            // 
-            this.минимумПарОпределенногоВидаПодрядДляПреподователяToolStripMenuItem.Name = "минимумПарОпределенногоВидаПодрядДляПреподователяToolStripMenuItem";
-            this.минимумПарОпределенногоВидаПодрядДляПреподователяToolStripMenuItem.Size = new System.Drawing.Size(588, 22);
-            this.минимумПарОпределенногоВидаПодрядДляПреподователяToolStripMenuItem.Text = "Минимум пар определенного вида подряд для преподователя";
-            // 
-            // минимумПереходовМеждуЗанятиямиОдногоТипаДляПреподователяToolStripMenuItem
-            // 
-            this.минимумПереходовМеждуЗанятиямиОдногоТипаДляПреподователяToolStripMenuItem.Name = "минимумПереходовМеждуЗанятиямиОдногоТипаДляПреподователяToolStripMenuItem";
-            this.минимумПереходовМеждуЗанятиямиОдногоТипаДляПреподователяToolStripMenuItem.Size = new System.Drawing.Size(588, 22);
-            this.минимумПереходовМеждуЗанятиямиОдногоТипаДляПреподователяToolStripMenuItem.Text = "Минимум переходов между занятиями одного типа для преподователя";
-            // 
-            // минимумОконМеждуУпорядоченнымиЗанятиямиОпределённогоВидаДляПреподователяToolStripMenuItem
-            // 
-            this.минимумОконМеждуУпорядоченнымиЗанятиямиОпределённогоВидаДляПреподователяToolStripMenuItem.Name = "минимумОконМеждуУпорядоченнымиЗанятиямиОпределённогоВидаДляПреподователяToolStrip" +
-    "MenuItem";
-            this.минимумОконМеждуУпорядоченнымиЗанятиямиОпределённогоВидаДляПреподователяToolStripMenuItem.Size = new System.Drawing.Size(588, 22);
-            this.минимумОконМеждуУпорядоченнымиЗанятиямиОпределённогоВидаДляПреподователяToolStripMenuItem.Text = "Минимум окон между упорядоченными занятиями  определённого вида для преподователя" +
-    "";
-            // 
-            // работаПреподователяВЗаданномВременномИнтервалеToolStripMenuItem
-            // 
-            this.работаПреподователяВЗаданномВременномИнтервалеToolStripMenuItem.Name = "работаПреподователяВЗаданномВременномИнтервалеToolStripMenuItem";
-            this.работаПреподователяВЗаданномВременномИнтервалеToolStripMenuItem.Size = new System.Drawing.Size(588, 22);
-            this.работаПреподователяВЗаданномВременномИнтервалеToolStripMenuItem.Text = "Работа преподователя в заданном временном интервале";
-            // 
-            // всеПреподователи1ToolStripMenuItem
-            // 
-            this.всеПреподователи1ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.времяДоступностиВсехПреподователейToolStripMenuItem,
-            this.максимумДнейВНеделюДляВсехПреподователейToolStripMenuItem,
-            this.максимумРеальныхДнейВНеделюДляВсехПреподователейToolStripMenuItem,
-            this.максимумУтреннихСменВНеделюДляВсехПреподователейToolStripMenuItem,
-            this.максимумВечернихСменВНеделюДляВсехПреподователейToolStripMenuItem,
-            this.всеПреподователиРаботаютМаксимумТриДняПодрядToolStripMenuItem,
-            this.всеПреподователиРаботаютМаксимумДваУтраПодрядToolStripMenuItem,
-            this.всеПреподователиРаботаютМаксимумДваВечераПодрядToolStripMenuItem,
-            this.минимумДнейВНеделюДляВсехПреподователейToolStripMenuItem,
-            this.минимумРеальныхДнейВНеделюДляВсехПреподователейToolStripMenuItem,
-            this.минимумУтреннихСменВНеделюДляВсехПреподователейToolStripMenuItem,
-            this.минимумВечернихСменВНеделюДляВсехПреподователейToolStripMenuItem,
-            this.максимумОконВДеньДляВсехПреподователейToolStripMenuItem,
-            this.максимумОконУтромвечеромДляВсехПреподователейToolStripMenuItem,
-            this.максимумОконВНеделюДляВсехПреподователейToolStripMenuItem,
-            this.максимумОконВРеальныйДеньДляВсехПреподователейToolStripMenuItem,
-            this.максимумОконВНеделюДляРеальныхДнейДляВсехПреподователейToolStripMenuItem,
-            this.максимумНулевыхПерерывовВечеромДляВсехПреподователейToolStripMenuItem});
-            this.всеПреподователи1ToolStripMenuItem.Name = "всеПреподователи1ToolStripMenuItem";
-            this.всеПреподователи1ToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-            this.всеПреподователи1ToolStripMenuItem.Text = "Все преподователи (1)";
-            // 
-            // времяДоступностиВсехПреподователейToolStripMenuItem
-            // 
-            this.времяДоступностиВсехПреподователейToolStripMenuItem.Name = "времяДоступностиВсехПреподователейToolStripMenuItem";
-            this.времяДоступностиВсехПреподователейToolStripMenuItem.Size = new System.Drawing.Size(468, 22);
-            this.времяДоступностиВсехПреподователейToolStripMenuItem.Text = "Время доступности всех преподователей";
-            // 
-            // максимумДнейВНеделюДляВсехПреподователейToolStripMenuItem
-            // 
-            this.максимумДнейВНеделюДляВсехПреподователейToolStripMenuItem.Name = "максимумДнейВНеделюДляВсехПреподователейToolStripMenuItem";
-            this.максимумДнейВНеделюДляВсехПреподователейToolStripMenuItem.Size = new System.Drawing.Size(468, 22);
-            this.максимумДнейВНеделюДляВсехПреподователейToolStripMenuItem.Text = "Максимум дней в неделю для всех преподователей";
-            // 
-            // максимумРеальныхДнейВНеделюДляВсехПреподователейToolStripMenuItem
-            // 
-            this.максимумРеальныхДнейВНеделюДляВсехПреподователейToolStripMenuItem.Name = "максимумРеальныхДнейВНеделюДляВсехПреподователейToolStripMenuItem";
-            this.максимумРеальныхДнейВНеделюДляВсехПреподователейToolStripMenuItem.Size = new System.Drawing.Size(468, 22);
-            this.максимумРеальныхДнейВНеделюДляВсехПреподователейToolStripMenuItem.Text = "Максимум реальных дней в неделю для всех преподователей";
-            // 
-            // максимумУтреннихСменВНеделюДляВсехПреподователейToolStripMenuItem
-            // 
-            this.максимумУтреннихСменВНеделюДляВсехПреподователейToolStripMenuItem.Name = "максимумУтреннихСменВНеделюДляВсехПреподователейToolStripMenuItem";
-            this.максимумУтреннихСменВНеделюДляВсехПреподователейToolStripMenuItem.Size = new System.Drawing.Size(468, 22);
-            this.максимумУтреннихСменВНеделюДляВсехПреподователейToolStripMenuItem.Text = "Максимум утренних смен в неделю для всех преподователей";
-            // 
-            // максимумВечернихСменВНеделюДляВсехПреподователейToolStripMenuItem
-            // 
-            this.максимумВечернихСменВНеделюДляВсехПреподователейToolStripMenuItem.Name = "максимумВечернихСменВНеделюДляВсехПреподователейToolStripMenuItem";
-            this.максимумВечернихСменВНеделюДляВсехПреподователейToolStripMenuItem.Size = new System.Drawing.Size(468, 22);
-            this.максимумВечернихСменВНеделюДляВсехПреподователейToolStripMenuItem.Text = "Максимум вечерних смен в неделю для всех преподователей";
-            // 
-            // всеПреподователиРаботаютМаксимумТриДняПодрядToolStripMenuItem
-            // 
-            this.всеПреподователиРаботаютМаксимумТриДняПодрядToolStripMenuItem.Name = "всеПреподователиРаботаютМаксимумТриДняПодрядToolStripMenuItem";
-            this.всеПреподователиРаботаютМаксимумТриДняПодрядToolStripMenuItem.Size = new System.Drawing.Size(468, 22);
-            this.всеПреподователиРаботаютМаксимумТриДняПодрядToolStripMenuItem.Text = "Все преподователи работают максимум три дня подряд";
-            // 
-            // всеПреподователиРаботаютМаксимумДваУтраПодрядToolStripMenuItem
-            // 
-            this.всеПреподователиРаботаютМаксимумДваУтраПодрядToolStripMenuItem.Name = "всеПреподователиРаботаютМаксимумДваУтраПодрядToolStripMenuItem";
-            this.всеПреподователиРаботаютМаксимумДваУтраПодрядToolStripMenuItem.Size = new System.Drawing.Size(468, 22);
-            this.всеПреподователиРаботаютМаксимумДваУтраПодрядToolStripMenuItem.Text = "Все преподователи работают максимум два утра подряд";
-            // 
-            // всеПреподователиРаботаютМаксимумДваВечераПодрядToolStripMenuItem
-            // 
-            this.всеПреподователиРаботаютМаксимумДваВечераПодрядToolStripMenuItem.Name = "всеПреподователиРаботаютМаксимумДваВечераПодрядToolStripMenuItem";
-            this.всеПреподователиРаботаютМаксимумДваВечераПодрядToolStripMenuItem.Size = new System.Drawing.Size(468, 22);
-            this.всеПреподователиРаботаютМаксимумДваВечераПодрядToolStripMenuItem.Text = "Все преподователи работают максимум два вечера подряд";
-            // 
-            // минимумДнейВНеделюДляВсехПреподователейToolStripMenuItem
-            // 
-            this.минимумДнейВНеделюДляВсехПреподователейToolStripMenuItem.Name = "минимумДнейВНеделюДляВсехПреподователейToolStripMenuItem";
-            this.минимумДнейВНеделюДляВсехПреподователейToolStripMenuItem.Size = new System.Drawing.Size(468, 22);
-            this.минимумДнейВНеделюДляВсехПреподователейToolStripMenuItem.Text = "Минимум дней в неделю для всех преподователей";
-            // 
-            // минимумРеальныхДнейВНеделюДляВсехПреподователейToolStripMenuItem
-            // 
-            this.минимумРеальныхДнейВНеделюДляВсехПреподователейToolStripMenuItem.Name = "минимумРеальныхДнейВНеделюДляВсехПреподователейToolStripMenuItem";
-            this.минимумРеальныхДнейВНеделюДляВсехПреподователейToolStripMenuItem.Size = new System.Drawing.Size(468, 22);
-            this.минимумРеальныхДнейВНеделюДляВсехПреподователейToolStripMenuItem.Text = "Минимум реальных дней в неделю для всех преподователей";
-            // 
-            // минимумУтреннихСменВНеделюДляВсехПреподователейToolStripMenuItem
-            // 
-            this.минимумУтреннихСменВНеделюДляВсехПреподователейToolStripMenuItem.Name = "минимумУтреннихСменВНеделюДляВсехПреподователейToolStripMenuItem";
-            this.минимумУтреннихСменВНеделюДляВсехПреподователейToolStripMenuItem.Size = new System.Drawing.Size(468, 22);
-            this.минимумУтреннихСменВНеделюДляВсехПреподователейToolStripMenuItem.Text = "Минимум утренних смен в неделю для всех преподователей";
-            // 
-            // минимумВечернихСменВНеделюДляВсехПреподователейToolStripMenuItem
-            // 
-            this.минимумВечернихСменВНеделюДляВсехПреподователейToolStripMenuItem.Name = "минимумВечернихСменВНеделюДляВсехПреподователейToolStripMenuItem";
-            this.минимумВечернихСменВНеделюДляВсехПреподователейToolStripMenuItem.Size = new System.Drawing.Size(468, 22);
-            this.минимумВечернихСменВНеделюДляВсехПреподователейToolStripMenuItem.Text = "Минимум вечерних смен в неделю для всех преподователей";
-            // 
-            // максимумОконВДеньДляВсехПреподователейToolStripMenuItem
-            // 
-            this.максимумОконВДеньДляВсехПреподователейToolStripMenuItem.Name = "максимумОконВДеньДляВсехПреподователейToolStripMenuItem";
-            this.максимумОконВДеньДляВсехПреподователейToolStripMenuItem.Size = new System.Drawing.Size(468, 22);
-            this.максимумОконВДеньДляВсехПреподователейToolStripMenuItem.Text = "Максимум окон в день для всех преподователей";
-            // 
-            // максимумОконУтромвечеромДляВсехПреподователейToolStripMenuItem
-            // 
-            this.максимумОконУтромвечеромДляВсехПреподователейToolStripMenuItem.Name = "максимумОконУтромвечеромДляВсехПреподователейToolStripMenuItem";
-            this.максимумОконУтромвечеромДляВсехПреподователейToolStripMenuItem.Size = new System.Drawing.Size(468, 22);
-            this.максимумОконУтромвечеромДляВсехПреподователейToolStripMenuItem.Text = "Максимум окон утром+вечером для всех преподователей";
-            // 
-            // максимумОконВНеделюДляВсехПреподователейToolStripMenuItem
-            // 
-            this.максимумОконВНеделюДляВсехПреподователейToolStripMenuItem.Name = "максимумОконВНеделюДляВсехПреподователейToolStripMenuItem";
-            this.максимумОконВНеделюДляВсехПреподователейToolStripMenuItem.Size = new System.Drawing.Size(468, 22);
-            this.максимумОконВНеделюДляВсехПреподователейToolStripMenuItem.Text = "Максимум окон в неделю для всех преподователей";
-            // 
-            // максимумОконВРеальныйДеньДляВсехПреподователейToolStripMenuItem
-            // 
-            this.максимумОконВРеальныйДеньДляВсехПреподователейToolStripMenuItem.Name = "максимумОконВРеальныйДеньДляВсехПреподователейToolStripMenuItem";
-            this.максимумОконВРеальныйДеньДляВсехПреподователейToolStripMenuItem.Size = new System.Drawing.Size(468, 22);
-            this.максимумОконВРеальныйДеньДляВсехПреподователейToolStripMenuItem.Text = "Максимум окон в реальный день для всех преподователей";
-            // 
-            // максимумОконВНеделюДляРеальныхДнейДляВсехПреподователейToolStripMenuItem
-            // 
-            this.максимумОконВНеделюДляРеальныхДнейДляВсехПреподователейToolStripMenuItem.Name = "максимумОконВНеделюДляРеальныхДнейДляВсехПреподователейToolStripMenuItem";
-            this.максимумОконВНеделюДляРеальныхДнейДляВсехПреподователейToolStripMenuItem.Size = new System.Drawing.Size(468, 22);
-            this.максимумОконВНеделюДляРеальныхДнейДляВсехПреподователейToolStripMenuItem.Text = "Максимум окон в неделю для реальных дней для всех преподователей";
-            // 
-            // максимумНулевыхПерерывовВечеромДляВсехПреподователейToolStripMenuItem
-            // 
-            this.максимумНулевыхПерерывовВечеромДляВсехПреподователейToolStripMenuItem.Name = "максимумНулевыхПерерывовВечеромДляВсехПреподователейToolStripMenuItem";
-            this.максимумНулевыхПерерывовВечеромДляВсехПреподователейToolStripMenuItem.Size = new System.Drawing.Size(468, 22);
-            this.максимумНулевыхПерерывовВечеромДляВсехПреподователейToolStripMenuItem.Text = "Максимум нулевых перерывов вечером для всех преподователей";
-            // 
-            // всеПреподователи2ToolStripMenuItem
-            // 
-            this.всеПреподователи2ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.максимумПарВДеньДляВсехПреподователейToolStripMenuItem,
-            this.максимумПарВРеальныйДеньДляВсехПреподователейToolStripMenuItem,
-            this.максимумПромежутковВДеньДляВсехПреподователейToolStripMenuItem,
-            this.максимумПромежутковВРеальныйДеньДляВсехПреподователейToolStripMenuItem,
-            this.максимумПарОпределенногоВидаВРеальныйДеньДляВсехПреподователейToolStripMenuItem,
-            this.максимумДваВидаЗанятийИз123ВДеньДляВсехПреподователейToolStripMenuItem,
-            this.максимумДваВидаЗанятийИз123ВРеальныйДеньДляВсехПреподователейToolStripMenuItem,
-            this.минимумПарВДеньДляВсехПреподователейToolStripMenuItem,
-            this.минимумПарВРеальныйДеньДляВсехПреподователейToolStripMenuItem,
-            this.минимумПарСУтраДляВсехПреподователейToolStripMenuItem,
-            this.минимумПарВечеромДляВсехПреподователейToolStripMenuItem,
-            this.максимумПарОпределенногоВидаВДеньДляВсехПреподователейToolStripMenuItem,
-            this.максимумПарПодрядДляВсехПреподователейToolStripMenuItem,
-            this.максимумЗанятийОпределённогоВидаПодрядДляВсехПреподователейToolStripMenuItem,
-            this.минимумПереходовМеждуЗанятиямиОдногоТипаДляВсехПреподователейToolStripMenuItem,
-            this.минимумОконМеждуУпорядоченнымиЗанятиямиОпределённогоВидаДляВсехПреподователейToolStripMenuItem,
-            this.работаВсехПреподователейВЗаданномВременномИнтервалеToolStripMenuItem});
-            this.всеПреподователи2ToolStripMenuItem.Name = "всеПреподователи2ToolStripMenuItem";
-            this.всеПреподователи2ToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-            this.всеПреподователи2ToolStripMenuItem.Text = "Все преподователи (2)";
-            // 
-            // максимумПарВДеньДляВсехПреподователейToolStripMenuItem
-            // 
-            this.максимумПарВДеньДляВсехПреподователейToolStripMenuItem.Name = "максимумПарВДеньДляВсехПреподователейToolStripMenuItem";
-            this.максимумПарВДеньДляВсехПреподователейToolStripMenuItem.Size = new System.Drawing.Size(619, 22);
-            this.максимумПарВДеньДляВсехПреподователейToolStripMenuItem.Text = "Максимум пар в день для всех преподователей";
-            // 
-            // максимумПарВРеальныйДеньДляВсехПреподователейToolStripMenuItem
-            // 
-            this.максимумПарВРеальныйДеньДляВсехПреподователейToolStripMenuItem.Name = "максимумПарВРеальныйДеньДляВсехПреподователейToolStripMenuItem";
-            this.максимумПарВРеальныйДеньДляВсехПреподователейToolStripMenuItem.Size = new System.Drawing.Size(619, 22);
-            this.максимумПарВРеальныйДеньДляВсехПреподователейToolStripMenuItem.Text = "Максимум пар в реальный день для всех преподователей";
-            // 
-            // максимумПромежутковВДеньДляВсехПреподователейToolStripMenuItem
-            // 
-            this.максимумПромежутковВДеньДляВсехПреподователейToolStripMenuItem.Name = "максимумПромежутковВДеньДляВсехПреподователейToolStripMenuItem";
-            this.максимумПромежутковВДеньДляВсехПреподователейToolStripMenuItem.Size = new System.Drawing.Size(619, 22);
-            this.максимумПромежутковВДеньДляВсехПреподователейToolStripMenuItem.Text = "Максимум промежутков в день для всех преподователей";
-            // 
-            // максимумПромежутковВРеальныйДеньДляВсехПреподователейToolStripMenuItem
-            // 
-            this.максимумПромежутковВРеальныйДеньДляВсехПреподователейToolStripMenuItem.Name = "максимумПромежутковВРеальныйДеньДляВсехПреподователейToolStripMenuItem";
-            this.максимумПромежутковВРеальныйДеньДляВсехПреподователейToolStripMenuItem.Size = new System.Drawing.Size(619, 22);
-            this.максимумПромежутковВРеальныйДеньДляВсехПреподователейToolStripMenuItem.Text = "Максимум промежутков в реальный день для всех преподователей";
-            // 
-            // максимумПарОпределенногоВидаВРеальныйДеньДляВсехПреподователейToolStripMenuItem
-            // 
-            this.максимумПарОпределенногоВидаВРеальныйДеньДляВсехПреподователейToolStripMenuItem.Name = "максимумПарОпределенногоВидаВРеальныйДеньДляВсехПреподователейToolStripMenuItem";
-            this.максимумПарОпределенногоВидаВРеальныйДеньДляВсехПреподователейToolStripMenuItem.Size = new System.Drawing.Size(619, 22);
-            this.максимумПарОпределенногоВидаВРеальныйДеньДляВсехПреподователейToolStripMenuItem.Text = "Максимум пар определенного вида в реальный день для всех преподователей";
-            // 
-            // максимумДваВидаЗанятийИз123ВДеньДляВсехПреподователейToolStripMenuItem
-            // 
-            this.максимумДваВидаЗанятийИз123ВДеньДляВсехПреподователейToolStripMenuItem.Name = "максимумДваВидаЗанятийИз123ВДеньДляВсехПреподователейToolStripMenuItem";
-            this.максимумДваВидаЗанятийИз123ВДеньДляВсехПреподователейToolStripMenuItem.Size = new System.Drawing.Size(619, 22);
-            this.максимумДваВидаЗанятийИз123ВДеньДляВсехПреподователейToolStripMenuItem.Text = "Максимум два вида занятий из №1, №2, №3 в день для всех преподователей";
-            // 
-            // максимумДваВидаЗанятийИз123ВРеальныйДеньДляВсехПреподователейToolStripMenuItem
-            // 
-            this.максимумДваВидаЗанятийИз123ВРеальныйДеньДляВсехПреподователейToolStripMenuItem.Name = "максимумДваВидаЗанятийИз123ВРеальныйДеньДляВсехПреподователейToolStripMenuItem";
-            this.максимумДваВидаЗанятийИз123ВРеальныйДеньДляВсехПреподователейToolStripMenuItem.Size = new System.Drawing.Size(619, 22);
-            this.максимумДваВидаЗанятийИз123ВРеальныйДеньДляВсехПреподователейToolStripMenuItem.Text = "Максимум два вида занятий из №1, №2, №3 в реальный день для всех преподователей";
-            // 
-            // минимумПарВДеньДляВсехПреподователейToolStripMenuItem
-            // 
-            this.минимумПарВДеньДляВсехПреподователейToolStripMenuItem.Name = "минимумПарВДеньДляВсехПреподователейToolStripMenuItem";
-            this.минимумПарВДеньДляВсехПреподователейToolStripMenuItem.Size = new System.Drawing.Size(619, 22);
-            this.минимумПарВДеньДляВсехПреподователейToolStripMenuItem.Text = "Минимум пар в день для всех преподователей";
-            // 
-            // минимумПарВРеальныйДеньДляВсехПреподователейToolStripMenuItem
-            // 
-            this.минимумПарВРеальныйДеньДляВсехПреподователейToolStripMenuItem.Name = "минимумПарВРеальныйДеньДляВсехПреподователейToolStripMenuItem";
-            this.минимумПарВРеальныйДеньДляВсехПреподователейToolStripMenuItem.Size = new System.Drawing.Size(619, 22);
-            this.минимумПарВРеальныйДеньДляВсехПреподователейToolStripMenuItem.Text = "Минимум пар в реальный день для всех преподователей";
-            // 
-            // минимумПарСУтраДляВсехПреподователейToolStripMenuItem
-            // 
-            this.минимумПарСУтраДляВсехПреподователейToolStripMenuItem.Name = "минимумПарСУтраДляВсехПреподователейToolStripMenuItem";
-            this.минимумПарСУтраДляВсехПреподователейToolStripMenuItem.Size = new System.Drawing.Size(619, 22);
-            this.минимумПарСУтраДляВсехПреподователейToolStripMenuItem.Text = "Минимум пар с утра для всех преподователей";
-            // 
-            // минимумПарВечеромДляВсехПреподователейToolStripMenuItem
-            // 
-            this.минимумПарВечеромДляВсехПреподователейToolStripMenuItem.Name = "минимумПарВечеромДляВсехПреподователейToolStripMenuItem";
-            this.минимумПарВечеромДляВсехПреподователейToolStripMenuItem.Size = new System.Drawing.Size(619, 22);
-            this.минимумПарВечеромДляВсехПреподователейToolStripMenuItem.Text = "Минимум пар вечером для всех преподователей";
-            // 
-            // максимумПарОпределенногоВидаВДеньДляВсехПреподователейToolStripMenuItem
-            // 
-            this.максимумПарОпределенногоВидаВДеньДляВсехПреподователейToolStripMenuItem.Name = "максимумПарОпределенногоВидаВДеньДляВсехПреподователейToolStripMenuItem";
-            this.максимумПарОпределенногоВидаВДеньДляВсехПреподователейToolStripMenuItem.Size = new System.Drawing.Size(619, 22);
-            this.максимумПарОпределенногоВидаВДеньДляВсехПреподователейToolStripMenuItem.Text = "Максимум пар определенного вида в день для всех преподователей";
-            // 
-            // максимумПарПодрядДляВсехПреподователейToolStripMenuItem
-            // 
-            this.максимумПарПодрядДляВсехПреподователейToolStripMenuItem.Name = "максимумПарПодрядДляВсехПреподователейToolStripMenuItem";
-            this.максимумПарПодрядДляВсехПреподователейToolStripMenuItem.Size = new System.Drawing.Size(619, 22);
-            this.максимумПарПодрядДляВсехПреподователейToolStripMenuItem.Text = "Максимум пар подряд для всех преподователей";
-            // 
-            // максимумЗанятийОпределённогоВидаПодрядДляВсехПреподователейToolStripMenuItem
-            // 
-            this.максимумЗанятийОпределённогоВидаПодрядДляВсехПреподователейToolStripMenuItem.Name = "максимумЗанятийОпределённогоВидаПодрядДляВсехПреподователейToolStripMenuItem";
-            this.максимумЗанятийОпределённогоВидаПодрядДляВсехПреподователейToolStripMenuItem.Size = new System.Drawing.Size(619, 22);
-            this.максимумЗанятийОпределённогоВидаПодрядДляВсехПреподователейToolStripMenuItem.Text = "Максимум занятий определённого вида подряд для всех преподователей";
-            // 
-            // минимумПереходовМеждуЗанятиямиОдногоТипаДляВсехПреподователейToolStripMenuItem
-            // 
-            this.минимумПереходовМеждуЗанятиямиОдногоТипаДляВсехПреподователейToolStripMenuItem.Name = "минимумПереходовМеждуЗанятиямиОдногоТипаДляВсехПреподователейToolStripMenuItem";
-            this.минимумПереходовМеждуЗанятиямиОдногоТипаДляВсехПреподователейToolStripMenuItem.Size = new System.Drawing.Size(619, 22);
-            this.минимумПереходовМеждуЗанятиямиОдногоТипаДляВсехПреподователейToolStripMenuItem.Text = "Минимум переходов между занятиями одного типа для всех преподователей";
-            // 
-            // минимумОконМеждуУпорядоченнымиЗанятиямиОпределённогоВидаДляВсехПреподователейToolStripMenuItem
-            // 
-            this.минимумОконМеждуУпорядоченнымиЗанятиямиОпределённогоВидаДляВсехПреподователейToolStripMenuItem.Name = "минимумОконМеждуУпорядоченнымиЗанятиямиОпределённогоВидаДляВсехПреподователейTool" +
-    "StripMenuItem";
-            this.минимумОконМеждуУпорядоченнымиЗанятиямиОпределённогоВидаДляВсехПреподователейToolStripMenuItem.Size = new System.Drawing.Size(619, 22);
-            this.минимумОконМеждуУпорядоченнымиЗанятиямиОпределённогоВидаДляВсехПреподователейToolStripMenuItem.Text = "Минимум окон между упорядоченными занятиями определённого вида для всех преподова" +
-    "телей";
-            // 
-            // работаВсехПреподователейВЗаданномВременномИнтервалеToolStripMenuItem
-            // 
-            this.работаВсехПреподователейВЗаданномВременномИнтервалеToolStripMenuItem.Name = "работаВсехПреподователейВЗаданномВременномИнтервалеToolStripMenuItem";
-            this.работаВсехПреподователейВЗаданномВременномИнтервалеToolStripMenuItem.Size = new System.Drawing.Size(619, 22);
-            this.работаВсехПреподователейВЗаданномВременномИнтервалеToolStripMenuItem.Text = "Работа всех преподователей в заданном временном интервале";
-            // 
-            // военнослужащиеToolStripMenuItem1
-            // 
-            this.военнослужащиеToolStripMenuItem1.Name = "военнослужащиеToolStripMenuItem1";
-            this.военнослужащиеToolStripMenuItem1.Size = new System.Drawing.Size(173, 22);
-            this.военнослужащиеToolStripMenuItem1.Text = "Военнослужащие";
-            // 
-            // занятияToolStripMenuItem1
-            // 
-            this.занятияToolStripMenuItem1.Name = "занятияToolStripMenuItem1";
-            this.занятияToolStripMenuItem1.Size = new System.Drawing.Size(173, 22);
-            this.занятияToolStripMenuItem1.Text = "Занятия";
-            // 
-            // историяToolStripMenuItem
-            // 
-            this.историяToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.восстановитьToolStripMenuItem,
-            this.настройкаToolStripMenuItem1});
-            this.историяToolStripMenuItem.Name = "историяToolStripMenuItem";
-            this.историяToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
-            this.историяToolStripMenuItem.Text = "История";
-            // 
-            // восстановитьToolStripMenuItem
-            // 
-            this.восстановитьToolStripMenuItem.Name = "восстановитьToolStripMenuItem";
-            this.восстановитьToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
-            this.восстановитьToolStripMenuItem.Text = "Восстановить";
-            // 
-            // настройкаToolStripMenuItem1
-            // 
-            this.настройкаToolStripMenuItem1.Name = "настройкаToolStripMenuItem1";
-            this.настройкаToolStripMenuItem1.Size = new System.Drawing.Size(149, 22);
-            this.настройкаToolStripMenuItem1.Text = "Настройка";
-            // 
-            // статистикаToolStripMenuItem
-            // 
-            this.статистикаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.статистикаПоПреподователямToolStripMenuItem,
-            this.статистикаПоДисциплинамToolStripMenuItem,
-            this.статистикаПоВоеннослужащимToolStripMenuItem,
-            this.статистикаПоАудиториямToolStripMenuItem,
-            this.статистикаПреподователейПоДисциплинамToolStripMenuItem,
-            this.печататьРасширеннуюСтатистикуToolStripMenuItem,
-            this.сохранитьРасширеннуюСтатистикуНаДискеToolStripMenuItem,
-            this.спракаПоСтатистикеToolStripMenuItem});
-            this.статистикаToolStripMenuItem.Name = "статистикаToolStripMenuItem";
-            this.статистикаToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
-            this.статистикаToolStripMenuItem.Text = "Статистика";
-            // 
-            // статистикаПоПреподователямToolStripMenuItem
-            // 
-            this.статистикаПоПреподователямToolStripMenuItem.Name = "статистикаПоПреподователямToolStripMenuItem";
-            this.статистикаПоПреподователямToolStripMenuItem.Size = new System.Drawing.Size(328, 22);
-            this.статистикаПоПреподователямToolStripMenuItem.Text = "Статистика по преподователям";
-            // 
-            // статистикаПоДисциплинамToolStripMenuItem
-            // 
-            this.статистикаПоДисциплинамToolStripMenuItem.Name = "статистикаПоДисциплинамToolStripMenuItem";
-            this.статистикаПоДисциплинамToolStripMenuItem.Size = new System.Drawing.Size(328, 22);
-            this.статистикаПоДисциплинамToolStripMenuItem.Text = "Статистика по дисциплинам";
-            // 
-            // статистикаПоВоеннослужащимToolStripMenuItem
-            // 
-            this.статистикаПоВоеннослужащимToolStripMenuItem.Name = "статистикаПоВоеннослужащимToolStripMenuItem";
-            this.статистикаПоВоеннослужащимToolStripMenuItem.Size = new System.Drawing.Size(328, 22);
-            this.статистикаПоВоеннослужащимToolStripMenuItem.Text = "Статистика по военнослужащим";
-            // 
-            // статистикаПоАудиториямToolStripMenuItem
-            // 
-            this.статистикаПоАудиториямToolStripMenuItem.Name = "статистикаПоАудиториямToolStripMenuItem";
-            this.статистикаПоАудиториямToolStripMenuItem.Size = new System.Drawing.Size(328, 22);
-            this.статистикаПоАудиториямToolStripMenuItem.Text = "Статистика по аудиториям";
-            // 
-            // статистикаПреподователейПоДисциплинамToolStripMenuItem
-            // 
-            this.статистикаПреподователейПоДисциплинамToolStripMenuItem.Name = "статистикаПреподователейПоДисциплинамToolStripMenuItem";
-            this.статистикаПреподователейПоДисциплинамToolStripMenuItem.Size = new System.Drawing.Size(328, 22);
-            this.статистикаПреподователейПоДисциплинамToolStripMenuItem.Text = "Статистика преподователей по дисциплинам";
-            // 
-            // печататьРасширеннуюСтатистикуToolStripMenuItem
-            // 
-            this.печататьРасширеннуюСтатистикуToolStripMenuItem.Name = "печататьРасширеннуюСтатистикуToolStripMenuItem";
-            this.печататьРасширеннуюСтатистикуToolStripMenuItem.Size = new System.Drawing.Size(328, 22);
-            this.печататьРасширеннуюСтатистикуToolStripMenuItem.Text = "Печатать расширенную статистику";
-            // 
-            // сохранитьРасширеннуюСтатистикуНаДискеToolStripMenuItem
-            // 
-            this.сохранитьРасширеннуюСтатистикуНаДискеToolStripMenuItem.Name = "сохранитьРасширеннуюСтатистикуНаДискеToolStripMenuItem";
-            this.сохранитьРасширеннуюСтатистикуНаДискеToolStripMenuItem.Size = new System.Drawing.Size(328, 22);
-            this.сохранитьРасширеннуюСтатистикуНаДискеToolStripMenuItem.Text = "Сохранить расширенную статистику на диске";
-            // 
-            // спракаПоСтатистикеToolStripMenuItem
-            // 
-            this.спракаПоСтатистикеToolStripMenuItem.Name = "спракаПоСтатистикеToolStripMenuItem";
-            this.спракаПоСтатистикеToolStripMenuItem.Size = new System.Drawing.Size(328, 22);
-            this.спракаПоСтатистикеToolStripMenuItem.Text = "Спрака по статистике";
-            // 
-            // дополнительноToolStripMenuItem
-            // 
-            this.дополнительноToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.планированиеЗанятийToolStripMenuItem,
-            this.распределитьЗанятиеРавномерноВТеченииНеделиToolStripMenuItem,
-            this.удалитьИзбыточноеОграничениеToolStripMenuItem,
-            this.занятияГруппВПорядкеГенерацииToolStripMenuItem});
-            this.дополнительноToolStripMenuItem.Name = "дополнительноToolStripMenuItem";
-            this.дополнительноToolStripMenuItem.Size = new System.Drawing.Size(107, 20);
-            this.дополнительноToolStripMenuItem.Text = "Дополнительно";
-            // 
-            // планированиеЗанятийToolStripMenuItem
-            // 
-            this.планированиеЗанятийToolStripMenuItem.Name = "планированиеЗанятийToolStripMenuItem";
-            this.планированиеЗанятийToolStripMenuItem.Size = new System.Drawing.Size(440, 22);
-            this.планированиеЗанятийToolStripMenuItem.Text = "Планирование занятий                                                             " +
-    "  CTRL + A";
-            this.планированиеЗанятийToolStripMenuItem.Click += new System.EventHandler(this.ПланированиеЗанятийToolStripMenuItem_Click);
-            // 
-            // распределитьЗанятиеРавномерноВТеченииНеделиToolStripMenuItem
-            // 
-            this.распределитьЗанятиеРавномерноВТеченииНеделиToolStripMenuItem.Name = "распределитьЗанятиеРавномерноВТеченииНеделиToolStripMenuItem";
-            this.распределитьЗанятиеРавномерноВТеченииНеделиToolStripMenuItem.Size = new System.Drawing.Size(440, 22);
-            this.распределитьЗанятиеРавномерноВТеченииНеделиToolStripMenuItem.Text = "Распределить занятие равномерно в течении недели";
-            // 
-            // удалитьИзбыточноеОграничениеToolStripMenuItem
-            // 
-            this.удалитьИзбыточноеОграничениеToolStripMenuItem.Name = "удалитьИзбыточноеОграничениеToolStripMenuItem";
-            this.удалитьИзбыточноеОграничениеToolStripMenuItem.Size = new System.Drawing.Size(440, 22);
-            this.удалитьИзбыточноеОграничениеToolStripMenuItem.Text = "Удалить избыточное ограничения";
-            this.удалитьИзбыточноеОграничениеToolStripMenuItem.Click += new System.EventHandler(this.УдалитьИзбыточноеОграничениеToolStripMenuItem_Click);
-            // 
-            // занятияГруппВПорядкеГенерацииToolStripMenuItem
-            // 
-            this.занятияГруппВПорядкеГенерацииToolStripMenuItem.Name = "занятияГруппВПорядкеГенерацииToolStripMenuItem";
-            this.занятияГруппВПорядкеГенерацииToolStripMenuItem.Size = new System.Drawing.Size(440, 22);
-            this.занятияГруппВПорядкеГенерацииToolStripMenuItem.Text = "Занятия групп в порядке генерации";
             // 
             // расписаниеToolStripMenuItem
             // 
             this.расписаниеToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.состоваитьНовоеCTRLGToolStripMenuItem,
             this.просмотрпоПреподователямToolStripMenuItem,
             this.просмотрпоГруппамToolStripMenuItem,
             this.просмотрпоАудиториямToolStripMenuItem,
             this.показатьмягкиеКонфликтыToolStripMenuItem,
             this.печатьCTRLPToolStripMenuItem,
-            this.блокировкаразблокировкаЗанятийToolStripMenuItem,
-            this.сохToolStripMenuItem,
-            this.составитьНесколькоToolStripMenuItem});
+            this.сохToolStripMenuItem});
             this.расписаниеToolStripMenuItem.Name = "расписаниеToolStripMenuItem";
             this.расписаниеToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
             this.расписаниеToolStripMenuItem.Text = "Расписание";
             // 
-            // состоваитьНовоеCTRLGToolStripMenuItem
-            // 
-            this.состоваитьНовоеCTRLGToolStripMenuItem.Name = "состоваитьНовоеCTRLGToolStripMenuItem";
-            this.состоваитьНовоеCTRLGToolStripMenuItem.Size = new System.Drawing.Size(305, 22);
-            this.состоваитьНовоеCTRLGToolStripMenuItem.Text = "Составить новое                            CTRL + G";
-            this.состоваитьНовоеCTRLGToolStripMenuItem.Click += new System.EventHandler(this.СостоваитьНовоеCTRLGToolStripMenuItem_Click);
-            // 
             // просмотрпоПреподователямToolStripMenuItem
             // 
-            this.просмотрпоПреподователямToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.дниГоризонтальноToolStripMenuItem,
-            this.времяГоризонтальноToolStripMenuItem});
             this.просмотрпоПреподователямToolStripMenuItem.Name = "просмотрпоПреподователямToolStripMenuItem";
             this.просмотрпоПреподователямToolStripMenuItem.Size = new System.Drawing.Size(305, 22);
             this.просмотрпоПреподователямToolStripMenuItem.Text = "Просмотр (по преподователям)         ";
             // 
-            // дниГоризонтальноToolStripMenuItem
-            // 
-            this.дниГоризонтальноToolStripMenuItem.Name = "дниГоризонтальноToolStripMenuItem";
-            this.дниГоризонтальноToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
-            this.дниГоризонтальноToolStripMenuItem.Text = "Дни горизонтально";
-            // 
-            // времяГоризонтальноToolStripMenuItem
-            // 
-            this.времяГоризонтальноToolStripMenuItem.Name = "времяГоризонтальноToolStripMenuItem";
-            this.времяГоризонтальноToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
-            this.времяГоризонтальноToolStripMenuItem.Text = "Время горизонтально";
-            // 
             // просмотрпоГруппамToolStripMenuItem
             // 
-            this.просмотрпоГруппамToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.дниГоризонтальноToolStripMenuItem1,
-            this.времяГоризонтальноToolStripMenuItem1});
             this.просмотрпоГруппамToolStripMenuItem.Name = "просмотрпоГруппамToolStripMenuItem";
             this.просмотрпоГруппамToolStripMenuItem.Size = new System.Drawing.Size(305, 22);
             this.просмотрпоГруппамToolStripMenuItem.Text = "Просмотр (по группам)              ";
-            // 
-            // дниГоризонтальноToolStripMenuItem1
-            // 
-            this.дниГоризонтальноToolStripMenuItem1.Name = "дниГоризонтальноToolStripMenuItem1";
-            this.дниГоризонтальноToolStripMenuItem1.Size = new System.Drawing.Size(195, 22);
-            this.дниГоризонтальноToolStripMenuItem1.Text = "Дни горизонтально";
-            // 
-            // времяГоризонтальноToolStripMenuItem1
-            // 
-            this.времяГоризонтальноToolStripMenuItem1.Name = "времяГоризонтальноToolStripMenuItem1";
-            this.времяГоризонтальноToolStripMenuItem1.Size = new System.Drawing.Size(195, 22);
-            this.времяГоризонтальноToolStripMenuItem1.Text = "Время горизонтально";
+            this.просмотрпоГруппамToolStripMenuItem.Click += new System.EventHandler(this.просмотрпоГруппамToolStripMenuItem_Click);
             // 
             // просмотрпоАудиториямToolStripMenuItem
             // 
-            this.просмотрпоАудиториямToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.дниГоризонтальноToolStripMenuItem2,
-            this.времяГоризонтальноToolStripMenuItem2});
             this.просмотрпоАудиториямToolStripMenuItem.Name = "просмотрпоАудиториямToolStripMenuItem";
             this.просмотрпоАудиториямToolStripMenuItem.Size = new System.Drawing.Size(305, 22);
             this.просмотрпоАудиториямToolStripMenuItem.Text = "Просмотр (по аудиториям)";
-            // 
-            // дниГоризонтальноToolStripMenuItem2
-            // 
-            this.дниГоризонтальноToolStripMenuItem2.Name = "дниГоризонтальноToolStripMenuItem2";
-            this.дниГоризонтальноToolStripMenuItem2.Size = new System.Drawing.Size(195, 22);
-            this.дниГоризонтальноToolStripMenuItem2.Text = "Дни горизонтально";
-            // 
-            // времяГоризонтальноToolStripMenuItem2
-            // 
-            this.времяГоризонтальноToolStripMenuItem2.Name = "времяГоризонтальноToolStripMenuItem2";
-            this.времяГоризонтальноToolStripMenuItem2.Size = new System.Drawing.Size(195, 22);
-            this.времяГоризонтальноToolStripMenuItem2.Text = "Время горизонтально";
             // 
             // показатьмягкиеКонфликтыToolStripMenuItem
             // 
@@ -1420,94 +536,11 @@
             this.печатьCTRLPToolStripMenuItem.Size = new System.Drawing.Size(305, 22);
             this.печатьCTRLPToolStripMenuItem.Text = "Печать                                                CTRL + P";
             // 
-            // блокировкаразблокировкаЗанятийToolStripMenuItem
-            // 
-            this.блокировкаразблокировкаЗанятийToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.заблокироватьВсеЗанятияТекущегоРасписанияToolStripMenuItem,
-            this.разблокироватьВсеЗанятияТекущегоРасписанияToolStripMenuItem,
-            this.заблокироватьВсеЗанятияВОпределенныйДеньToolStripMenuItem,
-            this.разблокироватьВсеЗанятияВОпределенныйДеньToolStripMenuItem,
-            this.заблокироватьВсеЗанятияЗавершающиеУчебныйДеньToolStripMenuItem,
-            this.разблокироватьВсеЗанятияЗавершающиеУчебныйДеньToolStripMenuItem,
-            this.заблокироватьВсеЗанятияОпределенногоВидаToolStripMenuItem,
-            this.разблокироватьВсеЗанятияОпределенногоВидаToolStripMenuItem,
-            this.блокироватьВсеЗанятияВыбранныеСПомощьюРасширенногоФильтраToolStripMenuItem,
-            this.разблокироватьВсеЗанятияВыбранныеСПомощьюРасширенногоФильтраToolStripMenuItem});
-            this.блокировкаразблокировкаЗанятийToolStripMenuItem.Name = "блокировкаразблокировкаЗанятийToolStripMenuItem";
-            this.блокировкаразблокировкаЗанятийToolStripMenuItem.Size = new System.Drawing.Size(305, 22);
-            this.блокировкаразблокировкаЗанятийToolStripMenuItem.Text = "Блокировка/разблокировка занятий";
-            // 
-            // заблокироватьВсеЗанятияТекущегоРасписанияToolStripMenuItem
-            // 
-            this.заблокироватьВсеЗанятияТекущегоРасписанияToolStripMenuItem.Name = "заблокироватьВсеЗанятияТекущегоРасписанияToolStripMenuItem";
-            this.заблокироватьВсеЗанятияТекущегоРасписанияToolStripMenuItem.Size = new System.Drawing.Size(504, 22);
-            this.заблокироватьВсеЗанятияТекущегоРасписанияToolStripMenuItem.Text = "Заблокировать все занятия текущего расписания";
-            // 
-            // разблокироватьВсеЗанятияТекущегоРасписанияToolStripMenuItem
-            // 
-            this.разблокироватьВсеЗанятияТекущегоРасписанияToolStripMenuItem.Name = "разблокироватьВсеЗанятияТекущегоРасписанияToolStripMenuItem";
-            this.разблокироватьВсеЗанятияТекущегоРасписанияToolStripMenuItem.Size = new System.Drawing.Size(504, 22);
-            this.разблокироватьВсеЗанятияТекущегоРасписанияToolStripMenuItem.Text = "Разблокировать все занятия текущего расписания";
-            // 
-            // заблокироватьВсеЗанятияВОпределенныйДеньToolStripMenuItem
-            // 
-            this.заблокироватьВсеЗанятияВОпределенныйДеньToolStripMenuItem.Name = "заблокироватьВсеЗанятияВОпределенныйДеньToolStripMenuItem";
-            this.заблокироватьВсеЗанятияВОпределенныйДеньToolStripMenuItem.Size = new System.Drawing.Size(504, 22);
-            this.заблокироватьВсеЗанятияВОпределенныйДеньToolStripMenuItem.Text = "Заблокировать все занятия в определенный день";
-            // 
-            // разблокироватьВсеЗанятияВОпределенныйДеньToolStripMenuItem
-            // 
-            this.разблокироватьВсеЗанятияВОпределенныйДеньToolStripMenuItem.Name = "разблокироватьВсеЗанятияВОпределенныйДеньToolStripMenuItem";
-            this.разблокироватьВсеЗанятияВОпределенныйДеньToolStripMenuItem.Size = new System.Drawing.Size(504, 22);
-            this.разблокироватьВсеЗанятияВОпределенныйДеньToolStripMenuItem.Text = "Разблокировать все занятия в определенный день";
-            // 
-            // заблокироватьВсеЗанятияЗавершающиеУчебныйДеньToolStripMenuItem
-            // 
-            this.заблокироватьВсеЗанятияЗавершающиеУчебныйДеньToolStripMenuItem.Name = "заблокироватьВсеЗанятияЗавершающиеУчебныйДеньToolStripMenuItem";
-            this.заблокироватьВсеЗанятияЗавершающиеУчебныйДеньToolStripMenuItem.Size = new System.Drawing.Size(504, 22);
-            this.заблокироватьВсеЗанятияЗавершающиеУчебныйДеньToolStripMenuItem.Text = "Заблокировать все занятия, завершающие учебный день";
-            // 
-            // разблокироватьВсеЗанятияЗавершающиеУчебныйДеньToolStripMenuItem
-            // 
-            this.разблокироватьВсеЗанятияЗавершающиеУчебныйДеньToolStripMenuItem.Name = "разблокироватьВсеЗанятияЗавершающиеУчебныйДеньToolStripMenuItem";
-            this.разблокироватьВсеЗанятияЗавершающиеУчебныйДеньToolStripMenuItem.Size = new System.Drawing.Size(504, 22);
-            this.разблокироватьВсеЗанятияЗавершающиеУчебныйДеньToolStripMenuItem.Text = "Разблокировать все занятия, завершающие учебный день";
-            // 
-            // заблокироватьВсеЗанятияОпределенногоВидаToolStripMenuItem
-            // 
-            this.заблокироватьВсеЗанятияОпределенногоВидаToolStripMenuItem.Name = "заблокироватьВсеЗанятияОпределенногоВидаToolStripMenuItem";
-            this.заблокироватьВсеЗанятияОпределенногоВидаToolStripMenuItem.Size = new System.Drawing.Size(504, 22);
-            this.заблокироватьВсеЗанятияОпределенногоВидаToolStripMenuItem.Text = "Заблокировать все занятия определенного вида";
-            // 
-            // разблокироватьВсеЗанятияОпределенногоВидаToolStripMenuItem
-            // 
-            this.разблокироватьВсеЗанятияОпределенногоВидаToolStripMenuItem.Name = "разблокироватьВсеЗанятияОпределенногоВидаToolStripMenuItem";
-            this.разблокироватьВсеЗанятияОпределенногоВидаToolStripMenuItem.Size = new System.Drawing.Size(504, 22);
-            this.разблокироватьВсеЗанятияОпределенногоВидаToolStripMenuItem.Text = "Разблокировать все занятия определенного вида";
-            // 
-            // блокироватьВсеЗанятияВыбранныеСПомощьюРасширенногоФильтраToolStripMenuItem
-            // 
-            this.блокироватьВсеЗанятияВыбранныеСПомощьюРасширенногоФильтраToolStripMenuItem.Name = "блокироватьВсеЗанятияВыбранныеСПомощьюРасширенногоФильтраToolStripMenuItem";
-            this.блокироватьВсеЗанятияВыбранныеСПомощьюРасширенногоФильтраToolStripMenuItem.Size = new System.Drawing.Size(504, 22);
-            this.блокироватьВсеЗанятияВыбранныеСПомощьюРасширенногоФильтраToolStripMenuItem.Text = "Блокировать все занятия, выбранные с помощью расширенного фильтра";
-            // 
-            // разблокироватьВсеЗанятияВыбранныеСПомощьюРасширенногоФильтраToolStripMenuItem
-            // 
-            this.разблокироватьВсеЗанятияВыбранныеСПомощьюРасширенногоФильтраToolStripMenuItem.Name = "разблокироватьВсеЗанятияВыбранныеСПомощьюРасширенногоФильтраToolStripMenuItem";
-            this.разблокироватьВсеЗанятияВыбранныеСПомощьюРасширенногоФильтраToolStripMenuItem.Size = new System.Drawing.Size(504, 22);
-            this.разблокироватьВсеЗанятияВыбранныеСПомощьюРасширенногоФильтраToolStripMenuItem.Text = "Разблокировать все занятия, выбранные с помощью расширенного фильтра";
-            // 
             // сохToolStripMenuItem
             // 
             this.сохToolStripMenuItem.Name = "сохToolStripMenuItem";
             this.сохToolStripMenuItem.Size = new System.Drawing.Size(305, 22);
             this.сохToolStripMenuItem.Text = "Сохранить данные и расписание как...";
-            // 
-            // составитьНесколькоToolStripMenuItem
-            // 
-            this.составитьНесколькоToolStripMenuItem.Name = "составитьНесколькоToolStripMenuItem";
-            this.составитьНесколькоToolStripMenuItem.Size = new System.Drawing.Size(305, 22);
-            this.составитьНесколькоToolStripMenuItem.Text = "Составить несколько";
             // 
             // настройкаToolStripMenuItem
             // 
@@ -2052,7 +1085,7 @@
             this.menuStrip2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(800, 450);
+            this.menuStrip2.Size = new System.Drawing.Size(525, 387);
             this.menuStrip2.TabIndex = 1;
             this.menuStrip2.Text = "menuStrip2";
             this.menuStrip2.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.MenuStrip2_ItemClicked);
@@ -2064,7 +1097,7 @@
             this.tabControl1.Controls.Add(this.main_time);
             this.tabControl1.Controls.Add(this.main_razme);
             this.tabControl1.Controls.Add(this.main_timetable);
-            this.tabControl1.Location = new System.Drawing.Point(142, 86);
+            this.tabControl1.Location = new System.Drawing.Point(12, 27);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(438, 268);
@@ -2160,110 +1193,76 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.data_additinal_btn);
-            this.groupBox2.Controls.Add(this.data_podzanya_btn);
+            this.groupBox2.Controls.Add(this.button9);
+            this.groupBox2.Controls.Add(this.button8);
+            this.groupBox2.Controls.Add(this.button6);
+            this.groupBox2.Controls.Add(this.button2);
+            this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.data_lessons_btn);
-            this.groupBox2.Controls.Add(this.data_vid_z_btn);
             this.groupBox2.Controls.Add(this.data_subject_btn);
             this.groupBox2.Controls.Add(this.data_class_btn);
             this.groupBox2.Controls.Add(this.data_students_btn);
             this.groupBox2.Controls.Add(this.data_teachers_btn);
-            this.groupBox2.Controls.Add(this.data_info_btn);
             this.groupBox2.Location = new System.Drawing.Point(55, 34);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(328, 165);
+            this.groupBox2.Size = new System.Drawing.Size(328, 188);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
-            // 
-            // data_additinal_btn
-            // 
-            this.data_additinal_btn.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.data_additinal_btn.Location = new System.Drawing.Point(220, 116);
-            this.data_additinal_btn.Name = "data_additinal_btn";
-            this.data_additinal_btn.Size = new System.Drawing.Size(96, 32);
-            this.data_additinal_btn.TabIndex = 10;
-            this.data_additinal_btn.Text = "Дополнительно";
-            this.data_additinal_btn.UseVisualStyleBackColor = true;
-            // 
-            // data_podzanya_btn
-            // 
-            this.data_podzanya_btn.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.data_podzanya_btn.Location = new System.Drawing.Point(118, 116);
-            this.data_podzanya_btn.Name = "data_podzanya_btn";
-            this.data_podzanya_btn.Size = new System.Drawing.Size(96, 32);
-            this.data_podzanya_btn.TabIndex = 9;
-            this.data_podzanya_btn.Text = "Подзанятия";
-            this.data_podzanya_btn.UseVisualStyleBackColor = true;
             // 
             // data_lessons_btn
             // 
             this.data_lessons_btn.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.data_lessons_btn.Location = new System.Drawing.Point(16, 116);
+            this.data_lessons_btn.Location = new System.Drawing.Point(6, 112);
             this.data_lessons_btn.Name = "data_lessons_btn";
             this.data_lessons_btn.Size = new System.Drawing.Size(96, 32);
             this.data_lessons_btn.TabIndex = 8;
             this.data_lessons_btn.Text = "Занятия";
             this.data_lessons_btn.UseVisualStyleBackColor = true;
-            // 
-            // data_vid_z_btn
-            // 
-            this.data_vid_z_btn.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.data_vid_z_btn.Location = new System.Drawing.Point(220, 19);
-            this.data_vid_z_btn.Name = "data_vid_z_btn";
-            this.data_vid_z_btn.Size = new System.Drawing.Size(96, 32);
-            this.data_vid_z_btn.TabIndex = 7;
-            this.data_vid_z_btn.Text = "Виды занятий";
-            this.data_vid_z_btn.UseVisualStyleBackColor = true;
+            this.data_lessons_btn.Click += new System.EventHandler(this.data_lessons_btn_Click);
             // 
             // data_subject_btn
             // 
             this.data_subject_btn.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.data_subject_btn.Location = new System.Drawing.Point(118, 19);
+            this.data_subject_btn.Location = new System.Drawing.Point(108, 19);
             this.data_subject_btn.Name = "data_subject_btn";
             this.data_subject_btn.Size = new System.Drawing.Size(96, 32);
             this.data_subject_btn.TabIndex = 6;
             this.data_subject_btn.Text = "Дисциплины";
             this.data_subject_btn.UseVisualStyleBackColor = true;
+            this.data_subject_btn.Click += new System.EventHandler(this.data_subject_btn_Click);
             // 
             // data_class_btn
             // 
             this.data_class_btn.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.data_class_btn.Location = new System.Drawing.Point(220, 69);
+            this.data_class_btn.Location = new System.Drawing.Point(136, 69);
             this.data_class_btn.Name = "data_class_btn";
-            this.data_class_btn.Size = new System.Drawing.Size(96, 32);
+            this.data_class_btn.Size = new System.Drawing.Size(80, 32);
             this.data_class_btn.TabIndex = 5;
             this.data_class_btn.Text = "Аудитории";
             this.data_class_btn.UseVisualStyleBackColor = true;
+            this.data_class_btn.Click += new System.EventHandler(this.data_class_btn_Click);
             // 
             // data_students_btn
             // 
             this.data_students_btn.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.data_students_btn.Location = new System.Drawing.Point(118, 69);
+            this.data_students_btn.Location = new System.Drawing.Point(6, 69);
             this.data_students_btn.Name = "data_students_btn";
-            this.data_students_btn.Size = new System.Drawing.Size(96, 32);
+            this.data_students_btn.Size = new System.Drawing.Size(124, 32);
             this.data_students_btn.TabIndex = 4;
-            this.data_students_btn.Text = "Студенты";
+            this.data_students_btn.Text = "Военнослужащие";
             this.data_students_btn.UseVisualStyleBackColor = true;
+            this.data_students_btn.Click += new System.EventHandler(this.data_students_btn_Click);
             // 
             // data_teachers_btn
             // 
             this.data_teachers_btn.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.data_teachers_btn.Location = new System.Drawing.Point(16, 69);
+            this.data_teachers_btn.Location = new System.Drawing.Point(108, 112);
             this.data_teachers_btn.Name = "data_teachers_btn";
             this.data_teachers_btn.Size = new System.Drawing.Size(96, 32);
             this.data_teachers_btn.TabIndex = 3;
             this.data_teachers_btn.Text = "Преподователи";
             this.data_teachers_btn.UseVisualStyleBackColor = true;
-            // 
-            // data_info_btn
-            // 
-            this.data_info_btn.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.data_info_btn.Location = new System.Drawing.Point(16, 19);
-            this.data_info_btn.Name = "data_info_btn";
-            this.data_info_btn.Size = new System.Drawing.Size(96, 32);
-            this.data_info_btn.TabIndex = 0;
-            this.data_info_btn.Text = "Информация";
-            this.data_info_btn.UseVisualStyleBackColor = true;
+            this.data_teachers_btn.Click += new System.EventHandler(this.data_teachers_btn_Click);
             // 
             // main_time
             // 
@@ -2278,10 +1277,8 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.ogr_additinal_btn);
             this.groupBox3.Controls.Add(this.ogr_lessons_btn);
             this.groupBox3.Controls.Add(this.ogr_timeout_btn);
-            this.groupBox3.Controls.Add(this.ogr_students_btn);
             this.groupBox3.Controls.Add(this.ogr_teachers_btn);
             this.groupBox3.Controls.Add(this.ogr_all_btn);
             this.groupBox3.Location = new System.Drawing.Point(99, 36);
@@ -2290,20 +1287,10 @@
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             // 
-            // ogr_additinal_btn
-            // 
-            this.ogr_additinal_btn.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ogr_additinal_btn.Location = new System.Drawing.Point(118, 116);
-            this.ogr_additinal_btn.Name = "ogr_additinal_btn";
-            this.ogr_additinal_btn.Size = new System.Drawing.Size(96, 32);
-            this.ogr_additinal_btn.TabIndex = 9;
-            this.ogr_additinal_btn.Text = "Дополнительно";
-            this.ogr_additinal_btn.UseVisualStyleBackColor = true;
-            // 
             // ogr_lessons_btn
             // 
             this.ogr_lessons_btn.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ogr_lessons_btn.Location = new System.Drawing.Point(16, 116);
+            this.ogr_lessons_btn.Location = new System.Drawing.Point(118, 69);
             this.ogr_lessons_btn.Name = "ogr_lessons_btn";
             this.ogr_lessons_btn.Size = new System.Drawing.Size(96, 32);
             this.ogr_lessons_btn.TabIndex = 8;
@@ -2319,16 +1306,7 @@
             this.ogr_timeout_btn.TabIndex = 6;
             this.ogr_timeout_btn.Text = "Перерыв";
             this.ogr_timeout_btn.UseVisualStyleBackColor = true;
-            // 
-            // ogr_students_btn
-            // 
-            this.ogr_students_btn.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ogr_students_btn.Location = new System.Drawing.Point(118, 69);
-            this.ogr_students_btn.Name = "ogr_students_btn";
-            this.ogr_students_btn.Size = new System.Drawing.Size(96, 32);
-            this.ogr_students_btn.TabIndex = 4;
-            this.ogr_students_btn.Text = "Студенты";
-            this.ogr_students_btn.UseVisualStyleBackColor = true;
+            this.ogr_timeout_btn.Click += new System.EventHandler(this.ogr_timeout_btn_Click);
             // 
             // ogr_teachers_btn
             // 
@@ -2575,7 +1553,7 @@
             // 
             // generate_timetable_btn
             // 
-            this.generate_timetable_btn.Location = new System.Drawing.Point(525, 384);
+            this.generate_timetable_btn.Location = new System.Drawing.Point(214, 326);
             this.generate_timetable_btn.Name = "generate_timetable_btn";
             this.generate_timetable_btn.Size = new System.Drawing.Size(236, 30);
             this.generate_timetable_btn.TabIndex = 3;
@@ -2583,11 +1561,64 @@
             this.generate_timetable_btn.UseVisualStyleBackColor = true;
             this.generate_timetable_btn.Click += new System.EventHandler(this.generate_timetable_btn_Click);
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(210, 21);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(104, 30);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Дни недели";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.Location = new System.Drawing.Point(222, 69);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(92, 37);
+            this.button2.TabIndex = 10;
+            this.button2.Text = "Расписание звонков";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(210, 112);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(104, 47);
+            this.button6.TabIndex = 11;
+            this.button6.Text = "Другие мероприятия";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(6, 21);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(96, 31);
+            this.button8.TabIndex = 12;
+            this.button8.Text = "Наз. ВУЗа";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // button9
+            // 
+            this.button9.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button9.Location = new System.Drawing.Point(108, 151);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(96, 31);
+            this.button9.TabIndex = 13;
+            this.button9.Text = "Группы";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
             // main_menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(525, 387);
             this.Controls.Add(this.generate_timetable_btn);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
@@ -2646,143 +1677,25 @@
         private System.Windows.Forms.ToolStripMenuItem информацияОбУчебномЗаведенииToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem названиеУчебногоЗаведенияToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem коментарииToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem периодыToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem дниНеделиИРасписаниеЗвонковToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem дниНеделиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem расписаниеЗвонковToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem дисциплиныToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem видыЗанятийToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem преподователиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem военнослужащиеToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem потокиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem группыToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem подгруппыToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem занятияToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem vacation_holiday;
         private System.Windows.Forms.ToolStripMenuItem аудиторииToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem всеОграниченияПоВремениToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ограниченияПоВремениToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem прочиеToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem основноеОбязательноеОграниченияПоВремениToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem перерывToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem преподователиToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem преподователь1ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem преподователь2ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem всеПреподователи1ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem всеПреподователи2ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem военнослужащиеToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem занятияToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem историяToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem статистикаToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem дополнительноToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem расписаниеToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem настройкаToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem справкаToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem доступностьПреподователейToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem максимумДнейВНеделюДляПреподователяToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem максимумУтреннихСменВНеделюДляПреподователяToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem максимумВечернихСменВНеделюДляПреподователяToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem преподовательРаботаетМаксимумТриДняПодрядToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem преподовательРаботаетМаксимумДваУтраПодрядToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem преподовательРаботаетМаксимумДваВечераПодрядToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem минимумДнейДляПреподователяToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem минимумРеальныхДнейВНеделюДляПреподователяToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem минимумУтреннихСменВНеделюДляПреподователяToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem минимумВечернихСменВНеделюДляПреподователяToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem максимумОконВДеньДляПреподователяToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem максимумОконУтромвечеромДляПреподователяToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem максимумОконВНеделюДляПреподователяToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem максимумОконВНеделюДляРеальныхДнейДляПреподователяToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem максимумНулевыхПерерывовВВечеромДляПреподователяToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem максимумПарВДеньДляПреподователяToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem максиумПарВРеальныйДеньДляПреподователяToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem максимумПромежутокВДеньДляПреподователяToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem максимумПромежутковВРеальныйДеньДляПреподователяToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem максимумПарОпределённогоВидаВРеальныйДеньДляПреподователяToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem максимумДваВидаЗанятийИз123ВДеньДляПреподователяToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem максимумДваВидаЗанятийИз123ВРеальныйДеньДляПреподователяToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem минимумПарВДеньДляПреподователяToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem минимумПарВРеальныйДеньДляПреподователяToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem минимумПарУтромДляПреподователяToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem минимумПарВечеромДляПреподователяToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem минимумПарОпределенногоВидаПодрядДляПреподователяToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem минимумПереходовМеждуЗанятиямиОдногоТипаДляПреподователяToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem минимумОконМеждуУпорядоченнымиЗанятиямиОпределённогоВидаДляПреподователяToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem работаПреподователяВЗаданномВременномИнтервалеToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem времяДоступностиВсехПреподователейToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem максимумДнейВНеделюДляВсехПреподователейToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem максимумРеальныхДнейВНеделюДляВсехПреподователейToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem максимумУтреннихСменВНеделюДляВсехПреподователейToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem максимумВечернихСменВНеделюДляВсехПреподователейToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem всеПреподователиРаботаютМаксимумТриДняПодрядToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem всеПреподователиРаботаютМаксимумДваУтраПодрядToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem всеПреподователиРаботаютМаксимумДваВечераПодрядToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem минимумДнейВНеделюДляВсехПреподователейToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem минимумРеальныхДнейВНеделюДляВсехПреподователейToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem минимумУтреннихСменВНеделюДляВсехПреподователейToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem минимумВечернихСменВНеделюДляВсехПреподователейToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem максимумОконВДеньДляВсехПреподователейToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem максимумОконУтромвечеромДляВсехПреподователейToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem максимумОконВНеделюДляВсехПреподователейToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem максимумОконВРеальныйДеньДляВсехПреподователейToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem максимумОконВНеделюДляРеальныхДнейДляВсехПреподователейToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem максимумНулевыхПерерывовВечеромДляВсехПреподователейToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem максимумПарВДеньДляВсехПреподователейToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem максимумПарВРеальныйДеньДляВсехПреподователейToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem максимумПромежутковВДеньДляВсехПреподователейToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem максимумПромежутковВРеальныйДеньДляВсехПреподователейToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem максимумПарОпределенногоВидаВРеальныйДеньДляВсехПреподователейToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem максимумДваВидаЗанятийИз123ВДеньДляВсехПреподователейToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem максимумДваВидаЗанятийИз123ВРеальныйДеньДляВсехПреподователейToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem минимумПарВДеньДляВсехПреподователейToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem минимумПарВРеальныйДеньДляВсехПреподователейToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem минимумПарСУтраДляВсехПреподователейToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem минимумПарВечеромДляВсехПреподователейToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem максимумПарОпределенногоВидаВДеньДляВсехПреподователейToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem максимумПарПодрядДляВсехПреподователейToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem максимумЗанятийОпределённогоВидаПодрядДляВсехПреподователейToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem минимумПереходовМеждуЗанятиямиОдногоТипаДляВсехПреподователейToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem минимумОконМеждуУпорядоченнымиЗанятиямиОпределённогоВидаДляВсехПреподователейToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem работаВсехПреподователейВЗаданномВременномИнтервалеToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem восстановитьToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem настройкаToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem статистикаПоПреподователямToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem статистикаПоДисциплинамToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem статистикаПоВоеннослужащимToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem статистикаПоАудиториямToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem статистикаПреподователейПоДисциплинамToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem печататьРасширеннуюСтатистикуToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem сохранитьРасширеннуюСтатистикуНаДискеToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem спракаПоСтатистикеToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem планированиеЗанятийToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem распределитьЗанятиеРавномерноВТеченииНеделиToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem удалитьИзбыточноеОграничениеToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem занятияГруппВПорядкеГенерацииToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem состоваитьНовоеCTRLGToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem просмотрпоПреподователямToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem дниГоризонтальноToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem времяГоризонтальноToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem просмотрпоГруппамToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem просмотрпоАудиториямToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem показатьмягкиеКонфликтыToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem печатьCTRLPToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem блокировкаразблокировкаЗанятийToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem сохToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem дниГоризонтальноToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem времяГоризонтальноToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem дниГоризонтальноToolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem времяГоризонтальноToolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem заблокироватьВсеЗанятияТекущегоРасписанияToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem разблокироватьВсеЗанятияТекущегоРасписанияToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem заблокироватьВсеЗанятияВОпределенныйДеньToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem разблокироватьВсеЗанятияВОпределенныйДеньToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem составитьНесколькоToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem заблокироватьВсеЗанятияЗавершающиеУчебныйДеньToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem разблокироватьВсеЗанятияЗавершающиеУчебныйДеньToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem заблокироватьВсеЗанятияОпределенногоВидаToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem разблокироватьВсеЗанятияОпределенногоВидаToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem блокироватьВсеЗанятияВыбранныеСПомощьюРасширенногоФильтраToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem разблокироватьВсеЗанятияВыбранныеСПомощьюРасширенногоФильтраToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem проверятьНаличиеОбновленийПриЗапускеToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem языкLanguageToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem расписаниеToolStripMenuItem1;
@@ -2864,20 +1777,14 @@
         private System.Windows.Forms.TabPage main_razme;
         private System.Windows.Forms.TabPage main_timetable;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button data_additinal_btn;
-        private System.Windows.Forms.Button data_podzanya_btn;
         private System.Windows.Forms.Button data_lessons_btn;
-        private System.Windows.Forms.Button data_vid_z_btn;
         private System.Windows.Forms.Button data_subject_btn;
         private System.Windows.Forms.Button data_class_btn;
         private System.Windows.Forms.Button data_students_btn;
         private System.Windows.Forms.Button data_teachers_btn;
-        private System.Windows.Forms.Button data_info_btn;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button ogr_additinal_btn;
         private System.Windows.Forms.Button ogr_lessons_btn;
         private System.Windows.Forms.Button ogr_timeout_btn;
-        private System.Windows.Forms.Button ogr_students_btn;
         private System.Windows.Forms.Button ogr_teachers_btn;
         private System.Windows.Forms.Button ogr_all_btn;
         private System.Windows.Forms.GroupBox groupBox4;
@@ -2900,6 +1807,11 @@
         private System.Windows.Forms.Button timetable_teachers_btn;
         private System.Windows.Forms.Button timetable_create_btn;
         private System.Windows.Forms.Button generate_timetable_btn;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
     }
 }
 
