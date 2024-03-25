@@ -110,8 +110,9 @@ namespace Timetable_VKA.DATA_SECTION
 
             for (int i = 0; i < dt_classroms.Rows.Count; i++)
             {
-                all_subjects[i] += dt_classroms.Rows[i].ItemArray[0].ToString();
-                all_subjects[i] += "\tлек";
+                
+                all_subjects[i] +="\n"+ dt_classroms.Rows[i].ItemArray[0].ToString();
+                //all_subjects[i] += "\n"+"лек";
 
             }
 
@@ -742,7 +743,7 @@ namespace Timetable_VKA.DATA_SECTION
                 Random random = new Random();
 
 
-                for (int i = 0; i < subjects_lecture[summa] + subjects_practic[summa] + subjects_con_work[summa]; i++)
+                for (int i = 1; i <= subjects_lecture[summa] + subjects_practic[summa] + subjects_con_work[summa]; i++)
                 {
 
 
@@ -752,8 +753,12 @@ namespace Timetable_VKA.DATA_SECTION
 
                         if (dataGridView1[column, row__].Value == null)
                         {
-                            dataGridView1[column, row__].Value = all_subjects[subject].ToString();
-
+                            dataGridView1[column, row__].Value = all_subjects[subject].ToString()+"\n";
+                            if (i < subjects_lecture[summa] || i == subjects_lecture[summa]) dataGridView1[column, row__].Value += "лек";
+                            if (i > subjects_lecture[summa] && i < subjects_lecture[summa] + subjects_practic[summa] || i == subjects_lecture[summa] + subjects_practic[summa])
+                                dataGridView1[column, row__].Value += "пр";
+                            if (i > subjects_lecture[summa] + subjects_practic[summa] && i < subjects_lecture[summa] + subjects_practic[summa]+subjects_con_work[summa] || i == subjects_lecture[summa] + subjects_practic[summa] + subjects_con_work[summa])
+                                dataGridView1[column, row__].Value += "зк";
                         }
                         else
                         {
