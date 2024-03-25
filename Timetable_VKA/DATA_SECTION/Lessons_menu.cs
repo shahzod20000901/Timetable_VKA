@@ -77,6 +77,7 @@ namespace Timetable_VKA.DATA_SECTION
         List<int> lecture =new List<int>() { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
         List<int> seminar = new List<int>() { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
         List<int> control_work = new List<int>() { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+        List<int> id = new List<int>() { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 
        
 
@@ -132,21 +133,32 @@ namespace Timetable_VKA.DATA_SECTION
             {
                 if (control_work[i] == 0) control_work.RemoveAt(i);
             }
+            int local = 1;
+            for (int i = 0; i < Subjects.LongCount(); i++)
+            {
+                id[i] = local;
+                local++;
+            }
 
+            for (int i = 0; i < id.LongCount(); i++)
+            {
+                if (id[i] == 0) id.RemoveAt(i);
+            }
 
             for (int i = 0; i < dataGridView1.Rows.Count-1; i++)
             {
 
 
 
-                command1 = new MySqlCommand("INSERT INTO `lessons_summary` (`Subjects`, `lectures`,`practic`,`control work`) VALUES(@log, @log" + i + ", @log" + i + 1 + ", @log" + i + 2 + ")", db.getConnection());
+                command1 = new MySqlCommand("INSERT INTO `lessons_summary` (`id`, `Subjects`, `lectures`,`practic`,`control work`) VALUES(@log, @log" + i +", @log" + i + 1+", @log" + i + 2 + ", @log" + i + 3 + ")", db.getConnection());
 
-                command1.Parameters.Add("@log", MySqlDbType.VarChar).Value = Subjects[i];
+                command1.Parameters.Add("@log", MySqlDbType.VarChar).Value = id[i];
+                command1.Parameters.Add("@log" + i + "", MySqlDbType.VarChar).Value = Subjects[i];
 
-                command1.Parameters.Add("@log" + i + "", MySqlDbType.Int32).Value = lecture[i];
+                command1.Parameters.Add("@log" + i + 1+"", MySqlDbType.Int32).Value = lecture[i];
 
-                command1.Parameters.Add("@log" + i + 1 + "", MySqlDbType.Int32).Value = seminar[i];
-                command1.Parameters.Add("@log" + i + 2 + "", MySqlDbType.Int32).Value = control_work[i];
+                command1.Parameters.Add("@log" + i + 2 + "", MySqlDbType.Int32).Value = seminar[i];
+                command1.Parameters.Add("@log" + i + 3 + "", MySqlDbType.Int32).Value = control_work[i];
                 
 
 

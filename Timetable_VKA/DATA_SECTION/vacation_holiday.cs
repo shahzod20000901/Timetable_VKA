@@ -35,7 +35,7 @@ namespace Timetable_VKA.DATA_SECTION
 
            
 
-            for(int i=0; i<7;i++)
+            for(int i=0; i<10;i++)
             {
                 DataGridViewRow row = new DataGridViewRow();
                 dataGridView1.Rows.Add(row);
@@ -61,53 +61,52 @@ namespace Timetable_VKA.DATA_SECTION
             DataBank.vac_mounth[1] = textBox4.Text.Substring(0, textBox4.Text.Length - 3);
 
 
-            for (int j = 0; j < dataGridView1.Rows.Count; j++)
+            for(int i=0; i<dataGridView1.Columns.Count; i++)
             {
-                if (dataGridView1[0, j].Value == null)
-                {
-                    dataGridView1.Rows.RemoveAt(j);
-
-                }
-            }
-            MessageBox.Show(dataGridView1.Rows.Count.ToString());
-
-                int flag = 0;
                 for(int j=0; j<dataGridView1.Rows.Count; j++)
                 {
-                    if (dataGridView1[0, j].Value!=null)
+                    if (dataGridView1[i, j].Value != null)
                     {
-                        DataBank.hol_day[flag] = dataGridView1[0, j].Value.ToString();
-                        DataBank.hol_mounth[flag] = dataGridView1[1, j].Value.ToString();
-                    flag++;
-
+                        if (dataGridView1[i, j].Value.ToString().ToLower() == "января") dataGridView1[i, j].Value = "янва";
+                        else if (dataGridView1[i, j].Value.ToString().ToLower() == "февраля") dataGridView1[i, j].Value = "февр";
+                        else if (dataGridView1[i, j].Value.ToString().ToLower() == "марта") dataGridView1[i, j].Value = "март";
+                        else if (dataGridView1[i, j].Value.ToString().ToLower() == "апреля") dataGridView1[i, j].Value = "апре";
+                        else if (dataGridView1[i, j].Value.ToString().ToLower() == "мая") dataGridView1[i, j].Value = "май";
+                        else if (dataGridView1[i, j].Value.ToString().ToLower() == "июня") dataGridView1[i, j].Value = "июнь";
+                        else if (dataGridView1[i, j].Value.ToString().ToLower() == "июля") dataGridView1[i, j].Value = "июль";
+                        else if (dataGridView1[i, j].Value.ToString().ToLower() == "августа") dataGridView1[i, j].Value = "авгу";
+                        else if (dataGridView1[i, j].Value.ToString().ToLower() == "сентября") dataGridView1[i, j].Value = "сент";
+                        else if (dataGridView1[i, j].Value.ToString().ToLower() == "октября") dataGridView1[i, j].Value = "октя";
+                        else if (dataGridView1[i, j].Value.ToString().ToLower() == "ноября") dataGridView1[i, j].Value = "нояб";
+                        else if (dataGridView1[i, j].Value.ToString().ToLower() == "декабря") dataGridView1[i, j].Value = "дека";
                     }
+                    
+
                 }
-
-           
-
-            for (int j = 0; j < DataBank.hol_day.Count; j++)
+            }
+            
+            /*
+            for(int i=0; i<dataGridView1.Rows.Count;i++)
             {
-                if (DataBank.hol_day[j]=="")DataBank.hol_day.RemoveAt(j);
+                if (dataGridView1[0,i].Value==null)dataGridView1.Rows.RemoveAt(i);
+            }
+            */
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            {
+                if (dataGridView1[0, i].Value != null)
+                {
+                    DataBank.hol_day[i] = dataGridView1[0, i].Value.ToString();
+                    DataBank.hol_mounth[i] = dataGridView1[1, i].Value.ToString();
+                }
+                
             }
 
-
-           
-           
-
-            
-            
-            for (int j = 0; j < 2; j++)
-            {
-                DataBank.hol_mounth[j] = DataBank.hol_mounth[j].Substring(0, DataBank.hol_mounth[j].Length - 3);
-            }
-
-            MessageBox.Show(DataBank.hol_mounth[0]);
+            /*
+            DataBank.hol_day[0] = "4";
+            DataBank.hol_day[1] = "23";
             DataBank.hol_mounth[0] = "Нояб";
-            
-           
-
-
-           
+            DataBank.hol_mounth[1] = "Февр";
+           */
 
             this.Close();
 

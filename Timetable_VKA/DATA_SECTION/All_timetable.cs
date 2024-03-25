@@ -441,7 +441,7 @@ namespace Timetable_VKA.DATA_SECTION
 
 
             ////////////////////////////////////////////////////////////////////////////////////////////////////////
-            /*                                            Вставка отпуска и праздников                                   */
+            /*                                            Вставка отпуска                                  */
             int vac_start_column = 0;
             int vac_start_row = 0;
 
@@ -553,73 +553,81 @@ namespace Timetable_VKA.DATA_SECTION
             }
             /*-------------------------------  Определение праздничные дни ------------------------------------- */
 
-            int flag = 0;
-            for (int i = 4; i < dataGridView1.Columns.Count; i++)
+
+
+            int mounths = 0;
+            int hol_days = 0;
+            
+            for(int local=0; local < DataBank.hol_mounth.Count; local++)
             {
-                int loc = 2;
-
-                if (dataGridView1[i, loc].Value != null)
+                for (int i = 4; i < dataGridView1.Columns.Count; i++)
                 {
-                    if (dataGridView1[i, loc].Value.ToString().ToLower() == DataBank.hol_mounth[flag].ToLower())
+                    int loc = 2;
+
+                    if (dataGridView1[i, loc].Value != null)
                     {
-                        ++loc;
-
-                        MessageBox.Show(DataBank.hol_mounth[flag]);
-                        for (; loc < dataGridView1.Rows.Count; loc++)
+                        if (dataGridView1[i, loc].Value.ToString().ToLower() == DataBank.hol_mounth[mounths].ToLower())
                         {
-                            if (dataGridView1[i, loc].Value != null)
-                            {
-                                if (dataGridView1[i, loc].Value.ToString().ToLower() == DataBank.hol_day[flag].ToLower())
-                                {
-                                    if (dataGridView1[i, loc+1].Value==null)
-                                    {
-                                        dataGridView1[i, loc + 1].Value = "Вых";
-                                        dataGridView1[i, loc + 1].Style.BackColor = Color.DarkGray; 
-                                    }
-                                    if (dataGridView1[i, loc + 2].Value == null)
-                                    {
-                                        dataGridView1[i, loc + 2].Value = "Вых";
-                                        dataGridView1[i, loc + 2].Style.BackColor = Color.DarkGray;
-                                    }
-                                    if (dataGridView1[i, loc + 3].Value == null)
-                                    {
-                                        dataGridView1[i, loc + 3].Value = "Вых";
-                                        dataGridView1[i, loc + 3].Style.BackColor = Color.DarkGray;
-                                    }
-                                    if (dataGridView1[i, loc + 4].Value == null)
-                                    {
-                                        dataGridView1[i, loc + 4].Value = "Вых";
-                                        dataGridView1[i, loc + 4].Style.BackColor = Color.DarkGray;
-                                    }
+                            ++loc;
 
+
+                            for (; loc < dataGridView1.Rows.Count; loc++)
+                            {
+                                if (dataGridView1[i, loc].Value != null)
+                                {
+                                    if (dataGridView1[i, loc].Value.ToString().ToLower() == DataBank.hol_day[hol_days].ToLower())
+                                    {
+
+                                        if (dataGridView1[i, loc + 1].Value == null)
+                                        {
+                                            dataGridView1[i, loc + 1].Value = "Вых";
+                                            dataGridView1[i, loc + 1].Style.BackColor = Color.DarkGray;
+
+                                        }
+                                        if (dataGridView1[i, loc + 2].Value == null)
+                                        {
+                                            dataGridView1[i, loc + 2].Value = "Вых";
+                                            dataGridView1[i, loc + 2].Style.BackColor = Color.DarkGray;
+
+                                        }
+                                        if (dataGridView1[i, loc + 3].Value == null)
+                                        {
+                                            dataGridView1[i, loc + 3].Value = "Вых";
+                                            dataGridView1[i, loc + 3].Style.BackColor = Color.DarkGray;
+
+                                        }
+                                        if (dataGridView1[i, loc + 4].Value == null)
+                                        {
+                                            dataGridView1[i, loc + 4].Value = "Вых";
+                                            dataGridView1[i, loc + 4].Style.BackColor = Color.DarkGray;
+
+                                        }
+
+                                    }
                                 }
+
+
                             }
 
-
                         }
-
                     }
-                }
-                if(flag==1)
-                {
-                    flag = 0;
-                }
-                flag++;
-                
 
+
+
+                }
+
+                mounths++;
+                hol_days++;
             }
 
-
-            ////////////////////////////////////////////////////////////////////////////////////////////////////////////
-            ///
-            dataGridView1.Rows.RemoveAt(32);
-
-            ////////////////////////////////////////////////////////////////////////////////////////////////////////
-            /*                                      распределение расписаний                             */
+            
 
 
+            dataGridView1.Rows.RemoveAt(30);
 
+            
 
+            
             int subject = 0;
             int summa = 0;
             for (int r = 0; r < all_subjects.Count; r++)
