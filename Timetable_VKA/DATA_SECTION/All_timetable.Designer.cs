@@ -75,8 +75,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(All_timetable));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.the_end_of_row = new System.Windows.Forms.Label();
-            this.the_end_of_column = new System.Windows.Forms.Label();
             this.vuz_name1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.week = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -110,17 +108,9 @@
             this.Column28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.group_name1 = new System.Windows.Forms.Label();
-            this.faculty_name = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.tabPage8 = new System.Windows.Forms.TabPage();
-            this.tabPage9 = new System.Windows.Forms.TabPage();
-            this.tabPage10 = new System.Windows.Forms.TabPage();
-            this.tabPage11 = new System.Windows.Forms.TabPage();
+            this.group_name2 = new System.Windows.Forms.Label();
+            this.vuz_name2 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -152,6 +142,9 @@
             this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.group_name3 = new System.Windows.Forms.Label();
+            this.vuz_name3 = new System.Windows.Forms.Label();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -183,6 +176,9 @@
             this.dataGridViewTextBoxColumn58 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn59 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn60 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.group_name4 = new System.Windows.Forms.Label();
+            this.vuz_name4 = new System.Windows.Forms.Label();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn61 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn62 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -214,6 +210,9 @@
             this.dataGridViewTextBoxColumn88 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn89 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn90 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.group_name5 = new System.Windows.Forms.Label();
+            this.vuz_name5 = new System.Windows.Forms.Label();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn91 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn92 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -245,6 +244,9 @@
             this.dataGridViewTextBoxColumn118 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn119 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn120 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.group_name6 = new System.Windows.Forms.Label();
+            this.vuz_name6 = new System.Windows.Forms.Label();
             this.dataGridView6 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn121 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn122 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -276,6 +278,9 @@
             this.dataGridViewTextBoxColumn148 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn149 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn150 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.group_name7 = new System.Windows.Forms.Label();
+            this.vuz_name7 = new System.Windows.Forms.Label();
             this.dataGridView7 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn151 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn152 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -307,6 +312,9 @@
             this.dataGridViewTextBoxColumn178 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn179 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn180 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.group_name8 = new System.Windows.Forms.Label();
+            this.vuz_name8 = new System.Windows.Forms.Label();
             this.dataGridView8 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn181 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn182 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -338,6 +346,9 @@
             this.dataGridViewTextBoxColumn208 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn209 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn210 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage9 = new System.Windows.Forms.TabPage();
+            this.group_name9 = new System.Windows.Forms.Label();
+            this.vuz_name9 = new System.Windows.Forms.Label();
             this.dataGridView9 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn211 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn212 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -369,6 +380,9 @@
             this.dataGridViewTextBoxColumn238 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn239 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn240 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage10 = new System.Windows.Forms.TabPage();
+            this.group_name10 = new System.Windows.Forms.Label();
+            this.vuz_name10 = new System.Windows.Forms.Label();
             this.dataGridView10 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn241 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn242 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -400,6 +414,9 @@
             this.dataGridViewTextBoxColumn268 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn269 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn270 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage11 = new System.Windows.Forms.TabPage();
+            this.group_name11 = new System.Windows.Forms.Label();
+            this.vuz_name11 = new System.Windows.Forms.Label();
             this.dataGridView11 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn271 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn272 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -431,48 +448,28 @@
             this.dataGridViewTextBoxColumn298 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn299 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn300 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vuz_name2 = new System.Windows.Forms.Label();
-            this.vuz_name3 = new System.Windows.Forms.Label();
-            this.vuz_name4 = new System.Windows.Forms.Label();
-            this.vuz_name5 = new System.Windows.Forms.Label();
-            this.vuz_name6 = new System.Windows.Forms.Label();
-            this.vuz_name7 = new System.Windows.Forms.Label();
-            this.vuz_name8 = new System.Windows.Forms.Label();
-            this.vuz_name9 = new System.Windows.Forms.Label();
-            this.vuz_name10 = new System.Windows.Forms.Label();
-            this.vuz_name11 = new System.Windows.Forms.Label();
-            this.group_name2 = new System.Windows.Forms.Label();
-            this.group_name3 = new System.Windows.Forms.Label();
-            this.group_name4 = new System.Windows.Forms.Label();
-            this.group_name5 = new System.Windows.Forms.Label();
-            this.group_name6 = new System.Windows.Forms.Label();
-            this.group_name7 = new System.Windows.Forms.Label();
-            this.group_name8 = new System.Windows.Forms.Label();
-            this.group_name9 = new System.Windows.Forms.Label();
-            this.group_name10 = new System.Windows.Forms.Label();
-            this.group_name11 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            this.tabPage4.SuspendLayout();
-            this.tabPage5.SuspendLayout();
-            this.tabPage6.SuspendLayout();
-            this.tabPage7.SuspendLayout();
-            this.tabPage8.SuspendLayout();
-            this.tabPage9.SuspendLayout();
-            this.tabPage10.SuspendLayout();
-            this.tabPage11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
+            this.tabPage6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
+            this.tabPage7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
+            this.tabPage8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).BeginInit();
+            this.tabPage9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).BeginInit();
+            this.tabPage10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).BeginInit();
+            this.tabPage11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView11)).BeginInit();
             this.SuspendLayout();
             // 
@@ -501,12 +498,9 @@
             // tabPage1
             // 
             this.tabPage1.AutoScroll = true;
-            this.tabPage1.Controls.Add(this.the_end_of_row);
-            this.tabPage1.Controls.Add(this.the_end_of_column);
             this.tabPage1.Controls.Add(this.vuz_name1);
             this.tabPage1.Controls.Add(this.dataGridView1);
             this.tabPage1.Controls.Add(this.group_name1);
-            this.tabPage1.Controls.Add(this.faculty_name);
             this.tabPage1.Location = new System.Drawing.Point(4, 21);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
@@ -516,28 +510,10 @@
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
-            // the_end_of_row
-            // 
-            this.the_end_of_row.AutoSize = true;
-            this.the_end_of_row.Location = new System.Drawing.Point(747, 2);
-            this.the_end_of_row.Name = "the_end_of_row";
-            this.the_end_of_row.Size = new System.Drawing.Size(39, 12);
-            this.the_end_of_row.TabIndex = 7;
-            this.the_end_of_row.Text = "end_row";
-            // 
-            // the_end_of_column
-            // 
-            this.the_end_of_column.AutoSize = true;
-            this.the_end_of_column.Location = new System.Drawing.Point(676, 15);
-            this.the_end_of_column.Name = "the_end_of_column";
-            this.the_end_of_column.Size = new System.Drawing.Size(52, 12);
-            this.the_end_of_column.TabIndex = 6;
-            this.the_end_of_column.Text = "end_column";
-            // 
             // vuz_name1
             // 
             this.vuz_name1.AutoSize = true;
-            this.vuz_name1.Location = new System.Drawing.Point(102, 15);
+            this.vuz_name1.Location = new System.Drawing.Point(390, 2);
             this.vuz_name1.Name = "vuz_name1";
             this.vuz_name1.Size = new System.Drawing.Size(43, 12);
             this.vuz_name1.TabIndex = 5;
@@ -822,22 +798,12 @@
             // group_name1
             // 
             this.group_name1.AutoSize = true;
-            this.group_name1.Location = new System.Drawing.Point(453, 2);
+            this.group_name1.Location = new System.Drawing.Point(449, 15);
             this.group_name1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.group_name1.Name = "group_name1";
-            this.group_name1.Size = new System.Drawing.Size(52, 12);
+            this.group_name1.Size = new System.Drawing.Size(28, 12);
             this.group_name1.TabIndex = 2;
-            this.group_name1.Text = "group_name";
-            // 
-            // faculty_name
-            // 
-            this.faculty_name.AutoSize = true;
-            this.faculty_name.Location = new System.Drawing.Point(676, 0);
-            this.faculty_name.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.faculty_name.Name = "faculty_name";
-            this.faculty_name.Size = new System.Drawing.Size(55, 12);
-            this.faculty_name.TabIndex = 1;
-            this.faculty_name.Text = "faculty_name";
+            this.group_name1.Text = "group";
             // 
             // tabPage2
             // 
@@ -852,114 +818,24 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // tabPage3
+            // group_name2
             // 
-            this.tabPage3.Controls.Add(this.group_name3);
-            this.tabPage3.Controls.Add(this.vuz_name3);
-            this.tabPage3.Controls.Add(this.dataGridView3);
-            this.tabPage3.Location = new System.Drawing.Point(4, 21);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(926, 807);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.group_name2.AutoSize = true;
+            this.group_name2.Location = new System.Drawing.Point(426, 15);
+            this.group_name2.Name = "group_name2";
+            this.group_name2.Size = new System.Drawing.Size(28, 12);
+            this.group_name2.TabIndex = 6;
+            this.group_name2.Text = "group";
+            this.group_name2.Click += new System.EventHandler(this.group_name2_Click);
             // 
-            // tabPage4
+            // vuz_name2
             // 
-            this.tabPage4.Controls.Add(this.group_name4);
-            this.tabPage4.Controls.Add(this.vuz_name4);
-            this.tabPage4.Controls.Add(this.dataGridView4);
-            this.tabPage4.Location = new System.Drawing.Point(4, 21);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(926, 807);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.Controls.Add(this.group_name5);
-            this.tabPage5.Controls.Add(this.vuz_name5);
-            this.tabPage5.Controls.Add(this.dataGridView5);
-            this.tabPage5.Location = new System.Drawing.Point(4, 21);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(926, 807);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // tabPage6
-            // 
-            this.tabPage6.Controls.Add(this.group_name6);
-            this.tabPage6.Controls.Add(this.vuz_name6);
-            this.tabPage6.Controls.Add(this.dataGridView6);
-            this.tabPage6.Location = new System.Drawing.Point(4, 21);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(926, 807);
-            this.tabPage6.TabIndex = 5;
-            this.tabPage6.UseVisualStyleBackColor = true;
-            // 
-            // tabPage7
-            // 
-            this.tabPage7.Controls.Add(this.group_name7);
-            this.tabPage7.Controls.Add(this.vuz_name7);
-            this.tabPage7.Controls.Add(this.dataGridView7);
-            this.tabPage7.Location = new System.Drawing.Point(4, 21);
-            this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(926, 807);
-            this.tabPage7.TabIndex = 6;
-            this.tabPage7.UseVisualStyleBackColor = true;
-            // 
-            // tabPage8
-            // 
-            this.tabPage8.Controls.Add(this.group_name8);
-            this.tabPage8.Controls.Add(this.vuz_name8);
-            this.tabPage8.Controls.Add(this.dataGridView8);
-            this.tabPage8.Location = new System.Drawing.Point(4, 21);
-            this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(926, 807);
-            this.tabPage8.TabIndex = 7;
-            this.tabPage8.UseVisualStyleBackColor = true;
-            // 
-            // tabPage9
-            // 
-            this.tabPage9.Controls.Add(this.group_name9);
-            this.tabPage9.Controls.Add(this.vuz_name9);
-            this.tabPage9.Controls.Add(this.dataGridView9);
-            this.tabPage9.Location = new System.Drawing.Point(4, 21);
-            this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage9.Size = new System.Drawing.Size(926, 807);
-            this.tabPage9.TabIndex = 8;
-            this.tabPage9.UseVisualStyleBackColor = true;
-            // 
-            // tabPage10
-            // 
-            this.tabPage10.Controls.Add(this.group_name10);
-            this.tabPage10.Controls.Add(this.vuz_name10);
-            this.tabPage10.Controls.Add(this.dataGridView10);
-            this.tabPage10.Location = new System.Drawing.Point(4, 21);
-            this.tabPage10.Name = "tabPage10";
-            this.tabPage10.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage10.Size = new System.Drawing.Size(926, 807);
-            this.tabPage10.TabIndex = 9;
-            this.tabPage10.UseVisualStyleBackColor = true;
-            // 
-            // tabPage11
-            // 
-            this.tabPage11.Controls.Add(this.group_name11);
-            this.tabPage11.Controls.Add(this.vuz_name11);
-            this.tabPage11.Controls.Add(this.dataGridView11);
-            this.tabPage11.Location = new System.Drawing.Point(4, 21);
-            this.tabPage11.Name = "tabPage11";
-            this.tabPage11.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage11.Size = new System.Drawing.Size(926, 807);
-            this.tabPage11.TabIndex = 10;
-            this.tabPage11.UseVisualStyleBackColor = true;
-            this.tabPage11.Click += new System.EventHandler(this.tabPage11_Click);
+            this.vuz_name2.AutoSize = true;
+            this.vuz_name2.Location = new System.Drawing.Point(380, 2);
+            this.vuz_name2.Name = "vuz_name2";
+            this.vuz_name2.Size = new System.Drawing.Size(29, 12);
+            this.vuz_name2.TabIndex = 5;
+            this.vuz_name2.Text = "label1";
             // 
             // dataGridView2
             // 
@@ -1237,6 +1113,36 @@
             this.dataGridViewTextBoxColumn30.Name = "dataGridViewTextBoxColumn30";
             this.dataGridViewTextBoxColumn30.Width = 30;
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.group_name3);
+            this.tabPage3.Controls.Add(this.vuz_name3);
+            this.tabPage3.Controls.Add(this.dataGridView3);
+            this.tabPage3.Location = new System.Drawing.Point(4, 21);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(926, 807);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // group_name3
+            // 
+            this.group_name3.AutoSize = true;
+            this.group_name3.Location = new System.Drawing.Point(442, 20);
+            this.group_name3.Name = "group_name3";
+            this.group_name3.Size = new System.Drawing.Size(28, 12);
+            this.group_name3.TabIndex = 7;
+            this.group_name3.Text = "group";
+            // 
+            // vuz_name3
+            // 
+            this.vuz_name3.AutoSize = true;
+            this.vuz_name3.Location = new System.Drawing.Point(406, 0);
+            this.vuz_name3.Name = "vuz_name3";
+            this.vuz_name3.Size = new System.Drawing.Size(29, 12);
+            this.vuz_name3.TabIndex = 6;
+            this.vuz_name3.Text = "label1";
+            // 
             // dataGridView3
             // 
             this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -1513,6 +1419,36 @@
             this.dataGridViewTextBoxColumn60.Name = "dataGridViewTextBoxColumn60";
             this.dataGridViewTextBoxColumn60.Width = 30;
             // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.group_name4);
+            this.tabPage4.Controls.Add(this.vuz_name4);
+            this.tabPage4.Controls.Add(this.dataGridView4);
+            this.tabPage4.Location = new System.Drawing.Point(4, 21);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(926, 807);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // group_name4
+            // 
+            this.group_name4.AutoSize = true;
+            this.group_name4.Location = new System.Drawing.Point(417, 26);
+            this.group_name4.Name = "group_name4";
+            this.group_name4.Size = new System.Drawing.Size(28, 12);
+            this.group_name4.TabIndex = 7;
+            this.group_name4.Text = "group";
+            // 
+            // vuz_name4
+            // 
+            this.vuz_name4.AutoSize = true;
+            this.vuz_name4.Location = new System.Drawing.Point(377, 3);
+            this.vuz_name4.Name = "vuz_name4";
+            this.vuz_name4.Size = new System.Drawing.Size(29, 12);
+            this.vuz_name4.TabIndex = 6;
+            this.vuz_name4.Text = "label1";
+            // 
             // dataGridView4
             // 
             this.dataGridView4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -1788,6 +1724,37 @@
             this.dataGridViewTextBoxColumn90.HeaderText = "27";
             this.dataGridViewTextBoxColumn90.Name = "dataGridViewTextBoxColumn90";
             this.dataGridViewTextBoxColumn90.Width = 30;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.group_name5);
+            this.tabPage5.Controls.Add(this.vuz_name5);
+            this.tabPage5.Controls.Add(this.dataGridView5);
+            this.tabPage5.Location = new System.Drawing.Point(4, 21);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(926, 807);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // group_name5
+            // 
+            this.group_name5.AutoSize = true;
+            this.group_name5.Location = new System.Drawing.Point(420, 26);
+            this.group_name5.Name = "group_name5";
+            this.group_name5.Size = new System.Drawing.Size(28, 12);
+            this.group_name5.TabIndex = 7;
+            this.group_name5.Text = "group";
+            this.group_name5.Click += new System.EventHandler(this.group_name5_Click);
+            // 
+            // vuz_name5
+            // 
+            this.vuz_name5.AutoSize = true;
+            this.vuz_name5.Location = new System.Drawing.Point(377, 3);
+            this.vuz_name5.Name = "vuz_name5";
+            this.vuz_name5.Size = new System.Drawing.Size(29, 12);
+            this.vuz_name5.TabIndex = 6;
+            this.vuz_name5.Text = "label1";
             // 
             // dataGridView5
             // 
@@ -2066,6 +2033,36 @@
             this.dataGridViewTextBoxColumn120.Name = "dataGridViewTextBoxColumn120";
             this.dataGridViewTextBoxColumn120.Width = 30;
             // 
+            // tabPage6
+            // 
+            this.tabPage6.Controls.Add(this.group_name6);
+            this.tabPage6.Controls.Add(this.vuz_name6);
+            this.tabPage6.Controls.Add(this.dataGridView6);
+            this.tabPage6.Location = new System.Drawing.Point(4, 21);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(926, 807);
+            this.tabPage6.TabIndex = 5;
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // group_name6
+            // 
+            this.group_name6.AutoSize = true;
+            this.group_name6.Location = new System.Drawing.Point(435, 20);
+            this.group_name6.Name = "group_name6";
+            this.group_name6.Size = new System.Drawing.Size(28, 12);
+            this.group_name6.TabIndex = 7;
+            this.group_name6.Text = "group";
+            // 
+            // vuz_name6
+            // 
+            this.vuz_name6.AutoSize = true;
+            this.vuz_name6.Location = new System.Drawing.Point(396, 3);
+            this.vuz_name6.Name = "vuz_name6";
+            this.vuz_name6.Size = new System.Drawing.Size(29, 12);
+            this.vuz_name6.TabIndex = 6;
+            this.vuz_name6.Text = "label1";
+            // 
             // dataGridView6
             // 
             this.dataGridView6.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -2341,6 +2338,36 @@
             this.dataGridViewTextBoxColumn150.HeaderText = "27";
             this.dataGridViewTextBoxColumn150.Name = "dataGridViewTextBoxColumn150";
             this.dataGridViewTextBoxColumn150.Width = 30;
+            // 
+            // tabPage7
+            // 
+            this.tabPage7.Controls.Add(this.group_name7);
+            this.tabPage7.Controls.Add(this.vuz_name7);
+            this.tabPage7.Controls.Add(this.dataGridView7);
+            this.tabPage7.Location = new System.Drawing.Point(4, 21);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage7.Size = new System.Drawing.Size(926, 807);
+            this.tabPage7.TabIndex = 6;
+            this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // group_name7
+            // 
+            this.group_name7.AutoSize = true;
+            this.group_name7.Location = new System.Drawing.Point(435, 26);
+            this.group_name7.Name = "group_name7";
+            this.group_name7.Size = new System.Drawing.Size(28, 12);
+            this.group_name7.TabIndex = 7;
+            this.group_name7.Text = "group";
+            // 
+            // vuz_name7
+            // 
+            this.vuz_name7.AutoSize = true;
+            this.vuz_name7.Location = new System.Drawing.Point(397, 3);
+            this.vuz_name7.Name = "vuz_name7";
+            this.vuz_name7.Size = new System.Drawing.Size(29, 12);
+            this.vuz_name7.TabIndex = 6;
+            this.vuz_name7.Text = "label1";
             // 
             // dataGridView7
             // 
@@ -2618,6 +2645,36 @@
             this.dataGridViewTextBoxColumn180.Name = "dataGridViewTextBoxColumn180";
             this.dataGridViewTextBoxColumn180.Width = 30;
             // 
+            // tabPage8
+            // 
+            this.tabPage8.Controls.Add(this.group_name8);
+            this.tabPage8.Controls.Add(this.vuz_name8);
+            this.tabPage8.Controls.Add(this.dataGridView8);
+            this.tabPage8.Location = new System.Drawing.Point(4, 21);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage8.Size = new System.Drawing.Size(926, 807);
+            this.tabPage8.TabIndex = 7;
+            this.tabPage8.UseVisualStyleBackColor = true;
+            // 
+            // group_name8
+            // 
+            this.group_name8.AutoSize = true;
+            this.group_name8.Location = new System.Drawing.Point(447, 22);
+            this.group_name8.Name = "group_name8";
+            this.group_name8.Size = new System.Drawing.Size(28, 12);
+            this.group_name8.TabIndex = 7;
+            this.group_name8.Text = "group";
+            // 
+            // vuz_name8
+            // 
+            this.vuz_name8.AutoSize = true;
+            this.vuz_name8.Location = new System.Drawing.Point(354, 3);
+            this.vuz_name8.Name = "vuz_name8";
+            this.vuz_name8.Size = new System.Drawing.Size(29, 12);
+            this.vuz_name8.TabIndex = 6;
+            this.vuz_name8.Text = "label1";
+            // 
             // dataGridView8
             // 
             this.dataGridView8.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -2670,7 +2727,7 @@
             dataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView8.DefaultCellStyle = dataGridViewCellStyle32;
-            this.dataGridView8.Location = new System.Drawing.Point(5, 40);
+            this.dataGridView8.Location = new System.Drawing.Point(7, 40);
             this.dataGridView8.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView8.Name = "dataGridView8";
             this.dataGridView8.RowHeadersVisible = false;
@@ -2893,6 +2950,36 @@
             this.dataGridViewTextBoxColumn210.HeaderText = "27";
             this.dataGridViewTextBoxColumn210.Name = "dataGridViewTextBoxColumn210";
             this.dataGridViewTextBoxColumn210.Width = 30;
+            // 
+            // tabPage9
+            // 
+            this.tabPage9.Controls.Add(this.group_name9);
+            this.tabPage9.Controls.Add(this.vuz_name9);
+            this.tabPage9.Controls.Add(this.dataGridView9);
+            this.tabPage9.Location = new System.Drawing.Point(4, 21);
+            this.tabPage9.Name = "tabPage9";
+            this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage9.Size = new System.Drawing.Size(926, 807);
+            this.tabPage9.TabIndex = 8;
+            this.tabPage9.UseVisualStyleBackColor = true;
+            // 
+            // group_name9
+            // 
+            this.group_name9.AutoSize = true;
+            this.group_name9.Location = new System.Drawing.Point(441, 26);
+            this.group_name9.Name = "group_name9";
+            this.group_name9.Size = new System.Drawing.Size(28, 12);
+            this.group_name9.TabIndex = 7;
+            this.group_name9.Text = "group";
+            // 
+            // vuz_name9
+            // 
+            this.vuz_name9.AutoSize = true;
+            this.vuz_name9.Location = new System.Drawing.Point(355, 3);
+            this.vuz_name9.Name = "vuz_name9";
+            this.vuz_name9.Size = new System.Drawing.Size(29, 12);
+            this.vuz_name9.TabIndex = 6;
+            this.vuz_name9.Text = "label1";
             // 
             // dataGridView9
             // 
@@ -3170,6 +3257,36 @@
             this.dataGridViewTextBoxColumn240.Name = "dataGridViewTextBoxColumn240";
             this.dataGridViewTextBoxColumn240.Width = 30;
             // 
+            // tabPage10
+            // 
+            this.tabPage10.Controls.Add(this.group_name10);
+            this.tabPage10.Controls.Add(this.vuz_name10);
+            this.tabPage10.Controls.Add(this.dataGridView10);
+            this.tabPage10.Location = new System.Drawing.Point(4, 21);
+            this.tabPage10.Name = "tabPage10";
+            this.tabPage10.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage10.Size = new System.Drawing.Size(926, 807);
+            this.tabPage10.TabIndex = 9;
+            this.tabPage10.UseVisualStyleBackColor = true;
+            // 
+            // group_name10
+            // 
+            this.group_name10.AutoSize = true;
+            this.group_name10.Location = new System.Drawing.Point(452, 22);
+            this.group_name10.Name = "group_name10";
+            this.group_name10.Size = new System.Drawing.Size(28, 12);
+            this.group_name10.TabIndex = 7;
+            this.group_name10.Text = "group";
+            // 
+            // vuz_name10
+            // 
+            this.vuz_name10.AutoSize = true;
+            this.vuz_name10.Location = new System.Drawing.Point(357, 3);
+            this.vuz_name10.Name = "vuz_name10";
+            this.vuz_name10.Size = new System.Drawing.Size(29, 12);
+            this.vuz_name10.TabIndex = 6;
+            this.vuz_name10.Text = "label1";
+            // 
             // dataGridView10
             // 
             this.dataGridView10.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -3445,6 +3562,37 @@
             this.dataGridViewTextBoxColumn270.HeaderText = "27";
             this.dataGridViewTextBoxColumn270.Name = "dataGridViewTextBoxColumn270";
             this.dataGridViewTextBoxColumn270.Width = 30;
+            // 
+            // tabPage11
+            // 
+            this.tabPage11.Controls.Add(this.group_name11);
+            this.tabPage11.Controls.Add(this.vuz_name11);
+            this.tabPage11.Controls.Add(this.dataGridView11);
+            this.tabPage11.Location = new System.Drawing.Point(4, 21);
+            this.tabPage11.Name = "tabPage11";
+            this.tabPage11.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage11.Size = new System.Drawing.Size(926, 807);
+            this.tabPage11.TabIndex = 10;
+            this.tabPage11.UseVisualStyleBackColor = true;
+            this.tabPage11.Click += new System.EventHandler(this.tabPage11_Click);
+            // 
+            // group_name11
+            // 
+            this.group_name11.AutoSize = true;
+            this.group_name11.Location = new System.Drawing.Point(447, 22);
+            this.group_name11.Name = "group_name11";
+            this.group_name11.Size = new System.Drawing.Size(28, 12);
+            this.group_name11.TabIndex = 7;
+            this.group_name11.Text = "group";
+            // 
+            // vuz_name11
+            // 
+            this.vuz_name11.AutoSize = true;
+            this.vuz_name11.Location = new System.Drawing.Point(367, 3);
+            this.vuz_name11.Name = "vuz_name11";
+            this.vuz_name11.Size = new System.Drawing.Size(29, 12);
+            this.vuz_name11.TabIndex = 6;
+            this.vuz_name11.Text = "label1";
             // 
             // dataGridView11
             // 
@@ -3722,186 +3870,6 @@
             this.dataGridViewTextBoxColumn300.Name = "dataGridViewTextBoxColumn300";
             this.dataGridViewTextBoxColumn300.Width = 30;
             // 
-            // vuz_name2
-            // 
-            this.vuz_name2.AutoSize = true;
-            this.vuz_name2.Location = new System.Drawing.Point(41, 15);
-            this.vuz_name2.Name = "vuz_name2";
-            this.vuz_name2.Size = new System.Drawing.Size(29, 12);
-            this.vuz_name2.TabIndex = 5;
-            this.vuz_name2.Text = "label1";
-            // 
-            // vuz_name3
-            // 
-            this.vuz_name3.AutoSize = true;
-            this.vuz_name3.Location = new System.Drawing.Point(56, 16);
-            this.vuz_name3.Name = "vuz_name3";
-            this.vuz_name3.Size = new System.Drawing.Size(29, 12);
-            this.vuz_name3.TabIndex = 6;
-            this.vuz_name3.Text = "label1";
-            // 
-            // vuz_name4
-            // 
-            this.vuz_name4.AutoSize = true;
-            this.vuz_name4.Location = new System.Drawing.Point(64, 22);
-            this.vuz_name4.Name = "vuz_name4";
-            this.vuz_name4.Size = new System.Drawing.Size(29, 12);
-            this.vuz_name4.TabIndex = 6;
-            this.vuz_name4.Text = "label1";
-            // 
-            // vuz_name5
-            // 
-            this.vuz_name5.AutoSize = true;
-            this.vuz_name5.Location = new System.Drawing.Point(58, 22);
-            this.vuz_name5.Name = "vuz_name5";
-            this.vuz_name5.Size = new System.Drawing.Size(29, 12);
-            this.vuz_name5.TabIndex = 6;
-            this.vuz_name5.Text = "label1";
-            // 
-            // vuz_name6
-            // 
-            this.vuz_name6.AutoSize = true;
-            this.vuz_name6.Location = new System.Drawing.Point(61, 16);
-            this.vuz_name6.Name = "vuz_name6";
-            this.vuz_name6.Size = new System.Drawing.Size(29, 12);
-            this.vuz_name6.TabIndex = 6;
-            this.vuz_name6.Text = "label1";
-            // 
-            // vuz_name7
-            // 
-            this.vuz_name7.AutoSize = true;
-            this.vuz_name7.Location = new System.Drawing.Point(86, 22);
-            this.vuz_name7.Name = "vuz_name7";
-            this.vuz_name7.Size = new System.Drawing.Size(29, 12);
-            this.vuz_name7.TabIndex = 6;
-            this.vuz_name7.Text = "label1";
-            // 
-            // vuz_name8
-            // 
-            this.vuz_name8.AutoSize = true;
-            this.vuz_name8.Location = new System.Drawing.Point(88, 22);
-            this.vuz_name8.Name = "vuz_name8";
-            this.vuz_name8.Size = new System.Drawing.Size(29, 12);
-            this.vuz_name8.TabIndex = 6;
-            this.vuz_name8.Text = "label1";
-            // 
-            // vuz_name9
-            // 
-            this.vuz_name9.AutoSize = true;
-            this.vuz_name9.Location = new System.Drawing.Point(69, 22);
-            this.vuz_name9.Name = "vuz_name9";
-            this.vuz_name9.Size = new System.Drawing.Size(29, 12);
-            this.vuz_name9.TabIndex = 6;
-            this.vuz_name9.Text = "label1";
-            // 
-            // vuz_name10
-            // 
-            this.vuz_name10.AutoSize = true;
-            this.vuz_name10.Location = new System.Drawing.Point(98, 22);
-            this.vuz_name10.Name = "vuz_name10";
-            this.vuz_name10.Size = new System.Drawing.Size(29, 12);
-            this.vuz_name10.TabIndex = 6;
-            this.vuz_name10.Text = "label1";
-            // 
-            // vuz_name11
-            // 
-            this.vuz_name11.AutoSize = true;
-            this.vuz_name11.Location = new System.Drawing.Point(70, 22);
-            this.vuz_name11.Name = "vuz_name11";
-            this.vuz_name11.Size = new System.Drawing.Size(29, 12);
-            this.vuz_name11.TabIndex = 6;
-            this.vuz_name11.Text = "label1";
-            // 
-            // group_name2
-            // 
-            this.group_name2.AutoSize = true;
-            this.group_name2.Location = new System.Drawing.Point(431, 2);
-            this.group_name2.Name = "group_name2";
-            this.group_name2.Size = new System.Drawing.Size(29, 12);
-            this.group_name2.TabIndex = 6;
-            this.group_name2.Text = "label1";
-            // 
-            // group_name3
-            // 
-            this.group_name3.AutoSize = true;
-            this.group_name3.Location = new System.Drawing.Point(440, 3);
-            this.group_name3.Name = "group_name3";
-            this.group_name3.Size = new System.Drawing.Size(29, 12);
-            this.group_name3.TabIndex = 7;
-            this.group_name3.Text = "label1";
-            // 
-            // group_name4
-            // 
-            this.group_name4.AutoSize = true;
-            this.group_name4.Location = new System.Drawing.Point(423, 3);
-            this.group_name4.Name = "group_name4";
-            this.group_name4.Size = new System.Drawing.Size(29, 12);
-            this.group_name4.TabIndex = 7;
-            this.group_name4.Text = "label1";
-            // 
-            // group_name5
-            // 
-            this.group_name5.AutoSize = true;
-            this.group_name5.Location = new System.Drawing.Point(422, 3);
-            this.group_name5.Name = "group_name5";
-            this.group_name5.Size = new System.Drawing.Size(29, 12);
-            this.group_name5.TabIndex = 7;
-            this.group_name5.Text = "label1";
-            // 
-            // group_name6
-            // 
-            this.group_name6.AutoSize = true;
-            this.group_name6.Location = new System.Drawing.Point(445, 3);
-            this.group_name6.Name = "group_name6";
-            this.group_name6.Size = new System.Drawing.Size(29, 12);
-            this.group_name6.TabIndex = 7;
-            this.group_name6.Text = "label1";
-            // 
-            // group_name7
-            // 
-            this.group_name7.AutoSize = true;
-            this.group_name7.Location = new System.Drawing.Point(441, 4);
-            this.group_name7.Name = "group_name7";
-            this.group_name7.Size = new System.Drawing.Size(29, 12);
-            this.group_name7.TabIndex = 7;
-            this.group_name7.Text = "label1";
-            // 
-            // group_name8
-            // 
-            this.group_name8.AutoSize = true;
-            this.group_name8.Location = new System.Drawing.Point(455, 4);
-            this.group_name8.Name = "group_name8";
-            this.group_name8.Size = new System.Drawing.Size(29, 12);
-            this.group_name8.TabIndex = 7;
-            this.group_name8.Text = "label1";
-            // 
-            // group_name9
-            // 
-            this.group_name9.AutoSize = true;
-            this.group_name9.Location = new System.Drawing.Point(440, 4);
-            this.group_name9.Name = "group_name9";
-            this.group_name9.Size = new System.Drawing.Size(29, 12);
-            this.group_name9.TabIndex = 7;
-            this.group_name9.Text = "label1";
-            // 
-            // group_name10
-            // 
-            this.group_name10.AutoSize = true;
-            this.group_name10.Location = new System.Drawing.Point(453, 3);
-            this.group_name10.Name = "group_name10";
-            this.group_name10.Size = new System.Drawing.Size(29, 12);
-            this.group_name10.TabIndex = 7;
-            this.group_name10.Text = "label1";
-            // 
-            // group_name11
-            // 
-            this.group_name11.AutoSize = true;
-            this.group_name11.Location = new System.Drawing.Point(447, 7);
-            this.group_name11.Name = "group_name11";
-            this.group_name11.Size = new System.Drawing.Size(29, 12);
-            this.group_name11.TabIndex = 7;
-            this.group_name11.Text = "label1";
-            // 
             // All_timetable
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -3920,33 +3888,33 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
             this.tabPage7.ResumeLayout(false);
             this.tabPage7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).EndInit();
             this.tabPage8.ResumeLayout(false);
             this.tabPage8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).EndInit();
             this.tabPage9.ResumeLayout(false);
             this.tabPage9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).EndInit();
             this.tabPage10.ResumeLayout(false);
             this.tabPage10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).EndInit();
             this.tabPage11.ResumeLayout(false);
             this.tabPage11.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView11)).EndInit();
             this.ResumeLayout(false);
 
@@ -3956,7 +3924,6 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label group_name1;
-        private System.Windows.Forms.Label faculty_name;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn week;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
@@ -3989,8 +3956,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column28;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column29;
         private System.Windows.Forms.Label vuz_name1;
-        private System.Windows.Forms.Label the_end_of_column;
-        private System.Windows.Forms.Label the_end_of_row;
         public System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;

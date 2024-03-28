@@ -153,6 +153,11 @@
             this.create = new System.Windows.Forms.Button();
             this.main_data = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.data_lessons_btn = new System.Windows.Forms.Button();
             this.data_subject_btn = new System.Windows.Forms.Button();
             this.data_class_btn = new System.Windows.Forms.Button();
@@ -186,11 +191,7 @@
             this.timetable_teachers_btn = new System.Windows.Forms.Button();
             this.timetable_create_btn = new System.Windows.Forms.Button();
             this.generate_timetable_btn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.потокиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.main_file.SuspendLayout();
@@ -459,7 +460,8 @@
             // военнослужащиеToolStripMenuItem
             // 
             this.военнослужащиеToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.группыToolStripMenuItem});
+            this.группыToolStripMenuItem,
+            this.потокиToolStripMenuItem});
             this.военнослужащиеToolStripMenuItem.Name = "военнослужащиеToolStripMenuItem";
             this.военнослужащиеToolStripMenuItem.Size = new System.Drawing.Size(263, 22);
             this.военнослужащиеToolStripMenuItem.Text = "Военнослужащие";
@@ -1209,6 +1211,59 @@
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             // 
+            // button9
+            // 
+            this.button9.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button9.Location = new System.Drawing.Point(108, 151);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(96, 31);
+            this.button9.TabIndex = 13;
+            this.button9.Text = "Группы";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(6, 21);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(96, 31);
+            this.button8.TabIndex = 12;
+            this.button8.Text = "Наз. ВУЗа";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(210, 112);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(104, 47);
+            this.button6.TabIndex = 11;
+            this.button6.Text = "Другие мероприятия";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.Location = new System.Drawing.Point(222, 69);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(92, 37);
+            this.button2.TabIndex = 10;
+            this.button2.Text = "Расписание звонков";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(210, 21);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(104, 30);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Дни недели";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // data_lessons_btn
             // 
             this.data_lessons_btn.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1561,58 +1616,12 @@
             this.generate_timetable_btn.UseVisualStyleBackColor = true;
             this.generate_timetable_btn.Click += new System.EventHandler(this.generate_timetable_btn_Click);
             // 
-            // button1
+            // потокиToolStripMenuItem
             // 
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(210, 21);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 30);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Дни недели";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(222, 69);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(92, 37);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Расписание звонков";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(210, 112);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(104, 47);
-            this.button6.TabIndex = 11;
-            this.button6.Text = "Другие мероприятия";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(6, 21);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(96, 31);
-            this.button8.TabIndex = 12;
-            this.button8.Text = "Наз. ВУЗа";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
-            // button9
-            // 
-            this.button9.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button9.Location = new System.Drawing.Point(108, 151);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(96, 31);
-            this.button9.TabIndex = 13;
-            this.button9.Text = "Группы";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            this.потокиToolStripMenuItem.Name = "потокиToolStripMenuItem";
+            this.потокиToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.потокиToolStripMenuItem.Text = "Потоки";
+            this.потокиToolStripMenuItem.Click += new System.EventHandler(this.потокиToolStripMenuItem_Click);
             // 
             // main_menu
             // 
@@ -1812,6 +1821,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.ToolStripMenuItem потокиToolStripMenuItem;
     }
 }
 

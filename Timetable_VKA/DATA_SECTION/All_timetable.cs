@@ -49,6 +49,17 @@ namespace Timetable_VKA.DATA_SECTION
         }
 
         MySqlDataAdapter da_reduc, da_classroms, da_lesson_sum, da_practic, da_con_work;
+
+        private void group_name5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void group_name2_Click(object sender, EventArgs e)
+        {
+
+        }
+
         DataSet ds_reduc, ds_classroms, ds_lesson_sum, ds_practic, ds_con_work;
 
         string[] lesson_time = { "", "", "", "" };
@@ -62,20 +73,20 @@ namespace Timetable_VKA.DATA_SECTION
             /*---------------------------------- название учебной группы ----------------------------------*/
 
             adding_groups_name();
-          
+
             /////////////////////////////////////////////////////////////////////////////////////////////
             /*                         Получение название ВУЗа                                */
-            adding_vuz_name(vuz_name1);
-            adding_vuz_name(vuz_name2);
-            adding_vuz_name(vuz_name3);
-            adding_vuz_name(vuz_name4);
-            adding_vuz_name(vuz_name5);
-            adding_vuz_name(vuz_name6);
-            adding_vuz_name(vuz_name7);
-            adding_vuz_name(vuz_name8);
-            adding_vuz_name(vuz_name9);
-            adding_vuz_name(vuz_name10);
-            adding_vuz_name(vuz_name11);
+            if (tabControl1.TabPages[0].Text != "") adding_vuz_name(vuz_name1);
+            if (tabControl1.TabPages[1].Text != "") adding_vuz_name(vuz_name2);
+            if (tabControl1.TabPages[2].Text != "") adding_vuz_name(vuz_name3);
+            if (tabControl1.TabPages[3].Text != "") adding_vuz_name(vuz_name4);
+            if (tabControl1.TabPages[4].Text != "") adding_vuz_name(vuz_name5);
+            if (tabControl1.TabPages[5].Text != "") adding_vuz_name(vuz_name6);
+            if (tabControl1.TabPages[6].Text != "") adding_vuz_name(vuz_name7);
+            if (tabControl1.TabPages[7].Text != "") adding_vuz_name(vuz_name8);
+            if (tabControl1.TabPages[8].Text != "") adding_vuz_name(vuz_name9);
+            if (tabControl1.TabPages[9].Text != "") adding_vuz_name(vuz_name10);
+            if (tabControl1.TabPages[10].Text != "") adding_vuz_name(vuz_name11);
             
 
             ///////////////////////////////////////////////////////////////////////////////////////////
@@ -111,7 +122,7 @@ namespace Timetable_VKA.DATA_SECTION
             for(int i=0; i<dt_reduc.Rows.Count; i++)
             {
                 all_subjects[i] = dt_reduc.Rows[i].ItemArray[0].ToString();
-                all_subjects[i] += "\t";
+                
                 
             }
 
@@ -130,12 +141,15 @@ namespace Timetable_VKA.DATA_SECTION
             db.closeConnection();
             dt_classroms = ds_classroms.Tables["testTable"];
 
+                    
             for (int i = 0; i < dt_classroms.Rows.Count; i++)
             {
                 
                 all_subjects[i] +="\n"+ dt_classroms.Rows[i].ItemArray[0].ToString();
-                
+                DataBank.stream_subjetcs[i]+= "\n" + dt_classroms.Rows[i].ItemArray[0].ToString();
 
+               
+                
             }
 
             /*--------------------------------------------------------------------------------------------------------*/
@@ -317,49 +331,49 @@ namespace Timetable_VKA.DATA_SECTION
             ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
             /*                                      Вставка стажировки                                         */
-            
-            adding_practices(dataGridView1);
-            adding_practices(dataGridView2);
-            adding_practices(dataGridView3);
-            adding_practices(dataGridView4);
-            adding_practices(dataGridView5);
-            adding_practices(dataGridView6);
-            adding_practices(dataGridView7);
-            adding_practices(dataGridView8);
-            adding_practices(dataGridView9);
-            adding_practices(dataGridView10);
-            adding_practices(dataGridView11);
+
+            if (tabControl1.TabPages[0].Text != "") adding_practices(dataGridView1);
+            if (tabControl1.TabPages[1].Text != "") adding_practices(dataGridView2);
+            if (tabControl1.TabPages[2].Text != "") adding_practices(dataGridView3);
+            if (tabControl1.TabPages[3].Text != "") adding_practices(dataGridView4);
+            if (tabControl1.TabPages[4].Text != "") adding_practices(dataGridView5);
+            if (tabControl1.TabPages[5].Text != "") adding_practices(dataGridView6);
+            if (tabControl1.TabPages[6].Text != "") adding_practices(dataGridView7);
+            if (tabControl1.TabPages[7].Text != "") adding_practices(dataGridView8);
+            if (tabControl1.TabPages[8].Text != "") adding_practices(dataGridView9);
+            if (tabControl1.TabPages[9].Text != "") adding_practices(dataGridView10);
+            if (tabControl1.TabPages[10].Text != "") adding_practices(dataGridView11);
 
             ////////////////////////////////////////////////////////////////////////////////////////////////////////
             ////////////////////////////////////////////////////////////////////////////////////////////////////////
             /*                                            Вставка отпуска                                  */
-            
-            adding_vacation(dataGridView1);
-            adding_vacation(dataGridView2);
-            adding_vacation(dataGridView3);
-            adding_vacation(dataGridView4);
-            adding_vacation(dataGridView5);
-            adding_vacation(dataGridView6);
-            adding_vacation(dataGridView7);
-            adding_vacation(dataGridView8);
-            adding_vacation(dataGridView9);
-            adding_vacation(dataGridView10);
-            adding_vacation(dataGridView11);
+
+            if (tabControl1.TabPages[0].Text != "") adding_vacation(dataGridView1);
+            if (tabControl1.TabPages[1].Text != "") adding_vacation(dataGridView2);
+            if (tabControl1.TabPages[2].Text != "") adding_vacation(dataGridView3);
+            if (tabControl1.TabPages[3].Text != "") adding_vacation(dataGridView4);
+            if (tabControl1.TabPages[4].Text != "") adding_vacation(dataGridView5);
+            if (tabControl1.TabPages[5].Text != "") adding_vacation(dataGridView6);
+            if (tabControl1.TabPages[6].Text != "") adding_vacation(dataGridView7);
+            if (tabControl1.TabPages[7].Text != "") adding_vacation(dataGridView8);
+            if (tabControl1.TabPages[8].Text != "") adding_vacation(dataGridView9);
+            if (tabControl1.TabPages[9].Text != "") adding_vacation(dataGridView10);
+            if (tabControl1.TabPages[10].Text != "") adding_vacation(dataGridView11);
 
             /*-------------------------------  Определение праздничные дни ------------------------------------- */
 
 
-            adding_holidays(dataGridView1);
-            adding_holidays(dataGridView2);
-            adding_holidays(dataGridView3);
-            adding_holidays(dataGridView4);
-            adding_holidays(dataGridView5);
-            adding_holidays(dataGridView6);
-            adding_holidays(dataGridView7);
-            adding_holidays(dataGridView8);
-            adding_holidays(dataGridView9);
-            adding_holidays(dataGridView10);
-            adding_holidays(dataGridView11);
+            if (tabControl1.TabPages[0].Text != "") adding_holidays(dataGridView1);
+            if (tabControl1.TabPages[1].Text != "") adding_holidays(dataGridView2);
+            if (tabControl1.TabPages[2].Text != "") adding_holidays(dataGridView3);
+            if (tabControl1.TabPages[3].Text != "") adding_holidays(dataGridView4);
+            if (tabControl1.TabPages[4].Text != "") adding_holidays(dataGridView5);
+            if (tabControl1.TabPages[5].Text != "") adding_holidays(dataGridView6);
+            if (tabControl1.TabPages[6].Text != "") adding_holidays(dataGridView7);
+            if (tabControl1.TabPages[7].Text != "") adding_holidays(dataGridView8);
+            if (tabControl1.TabPages[8].Text != "") adding_holidays(dataGridView9);
+            if (tabControl1.TabPages[9].Text != "") adding_holidays(dataGridView10);
+            if (tabControl1.TabPages[10].Text != "") adding_holidays(dataGridView11);
             
             
             /*--------------------------------------------  Удаление последней строки ------------------------------------*/
@@ -382,6 +396,7 @@ namespace Timetable_VKA.DATA_SECTION
             
             int subject = 0;
             int summa = 0;
+           
             for (int r = 0; r < all_subjects.Count; r++)
             {
                 int column = 3;
@@ -401,11 +416,121 @@ namespace Timetable_VKA.DATA_SECTION
                             if (dataGridView1[column, row__].Value == null)
                             {
                                 dataGridView1[column, row__].Value = all_subjects[subject].ToString() + "\n";
-                                if (i < subjects_lecture[summa] || i == subjects_lecture[summa]) dataGridView1[column, row__].Value += "лек";
+
+                                for(int m=0; m < DataBank.stream_subjetcs.Count; m++)
+                                {
+                                    if (all_subjects[subject] == DataBank.stream_subjetcs[m])
+                                    {
+                                        if (tabControl1.TabPages[1].Text!="")dataGridView2[column, row__].Value = DataBank.stream_subjetcs[m] + "\n";
+
+                                        if (tabControl1.TabPages[2].Text != "") dataGridView3[column, row__].Value = DataBank.stream_subjetcs[m] + "\n";
+                                        if (tabControl1.TabPages[3].Text != "") dataGridView4[column, row__].Value = DataBank.stream_subjetcs[m] + "\n";
+                                        if (tabControl1.TabPages[4].Text != "") dataGridView5[column, row__].Value = DataBank.stream_subjetcs[m] + "\n";
+                                        if (tabControl1.TabPages[5].Text != "") dataGridView6[column, row__].Value = DataBank.stream_subjetcs[m] + "\n";
+                                        if (tabControl1.TabPages[6].Text != "") dataGridView7[column, row__].Value = DataBank.stream_subjetcs[m] + "\n";
+                                        if (tabControl1.TabPages[7].Text != "") dataGridView8[column, row__].Value = DataBank.stream_subjetcs[m] + "\n";
+                                        if (tabControl1.TabPages[8].Text != "") dataGridView9[column, row__].Value = DataBank.stream_subjetcs[m] + "\n";
+                                        if (tabControl1.TabPages[9].Text != "") dataGridView10[column, row__].Value = DataBank.stream_subjetcs[m] + "\n";
+                                        if (tabControl1.TabPages[10].Text != "") dataGridView11[column, row__].Value = DataBank.stream_subjetcs[m] + "\n";
+                                        /*---------------------------------- Вставка цвета потоковых занятий -------------------------------------*/
+                                        if (tabControl1.TabPages[0].Text != "") dataGridView1[column, row__].Style.BackColor = Color.LightGreen;
+                                        if (tabControl1.TabPages[1].Text != "") dataGridView2[column, row__].Style.BackColor = Color.LightGreen;
+                                        if (tabControl1.TabPages[2].Text != "") dataGridView3[column, row__].Style.BackColor = Color.LightGreen;
+                                        if (tabControl1.TabPages[3].Text != "") dataGridView4[column, row__].Style.BackColor = Color.LightGreen;
+                                        if (tabControl1.TabPages[4].Text != "") dataGridView5[column, row__].Style.BackColor = Color.LightGreen;
+                                        if (tabControl1.TabPages[5].Text != "") dataGridView6[column, row__].Style.BackColor = Color.LightGreen;
+                                        if (tabControl1.TabPages[6].Text != "") dataGridView7[column, row__].Style.BackColor = Color.LightGreen;
+                                        if (tabControl1.TabPages[7].Text != "") dataGridView8[column, row__].Style.BackColor = Color.LightGreen;
+                                        if (tabControl1.TabPages[8].Text != "") dataGridView9[column, row__].Style.BackColor = Color.LightGreen;
+                                        if (tabControl1.TabPages[9].Text != "") dataGridView10[column, row__].Style.BackColor = Color.LightGreen;
+                                        if (tabControl1.TabPages[10].Text != "") dataGridView11[column, row__].Style.BackColor = Color.LightGreen;
+                                    }
+                                            
+
+
+                                }
+
+                                if (i < subjects_lecture[summa] || i == subjects_lecture[summa])
+                                {
+                                    dataGridView1[column, row__].Value += "лек";
+
+                                    for (int m = 0; m < DataBank.stream_subjetcs.Count; m++)
+                                    {
+                                        
+                                                if (all_subjects[subject] == DataBank.stream_subjetcs[m])
+                                                {
+                                                     if (tabControl1.TabPages[1].Text != "") dataGridView2[column, row__].Value += "лек";
+                                                     if (tabControl1.TabPages[2].Text != "") dataGridView3[column, row__].Value += "лек";
+                                                     if (tabControl1.TabPages[3].Text != "") dataGridView4[column, row__].Value += "лек";
+                                                     if (tabControl1.TabPages[4].Text != "") dataGridView5[column, row__].Value += "лек";
+                                                     if (tabControl1.TabPages[5].Text != "") dataGridView6[column, row__].Value += "лек";
+                                                     if (tabControl1.TabPages[6].Text != "") dataGridView7[column, row__].Value += "лек";
+                                                     if (tabControl1.TabPages[7].Text != "") dataGridView8[column, row__].Value += "лек";
+                                                     if (tabControl1.TabPages[8].Text != "") dataGridView9[column, row__].Value += "лек";
+                                                     if (tabControl1.TabPages[9].Text != "") dataGridView10[column, row__].Value += "лек";
+                                                     if (tabControl1.TabPages[10].Text != "") dataGridView11[column, row__].Value += "лек";
+
+
+                                                }
+
+                                                                                      
+
+                                    }
+
+                                }
+
+
+
                                 if (i > subjects_lecture[summa] && i < subjects_lecture[summa] + subjects_practic[summa] || i == subjects_lecture[summa] + subjects_practic[summa])
+                                {
                                     dataGridView1[column, row__].Value += "пр";
+
+                                    for (int m = 0; m < DataBank.stream_subjetcs.Count; m++)
+                                    {
+                                      
+                                                if (all_subjects[subject] == DataBank.stream_subjetcs[m])
+                                                {
+                                                     if (tabControl1.TabPages[1].Text != "") dataGridView2[column, row__].Value += "пр";
+                                                     if (tabControl1.TabPages[2].Text != "") dataGridView3[column, row__].Value += "пр";
+                                                     if (tabControl1.TabPages[3].Text != "") dataGridView4[column, row__].Value += "пр";
+                                                     if (tabControl1.TabPages[4].Text != "") dataGridView5[column, row__].Value += "пр";
+                                                     if (tabControl1.TabPages[5].Text != "") dataGridView6[column, row__].Value += "пр";
+                                                     if (tabControl1.TabPages[6].Text != "") dataGridView7[column, row__].Value += "пр";
+                                                     if (tabControl1.TabPages[7].Text != "") dataGridView8[column, row__].Value += "пр";
+                                                     if (tabControl1.TabPages[8].Text != "") dataGridView9[column, row__].Value += "пр";
+                                                     if (tabControl1.TabPages[9].Text != "") dataGridView10[column, row__].Value += "пр";
+                                                     if (tabControl1.TabPages[10].Text != "") dataGridView11[column, row__].Value += "пр";
+                                                }
+                                                                                      
+
+                                    }
+
+                                }
                                 if (i > subjects_lecture[summa] + subjects_practic[summa] && i < subjects_lecture[summa] + subjects_practic[summa] + subjects_con_work[summa] || i == subjects_lecture[summa] + subjects_practic[summa] + subjects_con_work[summa])
+                                {
                                     dataGridView1[column, row__].Value += "зк";
+
+                                    for (int m = 0; m < DataBank.stream_subjetcs.Count; m++)
+                                    {
+                                      
+                                                if (all_subjects[subject] == DataBank.stream_subjetcs[m])
+                                                {
+                                                    if (tabControl1.TabPages[1].Text != "") dataGridView2[column, row__].Value += "зк";
+                                                    if (tabControl1.TabPages[2].Text != "") dataGridView3[column, row__].Value += "зк";
+                                                    if (tabControl1.TabPages[3].Text != "") dataGridView4[column, row__].Value += "зк";
+                                                    if (tabControl1.TabPages[4].Text != "") dataGridView5[column, row__].Value += "зк";
+                                                    if (tabControl1.TabPages[5].Text != "") dataGridView6[column, row__].Value += "зк";
+                                                    if (tabControl1.TabPages[6].Text != "") dataGridView7[column, row__].Value += "зк";
+                                                    if (tabControl1.TabPages[7].Text != "") dataGridView8[column, row__].Value += "зк";
+                                                    if (tabControl1.TabPages[8].Text != "") dataGridView9[column, row__].Value += "зк";
+                                                    if (tabControl1.TabPages[9].Text != "") dataGridView10[column, row__].Value += "зк";
+                                                    if (tabControl1.TabPages[10].Text != "") dataGridView11[column, row__].Value += "зк";
+                                                }
+                                                
+                                    }
+
+                                }
+
                             }
                             else
                             {
@@ -902,7 +1027,7 @@ namespace Timetable_VKA.DATA_SECTION
                     {
                         if (dataGridView[vac_start_column, vac_start_row].Value == null)
                         {
-                            dataGridView[vac_start_column, vac_start_row].Value = "Вых";
+                            dataGridView[vac_start_column, vac_start_row].Value = "Отп";
                             dataGridView[vac_start_column, vac_start_row].Style.BackColor = Color.DarkGray;
 
                         }
@@ -916,7 +1041,7 @@ namespace Timetable_VKA.DATA_SECTION
                     {
                         if (dataGridView[vac_start_column, vac_start_row].Value == null)
                         {
-                            dataGridView[vac_start_column, vac_start_row].Value = "Вых";
+                            dataGridView[vac_start_column, vac_start_row].Value = "Отп";
                             dataGridView[vac_start_column, vac_start_row].Style.BackColor = Color.DarkGray;
                         }
                     }

@@ -51,6 +51,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataBank.cs" />
+    <Compile Include="DATA_SECTION\adding_streaming_lesson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DATA_SECTION\adding_streaming_lesson.Designer.cs">
+      <DependentUpon>adding_streaming_lesson.cs</DependentUpon>
+    </Compile>
     <Compile Include="DATA_SECTION\adding_subject_name_form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +168,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DATA_SECTION\adding_streaming_lesson.resx">
+      <DependentUpon>adding_streaming_lesson.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DATA_SECTION\adding_subject_name_form.resx">
       <DependentUpon>adding_subject_name_form.cs</DependentUpon>
     </EmbeddedResource>

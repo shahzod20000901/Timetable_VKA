@@ -208,5 +208,10 @@ namespace Timetable_VKA
         {
             new vacation_holiday_pratice().Show();
         }
+
+        private void потокиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new adding_streaming_lesson().Show();
+        }
     }
 }
