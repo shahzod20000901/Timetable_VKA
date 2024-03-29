@@ -32,12 +32,13 @@
             this.ok_btn = new System.Windows.Forms.Button();
             this.cancel_btn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.reduction = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Subjects = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Groups = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.add_btn = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,15 +74,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(548, 343);
             this.dataGridView1.TabIndex = 3;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(144, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Вставьте учебные группы :";
-            // 
             // reduction
             // 
             this.reduction.HeaderText = "Сокращение";
@@ -99,6 +91,15 @@
             this.Groups.HeaderText = "Группы";
             this.Groups.Name = "Groups";
             this.Groups.Width = 250;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(13, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(144, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Вставьте учебные группы :";
             // 
             // comboBox1
             // 
@@ -118,11 +119,21 @@
             this.add_btn.UseVisualStyleBackColor = true;
             this.add_btn.Click += new System.EventHandler(this.add_btn_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(328, 8);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "label2";
+            // 
             // adding_streaming_lesson
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(572, 412);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.add_btn);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
@@ -149,5 +160,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Groups;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button add_btn;
+        private System.Windows.Forms.Label label2;
     }
 }

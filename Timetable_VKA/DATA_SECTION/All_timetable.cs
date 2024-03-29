@@ -63,12 +63,18 @@ namespace Timetable_VKA.DATA_SECTION
         DataSet ds_reduc, ds_classroms, ds_lesson_sum, ds_practic, ds_con_work;
 
         string[] lesson_time = { "", "", "", "" };
-        List<string> groups_list=new List<string>() {"","","","","","","","","","","","","","","","","",""};
+        List<string> groups_list = new List<string>() { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
+        List<string> all_subjects = new List<string> { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
+        List<int> subjects_lecture = new List<int> { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+        List<int> subjects_practic = new List<int> { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+        List<int> subjects_con_work = new List<int> { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+
+
         private void All_timetable_Load(object sender, EventArgs e)
         {
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            dataGridView1.AutoSizeRowsMode=DataGridViewAutoSizeRowsMode.AllCells;
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             /////////////////////////////////////////////////////////////////////////////////////////
             /*---------------------------------- название учебной группы ----------------------------------*/
 
@@ -87,7 +93,7 @@ namespace Timetable_VKA.DATA_SECTION
             if (tabControl1.TabPages[8].Text != "") adding_vuz_name(vuz_name9);
             if (tabControl1.TabPages[9].Text != "") adding_vuz_name(vuz_name10);
             if (tabControl1.TabPages[10].Text != "") adding_vuz_name(vuz_name11);
-            
+
 
             ///////////////////////////////////////////////////////////////////////////////////////////
             /*------------------------------------  Размер ячейки ------------------------------------------------*/
@@ -104,12 +110,12 @@ namespace Timetable_VKA.DATA_SECTION
             adding_the_size_of_text(dataGridView10);
             adding_the_size_of_text(dataGridView11);
 
-           
+
 
             //////////////////////////////////////////////////////////////////////////////////////////////////
             /*                       Получение данных из базы данных                      */
 
-            List<string> all_subjects = new List<string> { "", "", "", "", "", "", "", "","","","","","","","","","" };
+
             /*-------------------------------------------------------------------------------------------------------*/
             command_reduc = new MySqlCommand("SELECT `Subjects_reduction` FROM `subjects_table`", db.getConnection());
             db.openConnection();
@@ -119,19 +125,19 @@ namespace Timetable_VKA.DATA_SECTION
             db.closeConnection();
             dt_reduc = ds_reduc.Tables["testTable"];
 
-            for(int i=0; i<dt_reduc.Rows.Count; i++)
+            for (int i = 0; i < dt_reduc.Rows.Count; i++)
             {
                 all_subjects[i] = dt_reduc.Rows[i].ItemArray[0].ToString();
-                
-                
+
+
             }
 
-            for(int i=0; i<all_subjects.Count; i++)
+            for (int i = 0; i < all_subjects.Count; i++)
             {
-                if (all_subjects[i] =="")all_subjects.RemoveAt(i);
+                if (all_subjects[i] == "") all_subjects.RemoveAt(i);
             }
 
-            
+
             /*--------------------------------------------------------------------------------------------------------*/
             command_classroms = new MySqlCommand("SELECT `classroom_number` FROM `classroms`", db.getConnection());
             db.openConnection();
@@ -141,23 +147,23 @@ namespace Timetable_VKA.DATA_SECTION
             db.closeConnection();
             dt_classroms = ds_classroms.Tables["testTable"];
 
-                    
+
             for (int i = 0; i < dt_classroms.Rows.Count; i++)
             {
-                
-                all_subjects[i] +="\n"+ dt_classroms.Rows[i].ItemArray[0].ToString();
-                DataBank.stream_subjetcs[i]+= "\n" + dt_classroms.Rows[i].ItemArray[0].ToString();
 
-               
+                all_subjects[i] += "\n" + dt_classroms.Rows[i].ItemArray[0].ToString();
                 
+                DataBank.unstreamed_subjetcs[i]+= "\n" + dt_classroms.Rows[i].ItemArray[0].ToString();
+                
+                DataBank.stream_subjetcs[i] += "\n" + dt_classroms.Rows[i].ItemArray[0].ToString();
+
+
+
             }
 
             /*--------------------------------------------------------------------------------------------------------*/
             /*                         получение кол. лекции практики и контрольных работ */
 
-            List<int> subjects_lecture = new List<int> { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-            List<int> subjects_practic = new List<int> { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-            List<int> subjects_con_work = new List<int> { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 
             command_lesson_sum = new MySqlCommand("SELECT `lectures` FROM `lessons_summary`", db.getConnection());
             db.openConnection();
@@ -190,7 +196,7 @@ namespace Timetable_VKA.DATA_SECTION
             db.closeConnection();
             dt_practic = ds_practic.Tables["testTable"];
 
-            
+
             for (int i = 0; i < dt_practic.Rows.Count; i++)
             {
                 subjects_practic[i] = int.Parse(dt_practic.Rows[i].ItemArray[0].ToString());
@@ -225,7 +231,7 @@ namespace Timetable_VKA.DATA_SECTION
                 if (subjects_con_work[i] == 0) subjects_con_work.RemoveAt(i);
             }
             ///////////////////////////////////////////////////////////////////////////////////////////////////////
-           
+
 
 
 
@@ -235,11 +241,11 @@ namespace Timetable_VKA.DATA_SECTION
             /*                 Вставка рабочего времени                 */
 
             string[] pairs_ = { "first_pair", "second_pair", "third_pair", "fourth_pair" };
-            
 
-            for (int i=0; i<4; i++)
+
+            for (int i = 0; i < 4; i++)
             {
-                command2 = new MySqlCommand("SELECT `"+pairs_[i]+"` FROM `working_hours_in_pairs`", db.getConnection());
+                command2 = new MySqlCommand("SELECT `" + pairs_[i] + "` FROM `working_hours_in_pairs`", db.getConnection());
                 db.openConnection();
                 daa = new MySqlDataAdapter(command2);
                 dss = new DataSet();
@@ -287,8 +293,8 @@ namespace Timetable_VKA.DATA_SECTION
             adding_dates(dataGridView9);
             adding_dates(dataGridView10);
             adding_dates(dataGridView11);
-           
-            
+
+
             /*                            Закрашивание ячецки                   */
 
 
@@ -374,8 +380,8 @@ namespace Timetable_VKA.DATA_SECTION
             if (tabControl1.TabPages[8].Text != "") adding_holidays(dataGridView9);
             if (tabControl1.TabPages[9].Text != "") adding_holidays(dataGridView10);
             if (tabControl1.TabPages[10].Text != "") adding_holidays(dataGridView11);
-            
-            
+
+
             /*--------------------------------------------  Удаление последней строки ------------------------------------*/
 
             dataGridView1.Rows.RemoveAt(30);
@@ -392,15 +398,15 @@ namespace Timetable_VKA.DATA_SECTION
 
             /////////////////////////////////////////////////////////////////////////////////////////////////////////
             /* -----------------------------------    Распределение занятий --------------------------------------------*/
-
-            
             int subject = 0;
             int summa = 0;
-           
+
+
+
             for (int r = 0; r < all_subjects.Count; r++)
             {
                 int column = 3;
-                int row__ = 24;
+                int row_1 = 24;
                 Random random = new Random();
 
 
@@ -411,71 +417,77 @@ namespace Timetable_VKA.DATA_SECTION
 
                     if (column < dataGridView1.Columns.Count)
                     {
-                        if(row__<dataGridView1.Rows.Count)
+                        if (row_1 < dataGridView1.Rows.Count)
                         {
-                            if (dataGridView1[column, row__].Value == null)
+                            if (dataGridView1[column, row_1].Value == null)
                             {
-                                dataGridView1[column, row__].Value = all_subjects[subject].ToString() + "\n";
+                                if (tabControl1.TabPages[0].Text != "") dataGridView1[column, row_1].Value = all_subjects[subject].ToString() + "\n";
 
-                                for(int m=0; m < DataBank.stream_subjetcs.Count; m++)
+                                /*-Вставка дисциплин-*/
+                                for (int m = 0; m < DataBank.stream_subjetcs.Count; m++)
                                 {
                                     if (all_subjects[subject] == DataBank.stream_subjetcs[m])
                                     {
-                                        if (tabControl1.TabPages[1].Text!="")dataGridView2[column, row__].Value = DataBank.stream_subjetcs[m] + "\n";
+                                        if (tabControl1.TabPages[1].Text != "") dataGridView2[column, row_1].Value = DataBank.stream_subjetcs[m] + "\n";
 
-                                        if (tabControl1.TabPages[2].Text != "") dataGridView3[column, row__].Value = DataBank.stream_subjetcs[m] + "\n";
-                                        if (tabControl1.TabPages[3].Text != "") dataGridView4[column, row__].Value = DataBank.stream_subjetcs[m] + "\n";
-                                        if (tabControl1.TabPages[4].Text != "") dataGridView5[column, row__].Value = DataBank.stream_subjetcs[m] + "\n";
-                                        if (tabControl1.TabPages[5].Text != "") dataGridView6[column, row__].Value = DataBank.stream_subjetcs[m] + "\n";
-                                        if (tabControl1.TabPages[6].Text != "") dataGridView7[column, row__].Value = DataBank.stream_subjetcs[m] + "\n";
-                                        if (tabControl1.TabPages[7].Text != "") dataGridView8[column, row__].Value = DataBank.stream_subjetcs[m] + "\n";
-                                        if (tabControl1.TabPages[8].Text != "") dataGridView9[column, row__].Value = DataBank.stream_subjetcs[m] + "\n";
-                                        if (tabControl1.TabPages[9].Text != "") dataGridView10[column, row__].Value = DataBank.stream_subjetcs[m] + "\n";
-                                        if (tabControl1.TabPages[10].Text != "") dataGridView11[column, row__].Value = DataBank.stream_subjetcs[m] + "\n";
+                                        if (tabControl1.TabPages[2].Text != "") dataGridView3[column, row_1].Value = DataBank.stream_subjetcs[m] + "\n";
+                                        if (tabControl1.TabPages[3].Text != "") dataGridView4[column, row_1].Value = DataBank.stream_subjetcs[m] + "\n";
+                                        if (tabControl1.TabPages[4].Text != "") dataGridView5[column, row_1].Value = DataBank.stream_subjetcs[m] + "\n";
+                                        if (tabControl1.TabPages[5].Text != "") dataGridView6[column, row_1].Value = DataBank.stream_subjetcs[m] + "\n";
+                                        if (tabControl1.TabPages[6].Text != "") dataGridView7[column, row_1].Value = DataBank.stream_subjetcs[m] + "\n";
+                                        if (tabControl1.TabPages[7].Text != "") dataGridView8[column, row_1].Value = DataBank.stream_subjetcs[m] + "\n";
+                                        if (tabControl1.TabPages[8].Text != "") dataGridView9[column, row_1].Value = DataBank.stream_subjetcs[m] + "\n";
+                                        if (tabControl1.TabPages[9].Text != "") dataGridView10[column, row_1].Value = DataBank.stream_subjetcs[m] + "\n";
+                                        if (tabControl1.TabPages[10].Text != "") dataGridView11[column, row_1].Value = DataBank.stream_subjetcs[m] + "\n";
                                         /*---------------------------------- Вставка цвета потоковых занятий -------------------------------------*/
-                                        if (tabControl1.TabPages[0].Text != "") dataGridView1[column, row__].Style.BackColor = Color.LightGreen;
-                                        if (tabControl1.TabPages[1].Text != "") dataGridView2[column, row__].Style.BackColor = Color.LightGreen;
-                                        if (tabControl1.TabPages[2].Text != "") dataGridView3[column, row__].Style.BackColor = Color.LightGreen;
-                                        if (tabControl1.TabPages[3].Text != "") dataGridView4[column, row__].Style.BackColor = Color.LightGreen;
-                                        if (tabControl1.TabPages[4].Text != "") dataGridView5[column, row__].Style.BackColor = Color.LightGreen;
-                                        if (tabControl1.TabPages[5].Text != "") dataGridView6[column, row__].Style.BackColor = Color.LightGreen;
-                                        if (tabControl1.TabPages[6].Text != "") dataGridView7[column, row__].Style.BackColor = Color.LightGreen;
-                                        if (tabControl1.TabPages[7].Text != "") dataGridView8[column, row__].Style.BackColor = Color.LightGreen;
-                                        if (tabControl1.TabPages[8].Text != "") dataGridView9[column, row__].Style.BackColor = Color.LightGreen;
-                                        if (tabControl1.TabPages[9].Text != "") dataGridView10[column, row__].Style.BackColor = Color.LightGreen;
-                                        if (tabControl1.TabPages[10].Text != "") dataGridView11[column, row__].Style.BackColor = Color.LightGreen;
+                                        if (tabControl1.TabPages[0].Text != "") dataGridView1[column, row_1].Style.BackColor = Color.LightGreen;
+                                        if (tabControl1.TabPages[1].Text != "") dataGridView2[column, row_1].Style.BackColor = Color.LightGreen;
+                                        if (tabControl1.TabPages[2].Text != "") dataGridView3[column, row_1].Style.BackColor = Color.LightGreen;
+                                        if (tabControl1.TabPages[3].Text != "") dataGridView4[column, row_1].Style.BackColor = Color.LightGreen;
+                                        if (tabControl1.TabPages[4].Text != "") dataGridView5[column, row_1].Style.BackColor = Color.LightGreen;
+                                        if (tabControl1.TabPages[5].Text != "") dataGridView6[column, row_1].Style.BackColor = Color.LightGreen;
+                                        if (tabControl1.TabPages[6].Text != "") dataGridView7[column, row_1].Style.BackColor = Color.LightGreen;
+                                        if (tabControl1.TabPages[7].Text != "") dataGridView8[column, row_1].Style.BackColor = Color.LightGreen;
+                                        if (tabControl1.TabPages[8].Text != "") dataGridView9[column, row_1].Style.BackColor = Color.LightGreen;
+                                        if (tabControl1.TabPages[9].Text != "") dataGridView10[column, row_1].Style.BackColor = Color.LightGreen;
+                                        if (tabControl1.TabPages[10].Text != "") dataGridView11[column, row_1].Style.BackColor = Color.LightGreen;
                                     }
-                                            
+
 
 
                                 }
 
+
+
                                 if (i < subjects_lecture[summa] || i == subjects_lecture[summa])
                                 {
-                                    dataGridView1[column, row__].Value += "лек";
+                                    if (tabControl1.TabPages[0].Text != "") dataGridView1[column, row_1].Value += "лек";
 
+                                    /*-Вставка лек-*/
                                     for (int m = 0; m < DataBank.stream_subjetcs.Count; m++)
                                     {
-                                        
-                                                if (all_subjects[subject] == DataBank.stream_subjetcs[m])
-                                                {
-                                                     if (tabControl1.TabPages[1].Text != "") dataGridView2[column, row__].Value += "лек";
-                                                     if (tabControl1.TabPages[2].Text != "") dataGridView3[column, row__].Value += "лек";
-                                                     if (tabControl1.TabPages[3].Text != "") dataGridView4[column, row__].Value += "лек";
-                                                     if (tabControl1.TabPages[4].Text != "") dataGridView5[column, row__].Value += "лек";
-                                                     if (tabControl1.TabPages[5].Text != "") dataGridView6[column, row__].Value += "лек";
-                                                     if (tabControl1.TabPages[6].Text != "") dataGridView7[column, row__].Value += "лек";
-                                                     if (tabControl1.TabPages[7].Text != "") dataGridView8[column, row__].Value += "лек";
-                                                     if (tabControl1.TabPages[8].Text != "") dataGridView9[column, row__].Value += "лек";
-                                                     if (tabControl1.TabPages[9].Text != "") dataGridView10[column, row__].Value += "лек";
-                                                     if (tabControl1.TabPages[10].Text != "") dataGridView11[column, row__].Value += "лек";
+
+                                        if (all_subjects[subject] == DataBank.stream_subjetcs[m])
+                                        {
+                                            if (tabControl1.TabPages[1].Text != "") dataGridView2[column, row_1].Value += "лек";
+                                            if (tabControl1.TabPages[2].Text != "") dataGridView3[column, row_1].Value += "лек";
+                                            if (tabControl1.TabPages[3].Text != "") dataGridView4[column, row_1].Value += "лек";
+                                            if (tabControl1.TabPages[4].Text != "") dataGridView5[column, row_1].Value += "лек";
+                                            if (tabControl1.TabPages[5].Text != "") dataGridView6[column, row_1].Value += "лек";
+                                            if (tabControl1.TabPages[6].Text != "") dataGridView7[column, row_1].Value += "лек";
+                                            if (tabControl1.TabPages[7].Text != "") dataGridView8[column, row_1].Value += "лек";
+                                            if (tabControl1.TabPages[8].Text != "") dataGridView9[column, row_1].Value += "лек";
+                                            if (tabControl1.TabPages[9].Text != "") dataGridView10[column, row_1].Value += "лек";
+                                            if (tabControl1.TabPages[10].Text != "") dataGridView11[column, row_1].Value += "лек";
 
 
-                                                }
+                                        }
 
-                                                                                      
+
 
                                     }
+
+
 
                                 }
 
@@ -483,51 +495,57 @@ namespace Timetable_VKA.DATA_SECTION
 
                                 if (i > subjects_lecture[summa] && i < subjects_lecture[summa] + subjects_practic[summa] || i == subjects_lecture[summa] + subjects_practic[summa])
                                 {
-                                    dataGridView1[column, row__].Value += "пр";
+                                    if (tabControl1.TabPages[0].Text != "") dataGridView1[column, row_1].Value += "пр";
 
+                                    /*- Вставка пр -*/
                                     for (int m = 0; m < DataBank.stream_subjetcs.Count; m++)
                                     {
-                                      
-                                                if (all_subjects[subject] == DataBank.stream_subjetcs[m])
-                                                {
-                                                     if (tabControl1.TabPages[1].Text != "") dataGridView2[column, row__].Value += "пр";
-                                                     if (tabControl1.TabPages[2].Text != "") dataGridView3[column, row__].Value += "пр";
-                                                     if (tabControl1.TabPages[3].Text != "") dataGridView4[column, row__].Value += "пр";
-                                                     if (tabControl1.TabPages[4].Text != "") dataGridView5[column, row__].Value += "пр";
-                                                     if (tabControl1.TabPages[5].Text != "") dataGridView6[column, row__].Value += "пр";
-                                                     if (tabControl1.TabPages[6].Text != "") dataGridView7[column, row__].Value += "пр";
-                                                     if (tabControl1.TabPages[7].Text != "") dataGridView8[column, row__].Value += "пр";
-                                                     if (tabControl1.TabPages[8].Text != "") dataGridView9[column, row__].Value += "пр";
-                                                     if (tabControl1.TabPages[9].Text != "") dataGridView10[column, row__].Value += "пр";
-                                                     if (tabControl1.TabPages[10].Text != "") dataGridView11[column, row__].Value += "пр";
-                                                }
-                                                                                      
+
+                                        if (all_subjects[subject] == DataBank.stream_subjetcs[m])
+                                        {
+                                            if (tabControl1.TabPages[1].Text != "") dataGridView2[column, row_1].Value += "пр";
+                                            if (tabControl1.TabPages[2].Text != "") dataGridView3[column, row_1].Value += "пр";
+                                            if (tabControl1.TabPages[3].Text != "") dataGridView4[column, row_1].Value += "пр";
+                                            if (tabControl1.TabPages[4].Text != "") dataGridView5[column, row_1].Value += "пр";
+                                            if (tabControl1.TabPages[5].Text != "") dataGridView6[column, row_1].Value += "пр";
+                                            if (tabControl1.TabPages[6].Text != "") dataGridView7[column, row_1].Value += "пр";
+                                            if (tabControl1.TabPages[7].Text != "") dataGridView8[column, row_1].Value += "пр";
+                                            if (tabControl1.TabPages[8].Text != "") dataGridView9[column, row_1].Value += "пр";
+                                            if (tabControl1.TabPages[9].Text != "") dataGridView10[column, row_1].Value += "пр";
+                                            if (tabControl1.TabPages[10].Text != "") dataGridView11[column, row_1].Value += "пр";
+                                        }
+
 
                                     }
+
+
 
                                 }
                                 if (i > subjects_lecture[summa] + subjects_practic[summa] && i < subjects_lecture[summa] + subjects_practic[summa] + subjects_con_work[summa] || i == subjects_lecture[summa] + subjects_practic[summa] + subjects_con_work[summa])
                                 {
-                                    dataGridView1[column, row__].Value += "зк";
+                                    if (tabControl1.TabPages[0].Text != "") dataGridView1[column, row_1].Value += "зк";
 
+                                    /*- Вставка зк -*/
                                     for (int m = 0; m < DataBank.stream_subjetcs.Count; m++)
                                     {
-                                      
-                                                if (all_subjects[subject] == DataBank.stream_subjetcs[m])
-                                                {
-                                                    if (tabControl1.TabPages[1].Text != "") dataGridView2[column, row__].Value += "зк";
-                                                    if (tabControl1.TabPages[2].Text != "") dataGridView3[column, row__].Value += "зк";
-                                                    if (tabControl1.TabPages[3].Text != "") dataGridView4[column, row__].Value += "зк";
-                                                    if (tabControl1.TabPages[4].Text != "") dataGridView5[column, row__].Value += "зк";
-                                                    if (tabControl1.TabPages[5].Text != "") dataGridView6[column, row__].Value += "зк";
-                                                    if (tabControl1.TabPages[6].Text != "") dataGridView7[column, row__].Value += "зк";
-                                                    if (tabControl1.TabPages[7].Text != "") dataGridView8[column, row__].Value += "зк";
-                                                    if (tabControl1.TabPages[8].Text != "") dataGridView9[column, row__].Value += "зк";
-                                                    if (tabControl1.TabPages[9].Text != "") dataGridView10[column, row__].Value += "зк";
-                                                    if (tabControl1.TabPages[10].Text != "") dataGridView11[column, row__].Value += "зк";
-                                                }
-                                                
+
+                                        if (all_subjects[subject] == DataBank.stream_subjetcs[m])
+                                        {
+                                            if (tabControl1.TabPages[1].Text != "") dataGridView2[column, row_1].Value += "зк";
+                                            if (tabControl1.TabPages[2].Text != "") dataGridView3[column, row_1].Value += "зк";
+                                            if (tabControl1.TabPages[3].Text != "") dataGridView4[column, row_1].Value += "зк";
+                                            if (tabControl1.TabPages[4].Text != "") dataGridView5[column, row_1].Value += "зк";
+                                            if (tabControl1.TabPages[5].Text != "") dataGridView6[column, row_1].Value += "зк";
+                                            if (tabControl1.TabPages[6].Text != "") dataGridView7[column, row_1].Value += "зк";
+                                            if (tabControl1.TabPages[7].Text != "") dataGridView8[column, row_1].Value += "зк";
+                                            if (tabControl1.TabPages[8].Text != "") dataGridView9[column, row_1].Value += "зк";
+                                            if (tabControl1.TabPages[9].Text != "") dataGridView10[column, row_1].Value += "зк";
+                                            if (tabControl1.TabPages[10].Text != "") dataGridView11[column, row_1].Value += "зк";
+                                        }
+
                                     }
+
+
 
                                 }
 
@@ -536,24 +554,35 @@ namespace Timetable_VKA.DATA_SECTION
                             {
                                 --i;
                             }
+
                         }
-                        
+
                     }
 
                     ++column;
-                    row__ = random.Next(4, dataGridView1.Rows.Count);
+                    row_1 = random.Next(4, dataGridView1.Rows.Count);
+
                 }
                 ++summa;
                 ++subject;
             }
 
+            
 
+            ///////////////////////////////////////////////////////////////////////////////////////////////////////
+            /* ------------------------------------ Распределение расписаний для других учебных групп ------------*/
+            if (tabControl1.TabPages[1].Text != "") adding_lessons_for_other_groups(dataGridView2, all_subjects);
+            if (tabControl1.TabPages[2].Text != "") adding_lessons_for_other_groups(dataGridView3, all_subjects);
+            if (tabControl1.TabPages[3].Text != "") adding_lessons_for_other_groups(dataGridView4, all_subjects);
+            if (tabControl1.TabPages[4].Text != "") adding_lessons_for_other_groups(dataGridView5, all_subjects);
+            if (tabControl1.TabPages[5].Text != "") adding_lessons_for_other_groups(dataGridView6, all_subjects);
+            if (tabControl1.TabPages[6].Text != "") adding_lessons_for_other_groups(dataGridView7, all_subjects);
+            if (tabControl1.TabPages[7].Text != "") adding_lessons_for_other_groups(dataGridView8, all_subjects);
+            if (tabControl1.TabPages[8].Text != "") adding_lessons_for_other_groups(dataGridView9, all_subjects);
+            if (tabControl1.TabPages[9].Text != "") adding_lessons_for_other_groups(dataGridView10, all_subjects);
+            if (tabControl1.TabPages[10].Text != "") adding_lessons_for_other_groups(dataGridView11, all_subjects);
 
-
-
-
-
-
+           
 
         }
         public void adding_vuz_name(Label label)
@@ -588,7 +617,7 @@ namespace Timetable_VKA.DATA_SECTION
             for (int i = 0; i < dt_group_name.Rows.Count; i++)
             {
                 groups_list[i] = dt_group_name.Rows[i].ItemArray[0].ToString();
-                
+
             }
 
 
@@ -597,7 +626,7 @@ namespace Timetable_VKA.DATA_SECTION
             {
 
                 tabControl1.TabPages[i].Text = groups_list[i].ToString();
-                
+
             }
 
             group_name1.Text = groups_list[0].ToString();
@@ -1128,6 +1157,69 @@ namespace Timetable_VKA.DATA_SECTION
 
             }
             dataGridView.Columns[2].DefaultCellStyle.Font = new Font("Times New Roman", 6);
+
+        }
+
+       
+        public void adding_lessons_for_other_groups(DataGridView dataGridView1, List<string> all_subjects)
+        {
+            int col2 = 3;
+            int row2 = 24;
+            int summa_all = 0;
+            for (int i = 0; i < all_subjects.Count; i++)
+            {
+
+                
+                for (int m = 1; m <= subjects_lecture[summa_all] + subjects_practic[summa_all] + subjects_con_work[summa_all]; m++)
+                {
+                    if (DataBank.unstreamed_subjetcs[i] == all_subjects[i])
+                    {
+                        if (col2 < dataGridView1.Columns.Count && row2 < dataGridView1.Rows.Count)
+                        {
+
+                            if (dataGridView1[col2, row2].Value == null)
+                                dataGridView1[col2, row2].Value = all_subjects[i] + "\n";
+
+                        }
+
+                        if (m < subjects_lecture[summa_all] || m == subjects_lecture[summa_all])
+                        {
+                            dataGridView1[col2, row2].Value += "лек";
+
+
+                        }
+
+
+
+                        if (m > subjects_lecture[summa_all] && m < subjects_lecture[summa_all] + subjects_practic[summa_all] || m == subjects_lecture[summa_all] + subjects_practic[summa_all])
+                        {
+                            dataGridView1[col2, row2].Value += "пр";
+
+
+                        }
+                        if (m > subjects_lecture[summa_all] + subjects_practic[summa_all] && m < subjects_lecture[summa_all] + subjects_practic[summa_all] + subjects_con_work[summa_all] || m == subjects_lecture[summa_all] + subjects_practic[summa_all] + subjects_con_work[summa_all])
+                        {
+                            dataGridView1[col2, row2].Value += "зк";
+                        }
+                            
+
+                        do
+                        {
+                            Random random = new Random();
+                            row2 = random.Next(4, dataGridView1.Rows.Count);
+                            col2 = random.Next(3, dataGridView1.Columns.Count);
+                        } while (dataGridView1[col2, row2].Value != null);
+
+                    }
+
+
+
+
+                }
+                summa_all++;
+
+            }
+
 
         }
 

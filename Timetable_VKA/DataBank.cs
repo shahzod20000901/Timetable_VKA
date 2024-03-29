@@ -48,6 +48,8 @@ namespace Timetable_VKA
         public static List<string> hol_day=new List<string>{"","","","","","","","","" };
         public static List<string> hol_mounth=new List<string> {"","","","","","","","","" };
 
-        public static List<string> stream_subjetcs = new List<string> { "", "", "", "", "", "", "", "", "", "", "" };
+        public static List<string> stream_subjetcs = new List<string> { "", "", "", "","","", "", "", "","","","","","", "", "", "", "", "", "", "", "", "" };
+        public static List<string> unstreamed_subjetcs = new List<string> { "", "", "", "","","", "", "", "","","","","","", "", "", "", "", "", "", "", "", "" };
+        public static List<DataGridView> all_tables=new List<DataGridView> ();
     }
 }

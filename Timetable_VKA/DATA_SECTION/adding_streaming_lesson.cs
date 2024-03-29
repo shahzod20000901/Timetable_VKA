@@ -101,8 +101,14 @@ namespace Timetable_VKA.DATA_SECTION
                 {
                     DataBank.stream_subjetcs[i] = dataGridView1[0, i].Value.ToString();
                 }
+                else
+                {
+                    if(dataGridView1[0, i].Value!=null)
+                    DataBank.unstreamed_subjetcs[i] = dataGridView1[0, i].Value.ToString();
+                }
             }
-            MessageBox.Show("Потоковое занятие добавлено!!!");
+            
+                MessageBox.Show("Потоковое занятие добавлено!!!");
             
             this.Close();
         }
