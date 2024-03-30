@@ -73,6 +73,11 @@ namespace Timetable_VKA
                 newForm.Show();
             }
 
+            if (e.KeyCode == Keys.O && e.Modifiers == Keys.Control)
+            {
+                new reading_timetable().Show();
+            }
+
         }
 
         private void НазваниеУчебногоЗаведенияToolStripMenuItem_Click(object sender, EventArgs e)
