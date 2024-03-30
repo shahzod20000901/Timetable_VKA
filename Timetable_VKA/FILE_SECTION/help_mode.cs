@@ -26,5 +26,10 @@ namespace Timetable_VKA
         {
             
         }
+
+        private void help_mode_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

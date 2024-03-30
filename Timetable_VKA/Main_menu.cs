@@ -3,19 +3,23 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Timetable_VKA.DATA_SECTION;
+using Timetable_VKA.FILE_SECTION;
 
 namespace Timetable_VKA
 {
     public partial class main_menu : Form
     {
+        
         public main_menu()
         {
             InitializeComponent();
+          
         }
 
         private void ИмпортИзВидовЗаныятийИзCSVФайлаToolStripMenuItem_Click(object sender, EventArgs e)
@@ -25,6 +29,8 @@ namespace Timetable_VKA
 
         private void СоздатьCTRLOToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            new reading_timetable().Show();
+            
 
         }
 
@@ -128,7 +134,8 @@ namespace Timetable_VKA
 
         private void generate_timetable_btn_Click(object sender, EventArgs e)
         {
-            new All_timetable();
+            new All_timetable().Show();
+           
             MessageBox.Show("Генерация выполнено!!!");
 
         }
@@ -201,7 +208,7 @@ namespace Timetable_VKA
 
         private void просмотрпоГруппамToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new All_timetable().Show();
+            new reading_timetable().Show();
         }
 
         private void button6_Click(object sender, EventArgs e)

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Timetable_VKA.FILE_SECTION;
 
 namespace Timetable_VKA
 {
@@ -36,6 +37,20 @@ namespace Timetable_VKA
         private void Choose_mode_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if(radioButton2.Checked)
+            {
+                new change_exthisting_timetable().Show();
+                
+            }
+            if(radioButton1.Checked)
+            {
+                MessageBox.Show("Для создания нового расписания введите все необходимые данные в разделе 'Данные'");
+                this.Close();
+            }
         }
     }
 }

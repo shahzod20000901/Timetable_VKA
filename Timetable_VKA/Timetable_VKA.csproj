@@ -148,6 +148,12 @@
       <DependentUpon>Work_day_of_week.cs</DependentUpon>
     </Compile>
     <Compile Include="DB.cs" />
+    <Compile Include="FILE_SECTION\change_exthisting_timetable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FILE_SECTION\change_exthisting_timetable.Designer.cs">
+      <DependentUpon>change_exthisting_timetable.cs</DependentUpon>
+    </Compile>
     <Compile Include="FILE_SECTION\choose_mode.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +165,12 @@
     </Compile>
     <Compile Include="FILE_SECTION\help_mode.Designer.cs">
       <DependentUpon>help_mode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FILE_SECTION\reading_timetable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FILE_SECTION\reading_timetable.Designer.cs">
+      <DependentUpon>reading_timetable.cs</DependentUpon>
     </Compile>
     <Compile Include="Main_menu.cs">
       <SubType>Form</SubType>
@@ -216,11 +228,17 @@
     <EmbeddedResource Include="DATA_SECTION\Work_day_of_week.resx">
       <DependentUpon>Work_day_of_week.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FILE_SECTION\change_exthisting_timetable.resx">
+      <DependentUpon>change_exthisting_timetable.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FILE_SECTION\choose_mode.resx">
       <DependentUpon>choose_mode.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FILE_SECTION\help_mode.resx">
       <DependentUpon>help_mode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FILE_SECTION\reading_timetable.resx">
+      <DependentUpon>reading_timetable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main_menu.resx">
       <DependentUpon>Main_menu.cs</DependentUpon>

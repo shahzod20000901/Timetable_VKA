@@ -63,6 +63,7 @@
             this.преподователиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.военнослужащиеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.группыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.потокиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.занятияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vacation_holiday = new System.Windows.Forms.ToolStripMenuItem();
             this.аудиторииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -191,7 +192,8 @@
             this.timetable_teachers_btn = new System.Windows.Forms.Button();
             this.timetable_create_btn = new System.Windows.Forms.Button();
             this.generate_timetable_btn = new System.Windows.Forms.Button();
-            this.потокиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.main_file.SuspendLayout();
@@ -469,9 +471,16 @@
             // группыToolStripMenuItem
             // 
             this.группыToolStripMenuItem.Name = "группыToolStripMenuItem";
-            this.группыToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.группыToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.группыToolStripMenuItem.Text = "Группы";
             this.группыToolStripMenuItem.Click += new System.EventHandler(this.группыToolStripMenuItem_Click);
+            // 
+            // потокиToolStripMenuItem
+            // 
+            this.потокиToolStripMenuItem.Name = "потокиToolStripMenuItem";
+            this.потокиToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.потокиToolStripMenuItem.Text = "Потоки";
+            this.потокиToolStripMenuItem.Click += new System.EventHandler(this.потокиToolStripMenuItem_Click);
             // 
             // занятияToolStripMenuItem
             // 
@@ -1616,12 +1625,9 @@
             this.generate_timetable_btn.UseVisualStyleBackColor = true;
             this.generate_timetable_btn.Click += new System.EventHandler(this.generate_timetable_btn_Click);
             // 
-            // потокиToolStripMenuItem
+            // openFileDialog1
             // 
-            this.потокиToolStripMenuItem.Name = "потокиToolStripMenuItem";
-            this.потокиToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.потокиToolStripMenuItem.Text = "Потоки";
-            this.потокиToolStripMenuItem.Click += new System.EventHandler(this.потокиToolStripMenuItem_Click);
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // main_menu
             // 
@@ -1822,6 +1828,8 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.ToolStripMenuItem потокиToolStripMenuItem;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }
 

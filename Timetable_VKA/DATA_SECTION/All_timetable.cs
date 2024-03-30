@@ -1,16 +1,10 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Timetable_VKA.DATA_SECTION
 {
@@ -34,7 +28,8 @@ namespace Timetable_VKA.DATA_SECTION
         DataTable dtt, dt_vuz_name, dt_group_name;
         MySqlDataAdapter daa, da_vuz_name, da_group_name;
         DataSet dss, ds_vuz_name, ds_group_name;
-
+        int index = 0;
+       
         private void tabPage11_Click(object sender, EventArgs e)
         {
 
@@ -62,6 +57,15 @@ namespace Timetable_VKA.DATA_SECTION
 
         DataSet ds_reduc, ds_classroms, ds_lesson_sum, ds_practic, ds_con_work;
 
+        
+
+        private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            
+            
+            
+        }
+
         string[] lesson_time = { "", "", "", "" };
         List<string> groups_list = new List<string>() { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
         List<string> all_subjects = new List<string> { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
@@ -69,7 +73,7 @@ namespace Timetable_VKA.DATA_SECTION
         List<int> subjects_practic = new List<int> { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
         List<int> subjects_con_work = new List<int> { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 
-
+        
         private void All_timetable_Load(object sender, EventArgs e)
         {
             this.MaximizeBox = false;
@@ -401,7 +405,7 @@ namespace Timetable_VKA.DATA_SECTION
             int subject = 0;
             int summa = 0;
 
-
+            
 
             for (int r = 0; r < all_subjects.Count; r++)
             {
@@ -480,7 +484,9 @@ namespace Timetable_VKA.DATA_SECTION
                                             if (tabControl1.TabPages[9].Text != "") dataGridView10[column, row_1].Value += "лек";
                                             if (tabControl1.TabPages[10].Text != "") dataGridView11[column, row_1].Value += "лек";
 
-
+                                            
+                                            
+                                                
                                         }
 
 
@@ -514,6 +520,7 @@ namespace Timetable_VKA.DATA_SECTION
                                             if (tabControl1.TabPages[9].Text != "") dataGridView10[column, row_1].Value += "пр";
                                             if (tabControl1.TabPages[10].Text != "") dataGridView11[column, row_1].Value += "пр";
                                         }
+
 
 
                                     }
@@ -582,9 +589,54 @@ namespace Timetable_VKA.DATA_SECTION
             if (tabControl1.TabPages[9].Text != "") adding_lessons_for_other_groups(dataGridView10, all_subjects);
             if (tabControl1.TabPages[10].Text != "") adding_lessons_for_other_groups(dataGridView11, all_subjects);
 
-           
+            /*---------------------------------------- Определение потоковых занятий для передачи цвета в чтение (reading timetable)*/
+            int ind = 0;
+
+            for (int i=0; i<dataGridView1.Columns.Count-1; i++)
+            {
+                for(int j=0; j<dataGridView1.Rows.Count-1; j++)
+                {
+                    if (dataGridView1[i, j].Value!=null)
+                    {
+                        if (ind < DataBank.stream_subjects_for_reading.Count-1)
+                        {
+                            if (dataGridView1[i, j].Style.BackColor == Color.LightGreen)
+                            {
+                                DataBank.stream_subjects_for_reading[ind] = dataGridView1[i, j].Value.ToString();
+                            }
+                        
+                            if (DataBank.stream_subjects_for_reading[ind] != DataBank.stream_subjects_for_reading[ind + 1])
+                            {
+                                ind++;
+
+                            }
+                        }
+                        
+                    }
+                    
+                }
+            }
+
+            /*--------------------------------------- Сохранение расписаний ---------------------------------*/
+
+            saving_timetables(dataGridView1, DataBank.routes[0]);
+            saving_timetables(dataGridView2, DataBank.routes[1]);
+            saving_timetables(dataGridView3, DataBank.routes[2]);
+            saving_timetables(dataGridView4, DataBank.routes[3]);
+            saving_timetables(dataGridView5, DataBank.routes[4]);
+            saving_timetables(dataGridView6, DataBank.routes[5]);
+            saving_timetables(dataGridView7, DataBank.routes[6]);
+            saving_timetables(dataGridView8, DataBank.routes[7]);
+            saving_timetables(dataGridView9, DataBank.routes[8]);
+            saving_timetables(dataGridView10, DataBank.routes[9]);
+            saving_timetables(dataGridView11, DataBank.routes[10]);
+
+
+
 
         }
+
+
         public void adding_vuz_name(Label label)
         {
             command_vuz_name = new MySqlCommand("SELECT `vuzName` FROM `vuzname`", db.getConnection());
@@ -640,6 +692,19 @@ namespace Timetable_VKA.DATA_SECTION
             group_name9.Text = groups_list[8].ToString();
             group_name10.Text = groups_list[9].ToString();
             group_name11.Text = groups_list[10].ToString();
+
+            
+        }
+
+        public void adding_the_size_of_text(DataGridView dataGridView)
+        {
+            for (int i = 0; i < dataGridView.Columns.Count; i++)
+            {
+                dataGridView.Columns[i].DefaultCellStyle.Font = new Font("Times New Roman", 7);
+
+
+            }
+            dataGridView.Columns[2].DefaultCellStyle.Font = new Font("Times New Roman", 6);
 
         }
 
@@ -857,6 +922,9 @@ namespace Timetable_VKA.DATA_SECTION
 
 
             }
+
+            dataGridView[29, dataGridView.Rows.Count-1].Value = "3";
+            dataGridView[29, dataGridView.Rows.Count-6].Value = "2";
         }
 
         public void adding_practices(DataGridView dataGridView)
@@ -1148,17 +1216,7 @@ namespace Timetable_VKA.DATA_SECTION
 
         }
 
-        public void adding_the_size_of_text(DataGridView dataGridView)
-        {
-            for (int i = 0; i < dataGridView.Columns.Count; i++)
-            {
-                dataGridView.Columns[i].DefaultCellStyle.Font = new Font("Times New Roman", 7);
-
-
-            }
-            dataGridView.Columns[2].DefaultCellStyle.Font = new Font("Times New Roman", 6);
-
-        }
+        
 
        
         public void adding_lessons_for_other_groups(DataGridView dataGridView1, List<string> all_subjects)
@@ -1207,7 +1265,7 @@ namespace Timetable_VKA.DATA_SECTION
                         {
                             Random random = new Random();
                             row2 = random.Next(4, dataGridView1.Rows.Count);
-                            col2 = random.Next(3, dataGridView1.Columns.Count);
+                            col2 = random.Next(4, dataGridView1.Columns.Count);
                         } while (dataGridView1[col2, row2].Value != null);
 
                     }
@@ -1221,6 +1279,13 @@ namespace Timetable_VKA.DATA_SECTION
             }
 
 
+        }
+
+
+        public void saving_all_of_timetables(DataGridView dataGridView1)
+        {
+
+           
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
@@ -1240,8 +1305,51 @@ namespace Timetable_VKA.DATA_SECTION
         {
 
         }
+        private void button1_Click(object sender, EventArgs e)
+        {
+           saving_timetables(dataGridView1, DataBank.routes[0]);
+           saving_timetables(dataGridView2, DataBank.routes[1]);
+           saving_timetables(dataGridView3, DataBank.routes[2]);
+           saving_timetables(dataGridView4, DataBank.routes[3]);
+           saving_timetables(dataGridView5, DataBank.routes[4]);
+           saving_timetables(dataGridView6, DataBank.routes[5]);
+           saving_timetables(dataGridView7, DataBank.routes[6]);
+           saving_timetables(dataGridView8, DataBank.routes[7]);
+           saving_timetables(dataGridView9, DataBank.routes[8]);
+           saving_timetables(dataGridView10, DataBank.routes[9]);
+           saving_timetables(dataGridView11, DataBank.routes[10]);
+           
+            MessageBox.Show("Сохранено!");
+            this.Close();
 
-        
+        }
+        public void saving_timetables(DataGridView dataGridView, string file )
+        {
+            
+            
+            using (BinaryWriter bw = new BinaryWriter(File.Open(file, FileMode.Create)))
+            {
+                bw.Write(dataGridView.Columns.Count);
+                bw.Write(dataGridView.Rows.Count);
+                foreach (DataGridViewRow dgvR in dataGridView.Rows)
+                {
+                    for (int j = 0; j < dataGridView.Columns.Count; ++j)
+                    {
+                        object val = dgvR.Cells[j].Value;
+                        if (val == null)
+                        {
+                            bw.Write(false);
+                            bw.Write(false);
+                        }
+                        else
+                        {
+                            bw.Write(true);
+                            bw.Write(val.ToString());
+                        }
+                    }
+                }
+            }
+        }
     }
 
    

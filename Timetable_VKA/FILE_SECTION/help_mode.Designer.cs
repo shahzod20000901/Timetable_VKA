@@ -54,6 +54,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "help_mode";
             this.Text = "Timetable_VKA";
+            this.Load += new System.EventHandler(this.help_mode_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

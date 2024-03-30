@@ -51,5 +51,18 @@ namespace Timetable_VKA
         public static List<string> stream_subjetcs = new List<string> { "", "", "", "","","", "", "", "","","","","","", "", "", "", "", "", "", "", "", "" };
         public static List<string> unstreamed_subjetcs = new List<string> { "", "", "", "","","", "", "", "","","","","","", "", "", "", "", "", "", "", "", "" };
         public static List<DataGridView> all_tables=new List<DataGridView> ();
+
+        public static List<string> selected_cells = new List<string> { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
+        public static List<DataGridView> saved_tables = new List<DataGridView>();
+
+        public static DataGridView dataGridView=new DataGridView();
+        
+        public static List<string> routes= new List<string> { "C:\\time_tables\\timetableVKA.txt", "C:\\time_tables\\timetableVKA1.txt",
+        "C:\\time_tables\\timetableVKA2.txt","C:\\time_tables\\timetableVKA3.txt","C:\\time_tables\\timetableVKA4.txt","C:\\time_tables\\timetableVKA5.txt",
+        "C:\\time_tables\\timetableVKA6.txt","C:\\time_tables\\timetableVKA7.txt","C:\\time_tables\\timetableVKA8.txt","C:\\time_tables\\timetableVKA9.txt",
+        "C:\\time_tables\\timetableVKA10.txt", "C:\\time_tables\\timetableVKA11.txt"};
+
+        public static List<string> stream_subjects_for_reading= new List<string> { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
+        public static List<string> stream_subjects_for_reading1 = new List<string>(1000);
     }
 }
