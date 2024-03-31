@@ -48,7 +48,7 @@ namespace Timetable_VKA.TIMETABLE_SECTION
             showing_teachers_timetable(dataGridView9, for_teachers, comboBox1.SelectedIndex);
             showing_teachers_timetable(dataGridView10, for_teachers, comboBox1.SelectedIndex);
             showing_teachers_timetable(dataGridView11, for_teachers, comboBox1.SelectedIndex);
-            
+
             
         }
 
@@ -297,7 +297,7 @@ namespace Timetable_VKA.TIMETABLE_SECTION
             }
             for (int i = 3; i < dataGridView.Columns.Count; i++)
             {
-                for (int j = 0; j < dataGridView.Rows.Count; j++)
+                for (int j = 0; j < dataGridView.Rows.Count-1; j++)
                 {
                     
                         //dataGridView[i, j].Value = null;
@@ -336,7 +336,7 @@ namespace Timetable_VKA.TIMETABLE_SECTION
             }
             for (int i = 3; i < dataGridView.Columns.Count; i++)
             {
-                for (int j = 0; j < dataGridView.Rows.Count; j++)
+                for (int j = 0; j < dataGridView.Rows.Count-2; j++)
                 {
                     if (dataGridView[i, j].Style.BackColor != Color.Chocolate)
                     {
@@ -357,15 +357,28 @@ namespace Timetable_VKA.TIMETABLE_SECTION
                 {
 
                     dataGridView[3, j].Style.BackColor = Color.Red;
+                    
 
                 }
 
 
 
             }
+            for(int i=0; i<dataGridView.Columns.Count; i++)
+            {
+                                   
+                dataGridView[i, dataGridView.Rows.Count-2].Style.BackColor = Color.Red;
 
 
-           
+                    
+
+
+
+                
+            }
+            
+
+
 
             adding_mounth_name(dataGridView);
             adding_dates(dataGridView);
@@ -426,7 +439,7 @@ namespace Timetable_VKA.TIMETABLE_SECTION
 
             dataGridView[29, dataGridView.Rows.Count - 1].Value = "3";
             dataGridView[29, dataGridView.Rows.Count - 6].Value = "2";
-              
+            dataGridView.AllowUserToAddRows = false;
         }
         public void adding_groups_name()
         {
