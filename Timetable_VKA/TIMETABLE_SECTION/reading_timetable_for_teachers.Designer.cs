@@ -1,6 +1,6 @@
-﻿namespace Timetable_VKA.FILE_SECTION
+﻿namespace Timetable_VKA.TIMETABLE_SECTION
 {
-    partial class reading_timetable
+    partial class reading_timetable_for_teachers
     {
         /// <summary>
         /// Required designer variable.
@@ -72,7 +72,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(reading_timetable));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(reading_timetable_for_teachers));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.vuz_name1 = new System.Windows.Forms.Label();
@@ -448,8 +448,9 @@
             this.dataGridViewTextBoxColumn298 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn299 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn300 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -489,7 +490,7 @@
             this.tabControl1.Controls.Add(this.tabPage10);
             this.tabControl1.Controls.Add(this.tabPage11);
             this.tabControl1.Font = new System.Drawing.Font("Times New Roman", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tabControl1.Location = new System.Drawing.Point(11, 11);
+            this.tabControl1.Location = new System.Drawing.Point(11, 33);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -513,7 +514,7 @@
             // vuz_name1
             // 
             this.vuz_name1.AutoSize = true;
-            this.vuz_name1.Location = new System.Drawing.Point(214, 4);
+            this.vuz_name1.Location = new System.Drawing.Point(390, 2);
             this.vuz_name1.Name = "vuz_name1";
             this.vuz_name1.Size = new System.Drawing.Size(43, 12);
             this.vuz_name1.TabIndex = 5;
@@ -571,7 +572,7 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridView1.Location = new System.Drawing.Point(4, 34);
+            this.dataGridView1.Location = new System.Drawing.Point(5, 29);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
@@ -798,7 +799,7 @@
             // group_name1
             // 
             this.group_name1.AutoSize = true;
-            this.group_name1.Location = new System.Drawing.Point(294, 20);
+            this.group_name1.Location = new System.Drawing.Point(449, 15);
             this.group_name1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.group_name1.Name = "group_name1";
             this.group_name1.Size = new System.Drawing.Size(28, 12);
@@ -3866,21 +3867,47 @@
             this.dataGridViewTextBoxColumn300.Name = "dataGridViewTextBoxColumn300";
             this.dataGridViewTextBoxColumn300.Width = 30;
             // 
-            // openFileDialog1
+            // comboBox1
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(664, 4);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(288, 21);
+            this.comboBox1.TabIndex = 6;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // reading_timetable
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(536, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(122, 13);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Выбирите дисциплину:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(11, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(86, 13);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Преподователи";
+            // 
+            // reading_timetable_for_teachers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(964, 759);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "reading_timetable";
-            this.Text = "Просмотр расписаний";
-            this.Load += new System.EventHandler(this.reading_timetable_Load);
+            this.Name = "reading_timetable_for_teachers";
+            this.Text = "Просмотр расписания преподователей";
+            this.Load += new System.EventHandler(this.reading_timetable_for_teachers_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -3916,6 +3943,7 @@
             this.tabPage11.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView11)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -3924,7 +3952,7 @@
         public System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Label vuz_name1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        public System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn week;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -4296,7 +4324,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn298;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn299;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn300;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

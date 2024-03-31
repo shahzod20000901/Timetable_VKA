@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Timetable_VKA.DATA_SECTION
 {
@@ -234,6 +235,10 @@ namespace Timetable_VKA.DATA_SECTION
             {
                 if (subjects_con_work[i] == 0) subjects_con_work.RemoveAt(i);
             }
+            for (int i = 0; i < subjects_con_work.Count; i++)
+            {
+                subjects_con_work[i] += 1;
+            }
             ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -404,8 +409,8 @@ namespace Timetable_VKA.DATA_SECTION
             /* -----------------------------------    Распределение занятий --------------------------------------------*/
             int subject = 0;
             int summa = 0;
-
-            
+            int flag_for_teacher = 0;
+            int flag_for_teacher_1 = 0;
 
             for (int r = 0; r < all_subjects.Count; r++)
             {
@@ -466,6 +471,21 @@ namespace Timetable_VKA.DATA_SECTION
                                 if (i < subjects_lecture[summa] || i == subjects_lecture[summa])
                                 {
                                     if (tabControl1.TabPages[0].Text != "") dataGridView1[column, row_1].Value += "лек";
+                                
+
+                                /*------------------------- Получаю проводимых занятий для расписания преподователей -----------------------*/
+                                    if (DataBank.for_teachers[flag_for_teacher] != dataGridView1[column, row_1].Value.ToString())
+                                {
+                                     DataBank.for_teachers[flag_for_teacher] = dataGridView1[column, row_1].Value.ToString();
+                                        teachers_label.Text +="\n"+ DataBank.for_teachers[flag_for_teacher] + "-" + flag_for_teacher+"\n";
+                                        DataBank.for_teachers_new[flag_for_teacher_1]= dataGridView1[column, row_1].Value.ToString();
+                                        flag_for_teacher_1++;
+                                    }
+                               
+                                    
+                                                
+
+
 
                                     /*-Вставка лек-*/
                                     for (int m = 0; m < DataBank.stream_subjetcs.Count; m++)
@@ -503,6 +523,16 @@ namespace Timetable_VKA.DATA_SECTION
                                 {
                                     if (tabControl1.TabPages[0].Text != "") dataGridView1[column, row_1].Value += "пр";
 
+
+                                    /*------------------------- Получаю проводимых занятий для расписания преподователей -----------------------*/
+                                    if (DataBank.for_teachers[flag_for_teacher] != dataGridView1[column, row_1].Value.ToString())
+                                    {
+                                        DataBank.for_teachers[flag_for_teacher] = dataGridView1[column, row_1].Value.ToString();
+                                        teachers_label.Text += "\n" + DataBank.for_teachers[flag_for_teacher] + "-" + flag_for_teacher + "\n";
+                                        DataBank.for_teachers_new[flag_for_teacher_1] = dataGridView1[column, row_1].Value.ToString();
+                                        flag_for_teacher_1++;
+                                    }
+
                                     /*- Вставка пр -*/
                                     for (int m = 0; m < DataBank.stream_subjetcs.Count; m++)
                                     {
@@ -531,6 +561,15 @@ namespace Timetable_VKA.DATA_SECTION
                                 if (i > subjects_lecture[summa] + subjects_practic[summa] && i < subjects_lecture[summa] + subjects_practic[summa] + subjects_con_work[summa] || i == subjects_lecture[summa] + subjects_practic[summa] + subjects_con_work[summa])
                                 {
                                     if (tabControl1.TabPages[0].Text != "") dataGridView1[column, row_1].Value += "зк";
+                                    
+                                    /*------------------------- Получаю проводимых занятий для расписания преподователей -----------------------*/
+                                    if (DataBank.for_teachers[flag_for_teacher] != dataGridView1[column, row_1].Value.ToString())
+                                    {
+                                        DataBank.for_teachers[flag_for_teacher] = dataGridView1[column, row_1].Value.ToString();
+                                        teachers_label.Text += "\n" + DataBank.for_teachers[flag_for_teacher] + "-" + flag_for_teacher + "\n";
+                                        DataBank.for_teachers_new[flag_for_teacher_1] = dataGridView1[column, row_1].Value.ToString();
+                                        flag_for_teacher_1++;
+                                    }
 
                                     /*- Вставка зк -*/
                                     for (int m = 0; m < DataBank.stream_subjetcs.Count; m++)
@@ -561,7 +600,6 @@ namespace Timetable_VKA.DATA_SECTION
                             {
                                 --i;
                             }
-
                         }
 
                     }
@@ -572,6 +610,7 @@ namespace Timetable_VKA.DATA_SECTION
                 }
                 ++summa;
                 ++subject;
+                flag_for_teacher++;
             }
 
             
@@ -633,7 +672,7 @@ namespace Timetable_VKA.DATA_SECTION
 
 
 
-
+            for_teachers_timetable(DataBank.for_teachers_new);
         }
 
 
@@ -1281,6 +1320,47 @@ namespace Timetable_VKA.DATA_SECTION
 
         }
 
+        public void for_teachers_timetable(List<string> file)
+        {
+            int a;
+            MySqlCommand command1;
+            command1 = new MySqlCommand("TRUNCATE TABLE `for_techers`", db.getConnection());
+            db.openConnection();
+            if (command1.ExecuteNonQuery() == 1)
+                a = 1;
+            else
+
+                a = 0; ;
+            db.closeConnection();
+
+            MySqlCommand command;
+            int j;
+
+
+            for (int i = 0; i < file.Count; i++)
+            {
+
+
+                command = new MySqlCommand("INSERT INTO `for_techers` (`lessons`) VALUES(@log)", db.getConnection());
+                command.Parameters.Add("@log", MySqlDbType.VarChar).Value = file[i];
+                
+
+
+
+
+
+                db.openConnection();
+
+
+                if (command.ExecuteNonQuery() == 1)
+                    j = 0;
+
+                else
+                    j = 1;
+
+                db.closeConnection();
+            }
+        }
 
         public void saving_all_of_timetables(DataGridView dataGridView1)
         {
@@ -1319,6 +1399,8 @@ namespace Timetable_VKA.DATA_SECTION
            saving_timetables(dataGridView10, DataBank.routes[9]);
            saving_timetables(dataGridView11, DataBank.routes[10]);
            
+
+
             MessageBox.Show("Сохранено!");
             this.Close();
 
@@ -1350,6 +1432,7 @@ namespace Timetable_VKA.DATA_SECTION
                 }
             }
         }
+        
     }
 
    

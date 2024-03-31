@@ -9,17 +9,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Timetable_VKA.DATA_SECTION;
 
-namespace Timetable_VKA.FILE_SECTION
+namespace Timetable_VKA.TIMETABLE_SECTION
 {
-    public partial class reading_timetable : Form
+    public partial class reading_timetable_new : Form
     {
-         
-        public reading_timetable()
+        public reading_timetable_new()
         {
             InitializeComponent();
-            
         }
+
         DB db = new DB();
         MySqlCommand command1;
 
@@ -33,12 +33,12 @@ namespace Timetable_VKA.FILE_SECTION
         MySqlDataAdapter daa, da_vuz_name, da_group_name;
         DataSet dss, ds_vuz_name, ds_group_name;
         int index = 0;
+
         string[] lesson_time = { "", "", "", "" };
         List<string> groups_list = new List<string>() { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
 
-        private void reading_timetable_Load(object sender, EventArgs e)
+        private void reading_timetable_new_Load(object sender, EventArgs e)
         {
-            
             this.MaximizeBox = false;
             this.MinimizeBox = false;
 
@@ -111,7 +111,7 @@ namespace Timetable_VKA.FILE_SECTION
             if (tabControl1.TabPages[10].Text != "") adding_vuz_name(vuz_name11);
 
 
-            
+
             /*                 Вставка рабочего времени                 */
 
             string[] pairs_ = { "first_pair", "second_pair", "third_pair", "fourth_pair" };
@@ -135,10 +135,9 @@ namespace Timetable_VKA.FILE_SECTION
             }
 
 
-
         }
 
-       
+
         public void adding_vuz_name(Label label)
         {
             command_vuz_name = new MySqlCommand("SELECT `vuzName` FROM `vuzname`", db.getConnection());
@@ -196,7 +195,7 @@ namespace Timetable_VKA.FILE_SECTION
             group_name11.Text = groups_list[10].ToString();
 
         }
-             
+
 
         public void colouring(DataGridView dataGridView)
         {
@@ -212,25 +211,25 @@ namespace Timetable_VKA.FILE_SECTION
 
 
             }
-            
-            for(int i=0; i<dataGridView.Columns.Count; i++)
+
+            for (int i = 0; i < dataGridView.Columns.Count; i++)
             {
-                for(int j=0; j<dataGridView.Rows.Count; j++)
+                for (int j = 0; j < dataGridView.Rows.Count; j++)
                 {
-                    if (dataGridView[i,j].Value!=null)
+                    if (dataGridView[i, j].Value != null)
                     {
                         if (dataGridView[i, j].Value.ToString() == "Стаж") dataGridView[i, j].Style.BackColor = Color.DarkOrange;
                         else if (dataGridView[i, j].Value.ToString() == "Отп") dataGridView[i, j].Style.BackColor = Color.DarkGray;
                         else if (dataGridView[i, j].Value.ToString() == "Вых") dataGridView[i, j].Style.BackColor = Color.DarkGray;
 
-                        
+
                     }
 
                 }
             }
         }
-             
-       
+
+
 
         public void adding_mounth_name(DataGridView dataGridView)
         {
@@ -284,7 +283,7 @@ namespace Timetable_VKA.FILE_SECTION
 
         public void reading_timetables(DataGridView dataGridView, string file)
         {
-            
+
 
             using (BinaryReader bw = new BinaryReader(File.Open(file, FileMode.Open)))
             {
@@ -303,7 +302,7 @@ namespace Timetable_VKA.FILE_SECTION
                     }
                 }
             }
-            
+
         }
     }
 }

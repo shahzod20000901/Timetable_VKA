@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Timetable_VKA.DATA_SECTION;
 using Timetable_VKA.FILE_SECTION;
+using Timetable_VKA.TIMETABLE_SECTION;
 
 namespace Timetable_VKA
 {
@@ -29,14 +30,14 @@ namespace Timetable_VKA
 
         private void СоздатьCTRLOToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new reading_timetable().Show();
-            
+            new reading_timetable_new().Show();
+
 
         }
 
         private void ВыходCTRLQToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
 
         private void Main_menu_Load(object sender, EventArgs e)
@@ -75,15 +76,17 @@ namespace Timetable_VKA
 
             if (e.KeyCode == Keys.O && e.Modifiers == Keys.Control)
             {
-                new reading_timetable().Show();
+                new reading_timetable_new().Show();
             }
-
+            if (e.KeyCode == Keys.Q && e.Modifiers == Keys.Control)
+            {
+                Application.Exit();
+            }
         }
 
         private void НазваниеУчебногоЗаведенияToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Vuz_name newForm =new Vuz_name();
-            newForm.Show();
+            
         }
 
         private void Create_Click(object sender, EventArgs e)
@@ -191,7 +194,8 @@ namespace Timetable_VKA
 
         private void информацияОбУчебномЗаведенииToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Vuz_name newForm = new Vuz_name();
+            newForm.Show();
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -213,7 +217,7 @@ namespace Timetable_VKA
 
         private void просмотрпоГруппамToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new reading_timetable().Show();
+            new reading_timetable_new().Show();
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -224,6 +228,67 @@ namespace Timetable_VKA
         private void потокиToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new adding_streaming_lesson().Show();
+        }
+
+        private void ogr_r_students_btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void утроВечерToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new change_exthisting_timetable().Show();
+        }
+
+        private void официальныйToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Для создания нового расписания введите все необходимые данные в разделе 'Данные'");
+            this.Close();
+        }
+
+        private void сохранитьCTRLSToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+
+            MessageBox.Show("Сохранено!");
+            this.Close();
+
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            new adding_streaming_lesson().Show();
+        }
+
+        private void недавноОткрытыеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new reading_timetable_new().Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            new reading_timetable_new().Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            new change_exthisting_timetable().Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Для создания нового расписания введите все необходимые данные в разделе 'Данные'");
+            this.Close();
+        }
+
+        private void open_btn_Click(object sender, EventArgs e)
+        {
+            new reading_timetable_new().Show();
+        }
+
+        private void просмотрпоПреподователямToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new reading_timetable_for_teachers().Show();    
         }
     }
 }

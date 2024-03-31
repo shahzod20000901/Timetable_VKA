@@ -37,25 +37,9 @@
             this.режимToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.официальныйToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.утроВечерToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.блочноеПланированиеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.периToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.сохранитьCTRLSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cохранитьКакToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.автосохранениеНастроекToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ипортToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.импортЗначенийРазделенныхЗапятымитекстовыйФайлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.импортДисциплинИзCSVФайлаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.импортИзВидовЗаныятийИзCSVФайлаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.импортПреподователейИзCSVФайлаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.импортПотоковГрупИПодгрупИзCSVФайлаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.импортЗданийИАудиторийИзCSVФайлаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.импортЗанятийИзCSVФайлаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.экспортToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выходCTRLQToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.данныеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.информацияОбУчебномЗаведенииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.названиеУчебногоЗаведенияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.коментарииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.дниНеделиИРасписаниеЗвонковToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.дниНеделиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.расписаниеЗвонковToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -70,10 +54,8 @@
             this.расписаниеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.просмотрпоПреподователямToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.просмотрпоГруппамToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.просмотрпоАудиториямToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.показатьмягкиеКонфликтыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.печатьCTRLPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.сохToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.настройкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.проверятьНаличиеОбновленийПриЗапускеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.языкLanguageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -134,15 +116,9 @@
             this.форумToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.webадресаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.указанияПоИспользованиюToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.полезныеСоветыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.частоЗадаваемыеВопросыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.эксклюзивУтровечерМароккоToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.безОграниченийУтровечерАлжирToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.блочноеПланированиеToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.периодыФинляндияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.оQtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.оБиблиотекахToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.main_file = new System.Windows.Forms.TabPage();
@@ -194,6 +170,7 @@
             this.generate_timetable_btn = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.button10 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.main_file.SuspendLayout();
@@ -229,11 +206,6 @@
             this.создатьCTRLOToolStripMenuItem,
             this.недавноОткрытыеToolStripMenuItem,
             this.режимToolStripMenuItem,
-            this.сохранитьCTRLSToolStripMenuItem,
-            this.cохранитьКакToolStripMenuItem,
-            this.автосохранениеНастроекToolStripMenuItem,
-            this.ипортToolStripMenuItem,
-            this.экспортToolStripMenuItem,
             this.выходCTRLQToolStripMenuItem});
             this.файлToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
@@ -243,144 +215,51 @@
             // открытьToolStripMenuItem
             // 
             this.открытьToolStripMenuItem.Name = "открытьToolStripMenuItem";
-            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
             this.открытьToolStripMenuItem.Text = "Создать      CTRL + N";
             this.открытьToolStripMenuItem.Click += new System.EventHandler(this.ОткрытьToolStripMenuItem_Click);
             // 
             // создатьCTRLOToolStripMenuItem
             // 
             this.создатьCTRLOToolStripMenuItem.Name = "создатьCTRLOToolStripMenuItem";
-            this.создатьCTRLOToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            this.создатьCTRLOToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
             this.создатьCTRLOToolStripMenuItem.Text = "Открыть    CTRL + O";
             this.создатьCTRLOToolStripMenuItem.Click += new System.EventHandler(this.СоздатьCTRLOToolStripMenuItem_Click);
             // 
             // недавноОткрытыеToolStripMenuItem
             // 
             this.недавноОткрытыеToolStripMenuItem.Name = "недавноОткрытыеToolStripMenuItem";
-            this.недавноОткрытыеToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            this.недавноОткрытыеToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
             this.недавноОткрытыеToolStripMenuItem.Text = "Недавно открытые";
+            this.недавноОткрытыеToolStripMenuItem.Click += new System.EventHandler(this.недавноОткрытыеToolStripMenuItem_Click);
             // 
             // режимToolStripMenuItem
             // 
             this.режимToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.официальныйToolStripMenuItem,
-            this.утроВечерToolStripMenuItem,
-            this.блочноеПланированиеToolStripMenuItem,
-            this.периToolStripMenuItem});
+            this.утроВечерToolStripMenuItem});
             this.режимToolStripMenuItem.Name = "режимToolStripMenuItem";
-            this.режимToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            this.режимToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
             this.режимToolStripMenuItem.Text = "Режим";
             // 
             // официальныйToolStripMenuItem
             // 
             this.официальныйToolStripMenuItem.Name = "официальныйToolStripMenuItem";
-            this.официальныйToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
-            this.официальныйToolStripMenuItem.Text = "Официальный";
+            this.официальныйToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.официальныйToolStripMenuItem.Text = "Штатное Расписание";
+            this.официальныйToolStripMenuItem.Click += new System.EventHandler(this.официальныйToolStripMenuItem_Click);
             // 
             // утроВечерToolStripMenuItem
             // 
             this.утроВечерToolStripMenuItem.Name = "утроВечерToolStripMenuItem";
-            this.утроВечерToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
-            this.утроВечерToolStripMenuItem.Text = "Утро-Вечер";
-            // 
-            // блочноеПланированиеToolStripMenuItem
-            // 
-            this.блочноеПланированиеToolStripMenuItem.Name = "блочноеПланированиеToolStripMenuItem";
-            this.блочноеПланированиеToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
-            this.блочноеПланированиеToolStripMenuItem.Text = "Блочное планирование";
-            // 
-            // периToolStripMenuItem
-            // 
-            this.периToolStripMenuItem.Name = "периToolStripMenuItem";
-            this.периToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
-            this.периToolStripMenuItem.Text = "Периоды";
-            // 
-            // сохранитьCTRLSToolStripMenuItem
-            // 
-            this.сохранитьCTRLSToolStripMenuItem.Name = "сохранитьCTRLSToolStripMenuItem";
-            this.сохранитьCTRLSToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
-            this.сохранитьCTRLSToolStripMenuItem.Text = "Сохранить    CTRL + S";
-            // 
-            // cохранитьКакToolStripMenuItem
-            // 
-            this.cохранитьКакToolStripMenuItem.Name = "cохранитьКакToolStripMenuItem";
-            this.cохранитьКакToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
-            this.cохранитьКакToolStripMenuItem.Text = "Cохранить как...";
-            // 
-            // автосохранениеНастроекToolStripMenuItem
-            // 
-            this.автосохранениеНастроекToolStripMenuItem.Name = "автосохранениеНастроекToolStripMenuItem";
-            this.автосохранениеНастроекToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
-            this.автосохранениеНастроекToolStripMenuItem.Text = "Автосохранение настроек";
-            // 
-            // ипортToolStripMenuItem
-            // 
-            this.ипортToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.импортЗначенийРазделенныхЗапятымитекстовыйФайлToolStripMenuItem});
-            this.ипортToolStripMenuItem.Name = "ипортToolStripMenuItem";
-            this.ипортToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
-            this.ипортToolStripMenuItem.Text = "Импорт";
-            // 
-            // импортЗначенийРазделенныхЗапятымитекстовыйФайлToolStripMenuItem
-            // 
-            this.импортЗначенийРазделенныхЗапятымитекстовыйФайлToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.импортДисциплинИзCSVФайлаToolStripMenuItem,
-            this.импортИзВидовЗаныятийИзCSVФайлаToolStripMenuItem,
-            this.импортПреподователейИзCSVФайлаToolStripMenuItem,
-            this.импортПотоковГрупИПодгрупИзCSVФайлаToolStripMenuItem,
-            this.импортЗданийИАудиторийИзCSVФайлаToolStripMenuItem,
-            this.импортЗанятийИзCSVФайлаToolStripMenuItem});
-            this.импортЗначенийРазделенныхЗапятымитекстовыйФайлToolStripMenuItem.Name = "импортЗначенийРазделенныхЗапятымитекстовыйФайлToolStripMenuItem";
-            this.импортЗначенийРазделенныхЗапятымитекстовыйФайлToolStripMenuItem.Size = new System.Drawing.Size(371, 22);
-            this.импортЗначенийРазделенныхЗапятымитекстовыйФайлToolStripMenuItem.Text = "Импорт значений разделенных запятыми (текстовый файл)";
-            // 
-            // импортДисциплинИзCSVФайлаToolStripMenuItem
-            // 
-            this.импортДисциплинИзCSVФайлаToolStripMenuItem.Name = "импортДисциплинИзCSVФайлаToolStripMenuItem";
-            this.импортДисциплинИзCSVФайлаToolStripMenuItem.Size = new System.Drawing.Size(319, 22);
-            this.импортДисциплинИзCSVФайлаToolStripMenuItem.Text = "Импорт дисциплин из CSV- файла";
-            // 
-            // импортИзВидовЗаныятийИзCSVФайлаToolStripMenuItem
-            // 
-            this.импортИзВидовЗаныятийИзCSVФайлаToolStripMenuItem.Name = "импортИзВидовЗаныятийИзCSVФайлаToolStripMenuItem";
-            this.импортИзВидовЗаныятийИзCSVФайлаToolStripMenuItem.Size = new System.Drawing.Size(319, 22);
-            this.импортИзВидовЗаныятийИзCSVФайлаToolStripMenuItem.Text = "Импорт видов заныятий из CSV - файла";
-            this.импортИзВидовЗаныятийИзCSVФайлаToolStripMenuItem.Click += new System.EventHandler(this.ИмпортИзВидовЗаныятийИзCSVФайлаToolStripMenuItem_Click);
-            // 
-            // импортПреподователейИзCSVФайлаToolStripMenuItem
-            // 
-            this.импортПреподователейИзCSVФайлаToolStripMenuItem.Name = "импортПреподователейИзCSVФайлаToolStripMenuItem";
-            this.импортПреподователейИзCSVФайлаToolStripMenuItem.Size = new System.Drawing.Size(319, 22);
-            this.импортПреподователейИзCSVФайлаToolStripMenuItem.Text = "Импорт преподователей из CSV - файла";
-            // 
-            // импортПотоковГрупИПодгрупИзCSVФайлаToolStripMenuItem
-            // 
-            this.импортПотоковГрупИПодгрупИзCSVФайлаToolStripMenuItem.Name = "импортПотоковГрупИПодгрупИзCSVФайлаToolStripMenuItem";
-            this.импортПотоковГрупИПодгрупИзCSVФайлаToolStripMenuItem.Size = new System.Drawing.Size(319, 22);
-            this.импортПотоковГрупИПодгрупИзCSVФайлаToolStripMenuItem.Text = "Импорт потоков груп и подгруп из CSV - файла";
-            // 
-            // импортЗданийИАудиторийИзCSVФайлаToolStripMenuItem
-            // 
-            this.импортЗданийИАудиторийИзCSVФайлаToolStripMenuItem.Name = "импортЗданийИАудиторийИзCSVФайлаToolStripMenuItem";
-            this.импортЗданийИАудиторийИзCSVФайлаToolStripMenuItem.Size = new System.Drawing.Size(319, 22);
-            this.импортЗданийИАудиторийИзCSVФайлаToolStripMenuItem.Text = "Импорт зданий и аудиторий из CSV - файла";
-            // 
-            // импортЗанятийИзCSVФайлаToolStripMenuItem
-            // 
-            this.импортЗанятийИзCSVФайлаToolStripMenuItem.Name = "импортЗанятийИзCSVФайлаToolStripMenuItem";
-            this.импортЗанятийИзCSVФайлаToolStripMenuItem.Size = new System.Drawing.Size(319, 22);
-            this.импортЗанятийИзCSVФайлаToolStripMenuItem.Text = "Импорт занятий из CSV - файла";
-            // 
-            // экспортToolStripMenuItem
-            // 
-            this.экспортToolStripMenuItem.Name = "экспортToolStripMenuItem";
-            this.экспортToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
-            this.экспортToolStripMenuItem.Text = "Экспорт";
+            this.утроВечерToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.утроВечерToolStripMenuItem.Text = "Особый";
+            this.утроВечерToolStripMenuItem.Click += new System.EventHandler(this.утроВечерToolStripMenuItem_Click);
             // 
             // выходCTRLQToolStripMenuItem
             // 
             this.выходCTRLQToolStripMenuItem.Name = "выходCTRLQToolStripMenuItem";
-            this.выходCTRLQToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            this.выходCTRLQToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
             this.выходCTRLQToolStripMenuItem.Text = "Выход        CTRL + Q";
             this.выходCTRLQToolStripMenuItem.Click += new System.EventHandler(this.ВыходCTRLQToolStripMenuItem_Click);
             // 
@@ -401,26 +280,10 @@
             // 
             // информацияОбУчебномЗаведенииToolStripMenuItem
             // 
-            this.информацияОбУчебномЗаведенииToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.названиеУчебногоЗаведенияToolStripMenuItem,
-            this.коментарииToolStripMenuItem});
             this.информацияОбУчебномЗаведенииToolStripMenuItem.Name = "информацияОбУчебномЗаведенииToolStripMenuItem";
             this.информацияОбУчебномЗаведенииToolStripMenuItem.Size = new System.Drawing.Size(263, 22);
             this.информацияОбУчебномЗаведенииToolStripMenuItem.Text = "Название ВУЗа";
             this.информацияОбУчебномЗаведенииToolStripMenuItem.Click += new System.EventHandler(this.информацияОбУчебномЗаведенииToolStripMenuItem_Click);
-            // 
-            // названиеУчебногоЗаведенияToolStripMenuItem
-            // 
-            this.названиеУчебногоЗаведенияToolStripMenuItem.Name = "названиеУчебногоЗаведенияToolStripMenuItem";
-            this.названиеУчебногоЗаведенияToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
-            this.названиеУчебногоЗаведенияToolStripMenuItem.Text = "Название учебного заведения";
-            this.названиеУчебногоЗаведенияToolStripMenuItem.Click += new System.EventHandler(this.НазваниеУчебногоЗаведенияToolStripMenuItem_Click);
-            // 
-            // коментарииToolStripMenuItem
-            // 
-            this.коментарииToolStripMenuItem.Name = "коментарииToolStripMenuItem";
-            this.коментарииToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
-            this.коментарииToolStripMenuItem.Text = "Коментарии";
             // 
             // дниНеделиИРасписаниеЗвонковToolStripMenuItem
             // 
@@ -471,14 +334,14 @@
             // группыToolStripMenuItem
             // 
             this.группыToolStripMenuItem.Name = "группыToolStripMenuItem";
-            this.группыToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.группыToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.группыToolStripMenuItem.Text = "Группы";
             this.группыToolStripMenuItem.Click += new System.EventHandler(this.группыToolStripMenuItem_Click);
             // 
             // потокиToolStripMenuItem
             // 
             this.потокиToolStripMenuItem.Name = "потокиToolStripMenuItem";
-            this.потокиToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.потокиToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.потокиToolStripMenuItem.Text = "Потоки";
             this.потокиToolStripMenuItem.Click += new System.EventHandler(this.потокиToolStripMenuItem_Click);
             // 
@@ -508,10 +371,8 @@
             this.расписаниеToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.просмотрпоПреподователямToolStripMenuItem,
             this.просмотрпоГруппамToolStripMenuItem,
-            this.просмотрпоАудиториямToolStripMenuItem,
             this.показатьмягкиеКонфликтыToolStripMenuItem,
-            this.печатьCTRLPToolStripMenuItem,
-            this.сохToolStripMenuItem});
+            this.печатьCTRLPToolStripMenuItem});
             this.расписаниеToolStripMenuItem.Name = "расписаниеToolStripMenuItem";
             this.расписаниеToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
             this.расписаниеToolStripMenuItem.Text = "Расписание";
@@ -521,6 +382,7 @@
             this.просмотрпоПреподователямToolStripMenuItem.Name = "просмотрпоПреподователямToolStripMenuItem";
             this.просмотрпоПреподователямToolStripMenuItem.Size = new System.Drawing.Size(305, 22);
             this.просмотрпоПреподователямToolStripMenuItem.Text = "Просмотр (по преподователям)         ";
+            this.просмотрпоПреподователямToolStripMenuItem.Click += new System.EventHandler(this.просмотрпоПреподователямToolStripMenuItem_Click);
             // 
             // просмотрпоГруппамToolStripMenuItem
             // 
@@ -528,12 +390,6 @@
             this.просмотрпоГруппамToolStripMenuItem.Size = new System.Drawing.Size(305, 22);
             this.просмотрпоГруппамToolStripMenuItem.Text = "Просмотр (по группам)              ";
             this.просмотрпоГруппамToolStripMenuItem.Click += new System.EventHandler(this.просмотрпоГруппамToolStripMenuItem_Click);
-            // 
-            // просмотрпоАудиториямToolStripMenuItem
-            // 
-            this.просмотрпоАудиториямToolStripMenuItem.Name = "просмотрпоАудиториямToolStripMenuItem";
-            this.просмотрпоАудиториямToolStripMenuItem.Size = new System.Drawing.Size(305, 22);
-            this.просмотрпоАудиториямToolStripMenuItem.Text = "Просмотр (по аудиториям)";
             // 
             // показатьмягкиеКонфликтыToolStripMenuItem
             // 
@@ -546,12 +402,6 @@
             this.печатьCTRLPToolStripMenuItem.Name = "печатьCTRLPToolStripMenuItem";
             this.печатьCTRLPToolStripMenuItem.Size = new System.Drawing.Size(305, 22);
             this.печатьCTRLPToolStripMenuItem.Text = "Печать                                                CTRL + P";
-            // 
-            // сохToolStripMenuItem
-            // 
-            this.сохToolStripMenuItem.Name = "сохToolStripMenuItem";
-            this.сохToolStripMenuItem.Size = new System.Drawing.Size(305, 22);
-            this.сохToolStripMenuItem.Text = "Сохранить данные и расписание как...";
             // 
             // настройкаToolStripMenuItem
             // 
@@ -983,15 +833,9 @@
             this.справкаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.вИнтернетеToolStripMenuItem,
             this.указанияПоИспользованиюToolStripMenuItem,
-            this.полезныеСоветыToolStripMenuItem,
             this.частоЗадаваемыеВопросыToolStripMenuItem,
-            this.эксклюзивУтровечерМароккоToolStripMenuItem,
-            this.безОграниченийУтровечерАлжирToolStripMenuItem,
             this.блочноеПланированиеToolStripMenuItem1,
-            this.периодыФинляндияToolStripMenuItem,
-            this.оПрограммеToolStripMenuItem,
-            this.оQtToolStripMenuItem,
-            this.оБиблиотекахToolStripMenuItem});
+            this.оПрограммеToolStripMenuItem});
             this.справкаToolStripMenuItem.Name = "справкаToolStripMenuItem";
             this.справкаToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.справкаToolStripMenuItem.Text = "Справка";
@@ -1004,7 +848,7 @@
             this.форумToolStripMenuItem,
             this.webадресаToolStripMenuItem});
             this.вИнтернетеToolStripMenuItem.Name = "вИнтернетеToolStripMenuItem";
-            this.вИнтернетеToolStripMenuItem.Size = new System.Drawing.Size(282, 22);
+            this.вИнтернетеToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
             this.вИнтернетеToolStripMenuItem.Text = "В интернете";
             // 
             // домашняяСтраницаToolStripMenuItem
@@ -1034,62 +878,26 @@
             // указанияПоИспользованиюToolStripMenuItem
             // 
             this.указанияПоИспользованиюToolStripMenuItem.Name = "указанияПоИспользованиюToolStripMenuItem";
-            this.указанияПоИспользованиюToolStripMenuItem.Size = new System.Drawing.Size(282, 22);
+            this.указанияПоИспользованиюToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
             this.указанияПоИспользованиюToolStripMenuItem.Text = "Указания по использованию";
-            // 
-            // полезныеСоветыToolStripMenuItem
-            // 
-            this.полезныеСоветыToolStripMenuItem.Name = "полезныеСоветыToolStripMenuItem";
-            this.полезныеСоветыToolStripMenuItem.Size = new System.Drawing.Size(282, 22);
-            this.полезныеСоветыToolStripMenuItem.Text = "Полезные советы";
             // 
             // частоЗадаваемыеВопросыToolStripMenuItem
             // 
             this.частоЗадаваемыеВопросыToolStripMenuItem.Name = "частоЗадаваемыеВопросыToolStripMenuItem";
-            this.частоЗадаваемыеВопросыToolStripMenuItem.Size = new System.Drawing.Size(282, 22);
+            this.частоЗадаваемыеВопросыToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
             this.частоЗадаваемыеВопросыToolStripMenuItem.Text = "Часто задаваемые вопросы";
-            // 
-            // эксклюзивУтровечерМароккоToolStripMenuItem
-            // 
-            this.эксклюзивУтровечерМароккоToolStripMenuItem.Name = "эксклюзивУтровечерМароккоToolStripMenuItem";
-            this.эксклюзивУтровечерМароккоToolStripMenuItem.Size = new System.Drawing.Size(282, 22);
-            this.эксклюзивУтровечерМароккоToolStripMenuItem.Text = "Эксклюзив утро/вечер (Марокко)";
-            // 
-            // безОграниченийУтровечерАлжирToolStripMenuItem
-            // 
-            this.безОграниченийУтровечерАлжирToolStripMenuItem.Name = "безОграниченийУтровечерАлжирToolStripMenuItem";
-            this.безОграниченийУтровечерАлжирToolStripMenuItem.Size = new System.Drawing.Size(282, 22);
-            this.безОграниченийУтровечерАлжирToolStripMenuItem.Text = "Без ограничений утро/вечер (Алжир)";
             // 
             // блочноеПланированиеToolStripMenuItem1
             // 
             this.блочноеПланированиеToolStripMenuItem1.Name = "блочноеПланированиеToolStripMenuItem1";
-            this.блочноеПланированиеToolStripMenuItem1.Size = new System.Drawing.Size(282, 22);
+            this.блочноеПланированиеToolStripMenuItem1.Size = new System.Drawing.Size(232, 22);
             this.блочноеПланированиеToolStripMenuItem1.Text = "Блочное планирование";
-            // 
-            // периодыФинляндияToolStripMenuItem
-            // 
-            this.периодыФинляндияToolStripMenuItem.Name = "периодыФинляндияToolStripMenuItem";
-            this.периодыФинляндияToolStripMenuItem.Size = new System.Drawing.Size(282, 22);
-            this.периодыФинляндияToolStripMenuItem.Text = "Периоды (Финляндия)";
             // 
             // оПрограммеToolStripMenuItem
             // 
             this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
-            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(282, 22);
+            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
             this.оПрограммеToolStripMenuItem.Text = "О программе";
-            // 
-            // оQtToolStripMenuItem
-            // 
-            this.оQtToolStripMenuItem.Name = "оQtToolStripMenuItem";
-            this.оQtToolStripMenuItem.Size = new System.Drawing.Size(282, 22);
-            this.оQtToolStripMenuItem.Text = "О Qt";
-            // 
-            // оБиблиотекахToolStripMenuItem
-            // 
-            this.оБиблиотекахToolStripMenuItem.Name = "оБиблиотекахToolStripMenuItem";
-            this.оБиблиотекахToolStripMenuItem.Size = new System.Drawing.Size(282, 22);
-            this.оБиблиотекахToolStripMenuItem.Text = "О библиотеках";
             // 
             // menuStrip2
             // 
@@ -1146,18 +954,20 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(117, 35);
             this.button5.TabIndex = 4;
-            this.button5.Text = "Как";
+            this.button5.Text = "Особый";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(18, 133);
+            this.button4.Location = new System.Drawing.Point(18, 122);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(120, 35);
+            this.button4.Size = new System.Drawing.Size(120, 46);
             this.button4.TabIndex = 3;
-            this.button4.Text = "Сохранить";
+            this.button4.Text = "Штатное расписание";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -1168,6 +978,7 @@
             this.button3.TabIndex = 2;
             this.button3.Text = "Недавно открытые";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // open_btn
             // 
@@ -1178,6 +989,7 @@
             this.open_btn.TabIndex = 1;
             this.open_btn.Text = "Открыть";
             this.open_btn.UseVisualStyleBackColor = true;
+            this.open_btn.Click += new System.EventHandler(this.open_btn_Click);
             // 
             // create
             // 
@@ -1204,6 +1016,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.button10);
             this.groupBox2.Controls.Add(this.button9);
             this.groupBox2.Controls.Add(this.button8);
             this.groupBox2.Controls.Add(this.button6);
@@ -1223,7 +1036,7 @@
             // button9
             // 
             this.button9.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button9.Location = new System.Drawing.Point(108, 151);
+            this.button9.Location = new System.Drawing.Point(6, 150);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(96, 31);
             this.button9.TabIndex = 13;
@@ -1475,8 +1288,9 @@
             this.ogr_r_students_btn.Name = "ogr_r_students_btn";
             this.ogr_r_students_btn.Size = new System.Drawing.Size(96, 32);
             this.ogr_r_students_btn.TabIndex = 4;
-            this.ogr_r_students_btn.Text = "Студенты";
+            this.ogr_r_students_btn.Text = "Военнослуж.";
             this.ogr_r_students_btn.UseVisualStyleBackColor = true;
+            this.ogr_r_students_btn.Click += new System.EventHandler(this.ogr_r_students_btn_Click);
             // 
             // ogr_r_teachers_btn
             // 
@@ -1592,7 +1406,7 @@
             this.timetable_students_btn.Name = "timetable_students_btn";
             this.timetable_students_btn.Size = new System.Drawing.Size(96, 32);
             this.timetable_students_btn.TabIndex = 4;
-            this.timetable_students_btn.Text = "Студенты";
+            this.timetable_students_btn.Text = "Военнослуж.";
             this.timetable_students_btn.UseVisualStyleBackColor = true;
             // 
             // timetable_teachers_btn
@@ -1628,6 +1442,17 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // button10
+            // 
+            this.button10.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button10.Location = new System.Drawing.Point(108, 151);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(96, 30);
+            this.button10.TabIndex = 14;
+            this.button10.Text = "Потоки";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // main_menu
             // 
@@ -1673,25 +1498,9 @@
         private System.Windows.Forms.ToolStripMenuItem режимToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem официальныйToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem утроВечерToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem блочноеПланированиеToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem периToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem сохранитьCTRLSToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cохранитьКакToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem автосохранениеНастроекToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ипортToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem импортЗначенийРазделенныхЗапятымитекстовыйФайлToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem импортДисциплинИзCSVФайлаToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem импортИзВидовЗаныятийИзCSVФайлаToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem импортПреподователейИзCSVФайлаToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem импортПотоковГрупИПодгрупИзCSVФайлаToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem импортЗданийИАудиторийИзCSVФайлаToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem импортЗанятийИзCSVФайлаToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem экспортToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem выходCTRLQToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem данныеToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem информацияОбУчебномЗаведенииToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem названиеУчебногоЗаведенияToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem коментарииToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem дниНеделиИРасписаниеЗвонковToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem дниНеделиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem расписаниеЗвонковToolStripMenuItem;
@@ -1707,10 +1516,8 @@
         private System.Windows.Forms.ToolStripMenuItem справкаToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem просмотрпоПреподователямToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem просмотрпоГруппамToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem просмотрпоАудиториямToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem показатьмягкиеКонфликтыToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem печатьCTRLPToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem сохToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem проверятьНаличиеОбновленийПриЗапускеToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem языкLanguageToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem расписаниеToolStripMenuItem1;
@@ -1769,15 +1576,9 @@
         private System.Windows.Forms.ToolStripMenuItem форумToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem webадресаToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem указанияПоИспользованиюToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem полезныеСоветыToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem частоЗадаваемыеВопросыToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem эксклюзивУтровечерМароккоToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem безОграниченийУтровечерАлжирToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem блочноеПланированиеToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem периодыФинляндияToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem оПрограммеToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem оQtToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem оБиблиотекахToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage main_file;
@@ -1830,6 +1631,7 @@
         private System.Windows.Forms.ToolStripMenuItem потокиToolStripMenuItem;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.Button button10;
     }
 }
 
