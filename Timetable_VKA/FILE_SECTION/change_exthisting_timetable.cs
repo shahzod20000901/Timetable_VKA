@@ -45,6 +45,7 @@ namespace Timetable_VKA.FILE_SECTION
         private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             cutting_lessons(dataGridView1);
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -345,6 +346,70 @@ namespace Timetable_VKA.FILE_SECTION
             MessageBox.Show("Расписание сохранено!!!!");
         }
 
+        private void dataGridView2_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            cutting_lessons(dataGridView2);
+        }
+
+        private void dataGridView3_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            cutting_lessons(dataGridView3);
+        }
+
+        private void dataGridView4_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            cutting_lessons(dataGridView4);
+        }
+
+        private void dataGridView5_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            cutting_lessons(dataGridView5);
+        }
+
+        private void dataGridView6_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            cutting_lessons(dataGridView6);
+        }
+
+        private void dataGridView7_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            cutting_lessons(dataGridView7);
+        }
+
+        private void dataGridView8_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            cutting_lessons(dataGridView8);
+        }
+
+        private void dataGridView9_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            cutting_lessons(dataGridView9);
+        }
+
+        private void dataGridView10_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            cutting_lessons(dataGridView10);
+        }
+
+        private void dataGridView11_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            cutting_lessons(dataGridView11);
+        }
+
+        private void vuz_name2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            index = 0;
+            for(int i=0; i<DataBank.selected_cells.Count; i++)
+            {
+                DataBank.selected_cells[i] = "";
+            }
+        }
+
         public void adding_vuz_name(Label label)
         {
             command_vuz_name = new MySqlCommand("SELECT `vuzName` FROM `vuzname`", db.getConnection());
@@ -559,7 +624,7 @@ namespace Timetable_VKA.FILE_SECTION
         public void moving_to_left(DataGridView dataGridView)
         {
             int flag = 0;
-            int column = 3;
+            int column = 4;
             int row_1 = 24;
             Random random = new Random();
 
@@ -591,9 +656,9 @@ namespace Timetable_VKA.FILE_SECTION
                 }
 
                 column++;
-                if (column == move_to_left || column>move_to_left)
+                if (column == move_to_left-2)
                 {
-                    column = 3;
+                    column = 4;
                 }
                 row_1 = random.Next(4, dataGridView.Rows.Count-1);
 
