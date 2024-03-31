@@ -55,7 +55,7 @@ namespace Timetable_VKA.TIMETABLE_SECTION
         string[] lesson_time = { "", "", "", "" };
         string[] teachers_list = { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
         List<string> groups_list = new List<string>() { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
-        List<string> for_teachers = new List<string> { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
+        List<string> for_teachers = new List<string>  { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
         private void reading_timetable_for_teachers_Load(object sender, EventArgs e)
         {
             this.MaximizeBox = false;
@@ -279,7 +279,12 @@ namespace Timetable_VKA.TIMETABLE_SECTION
                 subject_practic = 31;
                 subject_control_work = 32;
             }
-
+            else if (index == 11)
+            {
+                subject_lecture = 33;
+                subject_practic = 34;
+                subject_control_work = 35;
+            }
             for (int i = 3; i < dataGridView.Columns.Count; i++)
             {
                 for (int j = 0; j < dataGridView.Rows.Count; j++)
@@ -309,14 +314,14 @@ namespace Timetable_VKA.TIMETABLE_SECTION
 
                 }
             }
-            List<string> for_teachers = new List<string> { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
-            for(int i=0; i<teach.Count; i++)
+            List<string> for_teachers = new List<string> { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
+            for (int i=0; i<teach.Count; i++)
             {
                 for_teachers[i] = teach[i];
             }
 
 
-            
+           
 
             for (int i = 3; i < dataGridView.Columns.Count; i++)
             {
@@ -336,7 +341,7 @@ namespace Timetable_VKA.TIMETABLE_SECTION
             }
             for (int i = 3; i < dataGridView.Columns.Count; i++)
             {
-                for (int j = 0; j < dataGridView.Rows.Count-2; j++)
+                for (int j = 0; j < dataGridView.Rows.Count-1; j++)
                 {
                     if (dataGridView[i, j].Style.BackColor != Color.Chocolate)
                     {
@@ -367,7 +372,7 @@ namespace Timetable_VKA.TIMETABLE_SECTION
             for(int i=0; i<dataGridView.Columns.Count; i++)
             {
                                    
-                dataGridView[i, dataGridView.Rows.Count-2].Style.BackColor = Color.Red;
+                dataGridView[i, dataGridView.Rows.Count-1].Style.BackColor = Color.Red;
 
 
                     

@@ -75,7 +75,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(All_timetable));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
             this.vuz_name1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.week = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -452,7 +451,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.teachers_label = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -503,7 +501,6 @@
             // tabPage1
             // 
             this.tabPage1.AutoScroll = true;
-            this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.vuz_name1);
             this.tabPage1.Controls.Add(this.dataGridView1);
             this.tabPage1.Controls.Add(this.group_name1);
@@ -515,14 +512,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
-            // 
-            // label1
-            // 
-            this.label1.Location = new System.Drawing.Point(594, 4);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 12);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "cell: ";
             // 
             // vuz_name1
             // 
@@ -3900,22 +3889,11 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // teachers_label
-            // 
-            this.teachers_label.AutoSize = true;
-            this.teachers_label.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.teachers_label.Location = new System.Drawing.Point(487, 10);
-            this.teachers_label.Name = "teachers_label";
-            this.teachers_label.Size = new System.Drawing.Size(49, 15);
-            this.teachers_label.TabIndex = 2;
-            this.teachers_label.Text = "teachers:";
-            // 
             // All_timetable
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(964, 759);
-            this.Controls.Add(this.teachers_label);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tabControl1);
             this.Font = new System.Drawing.Font("Times New Roman", 5.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -3959,7 +3937,6 @@
             this.tabPage11.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView11)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -4338,11 +4315,9 @@
         private System.Windows.Forms.Label group_name9;
         private System.Windows.Forms.Label group_name10;
         private System.Windows.Forms.Label group_name11;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         public System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label teachers_label;
     }
 }
