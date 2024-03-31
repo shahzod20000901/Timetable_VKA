@@ -155,7 +155,7 @@ namespace Timetable_VKA.FILE_SECTION
         {
             saving_timetables(dataGridView1, DataBank.routes[0]);
             MessageBox.Show("Расписание сохранено!!!!");
-            this.Close();
+           
         }
         public void saving_timetables(DataGridView dataGridView, string file)
         {
@@ -183,6 +183,166 @@ namespace Timetable_VKA.FILE_SECTION
                     }
                 }
             }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            moving_to_left(dataGridView2);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            moving_to_right(dataGridView2);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            saving_timetables(dataGridView2, DataBank.routes[1]);
+            MessageBox.Show("Расписание сохранено!!!!");
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            moving_to_left(dataGridView3);
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            moving_to_right(dataGridView3);
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            saving_timetables(dataGridView3, DataBank.routes[2]);
+            MessageBox.Show("Расписание сохранено!!!!");
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            moving_to_left(dataGridView4);
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            moving_to_right(dataGridView4);
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            saving_timetables(dataGridView4, DataBank.routes[3]);
+            MessageBox.Show("Расписание сохранено!!!!");
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            moving_to_left(dataGridView5);
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            moving_to_right(dataGridView5);
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            saving_timetables(dataGridView5, DataBank.routes[4]);
+            MessageBox.Show("Расписание сохранено!!!!");
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            moving_to_left(dataGridView6);
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            moving_to_right(dataGridView6);
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            saving_timetables(dataGridView6, DataBank.routes[5]);
+            MessageBox.Show("Расписание сохранено!!!!");
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            moving_to_left(dataGridView7);
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            moving_to_right(dataGridView7);
+        }
+
+        private void button21_Click(object sender, EventArgs e)
+        {
+            saving_timetables(dataGridView7, DataBank.routes[6]);
+            MessageBox.Show("Расписание сохранено!!!!");
+        }
+
+        private void button22_Click(object sender, EventArgs e)
+        {
+            moving_to_left(dataGridView8);
+        }
+
+        private void button23_Click(object sender, EventArgs e)
+        {
+            moving_to_right(dataGridView8);
+        }
+
+        private void button24_Click(object sender, EventArgs e)
+        {
+            saving_timetables(dataGridView8, DataBank.routes[7]);
+            MessageBox.Show("Расписание сохранено!!!!");
+        }
+
+        private void button25_Click(object sender, EventArgs e)
+        {
+            moving_to_left(dataGridView9);
+        }
+
+        private void button26_Click(object sender, EventArgs e)
+        {
+            moving_to_right(dataGridView9);
+        }
+
+        private void button27_Click(object sender, EventArgs e)
+        {
+            saving_timetables(dataGridView9, DataBank.routes[8]);
+            MessageBox.Show("Расписание сохранено!!!!");
+        }
+
+        private void button28_Click(object sender, EventArgs e)
+        {
+            moving_to_left(dataGridView10);
+        }
+
+        private void button29_Click(object sender, EventArgs e)
+        {
+            moving_to_right(dataGridView10);
+        }
+
+        private void button30_Click(object sender, EventArgs e)
+        {
+            saving_timetables(dataGridView10, DataBank.routes[9]);
+            MessageBox.Show("Расписание сохранено!!!!");
+        }
+
+        private void button31_Click(object sender, EventArgs e)
+        {
+            moving_to_left(dataGridView11);
+        }
+
+        private void button32_Click(object sender, EventArgs e)
+        {
+            moving_to_right(dataGridView11);
+        }
+
+        private void button33_Click(object sender, EventArgs e)
+        {
+            saving_timetables(dataGridView11, DataBank.routes[10]);
+            MessageBox.Show("Расписание сохранено!!!!");
         }
 
         public void adding_vuz_name(Label label)
