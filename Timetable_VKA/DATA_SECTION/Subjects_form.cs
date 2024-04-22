@@ -81,26 +81,15 @@ namespace Timetable_VKA.DATA_SECTION
 
 
             for (int i=0; i< listView1.Items.Count;i++)
-            {
-
-            
-                    command = new MySqlCommand("INSERT INTO `subjects_table` (`Subjects`, `Subjects_reduction`) VALUES(@log"+i+", @log1"+i+")", db.getConnection());
+            {            
+                command = new MySqlCommand("INSERT INTO `subjects_table` (`Subjects`, `Subjects_reduction`) VALUES(@log"+i+", @log1"+i+")", db.getConnection());
                 command.Parameters.Add("@log" + i + "", MySqlDbType.VarChar).Value = listView1.Items[i].SubItems[0].Text;
-                    command.Parameters.Add("@log1"+i+"", MySqlDbType.VarChar).Value = listView1.Items[i].SubItems[1].Text;
-
-
-
-
-
+                command.Parameters.Add("@log1"+i+"", MySqlDbType.VarChar).Value = listView1.Items[i].SubItems[1].Text;
                 db.openConnection();
-
-
                 if (command.ExecuteNonQuery() == 1)
-                    j = 0;
-               
+                    j = 0;               
                 else
-                    j = 1;
-            
+                    j = 1;            
             db.closeConnection();
             }
             this.Close();

@@ -170,8 +170,6 @@ namespace Timetable_VKA.DATA_SECTION
                 for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
                 {
 
-
-
                     command1 = new MySqlCommand("INSERT INTO `lessons_summary` (`id`, `Subjects`, `lectures`,`practic`,`control work`) VALUES(@log, @log" + i + ", @log" + i + 1 + ", @log" + i + 2 + ", @log" + i + 3 + ")", db.getConnection());
 
                     command1.Parameters.Add("@log", MySqlDbType.VarChar).Value = id[i];
@@ -181,13 +179,6 @@ namespace Timetable_VKA.DATA_SECTION
 
                     command1.Parameters.Add("@log" + i + 2 + "", MySqlDbType.Int32).Value = seminar[i];
                     command1.Parameters.Add("@log" + i + 3 + "", MySqlDbType.Int32).Value = control_work[i];
-
-
-
-
-
-
-
 
                     db.openConnection();
 

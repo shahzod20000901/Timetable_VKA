@@ -53,6 +53,62 @@ namespace Timetable_VKA.TIMETABLE_SECTION
         }
 
         string[] lesson_time = { "", "", "", "" };
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SaveAsExcelFile(dataGridView1, group_name1.Text, teachers_list[comboBox1.SelectedIndex]);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SaveAsExcelFile(dataGridView2, group_name2.Text, teachers_list[comboBox1.SelectedIndex]);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            SaveAsExcelFile(dataGridView3, group_name3.Text, teachers_list[comboBox1.SelectedIndex]);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            SaveAsExcelFile(dataGridView4, group_name4.Text, teachers_list[comboBox1.SelectedIndex]);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            SaveAsExcelFile(dataGridView5, group_name5.Text, teachers_list[comboBox1.SelectedIndex]);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            SaveAsExcelFile(dataGridView6, group_name6.Text, teachers_list[comboBox1.SelectedIndex]);
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            SaveAsExcelFile(dataGridView7, group_name7.Text, teachers_list[comboBox1.SelectedIndex]);
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            SaveAsExcelFile(dataGridView8, group_name8.Text, teachers_list[comboBox1.SelectedIndex]);
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            SaveAsExcelFile(dataGridView9, group_name9.Text, teachers_list[comboBox1.SelectedIndex]);
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            SaveAsExcelFile(dataGridView10, group_name10.Text, teachers_list[comboBox1.SelectedIndex]);
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            SaveAsExcelFile(dataGridView11, group_name11.Text, teachers_list[comboBox1.SelectedIndex]);
+        }
+
         string[] teachers_list = { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
         List<string> groups_list = new List<string>() { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
         List<string> for_teachers = new List<string>  { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
@@ -151,13 +207,6 @@ namespace Timetable_VKA.TIMETABLE_SECTION
             adding_mounth_name(dataGridView9);
             adding_mounth_name(dataGridView10);
             adding_mounth_name(dataGridView11);
-
-
-
-
-
-
-
 
 
             /////////////////////////////////////////////////////////////////////////////////////////
@@ -595,6 +644,75 @@ namespace Timetable_VKA.TIMETABLE_SECTION
                     }
                 }
             }
+
+        }
+
+        public void SaveAsExcelFile(DataGridView dataGridView, string group_name, string teacher_name)
+        {
+            for (int i = 0; i < dataGridView.Rows.Count; i++)
+            {
+                for (int j = 0; j < dataGridView.Columns.Count; j++)
+                {
+                    if (dataGridView.Rows[i].Cells[j].Value == null) dataGridView.Rows[i].Cells[j].Value = "";
+
+                }
+            }
+
+
+
+            if (dataGridView.Rows.Count > 0)
+            {
+                Microsoft.Office.Interop.Excel.ApplicationClass MExcel = new Microsoft.Office.Interop.Excel.ApplicationClass();
+
+                MExcel.Application.Workbooks.Add(Type.Missing);
+
+                for (int i = 1; i < dataGridView.Columns.Count + 1; i++)
+                {
+                    MExcel.Cells[1, i] = dataGridView.Columns[i - 1].HeaderText;
+
+                }
+                for (int i = 0; i < dataGridView.Rows.Count; i++)
+                {
+                    for (int j = 0; j < dataGridView.Columns.Count; j++)
+                    {
+                        if (dataGridView.Rows[i].Cells[j].Style.BackColor!=Color.White)
+                        {
+                            MExcel.Cells[i + 2, j + 1] = dataGridView.Rows[i].Cells[j].Value.ToString();
+                            if(j==1) MExcel.Cells[i + 2, j + 1] = "";
+
+                        }
+
+
+                    }
+                }
+                
+
+                MExcel.Cells[2, 15] = group_name;
+                MExcel.Cells[3, 15] =comboBox1.Items[comboBox1.SelectedIndex]+": "+ teacher_name;
+
+                MExcel.Range[MExcel.Cells[2, 13], MExcel.Cells[2, 17]].Merge();
+                MExcel.Range[MExcel.Cells[3, 4], MExcel.Cells[3, 24]].Merge();
+
+                
+
+                MExcel.Columns.AutoFit();
+                MExcel.Rows.AutoFit();
+                MExcel.Columns.Font.Size = 12;
+
+
+                MExcel.Visible = true;
+
+
+
+
+
+            }
+            else
+            {
+                MessageBox.Show("Запись не найдено!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
 
         }
     }

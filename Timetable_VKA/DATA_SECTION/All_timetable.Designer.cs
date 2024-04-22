@@ -808,6 +808,7 @@
             this.group_name1.Size = new System.Drawing.Size(28, 12);
             this.group_name1.TabIndex = 2;
             this.group_name1.Text = "group";
+            this.group_name1.Click += new System.EventHandler(this.group_name1_Click);
             // 
             // tabPage2
             // 

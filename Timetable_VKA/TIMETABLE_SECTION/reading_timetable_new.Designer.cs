@@ -75,7 +75,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(reading_timetable_new));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
             this.vuz_name1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.week = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -449,6 +448,17 @@
             this.dataGridViewTextBoxColumn298 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn299 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn300 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -498,7 +508,7 @@
             // tabPage1
             // 
             this.tabPage1.AutoScroll = true;
-            this.tabPage1.Controls.Add(this.label1);
+            this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.vuz_name1);
             this.tabPage1.Controls.Add(this.dataGridView1);
             this.tabPage1.Controls.Add(this.group_name1);
@@ -509,14 +519,6 @@
             this.tabPage1.Size = new System.Drawing.Size(926, 807);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.Location = new System.Drawing.Point(594, 4);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 12);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "cell: ";
             // 
             // vuz_name1
             // 
@@ -579,7 +581,7 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridView1.Location = new System.Drawing.Point(5, 29);
+            this.dataGridView1.Location = new System.Drawing.Point(7, 40);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
@@ -815,6 +817,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.button2);
             this.tabPage2.Controls.Add(this.group_name2);
             this.tabPage2.Controls.Add(this.vuz_name2);
             this.tabPage2.Controls.Add(this.dataGridView2);
@@ -896,7 +899,7 @@
             dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle8;
-            this.dataGridView2.Location = new System.Drawing.Point(4, 29);
+            this.dataGridView2.Location = new System.Drawing.Point(2, 40);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersVisible = false;
@@ -1122,6 +1125,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.button3);
             this.tabPage3.Controls.Add(this.group_name3);
             this.tabPage3.Controls.Add(this.vuz_name3);
             this.tabPage3.Controls.Add(this.dataGridView3);
@@ -1202,7 +1206,7 @@
             dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView3.DefaultCellStyle = dataGridViewCellStyle12;
-            this.dataGridView3.Location = new System.Drawing.Point(4, 34);
+            this.dataGridView3.Location = new System.Drawing.Point(4, 40);
             this.dataGridView3.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowHeadersVisible = false;
@@ -1428,6 +1432,7 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.button4);
             this.tabPage4.Controls.Add(this.group_name4);
             this.tabPage4.Controls.Add(this.vuz_name4);
             this.tabPage4.Controls.Add(this.dataGridView4);
@@ -1734,6 +1739,7 @@
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.button5);
             this.tabPage5.Controls.Add(this.group_name5);
             this.tabPage5.Controls.Add(this.vuz_name5);
             this.tabPage5.Controls.Add(this.dataGridView5);
@@ -2040,6 +2046,7 @@
             // 
             // tabPage6
             // 
+            this.tabPage6.Controls.Add(this.button6);
             this.tabPage6.Controls.Add(this.group_name6);
             this.tabPage6.Controls.Add(this.vuz_name6);
             this.tabPage6.Controls.Add(this.dataGridView6);
@@ -2120,7 +2127,7 @@
             dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView6.DefaultCellStyle = dataGridViewCellStyle24;
-            this.dataGridView6.Location = new System.Drawing.Point(5, 34);
+            this.dataGridView6.Location = new System.Drawing.Point(5, 40);
             this.dataGridView6.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView6.Name = "dataGridView6";
             this.dataGridView6.RowHeadersVisible = false;
@@ -2346,6 +2353,7 @@
             // 
             // tabPage7
             // 
+            this.tabPage7.Controls.Add(this.button7);
             this.tabPage7.Controls.Add(this.group_name7);
             this.tabPage7.Controls.Add(this.vuz_name7);
             this.tabPage7.Controls.Add(this.dataGridView7);
@@ -2652,6 +2660,7 @@
             // 
             // tabPage8
             // 
+            this.tabPage8.Controls.Add(this.button8);
             this.tabPage8.Controls.Add(this.group_name8);
             this.tabPage8.Controls.Add(this.vuz_name8);
             this.tabPage8.Controls.Add(this.dataGridView8);
@@ -2958,6 +2967,7 @@
             // 
             // tabPage9
             // 
+            this.tabPage9.Controls.Add(this.button9);
             this.tabPage9.Controls.Add(this.group_name9);
             this.tabPage9.Controls.Add(this.vuz_name9);
             this.tabPage9.Controls.Add(this.dataGridView9);
@@ -3264,6 +3274,7 @@
             // 
             // tabPage10
             // 
+            this.tabPage10.Controls.Add(this.button10);
             this.tabPage10.Controls.Add(this.group_name10);
             this.tabPage10.Controls.Add(this.vuz_name10);
             this.tabPage10.Controls.Add(this.dataGridView10);
@@ -3570,6 +3581,7 @@
             // 
             // tabPage11
             // 
+            this.tabPage11.Controls.Add(this.button11);
             this.tabPage11.Controls.Add(this.group_name11);
             this.tabPage11.Controls.Add(this.vuz_name11);
             this.tabPage11.Controls.Add(this.dataGridView11);
@@ -3874,6 +3886,116 @@
             this.dataGridViewTextBoxColumn300.Name = "dataGridViewTextBoxColumn300";
             this.dataGridViewTextBoxColumn300.Width = 30;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(731, 10);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(159, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Сохранить как Excel файл";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(760, 10);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(159, 23);
+            this.button2.TabIndex = 7;
+            this.button2.Text = "Сохранить как Excel файл";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(761, 9);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(159, 23);
+            this.button3.TabIndex = 8;
+            this.button3.Text = "Сохранить как Excel файл";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(761, 6);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(159, 23);
+            this.button4.TabIndex = 8;
+            this.button4.Text = "Сохранить как Excel файл";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(761, 12);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(159, 23);
+            this.button5.TabIndex = 8;
+            this.button5.Text = "Сохранить как Excel файл";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(761, 9);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(159, 23);
+            this.button6.TabIndex = 8;
+            this.button6.Text = "Сохранить как Excel файл";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(760, 6);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(159, 23);
+            this.button7.TabIndex = 8;
+            this.button7.Text = "Сохранить как Excel файл";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(761, 6);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(159, 23);
+            this.button8.TabIndex = 8;
+            this.button8.Text = "Сохранить как Excel файл";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(760, 12);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(159, 23);
+            this.button9.TabIndex = 8;
+            this.button9.Text = "Сохранить как Excel файл";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(761, 6);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(159, 23);
+            this.button10.TabIndex = 8;
+            this.button10.Text = "Сохранить как Excel файл";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(762, 6);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(159, 23);
+            this.button11.TabIndex = 8;
+            this.button11.Text = "Сохранить как Excel файл";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
             // reading_timetable_new
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3927,7 +4049,6 @@
 
         public System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label vuz_name1;
         public System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn week;
@@ -4301,5 +4422,16 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn298;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn299;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn300;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button11;
     }
 }

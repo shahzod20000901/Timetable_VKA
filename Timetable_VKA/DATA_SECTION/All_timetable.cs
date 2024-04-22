@@ -68,6 +68,12 @@ namespace Timetable_VKA.DATA_SECTION
         }
 
         string[] lesson_time = { "", "", "", "" };
+
+        private void group_name1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         List<string> groups_list = new List<string>() { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
         List<string> all_subjects = new List<string> { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
         List<int> subjects_lecture = new List<int> { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
@@ -957,7 +963,7 @@ namespace Timetable_VKA.DATA_SECTION
 
             }
 
-            dataGridView[29, dataGridView.Rows.Count-1].Value = "3";
+            //dataGridView[29, dataGridView.Rows.Count-1].Value = "3";
             dataGridView[29, dataGridView.Rows.Count-6].Value = "2";
         }
 

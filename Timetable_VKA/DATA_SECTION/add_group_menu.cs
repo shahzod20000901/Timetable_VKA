@@ -34,7 +34,7 @@ namespace Timetable_VKA.DATA_SECTION
 
         private void ok_btn_Click(object sender, EventArgs e)
         {
-            string[] sub_red = { textBox1.Text+" группа", textBox2.Text+" кафедра", textBox3.Text+" факультет" };
+            string[] sub_red = { textBox1.Text+" учебная группа", textBox2.Text+" кафедра", textBox3.Text+" факультет" };
             ListViewItem listViewItem = new ListViewItem(sub_red);
             group.listView1.Items.Add(listViewItem);
         }

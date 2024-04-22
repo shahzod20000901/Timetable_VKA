@@ -10,6 +10,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Timetable_VKA.DATA_SECTION;
+using System.Reflection;
+using Excel = Microsoft.Office.Interop.Excel;
+using System.Data;
+using Microsoft.Office.Interop.Excel;
 
 namespace Timetable_VKA.TIMETABLE_SECTION
 {
@@ -23,18 +27,74 @@ namespace Timetable_VKA.TIMETABLE_SECTION
         DB db = new DB();
         MySqlCommand command1;
 
-        DataTable dt;
+        System.Data.DataTable dt;
         MySqlDataAdapter da;
         DataSet ds;
 
 
         MySqlCommand command2, command_vuz_name, command_group_name;
-        DataTable dtt, dt_vuz_name, dt_group_name;
+        System.Data.DataTable dtt, dt_vuz_name, dt_group_name;
         MySqlDataAdapter daa, da_vuz_name, da_group_name;
         DataSet dss, ds_vuz_name, ds_group_name;
         int index = 0;
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SaveAsExcelFile(dataGridView1, group_name1.Text);
+        }
+
         string[] lesson_time = { "", "", "", "" };
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SaveAsExcelFile(dataGridView2, group_name2.Text);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            SaveAsExcelFile(dataGridView3, group_name3.Text);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            SaveAsExcelFile(dataGridView4, group_name4.Text);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            SaveAsExcelFile(dataGridView5, group_name5.Text);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            SaveAsExcelFile(dataGridView6, group_name6.Text);
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            SaveAsExcelFile(dataGridView7, group_name7.Text);
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            SaveAsExcelFile(dataGridView8, group_name8.Text);
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            SaveAsExcelFile(dataGridView9, group_name9.Text);
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            SaveAsExcelFile(dataGridView10, group_name10.Text);
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            SaveAsExcelFile(dataGridView11, group_name11.Text);
+        }
+
         List<string> groups_list = new List<string>() { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
 
         private void reading_timetable_new_Load(object sender, EventArgs e)
@@ -134,11 +194,11 @@ namespace Timetable_VKA.TIMETABLE_SECTION
                 lesson_time[i] = dtt.Rows[0].ItemArray[0].ToString();
             }
 
-
+            
         }
 
 
-        public void adding_vuz_name(Label label)
+        public void adding_vuz_name(System.Windows.Forms.Label label)
         {
             command_vuz_name = new MySqlCommand("SELECT `vuzName` FROM `vuzname`", db.getConnection());
             db.openConnection();
@@ -196,7 +256,6 @@ namespace Timetable_VKA.TIMETABLE_SECTION
 
         }
 
-
         public void colouring(DataGridView dataGridView)
         {
             for (int i = 0; i < dataGridView.Columns.Count; i++)
@@ -228,8 +287,6 @@ namespace Timetable_VKA.TIMETABLE_SECTION
                 }
             }
         }
-
-
 
         public void adding_mounth_name(DataGridView dataGridView)
         {
@@ -303,6 +360,65 @@ namespace Timetable_VKA.TIMETABLE_SECTION
                 }
             }
 
+        }
+
+        public void SaveAsExcelFile(DataGridView dataGridView, string group_name)
+        {
+            for(int i=0;i<dataGridView.Rows.Count;i++)
+            {
+                for(int j=0; j<dataGridView.Columns.Count; j++)
+                {
+                    if (dataGridView.Rows[i].Cells[j].Value == null) dataGridView.Rows[i].Cells[j].Value = "";
+                    
+                }
+            }
+            
+
+
+            if (dataGridView.Rows.Count > 0)
+            {
+                Microsoft.Office.Interop.Excel.ApplicationClass MExcel = new Microsoft.Office.Interop.Excel.ApplicationClass();
+                
+                MExcel.Application.Workbooks.Add(Type.Missing);
+               
+                for (int i = 1; i < dataGridView.Columns.Count + 1; i++)
+                {
+                    MExcel.Cells[1, i] = dataGridView.Columns[i - 1].HeaderText;
+                    
+                }
+                for (int i = 0; i < dataGridView.Rows.Count; i++)
+                {
+                    for (int j = 0; j < dataGridView.Columns.Count; j++)
+                    {
+                        MExcel.Cells[i + 2, j + 1] = dataGridView.Rows[i].Cells[j].Value.ToString();
+                        if (j == 1) MExcel.Cells[i + 2, j + 1] = "";
+
+                    }
+                }
+                MExcel.Cells[2, 15] = group_name.ToString();
+
+                MExcel.Range[MExcel.Cells[2, 13], MExcel.Cells[2, 17]].Merge();
+                
+
+                MExcel.Columns.AutoFit();
+                MExcel.Rows.AutoFit();
+                MExcel.Columns.Font.Size = 12;
+                
+                
+                MExcel.Visible = true;
+
+                
+
+              
+
+            }
+            else
+            {
+                MessageBox.Show("Запись не найдено!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
+
+            
         }
     }
 }
