@@ -22,10 +22,12 @@ namespace Timetable_VKA
         {
             InitializeComponent();
             Directory.SetCurrentDirectory("..\\..");
-            MessageBox.Show(this, Directory.GetCurrentDirectory(), "Init directory", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+            
+            
+            
         }
-
+        int flag = 0;
+        int flag_for_route = 0;
         private void ИмпортИзВидовЗаныятийИзCSVФайлаToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -45,9 +47,30 @@ namespace Timetable_VKA
 
         private void Main_menu_Load(object sender, EventArgs e)
         {
+            for(int i=0; i<DataBank.routes.Count; i++)
+            {
+                path();
+            }
             
         }
+        public void path()
+        {
+            
+            string path = Directory.GetCurrentDirectory();
 
+            string[] path_split = path.Split(new char[] { '\\' });
+            string path2 = "";
+            for (int i = 0; i < path_split.Length; i++)
+            {
+                path2 += path_split[i] + "\\\\";
+            }
+            path2 += "timetableVKA" + flag + ".txt";
+            DataBank.routes[flag_for_route] = path2;
+            //MessageBox.Show(DataBank.routes[flag_for_route]);
+            flag++;
+            
+            flag_for_route++;
+        }
         private void УдалитьИзбыточноеОграничениеToolStripMenuItem_Click(object sender, EventArgs e)
         {
 

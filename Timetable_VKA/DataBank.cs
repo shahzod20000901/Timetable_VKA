@@ -61,20 +61,22 @@ namespace Timetable_VKA
 
         public static DataGridView dataGridView=new DataGridView();
         //Directory.SetCurrentDirectory("..\\..");
-        public static List<string> routes= new List<string> { Directory.GetCurrentDirectory().ToString()+"\\Saved_timetables\\timetableVKA.txt",
-             Directory.GetCurrentDirectory().ToString()+"\\Saved_timetables\\timetableVKA1.txt",
-         Directory.GetCurrentDirectory().ToString()+"\\Saved_timetables\\timetableVKA2.txt",
-            Directory.GetCurrentDirectory().ToString()+"\\Saved_timetables\\timetableVKA3.txt",
-            Directory.GetCurrentDirectory().ToString()+"\\Saved_timetables\\timetableVKA4.txt",
-            Directory.GetCurrentDirectory().ToString()+"\\Saved_timetables\\timetableVKA5.txt",
-        Directory.GetCurrentDirectory().ToString()+"\\Saved_timetables\\timetableVKA6.txt",
-            Directory.GetCurrentDirectory().ToString()+"\\Saved_timetables\\timetableVKA7.txt",
-            Directory.GetCurrentDirectory().ToString()+"\\Saved_timetables\\timetableVKA8.txt",
-            Directory.GetCurrentDirectory().ToString()+"\\Saved_timetables\\timetableVKA9.txt",
-        Directory.GetCurrentDirectory().ToString()+"\\Saved_timetables\\timetableVKA10.txt",
-            Directory.GetCurrentDirectory().ToString()+"\\Saved_timetables\\timetableVKA11.txt"};
+        public static List<string> routes= new List<string> { path_timetables+"\\Saved_timetables\\timetableVKA0.txt",
+             path_timetables+"\\Saved_timetables\\timetableVKA1.txt",
+         path_timetables+"\\Saved_timetables\\timetableVKA2.txt",
+            path_timetables+"\\Saved_timetables\\timetableVKA3.txt",
+            path_timetables+"\\Saved_timetables\\timetableVKA4.txt",
+            path_timetables+"\\Saved_timetables\\timetableVKA5.txt",
+        path_timetables+"\\Saved_timetables\\timetableVKA6.txt",
+            path_timetables+"\\Saved_timetables\\timetableVKA7.txt",
+            path_timetables+"\\Saved_timetables\\timetableVKA8.txt",
+            path_timetables+"\\Saved_timetables\\timetableVKA9.txt",
+        path_timetables+"\\Saved_timetables\\timetableVKA10.txt",
+            path_timetables+"\\Saved_timetables\\timetableVKA11.txt",
+        };
 
         public static List<string> stream_subjects_for_reading= new List<string> { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
         public static List<string> stream_subjects_for_reading1 = new List<string>(1000);
+        public static string path_timetables ="";
     }
 }

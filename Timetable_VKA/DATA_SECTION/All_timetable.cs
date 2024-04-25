@@ -14,7 +14,7 @@ namespace Timetable_VKA.DATA_SECTION
     {
         public All_timetable()
         {
-            Directory.SetCurrentDirectory("..\\..");
+            
             InitializeComponent();
         }
 
@@ -84,7 +84,7 @@ namespace Timetable_VKA.DATA_SECTION
         
         private void All_timetable_Load(object sender, EventArgs e)
         {
-            Directory.SetCurrentDirectory("..\\..");
+            
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
@@ -660,7 +660,7 @@ namespace Timetable_VKA.DATA_SECTION
             }
 
             /*--------------------------------------- Сохранение расписаний ---------------------------------*/
-
+            /*
             saving_timetables(dataGridView1, DataBank.routes[0]);
             saving_timetables(dataGridView2, DataBank.routes[1]);
             saving_timetables(dataGridView3, DataBank.routes[2]);
@@ -672,7 +672,7 @@ namespace Timetable_VKA.DATA_SECTION
             saving_timetables(dataGridView9, DataBank.routes[8]);
             saving_timetables(dataGridView10, DataBank.routes[9]);
             saving_timetables(dataGridView11, DataBank.routes[10]);
-
+            */
 
 
             for_teachers_timetable(DataBank.for_teachers_new);
@@ -1401,13 +1401,14 @@ namespace Timetable_VKA.DATA_SECTION
            saving_timetables(dataGridView9, DataBank.routes[8]);
            saving_timetables(dataGridView10, DataBank.routes[9]);
            saving_timetables(dataGridView11, DataBank.routes[10]);
-           
 
 
+            
             MessageBox.Show("Сохранено!");
             this.Close();
-
+            MessageBox.Show(DataBank.routes[0]);
         }
+        
         public void saving_timetables(DataGridView dataGridView, string file )
         {
             
@@ -1434,6 +1435,7 @@ namespace Timetable_VKA.DATA_SECTION
                     }
                 }
             }
+            
         }
         
     }

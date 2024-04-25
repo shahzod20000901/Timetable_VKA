@@ -22,6 +22,7 @@ namespace Timetable_VKA.TIMETABLE_SECTION
         public reading_timetable_new()
         {
             InitializeComponent();
+            
         }
 
         DB db = new DB();
@@ -106,6 +107,7 @@ namespace Timetable_VKA.TIMETABLE_SECTION
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             ////////////////////////////////////////////////////////////////////////////////////////////
             /*--------------------------------- Получение данных -----------------------------------*/
+            MessageBox.Show(DataBank.routes[1]);
             reading_timetables(dataGridView1, DataBank.routes[0]);
             colouring(dataGridView1);
             adding_mounth_name(dataGridView1);
@@ -341,7 +343,7 @@ namespace Timetable_VKA.TIMETABLE_SECTION
         public void reading_timetables(DataGridView dataGridView, string file)
         {
 
-
+            
             using (BinaryReader bw = new BinaryReader(File.Open(file, FileMode.Open)))
             {
                 int n = bw.ReadInt32();
