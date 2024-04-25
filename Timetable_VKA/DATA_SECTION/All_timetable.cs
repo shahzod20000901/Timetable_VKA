@@ -14,6 +14,7 @@ namespace Timetable_VKA.DATA_SECTION
     {
         public All_timetable()
         {
+            Directory.SetCurrentDirectory("..\\..");
             InitializeComponent();
         }
 
@@ -83,6 +84,7 @@ namespace Timetable_VKA.DATA_SECTION
         
         private void All_timetable_Load(object sender, EventArgs e)
         {
+            Directory.SetCurrentDirectory("..\\..");
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;

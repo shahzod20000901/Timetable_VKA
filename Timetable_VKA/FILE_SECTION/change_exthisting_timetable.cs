@@ -17,6 +17,7 @@ namespace Timetable_VKA.FILE_SECTION
         public change_exthisting_timetable()
         {
             InitializeComponent();
+            Directory.SetCurrentDirectory("..\\..");
         }
         DB db = new DB();
         MySqlCommand command1;
