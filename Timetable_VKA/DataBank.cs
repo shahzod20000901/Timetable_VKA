@@ -60,10 +60,18 @@ namespace Timetable_VKA
 
         public static DataGridView dataGridView=new DataGridView();
         
-        public static List<string> routes= new List<string> { "C:\\time_tables\\timetableVKA.txt", "C:\\time_tables\\timetableVKA1.txt",
-        "C:\\time_tables\\timetableVKA2.txt","C:\\time_tables\\timetableVKA3.txt","C:\\time_tables\\timetableVKA4.txt","C:\\time_tables\\timetableVKA5.txt",
-        "C:\\time_tables\\timetableVKA6.txt","C:\\time_tables\\timetableVKA7.txt","C:\\time_tables\\timetableVKA8.txt","C:\\time_tables\\timetableVKA9.txt",
-        "C:\\time_tables\\timetableVKA10.txt", "C:\\time_tables\\timetableVKA11.txt"};
+        public static List<string> routes= new List<string> { "Saved_timetables\\timetableVKA.txt",
+            "Saved_timetables\\timetableVKA1.txt",
+        "Saved_timetables\\timetableVKA2.txt",
+            "Saved_timetables\\timetableVKA3.txt",
+            "Saved_timetables\\timetableVKA4.txt",
+            "Saved_timetables\\timetableVKA5.txt",
+        "Saved_timetables\\timetableVKA6.txt",
+            "Saved_timetables\\timetableVKA7.txt",
+            "Saved_timetables\\timetableVKA8.txt",
+            "Saved_timetables\\timetableVKA9.txt",
+        "Saved_timetables\\timetableVKA10.txt",
+            "Saved_timetables\\timetableVKA11.txt"};
 
         public static List<string> stream_subjects_for_reading= new List<string> { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
         public static List<string> stream_subjects_for_reading1 = new List<string>(1000);

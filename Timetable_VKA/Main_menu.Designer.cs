@@ -54,8 +54,6 @@
             this.расписаниеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.просмотрпоПреподователямToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.просмотрпоГруппамToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.показатьмягкиеКонфликтыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.печатьCTRLPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.настройкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.проверятьНаличиеОбновленийПриЗапускеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.языкLanguageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -130,6 +128,7 @@
             this.create = new System.Windows.Forms.Button();
             this.main_data = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -170,7 +169,6 @@
             this.generate_timetable_btn = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.button10 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.main_file.SuspendLayout();
@@ -245,14 +243,14 @@
             // официальныйToolStripMenuItem
             // 
             this.официальныйToolStripMenuItem.Name = "официальныйToolStripMenuItem";
-            this.официальныйToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.официальныйToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.официальныйToolStripMenuItem.Text = "Штатное Расписание";
             this.официальныйToolStripMenuItem.Click += new System.EventHandler(this.официальныйToolStripMenuItem_Click);
             // 
             // утроВечерToolStripMenuItem
             // 
             this.утроВечерToolStripMenuItem.Name = "утроВечерToolStripMenuItem";
-            this.утроВечерToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.утроВечерToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.утроВечерToolStripMenuItem.Text = "Особый";
             this.утроВечерToolStripMenuItem.Click += new System.EventHandler(this.утроВечерToolStripMenuItem_Click);
             // 
@@ -319,7 +317,7 @@
             // 
             this.преподователиToolStripMenuItem.Name = "преподователиToolStripMenuItem";
             this.преподователиToolStripMenuItem.Size = new System.Drawing.Size(263, 22);
-            this.преподователиToolStripMenuItem.Text = "Преподователи";
+            this.преподователиToolStripMenuItem.Text = "Преподаватели";
             this.преподователиToolStripMenuItem.Click += new System.EventHandler(this.ПреподователиToolStripMenuItem_Click);
             // 
             // военнослужащиеToolStripMenuItem
@@ -370,9 +368,7 @@
             // 
             this.расписаниеToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.просмотрпоПреподователямToolStripMenuItem,
-            this.просмотрпоГруппамToolStripMenuItem,
-            this.показатьмягкиеКонфликтыToolStripMenuItem,
-            this.печатьCTRLPToolStripMenuItem});
+            this.просмотрпоГруппамToolStripMenuItem});
             this.расписаниеToolStripMenuItem.Name = "расписаниеToolStripMenuItem";
             this.расписаниеToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
             this.расписаниеToolStripMenuItem.Text = "Расписание";
@@ -380,28 +376,16 @@
             // просмотрпоПреподователямToolStripMenuItem
             // 
             this.просмотрпоПреподователямToolStripMenuItem.Name = "просмотрпоПреподователямToolStripMenuItem";
-            this.просмотрпоПреподователямToolStripMenuItem.Size = new System.Drawing.Size(305, 22);
+            this.просмотрпоПреподователямToolStripMenuItem.Size = new System.Drawing.Size(278, 22);
             this.просмотрпоПреподователямToolStripMenuItem.Text = "Просмотр (по преподователям)         ";
             this.просмотрпоПреподователямToolStripMenuItem.Click += new System.EventHandler(this.просмотрпоПреподователямToolStripMenuItem_Click);
             // 
             // просмотрпоГруппамToolStripMenuItem
             // 
             this.просмотрпоГруппамToolStripMenuItem.Name = "просмотрпоГруппамToolStripMenuItem";
-            this.просмотрпоГруппамToolStripMenuItem.Size = new System.Drawing.Size(305, 22);
+            this.просмотрпоГруппамToolStripMenuItem.Size = new System.Drawing.Size(278, 22);
             this.просмотрпоГруппамToolStripMenuItem.Text = "Просмотр (по группам)              ";
             this.просмотрпоГруппамToolStripMenuItem.Click += new System.EventHandler(this.просмотрпоГруппамToolStripMenuItem_Click);
-            // 
-            // показатьмягкиеКонфликтыToolStripMenuItem
-            // 
-            this.показатьмягкиеКонфликтыToolStripMenuItem.Name = "показатьмягкиеКонфликтыToolStripMenuItem";
-            this.показатьмягкиеКонфликтыToolStripMenuItem.Size = new System.Drawing.Size(305, 22);
-            this.показатьмягкиеКонфликтыToolStripMenuItem.Text = "Показать \"мягкие\" конфликты";
-            // 
-            // печатьCTRLPToolStripMenuItem
-            // 
-            this.печатьCTRLPToolStripMenuItem.Name = "печатьCTRLPToolStripMenuItem";
-            this.печатьCTRLPToolStripMenuItem.Size = new System.Drawing.Size(305, 22);
-            this.печатьCTRLPToolStripMenuItem.Text = "Печать                                                CTRL + P";
             // 
             // настройкаToolStripMenuItem
             // 
@@ -1033,6 +1017,17 @@
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             // 
+            // button10
+            // 
+            this.button10.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button10.Location = new System.Drawing.Point(108, 151);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(96, 30);
+            this.button10.TabIndex = 14;
+            this.button10.Text = "Потоки";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
             // button9
             // 
             this.button9.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -1435,24 +1430,13 @@
             this.generate_timetable_btn.Name = "generate_timetable_btn";
             this.generate_timetable_btn.Size = new System.Drawing.Size(236, 30);
             this.generate_timetable_btn.TabIndex = 3;
-            this.generate_timetable_btn.Text = "Сгенерировать расписание";
+            this.generate_timetable_btn.Text = "Сгенерировать расписания";
             this.generate_timetable_btn.UseVisualStyleBackColor = true;
             this.generate_timetable_btn.Click += new System.EventHandler(this.generate_timetable_btn_Click);
             // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // button10
-            // 
-            this.button10.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button10.Location = new System.Drawing.Point(108, 151);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(96, 30);
-            this.button10.TabIndex = 14;
-            this.button10.Text = "Потоки";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // main_menu
             // 
@@ -1516,8 +1500,6 @@
         private System.Windows.Forms.ToolStripMenuItem справкаToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem просмотрпоПреподователямToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem просмотрпоГруппамToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem показатьмягкиеКонфликтыToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem печатьCTRLPToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem проверятьНаличиеОбновленийПриЗапускеToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem языкLanguageToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem расписаниеToolStripMenuItem1;

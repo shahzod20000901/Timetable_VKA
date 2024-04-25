@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using Timetable_VKA.DATA_SECTION;
 using Timetable_VKA.FILE_SECTION;
 using Timetable_VKA.TIMETABLE_SECTION;
+using System.IO;
 
 namespace Timetable_VKA
 {
@@ -20,7 +21,9 @@ namespace Timetable_VKA
         public main_menu()
         {
             InitializeComponent();
-          
+            Directory.SetCurrentDirectory("..\\..");
+            MessageBox.Show(this, Directory.GetCurrentDirectory(), "Init directory", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
 
         private void ИмпортИзВидовЗаныятийИзCSVФайлаToolStripMenuItem_Click(object sender, EventArgs e)
