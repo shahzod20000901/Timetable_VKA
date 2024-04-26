@@ -1406,7 +1406,7 @@ namespace Timetable_VKA.DATA_SECTION
             
             MessageBox.Show("Сохранено!");
             this.Close();
-            MessageBox.Show(DataBank.routes[0]);
+            
         }
         
         public void saving_timetables(DataGridView dataGridView, string file )
