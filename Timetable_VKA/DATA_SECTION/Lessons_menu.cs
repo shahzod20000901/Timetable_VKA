@@ -71,7 +71,7 @@ namespace Timetable_VKA.DATA_SECTION
             {
                 for(int n=0; n<dataGridView1.Rows.Count-1; n++)
                 {
-                    dataGridView1[m, n].Value = random.Next(3, 10);
+                    dataGridView1[m, n].Value = random.Next(9, 12);
                 }
             }
         }

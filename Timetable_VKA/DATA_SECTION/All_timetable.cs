@@ -676,6 +676,32 @@ namespace Timetable_VKA.DATA_SECTION
 
 
             for_teachers_timetable(DataBank.for_teachers_new);
+            
+            /*----------------------------------------  Расчет штрафных баллов --------------------------------------------*/
+            showing_fine_scores(dataGridView1, label1);
+            showing_fine_scores(dataGridView2, label2);
+            showing_fine_scores(dataGridView3, label3);
+            showing_fine_scores(dataGridView4, label4);
+            showing_fine_scores(dataGridView5, label5);
+            showing_fine_scores(dataGridView6, label6);
+            showing_fine_scores(dataGridView7, label7);
+            showing_fine_scores(dataGridView8, label8);
+            showing_fine_scores(dataGridView9, label9);
+            showing_fine_scores(dataGridView10, label10);
+            showing_fine_scores(dataGridView11, label11);
+            /*--------------------------------------- Добавление самостоятельной работы --------------------------------*/
+            adding_sampo(dataGridView1);
+            adding_sampo(dataGridView2);
+            adding_sampo(dataGridView3);
+            adding_sampo(dataGridView4);
+            adding_sampo(dataGridView5);
+            adding_sampo(dataGridView6);
+            adding_sampo(dataGridView7);
+            adding_sampo(dataGridView8);
+            adding_sampo(dataGridView9);
+            adding_sampo(dataGridView10);
+            adding_sampo(dataGridView11);
+
         }
 
 
@@ -965,7 +991,7 @@ namespace Timetable_VKA.DATA_SECTION
 
             }
 
-            //dataGridView[29, dataGridView.Rows.Count-1].Value = "3";
+            dataGridView[29, dataGridView.Rows.Count-1].Value = "3";
             dataGridView[29, dataGridView.Rows.Count-6].Value = "2";
         }
 
@@ -1258,8 +1284,42 @@ namespace Timetable_VKA.DATA_SECTION
 
         }
 
-        
+        public void adding_sampo(DataGridView dataGridView)
+        {
+            int start_column = 3;
+            int start_row = 24;
+            for(int i=start_column; i<dataGridView.Columns.Count; i++)
+            {
+                for(int j=start_row; j<dataGridView.Rows.Count; j++)
+                {
+                    if (dataGridView[i, j].Value==null)
+                    {
+                        dataGridView[i, j].Value = "Cp";
+                    }
+                }
+                start_row =3;
+            }
+        }
 
+        public void showing_fine_scores(DataGridView dataGridView, Label label)
+        {
+            int check_point = 1;
+            int summ_fine_score = 0;
+            for(int i=4; i<dataGridView.Columns.Count; i++)
+            {
+                for(int j=3; j<dataGridView.Rows.Count; j++)
+                {
+                    if (dataGridView[check_point, j].Value=="7-8")
+                    {
+                        if (dataGridView[i, j].Value==null)
+                        {
+                            summ_fine_score++;
+                        }
+                    }
+                }
+            }
+            label.Text +=" "+summ_fine_score;
+        }
        
         public void adding_lessons_for_other_groups(DataGridView dataGridView1, List<string> all_subjects)
         {
