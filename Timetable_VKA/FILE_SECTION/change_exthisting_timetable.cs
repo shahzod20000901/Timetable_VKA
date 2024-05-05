@@ -618,9 +618,10 @@ namespace Timetable_VKA.FILE_SECTION
                     column = move_to_right + 2;
                 }
                 row_1 = random.Next(4, dataGridView.Rows.Count-1);
-
             }
+           
         }
+        
 
         public void moving_to_left(DataGridView dataGridView)
         {

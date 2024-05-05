@@ -71,7 +71,7 @@ namespace Timetable_VKA.DATA_SECTION
             {
                 for(int n=0; n<dataGridView1.Rows.Count-1; n++)
                 {
-                    dataGridView1[m, n].Value = random.Next(9, 12);
+                    dataGridView1[m, n].Value = random.Next(12, 15);
                 }
             }
         }
@@ -161,9 +161,9 @@ namespace Timetable_VKA.DATA_SECTION
                 summa+= control_work[i];
             }
 
-            if(summa>300)
+            if(summa>500)
             {
-                MessageBox.Show("Сумма всех занятий не должен превышать выше 400 пар");
+                MessageBox.Show("Сумма всех занятий не должен превышать выше 500 пар");
             }
             else
             {

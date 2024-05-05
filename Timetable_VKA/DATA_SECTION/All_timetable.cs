@@ -689,18 +689,7 @@ namespace Timetable_VKA.DATA_SECTION
             showing_fine_scores(dataGridView9, label9);
             showing_fine_scores(dataGridView10, label10);
             showing_fine_scores(dataGridView11, label11);
-            /*--------------------------------------- Добавление самостоятельной работы --------------------------------*/
-            adding_sampo(dataGridView1);
-            adding_sampo(dataGridView2);
-            adding_sampo(dataGridView3);
-            adding_sampo(dataGridView4);
-            adding_sampo(dataGridView5);
-            adding_sampo(dataGridView6);
-            adding_sampo(dataGridView7);
-            adding_sampo(dataGridView8);
-            adding_sampo(dataGridView9);
-            adding_sampo(dataGridView10);
-            adding_sampo(dataGridView11);
+           
 
         }
 
@@ -1284,22 +1273,7 @@ namespace Timetable_VKA.DATA_SECTION
 
         }
 
-        public void adding_sampo(DataGridView dataGridView)
-        {
-            int start_column = 3;
-            int start_row = 24;
-            for(int i=start_column; i<dataGridView.Columns.Count; i++)
-            {
-                for(int j=start_row; j<dataGridView.Rows.Count; j++)
-                {
-                    if (dataGridView[i, j].Value==null)
-                    {
-                        dataGridView[i, j].Value = "Cp";
-                    }
-                }
-                start_row =3;
-            }
-        }
+        
 
         public void showing_fine_scores(DataGridView dataGridView, Label label)
         {
@@ -1468,7 +1442,23 @@ namespace Timetable_VKA.DATA_SECTION
             this.Close();
             
         }
-        
+        public void deleting_sampo(DataGridView dataGridView)
+        {
+            int start_column = 3;
+            int start_row = 24;
+            for (int i = start_column; i < dataGridView.Columns.Count; i++)
+            {
+                for (int j = start_row; j < dataGridView.Rows.Count; j++)
+                {
+                    if (dataGridView[i, j].Value == "Cp")
+                    {
+                        dataGridView[i, j].Value = null;
+                    }
+                }
+                start_row = 3;
+            }
+        }
+
         public void saving_timetables(DataGridView dataGridView, string file )
         {
             
